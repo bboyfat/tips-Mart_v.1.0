@@ -1,0 +1,6 @@
+framework module Pods_Tips_Mart {
+  umbrella header "Pods-Tips-Mart-umbrella.h"
+
+  export *
+  module * { export * }
+}
