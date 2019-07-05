@@ -10,10 +10,10 @@ import Foundation
 import RealmSwift
 
 
-class RealmRegistration: Object{
-  
+class RealmUserData: Object{
     @objc dynamic var name: String = ""
     @objc dynamic var surName: String = ""
-    @objc dynamic var friendsID: String = ""
+    @objc dynamic var phoneNumber: String = ""
+    @objc dynamic var id: String = ""
     @objc dynamic var birthDate: String = ""
 }

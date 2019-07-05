@@ -65,17 +65,20 @@ class RegXib: UIView{
             password.isSecureTextEntry = true
         }
     }
+    let localizedString = NSLocalizedString("Enter phone number", comment: "")
     private func setplaceHolders(){
-        phoneNumber.attributedPlaceholder = NSAttributedString(string: "Введите свой номер телефона", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        password.attributedPlaceholder = NSAttributedString(string: "Введите пароль", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        repeatPassword.attributedPlaceholder = NSAttributedString(string: "Введите пароль", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        phoneNumber.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Enter phone number", comment: "") , attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        password.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Enter password", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        repeatPassword.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Repeat password", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
     //Post Notfication
     private func postNotification(){
         registrationBtn.addTarget(self, action: #selector(handlePost), for: .touchUpInside)
     }
     @objc private func handlePost(){
-        notificationCenter.post(name: NSNotification.Name.registrationPressed, object: self)
+        let userInfo: [String : Any] = ["PhoneNumber": phoneNumber.text!, "password": password.text!]
+//        notificationCenter.post(name: NSNotification.Name.registrationPressed, object: self)
+        notificationCenter.post(name: NSNotification.Name.registrationPressed, object: self, userInfo: userInfo)
     }
     
    

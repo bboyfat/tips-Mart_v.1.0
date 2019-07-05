@@ -1,0 +1,12 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Tips-Mart";
+/* Bundle name */
+"CFBundleName" = "Tips-MartDemo";
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "Need camera to set profile photo";
+/* Privacy - Location Always and When In Use Usage Description */
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "To show you the closest shops to you we need to ger your agree";
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "To show you the closest shops to you we need to ger your agree";
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "Need photo library only for using to set new photo to profile";

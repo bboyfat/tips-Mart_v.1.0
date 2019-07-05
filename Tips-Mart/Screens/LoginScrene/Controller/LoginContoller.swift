@@ -20,6 +20,10 @@ class LoginController: UIViewController {
     //MARK: Properties
     let notificationCenter = NotificationCenter.default
     //StatusBar style
+    var loginModel = LoginModel()
+    var viewModel: LoginViewModelProtocol!
+    
+    var regeistrModel: RegistrationModelRequset!
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -28,14 +32,35 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         
         addObserverForRegistrationBtn()
+        addObserverForLoginBtn()
         addTap()
     }
+    
+    //Observer for Registration btnAction
     private func addObserverForRegistrationBtn(){
-        notificationCenter.addObserver(self, selector: #selector(handleObserve), name: NSNotification.Name.registrationPressed, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleRegistration), name: NSNotification.Name.registrationPressed, object: nil)
     }
-    @objc private func handleObserve(){
+    @objc private func handleRegistration(_ notification: NSNotification){
+        if let userInfo = notification.userInfo as NSDictionary?{
+            guard let phoneNumber = userInfo["PhoneNumber"] as? String else {return}
+            self.regeistrModel = RegistrationModelRequset(options: OptionsForRegistration(inviter: "", phoneNumber: phoneNumber))
+            self.viewModel = RegistrationViewModel(registrationModel: self.regeistrModel)
+            self.viewModel.letsGo()
+        }
         let vc =  UIStoryboard(name: "ContinueRegistration", bundle: nil).instantiateViewController(withIdentifier: "ContinueNavigation")
         present(vc, animated: true, completion: nil)
+    }
+    //OBserver for Login Btn Action
+    private func addObserverForLoginBtn(){
+        notificationCenter.addObserver(self, selector: #selector(handleLogin), name: NSNotification.Name.loginPressed, object: nil)
+    }
+    @objc private func handleLogin(_ notification: NSNotification){
+        if let userInfo = notification.userInfo as NSDictionary?{
+            self.loginModel.phoneNumber = userInfo["phone"] as? String
+            self.loginModel.password = userInfo["pass"] as? String
+            viewModel = LoginViewModel(loginModel: self.loginModel)
+            viewModel.letsGo()
+        }
     }
     // Gesture for end editing
     func addTap(){
@@ -83,4 +108,6 @@ class LoginController: UIViewController {
         notificationCenter.removeObserver(self)
     }
 }
+
+
 

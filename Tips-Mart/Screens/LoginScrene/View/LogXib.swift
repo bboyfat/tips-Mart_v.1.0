@@ -13,11 +13,13 @@ import SwiftPhoneNumberFormatter
 class LogXib: UIView{
     let nibName = "LogXib"
     var contentVIew: UIView?
+    let notificationCenter = NotificationCenter.default
     #warning("Don't Forget to create password textField")
     var isAgreed = false
     
     @IBOutlet weak var phoneNumber: PhoneFormattedTextField!
     
+    @IBOutlet weak var loginBtnOutlet: UIButton!
     @IBOutlet weak var password: UITextField!
     let rightButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Group 5"), with: "", with: .unspecified)
     
@@ -25,11 +27,22 @@ class LogXib: UIView{
         super.awakeFromNib()
         setplaceHolders()
         phoneNumber.delegate = self
+        postNotification()
         #warning("Don't Forget to create password textField")
         password.rightView = setItems(button: rightButton)
         password.rightViewMode = .always
     }
     #warning("Don't Forget to create password textField")
+    //Post Notfication
+    private func postNotification(){
+        loginBtnOutlet.addTarget(self, action: #selector(handlePost), for: .touchUpInside)
+    }
+    @objc private func handlePost(){
+        let userData: [String : Any] = ["phone": phoneNumber.text!, "pass": password.text!]
+        notificationCenter.post(name: NSNotification.Name.loginPressed, object: self, userInfo: userData)
+//        notificationCenter.post(name: NSNotification.Name.loginPressed, object: self)
+    }
+    //set rightView for TextField
     private func setItems(button: UIButton) -> UIView{
         rightButton.addTarget(self, action: #selector(handleAgree), for: .touchUpInside)
         let view = UIView()
@@ -58,8 +71,8 @@ class LogXib: UIView{
     
     
     private func setplaceHolders(){
-        phoneNumber.attributedPlaceholder = NSAttributedString(string: "Введите свой номер телефона", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        password.attributedPlaceholder = NSAttributedString(string: "Введите пароль", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        phoneNumber.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Enter phone number", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        password.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Enter password", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
     
     

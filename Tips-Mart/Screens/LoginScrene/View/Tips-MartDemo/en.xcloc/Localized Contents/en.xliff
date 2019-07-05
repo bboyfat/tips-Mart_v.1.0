@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Tips-MartDemo/en.lproj/InfoPlist.strings" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="10.2.1" build-num="10E1001"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName">
+        <source>Tips-Mart</source>
+        <target>Tips-Mart</target>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName">
+        <source>Tips-MartDemo</source>
+        <target>Tips-MartDemo</target>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSCameraUsageDescription">
+        <source>Need camera to set profile photo</source>
+        <target>Need camera to set profile photo</target>
+        <note>Privacy - Camera Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSLocationAlwaysAndWhenInUseUsageDescription">
+        <source>To show you the closest shops to you we need to ger your agree</source>
+        <target>To show you the closest shops to you we need to ger your agree</target>
+        <note>Privacy - Location Always and When In Use Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSLocationWhenInUseUsageDescription">
+        <source>To show you the closest shops to you we need to ger your agree</source>
+        <target>To show you the closest shops to you we need to ger your agree</target>
+        <note>Privacy - Location When In Use Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSPhotoLibraryUsageDescription">
+        <source>Need photo library only for using to set new photo to profile</source>
+        <target>Need photo library only for using to set new photo to profile</target>
+        <note>Privacy - Photo Library Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Tips-MartDemo/Screens/MainTabBarScene/View/Base.lproj/Main.storyboard" source-language="en" target-language="en" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="10.2.1" build-num="10E1001"/>
+    </header>
+    <body>
+      <trans-unit id="2MH-SW-r8G.normalTitle">
+        <source>Подтвердить</source>
+        <target>Подтвердить</target>
+        <note>Class = "UIButton"; normalTitle = "Подтвердить"; ObjectID = "2MH-SW-r8G";</note>
+      </trans-unit>
+      <trans-unit id="3HC-MT-rXQ.normalTitle">
+        <source>Вход</source>
+        <target>Вход</target>
+        <note>Class = "UIButton"; normalTitle = "Вход"; ObjectID = "3HC-MT-rXQ";</note>
+      </trans-unit>
+      <trans-unit id="AOQ-ci-Kxw.normalTitle">
+        <source>Забыли пароль?</source>
+        <target>Забыли пароль?</target>
+        <note>Class = "UIButton"; normalTitle = "Забыли пароль?"; ObjectID = "AOQ-ci-Kxw";</note>
+      </trans-unit>
+      <trans-unit id="Aam-lB-roF.placeholder">
+        <source>&gt;</source>
+        <target>&gt;</target>
+        <note>Class = "UITextField"; placeholder = "&gt;"; ObjectID = "Aam-lB-roF";</note>
+      </trans-unit>
+      <trans-unit id="BwJ-Lq-J1l.title">
+        <source>Item</source>
+        <target>Item</target>
+        <note>Class = "UITabBarItem"; title = "Item"; ObjectID = "BwJ-Lq-J1l";</note>
+      </trans-unit>
+      <trans-unit id="CIU-gi-mNs.text">
+        <source>У меня нет друзей и меня никто не приглашал</source>
+        <target>У меня нет друзей и меня никто не приглашал</target>
+        <note>Class = "UILabel"; text = "У меня нет друзей и меня никто не приглашал"; ObjectID = "CIU-gi-mNs";</note>
+      </trans-unit>
+      <trans-unit id="ERs-eR-ibn.normalTitle">
+        <source>Мужской</source>
+        <target>Мужской</target>
+        <note>Class = "UIButton"; normalTitle = "Мужской"; ObjectID = "ERs-eR-ibn";</note>
+      </trans-unit>
+      <trans-unit id="GGo-X1-eN1.normalTitle">
+        <source>Вход</source>
+        <target>Вход</target>
+        <note>Class = "UIButton"; normalTitle = "Вход"; ObjectID = "GGo-X1-eN1";</note>
+      </trans-unit>
+      <trans-unit id="Ktf-b1-rJF.text">
+        <source>Войти с помощью FaceBook</source>
+        <target>Войти с помощью FaceBook</target>
+        <note>Class = "UILabel"; text = "Войти с помощью FaceBook"; ObjectID = "Ktf-b1-rJF";</note>
+      </trans-unit>
+      <trans-unit id="P0N-nV-cNW.normalTitle">
+        <source>Пропустить</source>
+        <target>Пропустить</target>
+        <note>Class = "UIButton"; normalTitle = "Пропустить"; ObjectID = "P0N-nV-cNW";</note>
+      </trans-unit>
+      <trans-unit id="R6m-Zs-Myl.normalTitle">
+        <source>     &lt; Назад</source>
+        <target>     &lt; Назад</target>
+        <note>Class = "UIButton"; normalTitle = "     &lt; Назад"; ObjectID = "R6m-Zs-Myl";</note>
+      </trans-unit>
+      <trans-unit id="RZd-4I-YuT.text">
+        <source>Я принимаю условия пользовательского соглашения </source>
+        <target>Я принимаю условия пользовательского соглашения </target>
+        <note>Class = "UILabel"; text = "Я принимаю условия пользовательского соглашения "; ObjectID = "RZd-4I-YuT";</note>
+      </trans-unit>
+      <trans-unit id="U1F-pO-eKG.placeholder">
+        <source>&gt;</source>
+        <target>&gt;</target>
+        <note>Class = "UITextField"; placeholder = "&gt;"; ObjectID = "U1F-pO-eKG";</note>
+      </trans-unit>
+      <trans-unit id="Who-iW-cIw.normalTitle">
+        <source>Женский</source>
+        <target>Женский</target>
+        <note>Class = "UIButton"; normalTitle = "Женский"; ObjectID = "Who-iW-cIw";</note>
+      </trans-unit>
+      <trans-unit id="iSW-pX-fFQ.normalTitle">
+        <source>Прислать код повторно</source>
+        <target>Прислать код повторно</target>
+        <note>Class = "UIButton"; normalTitle = "Прислать код повторно"; ObjectID = "iSW-pX-fFQ";</note>
+      </trans-unit>
+      <trans-unit id="ipM-7H-0vA.placeholder">
+        <source>&gt;</source>
+        <target>&gt;</target>
+        <note>Class = "UITextField"; placeholder = "&gt;"; ObjectID = "ipM-7H-0vA";</note>
+      </trans-unit>
+      <trans-unit id="lWZ-Po-DjS.normalTitle">
+        <source>Продолжить</source>
+        <target>Продолжить</target>
+        <note>Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "lWZ-Po-DjS";</note>
+      </trans-unit>
+      <trans-unit id="q1Y-U8-reo.normalTitle">
+        <source>Регистрация</source>
+        <target>Регистрация</target>
+        <note>Class = "UIButton"; normalTitle = "Регистрация"; ObjectID = "q1Y-U8-reo";</note>
+      </trans-unit>
+      <trans-unit id="rgW-wx-erj.normalTitle">
+        <source>Регистрация</source>
+        <target>Регистрация</target>
+        <note>Class = "UIButton"; normalTitle = "Регистрация"; ObjectID = "rgW-wx-erj";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

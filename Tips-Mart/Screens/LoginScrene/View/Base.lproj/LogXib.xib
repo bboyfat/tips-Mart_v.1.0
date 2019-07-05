@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogXib" customModule="Tips_Mart" customModuleProvider="target">
             <connections>
+                <outlet property="loginBtnOutlet" destination="k57-sC-AiM" id="MD3-4h-uo8"/>
                 <outlet property="password" destination="423-7Z-ce4" id="7Ki-oa-aCT"/>
                 <outlet property="phoneNumber" destination="lbV-US-V9m" id="GgE-Iv-89S"/>
             </connections>

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Tips-Mart
+
+  Created by Andrey Petrovskiy on 7/5/19.
+  Copyright © 2019 Andrey Petrovskiy. All rights reserved.
+*/
+
+"Enter phone number" = "Введите номер телефона";
+"Enter password" = "Введите пароль";
+"Repeat password" = "Повторите пароль";

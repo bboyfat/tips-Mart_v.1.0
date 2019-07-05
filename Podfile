@@ -14,5 +14,7 @@ target 'Tips-Mart' do
    pod 'ReachabilitySwift'
    pod 'Alamofire'
    pod 'AlamofireImage'
+   
+
 
 end
