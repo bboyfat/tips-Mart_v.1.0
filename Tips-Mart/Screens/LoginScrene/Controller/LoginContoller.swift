@@ -30,7 +30,7 @@ class LoginController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        enterBtnoutlet.setTitle(NSLocalizedString("Enter", comment: ""), for: .normal)
         addObserverForRegistrationBtn()
         addObserverForLoginBtn()
         addTap()

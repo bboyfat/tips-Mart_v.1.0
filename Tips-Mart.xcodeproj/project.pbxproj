@@ -52,11 +52,8 @@
 		C20B327122CE464600533F75 /* PasswordBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordBtn.swift; sourceTree = "<group>"; };
 		C20B327322CE715500533F75 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		C220EAD322CF9B3B002C6B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		C220EAD422CF9B3C002C6B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Login.strings; sourceTree = "<group>"; };
 		C220EAD522CF9B3D002C6B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/PreLoginScrene.storyboard; sourceTree = "<group>"; };
 		C220EAD622CF9B4B002C6B90 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		C220EAD722CF9B4B002C6B90 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Login.strings; sourceTree = "<group>"; };
-		C220EAD922CF9D4E002C6B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Login.strings; sourceTree = "<group>"; };
 		C220EADB22CF9DC9002C6B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LogXib.xib; sourceTree = "<group>"; };
 		C220EAE422CF9F47002C6B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RegXib.xib; sourceTree = "<group>"; };
 		C220EAEC22CFA094002C6B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RegXib.xib; sourceTree = "<group>"; };
@@ -68,6 +65,9 @@
 		C220EAF522CFA708002C6B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C220EAF722CFA70C002C6B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C220EAF822CFA70E002C6B90 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C256AB1C22CFFC5700970D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C256AB2122CFFC6E00970D7E /* uk */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = uk; path = uk.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C256AB2222CFFC7200970D7E /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C2B4B7F922CF49F70096CDC0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C2B4B7FB22CF4B8A0096CDC0 /* LoginNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkService.swift; sourceTree = "<group>"; };
 		C2B4B7FD22CF4E470096CDC0 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -81,7 +81,6 @@
 		C2C583AE22CCAFBC004CBCBF /* Tips-Mart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tips-Mart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C583B122CCAFBC004CBCBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C583B322CCAFBC004CBCBF /* LoginContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContoller.swift; sourceTree = "<group>"; };
-		C2C583B622CCAFBC004CBCBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C2C583B822CCAFBD004CBCBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2C583BB22CCAFBD004CBCBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2C583BD22CCAFBD004CBCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -531,10 +530,9 @@
 		C2C583B522CCAFBC004CBCBF /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C2C583B622CCAFBC004CBCBF /* Base */,
-				C220EAD422CF9B3C002C6B90 /* ru */,
-				C220EAD722CF9B4B002C6B90 /* uk */,
-				C220EAD922CF9D4E002C6B90 /* en */,
+				C256AB1C22CFFC5700970D7E /* en */,
+				C256AB2122CFFC6E00970D7E /* uk */,
+				C256AB2222CFFC7200970D7E /* ru */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";
