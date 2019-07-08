@@ -17,10 +17,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegXib" customModule="Tips_Mart" customModuleProvider="target">
             <connections>
-                <outlet property="password" destination="423-7Z-ce4" id="eJ3-Ty-qu8"/>
+                <outlet property="password" destination="423-7Z-ce4" id="6jk-db-vwv"/>
                 <outlet property="phoneNumber" destination="lbV-US-V9m" id="gOY-Sf-GdS"/>
                 <outlet property="registrationBtn" destination="k57-sC-AiM" id="Vy7-fg-aDK"/>
-                <outlet property="repeatPassword" destination="kMd-ce-9TR" id="iKn-u4-0wo"/>
+                <outlet property="repeatPassword" destination="kMd-ce-9TR" id="OdL-aI-DGY"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

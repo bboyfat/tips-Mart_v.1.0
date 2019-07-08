@@ -46,6 +46,7 @@ class LoginController: UIViewController {
             self.regeistrModel = RegistrationModelRequset(options: OptionsForRegistration(inviter: "", phoneNumber: phoneNumber))
             self.viewModel = RegistrationViewModel(registrationModel: self.regeistrModel)
             self.viewModel.letsGo()
+           
         }
         let vc =  UIStoryboard(name: "ContinueRegistration", bundle: nil).instantiateViewController(withIdentifier: "ContinueNavigation")
         present(vc, animated: true, completion: nil)
@@ -60,6 +61,12 @@ class LoginController: UIViewController {
             self.loginModel.password = userInfo["pass"] as? String
             viewModel = LoginViewModel(loginModel: self.loginModel)
             viewModel.letsGo()
+            let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarController
+            OperationQueue.main.addOperation {
+                self.present(tabBarController, animated: true) {
+                    
+                }
+            }
         }
     }
     // Gesture for end editing

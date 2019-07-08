@@ -20,52 +20,26 @@ class RegXib: UIView{
     //MARK: Properties
     let nibName = "RegXib"
     var contentVIew: UIView?
-     #warning("Don't Forget to create password textField")
-    var isAgreed = false
     let notificationCenter = NotificationCenter.default
-     #warning("Don't Forget to create password textField")
-    let rightButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Group 5"), with: "", with: .unspecified)
-    let rightBtn2 = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Group 5"), with: "", with: .unspecified)
+    //MARK: LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setplaceHolders()
         phoneNumber.delegate = self
         postNotification()
-        password.rightView = setItems(button: rightButton)
-        repeatPassword.rightView = setItems(button: rightBtn2)
-        password.rightViewMode = .always
-        repeatPassword.rightViewMode = .always
+        setPasswordsViews()
         
     }
-    //MARK: Methods
-    private func setItems(button: UIButton) -> UIView{
-         #warning("Don't Forget to create password textField")
-        rightButton.addTarget(self, action: #selector(handleAgree), for: .touchUpInside)
-        let view = UIView()
-        view.frame = CGRect(x: -20, y: 0, width: 30, height: 30)
-        view.tintColor = .white
-        view.addSubview(button)
-        button.frame = view.bounds
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
         
-        return view
     }
-    #warning("Don't Forget to create password textField")
-    @objc func handleAgree(){
-        isAgreed = !isAgreed
-        checkPass()
+    //passwords views for textFields
+    func setPasswordsViews(){
+        password.addRightView()
+        repeatPassword.addRightView()
     }
-     #warning("Don't Forget to create password textField")
-    func checkPass(){
-        if isAgreed {
-            rightButton.setImage(#imageLiteral(resourceName: "Group 6"), for: .normal)
-            password.isSecureTextEntry = false
-        } else {
-            rightButton.setImage(#imageLiteral(resourceName: "Group 5"), for: .normal)
-            password.isSecureTextEntry = true
-        }
-    }
-    let localizedString = NSLocalizedString("Enter phone number", comment: "")
+    //Localized placeholders with white color
     private func setplaceHolders(){
         phoneNumber.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Enter phone number", comment: "") , attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         password.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Enter password", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
@@ -77,15 +51,16 @@ class RegXib: UIView{
     }
     @objc private func handlePost(){
         let userInfo: [String : Any] = ["PhoneNumber": phoneNumber.text!, "password": password.text!]
-//        notificationCenter.post(name: NSNotification.Name.registrationPressed, object: self)
+        
         notificationCenter.post(name: NSNotification.Name.registrationPressed, object: self, userInfo: userInfo)
     }
     
-   
+    
     //MARK: Initialization
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
+        
     }
     
     override init(frame: CGRect) {
@@ -94,7 +69,6 @@ class RegXib: UIView{
     }
     
     func commonInit(){
-        
         guard let view = loadViewFromNib() else {return}
         view.frame = self.bounds
         self.addSubview(view)

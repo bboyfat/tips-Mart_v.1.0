@@ -14,25 +14,27 @@ class LogXib: UIView{
     let nibName = "LogXib"
     var contentVIew: UIView?
     let notificationCenter = NotificationCenter.default
-    #warning("Don't Forget to create password textField")
-    var isAgreed = false
+    
     
     @IBOutlet weak var phoneNumber: PhoneFormattedTextField!
     
     @IBOutlet weak var loginBtnOutlet: UIButton!
+    
     @IBOutlet weak var password: UITextField!
-    let rightButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Group 5"), with: "", with: .unspecified)
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setplaceHolders()
         phoneNumber.delegate = self
         postNotification()
-        #warning("Don't Forget to create password textField")
-        password.rightView = setItems(button: rightButton)
-        password.rightViewMode = .always
+        setPasswordView()
     }
-    #warning("Don't Forget to create password textField")
+    //set password rightView
+    func setPasswordView(){
+        password.addRightView()
+        
+    }
+    
     //Post Notfication
     private func postNotification(){
         loginBtnOutlet.addTarget(self, action: #selector(handlePost), for: .touchUpInside)
@@ -40,42 +42,12 @@ class LogXib: UIView{
     @objc private func handlePost(){
         let userData: [String : Any] = ["phone": phoneNumber.text!, "pass": password.text!]
         notificationCenter.post(name: NSNotification.Name.loginPressed, object: self, userInfo: userData)
-//        notificationCenter.post(name: NSNotification.Name.loginPressed, object: self)
     }
-    //set rightView for TextField
-    private func setItems(button: UIButton) -> UIView{
-        rightButton.addTarget(self, action: #selector(handleAgree), for: .touchUpInside)
-        let view = UIView()
-        view.frame = CGRect(x: -20, y: 0, width: 30, height: 30)
-        view.tintColor = .white
-        view.addSubview(button)
-        button.frame = view.bounds
-        
-        return view
-    }
-    #warning("Don't Forget to create password textField")
-    @objc func handleAgree(){
-        isAgreed = !isAgreed
-        checkPass()
-    }
-    #warning("Don't Forget to create password textField")
-    func checkPass(){
-        if isAgreed {
-            rightButton.setImage(#imageLiteral(resourceName: "Group 6"), for: .normal)
-            password.isSecureTextEntry = false
-        } else {
-            rightButton.setImage(#imageLiteral(resourceName: "Group 5"), for: .normal)
-            password.isSecureTextEntry = true
-        }
-    }
-    
-    
+    //Localized placeholders with white color
     private func setplaceHolders(){
         phoneNumber.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Enter phone number", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         password.attributedPlaceholder = NSAttributedString(string: NSLocalizedString("Enter password", comment: ""), attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -41,11 +41,6 @@ class LoginNetworkService: NetworkServiceProtocol{
     
     private func saveSession(userData: UsersData){
         userOutput = UsersData(userid: userData.userid, phoneNumber: userData.phoneNumber, name: userData.name, surname: userData.surname, createdTime: userData.createdTime, refreshToken: userData.refreshToken, accessToken: userData.accessToken, balance: userData.balance)
-        print(userOutput?.userid)
-//        if let userData = userOutput{
-//            dataBaseService  = RealmService(userData: userData)
-//            dataBaseService?.save()
-//        }
         
     }
     
