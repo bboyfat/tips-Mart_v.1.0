@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "На балансе"; ObjectID = "1b9-sH-LaK"; */
+"1b9-sH-LaK.text" = "На балансе";
+
+/* Class = "UILabel"; text = "213,68 грн"; ObjectID = "A5q-qe-Vyh"; */
+"A5q-qe-Vyh.text" = "213,68 грн";
+
+/* Class = "UILabel"; text = "Все операции"; ObjectID = "HDK-hu-Sqn"; */
+"HDK-hu-Sqn.text" = "Все операции";
+
+/* Class = "UILabel"; text = "92 дня"; ObjectID = "I9z-Zp-eEh"; */
+"I9z-Zp-eEh.text" = "92 дня";
+
+/* Class = "UILabel"; text = "Вы с Tips Mart уже"; ObjectID = "WZj-yF-zbb"; */
+"WZj-yF-zbb.text" = "Вы с Tips Mart уже";
+
+/* Class = "UILabel"; text = "Общий кэшбэк"; ObjectID = "Wsn-3r-VHl"; */
+"Wsn-3r-VHl.text" = "Общий кэшбэк";
+
+/* Class = "UILabel"; text = "ID:"; ObjectID = "dQh-Nx-fNL"; */
+"dQh-Nx-fNL.text" = "ID:";
+
+/* Class = "UILabel"; text = "Ваши друзья"; ObjectID = "fCg-1g-T6f"; */
+"fCg-1g-T6f.text" = "Ваши друзья";
+
+/* Class = "UILabel"; text = " 100000"; ObjectID = "izo-AW-gW0"; */
+"izo-AW-gW0.text" = " 100000";
+
+/* Class = "UILabel"; text = "Приглашенные"; ObjectID = "npZ-bz-9Mv"; */
+"npZ-bz-9Mv.text" = "Приглашенные";
+
+/* Class = "UILabel"; text = "44,95 грн"; ObjectID = "rcg-pn-enD"; */
+"rcg-pn-enD.text" = "44,95 грн";
+
+/* Class = "UILabel"; text = "В ожидании"; ObjectID = "xZb-t0-QV6"; */
+"xZb-t0-QV6.text" = "В ожидании";
+
+/* Class = "UILabel"; text = "Ваш бонус"; ObjectID = "y1h-Fv-Mke"; */
+"y1h-Fv-Mke.text" = "Ваш бонус";
+
+/* Class = "UIButton"; normalTitle = "История операций"; ObjectID = "zzK-0C-VDt"; */
+"zzK-0C-VDt.normalTitle" = "История операций";

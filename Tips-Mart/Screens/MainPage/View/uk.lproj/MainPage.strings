@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "В очікуванні"; ObjectID = "7QT-QS-qyB"; */
+"7QT-QS-qyB.text" = "В очікуванні";
+
+/* Class = "UILabel"; text = "На балансі"; ObjectID = "9oX-Zg-FRO"; */
+"9oX-Zg-FRO.text" = "На балансі";
+
+/* Class = "UIButton"; normalTitle = "Моя карта  "; ObjectID = "GCq-X1-6GG"; */
+"GCq-X1-6GG.normalTitle" = "Моя карта  ";
+
+/* Class = "UILabel"; text = "ID:"; ObjectID = "Mez-a8-Mlm"; */
+"Mez-a8-Mlm.text" = "ID:";
+
+/* Class = "UIButton"; normalTitle = "Інші карти  "; ObjectID = "P5X-qt-EYf"; */
+"P5X-qt-EYf.normalTitle" = "Інші карти  ";
+
+/* Class = "UILabel"; text = "Им'я Фамілія"; ObjectID = "QSS-ga-6BB"; */
+"QSS-ga-6BB.text" = "Им'я Фамілія";
+
+/* Class = "UILabel"; text = "44,95 грн"; ObjectID = "TuR-Vu-WLc"; */
+"TuR-Vu-WLc.text" = "44,95 грн";
+
+/* Class = "UILabel"; text = "213,68 грн"; ObjectID = "YkD-To-Y5K"; */
+"YkD-To-Y5K.text" = "213,68 грн";
+
+/* Class = "UILabel"; text = " 100000"; ObjectID = "xgw-2m-Rsy"; */
+"xgw-2m-Rsy.text" = " 100000";

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shops Controller-->
+        <scene sceneID="hcW-LE-USL">
+            <objects>
+                <viewController id="gtX-xD-3Jf" customClass="ShopsController" customModule="Tips_Mart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EIV-w9-GD7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irE-uu-AUx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Shops" id="gH3-84-54R">
+                                        <barButtonItem key="leftBarButtonItem" image="shopsCollection" id="5RU-VT-SGj">
+                                            <color key="tintColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="Right" id="o8x-Yv-ote">
+                                            <color key="tintColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="sMj-lG-G7k">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vop-dH-0YP">
+                                <rect key="frame" x="10" y="144" width="394" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vRZ-iw-ybF"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All shops"/>
+                                    <segment title="Selected"/>
+                                </segments>
+                                <color key="tintColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="maK-1s-82f">
+                                <rect key="frame" x="0.0" y="184" width="414" height="678"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xat-LQ-umX">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BMm-zb-hfF">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bJr-Nb-yRG" firstAttribute="trailing" secondItem="Vop-dH-0YP" secondAttribute="trailing" constant="10" id="AC1-t1-9tr"/>
+                            <constraint firstItem="bJr-Nb-yRG" firstAttribute="trailing" secondItem="maK-1s-82f" secondAttribute="trailing" id="KGr-IH-1go"/>
+                            <constraint firstItem="irE-uu-AUx" firstAttribute="leading" secondItem="bJr-Nb-yRG" secondAttribute="leading" id="LXV-wZ-W7n"/>
+                            <constraint firstItem="bJr-Nb-yRG" firstAttribute="bottom" secondItem="maK-1s-82f" secondAttribute="bottom" id="Oba-6t-VzF"/>
+                            <constraint firstItem="maK-1s-82f" firstAttribute="top" secondItem="Vop-dH-0YP" secondAttribute="bottom" constant="10" id="P9B-4E-kGY"/>
+                            <constraint firstItem="Vop-dH-0YP" firstAttribute="leading" secondItem="bJr-Nb-yRG" secondAttribute="leading" constant="10" id="Sb7-Qb-0kp"/>
+                            <constraint firstAttribute="trailing" secondItem="irE-uu-AUx" secondAttribute="trailing" id="TJT-cv-IeV"/>
+                            <constraint firstItem="sMj-lG-G7k" firstAttribute="top" secondItem="irE-uu-AUx" secondAttribute="bottom" id="Tfm-MF-bxW"/>
+                            <constraint firstItem="Vop-dH-0YP" firstAttribute="top" secondItem="sMj-lG-G7k" secondAttribute="bottom" id="VeV-0d-aia"/>
+                            <constraint firstItem="maK-1s-82f" firstAttribute="leading" secondItem="bJr-Nb-yRG" secondAttribute="leading" id="bC4-Ab-Ptp"/>
+                            <constraint firstItem="sMj-lG-G7k" firstAttribute="leading" secondItem="bJr-Nb-yRG" secondAttribute="leading" id="ciq-cU-acf"/>
+                            <constraint firstItem="sMj-lG-G7k" firstAttribute="trailing" secondItem="bJr-Nb-yRG" secondAttribute="trailing" id="se2-vt-fJa"/>
+                            <constraint firstItem="irE-uu-AUx" firstAttribute="top" secondItem="bJr-Nb-yRG" secondAttribute="top" id="ve7-Vb-dK5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bJr-Nb-yRG"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="maK-1s-82f" id="sjs-Sd-RLX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWq-uM-Vt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="167"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Right" width="90" height="24"/>
+        <image name="shopsCollection" width="24" height="18"/>
+    </resources>
+</document>

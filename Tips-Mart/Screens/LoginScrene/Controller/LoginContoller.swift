@@ -61,8 +61,9 @@ class LoginController: UIViewController {
             self.loginModel.password = userInfo["pass"] as? String
             viewModel = LoginViewModel(loginModel: self.loginModel)
             viewModel.letsGo()
+             OperationQueue.main.addOperation {
             let tabBarController = UIStoryboard(name: "MainTabBar", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarController
-            OperationQueue.main.addOperation {
+           
                 self.present(tabBarController, animated: true) {
                     
                 }

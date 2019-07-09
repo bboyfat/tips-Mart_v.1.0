@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "On the balance"; ObjectID = "1b9-sH-LaK"; */
+"1b9-sH-LaK.text" = "On the balance";
+
+/* Class = "UILabel"; text = "213,68 uah"; ObjectID = "A5q-qe-Vyh"; */
+"A5q-qe-Vyh.text" = "213,68 uah";
+
+/* Class = "UILabel"; text = "All operations"; ObjectID = "HDK-hu-Sqn"; */
+"HDK-hu-Sqn.text" = "All operations";
+
+/* Class = "UILabel"; text = "92 days"; ObjectID = "I9z-Zp-eEh"; */
+"I9z-Zp-eEh.text" = "92 days";
+
+/* Class = "UILabel"; text = "You with Tips Mart"; ObjectID = "WZj-yF-zbb"; */
+"WZj-yF-zbb.text" = "You with Tips Mart";
+
+/* Class = "UILabel"; text = "General Cashback"; ObjectID = "Wsn-3r-VHl"; */
+"Wsn-3r-VHl.text" = "General Cashback";
+
+/* Class = "UILabel"; text = "ID:"; ObjectID = "dQh-Nx-fNL"; */
+"dQh-Nx-fNL.text" = "ID:";
+
+/* Class = "UILabel"; text = "Your friends"; ObjectID = "fCg-1g-T6f"; */
+"fCg-1g-T6f.text" = "Your friends";
+
+/* Class = "UILabel"; text = " 100000"; ObjectID = "izo-AW-gW0"; */
+"izo-AW-gW0.text" = " 100000";
+
+/* Class = "UILabel"; text = "Invited"; ObjectID = "npZ-bz-9Mv"; */
+"npZ-bz-9Mv.text" = "Invited";
+
+/* Class = "UILabel"; text = "44,95 uah"; ObjectID = "rcg-pn-enD"; */
+"rcg-pn-enD.text" = "44,95 uah";
+
+/* Class = "UILabel"; text = "Pending"; ObjectID = "xZb-t0-QV6"; */
+"xZb-t0-QV6.text" = "Pending";
+
+/* Class = "UILabel"; text = "Bonus"; ObjectID = "y1h-Fv-Mke"; */
+"y1h-Fv-Mke.text" = "Bonus";
+
+/* Class = "UIButton"; normalTitle = "Purchase history"; ObjectID = "zzK-0C-VDt"; */
+"zzK-0C-VDt.normalTitle" = "Purchase history";

@@ -10,6 +10,8 @@ import UIKit
 
 class MainPageView: UIView {
 
+    @IBOutlet weak var navigationView: UIView!
+    @IBOutlet weak var profileStackView: UIStackView!
     @IBOutlet weak var myCardBtn: UIButton!
     @IBOutlet weak var otherCardsBtn: UIButton!
     override func awakeFromNib() {

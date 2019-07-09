@@ -88,7 +88,7 @@ extension RegXib: UITextFieldDelegate{
         setMaskForPhone()
     }
     func setMaskForPhone(){
-        phoneNumber.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: " (###) ###-##-##")
+        phoneNumber.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: " ### ### ## ##")
         phoneNumber.prefix = "+38"
     }
 }

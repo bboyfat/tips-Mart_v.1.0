@@ -385,11 +385,14 @@
                         <viewLayoutGuide key="safeArea" id="Rv4-LC-cFO"/>
                         <connections>
                             <outlet property="myCardBtn" destination="GCq-X1-6GG" id="uou-vB-2a3"/>
+                            <outlet property="navigationView" destination="YC8-w4-lb0" id="DcP-hh-yr1"/>
                             <outlet property="otherCardsBtn" destination="P5X-qt-EYf" id="avO-Lw-NwY"/>
+                            <outlet property="profileStackView" destination="apJ-3M-aed" id="ARk-98-AhV"/>
                         </connections>
                     </view>
                     <connections>
                         <outlet property="collectionBanerView" destination="SLB-18-8rj" id="35W-7z-0En"/>
+                        <outlet property="mainView" destination="Z9y-fC-LZW" id="Go0-kK-3Kd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRM-M5-R1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
