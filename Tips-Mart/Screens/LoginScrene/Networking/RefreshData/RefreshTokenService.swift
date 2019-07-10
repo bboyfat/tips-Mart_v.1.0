@@ -21,6 +21,12 @@ class RefreshToken: NetworkServiceProtocol{
             if let data = dataResponse.data{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    // set values for tokens
+//                    self.userDefaults.set(data.accessToken.value, forKey: "accessToken")
+//                    self.userDefaults.set(data.refreshToken.value, forKey: "refreshToken")
+//                    //set expires for tokens
+//                    self.userDefaults.set(data.accessToken.expires, forKey: "accessExpires")
+//                    self.userDefaults.set(data.refreshToken.expires, forKey: "refreshExpires")
                 } catch {
                     handler(false)
                 }

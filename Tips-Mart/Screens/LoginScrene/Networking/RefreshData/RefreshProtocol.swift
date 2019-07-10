@@ -9,6 +9,6 @@
 import Foundation
 
 protocol RefreshServiceProtocol {
-    var accessToken: String {get set}
+   
     func sendRequest(handler: @escaping (Bool) -> ())
 }

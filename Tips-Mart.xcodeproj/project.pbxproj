@@ -19,6 +19,9 @@
 		C220EADA22CF9DC9002C6B90 /* LogXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C220EADC22CF9DC9002C6B90 /* LogXib.xib */; };
 		C220EAE322CF9F47002C6B90 /* RegXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C220EAE522CF9F47002C6B90 /* RegXib.xib */; };
 		C220EAF422CFA708002C6B90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C220EAF622CFA708002C6B90 /* Localizable.strings */; };
+		C289187422D5EBE800A4DFB9 /* ShopsDatRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289187322D5EBE800A4DFB9 /* ShopsDatRealm.swift */; };
+		C289187622D5EF8A00A4DFB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289187522D5EF8A00A4DFB9 /* Constants.swift */; };
+		C289187822D5F14000A4DFB9 /* ShopsDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289187722D5F14000A4DFB9 /* ShopsDataBaseService.swift */; };
 		C28CBEA722D340E700F53838 /* UITextField + RightPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28CBEA622D340E700F53838 /* UITextField + RightPasswordView.swift */; };
 		C28D33D522D37F780072A95C /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D33D422D37F780072A95C /* MainPageController.swift */; };
 		C28D33D722D387820072A95C /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D33D622D387820072A95C /* MainPageView.swift */; };
@@ -101,6 +104,9 @@
 		C256AB1C22CFFC5700970D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C256AB2122CFFC6E00970D7E /* uk */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = uk; path = uk.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C256AB2222CFFC7200970D7E /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C289187322D5EBE800A4DFB9 /* ShopsDatRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsDatRealm.swift; sourceTree = "<group>"; };
+		C289187522D5EF8A00A4DFB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C289187722D5F14000A4DFB9 /* ShopsDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsDataBaseService.swift; sourceTree = "<group>"; };
 		C28CBEA622D340E700F53838 /* UITextField + RightPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + RightPasswordView.swift"; sourceTree = "<group>"; };
 		C28D33D422D37F780072A95C /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		C28D33D622D387820072A95C /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
@@ -229,6 +235,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C289187222D5EBD100A4DFB9 /* DATABASE */ = {
+			isa = PBXGroup;
+			children = (
+				C289187322D5EBE800A4DFB9 /* ShopsDatRealm.swift */,
+			);
+			path = DATABASE;
+			sourceTree = "<group>";
+		};
+		C289187922D5F87900A4DFB9 /* ShopsDataService */ = {
+			isa = PBXGroup;
+			children = (
+				C289187722D5F14000A4DFB9 /* ShopsDataBaseService.swift */,
+			);
+			path = ShopsDataService;
+			sourceTree = "<group>";
+		};
 		C28D33D822D389F20072A95C /* ProfileScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +317,7 @@
 		C2929B9322D4E0970056E043 /* ShopsScene */ = {
 			isa = PBXGroup;
 			children = (
+				C289187922D5F87900A4DFB9 /* ShopsDataService */,
 				C2929BAA22D4EFDB0056E043 /* ShopsDSD */,
 				C2929BA922D4EFC50056E043 /* ViewModel */,
 				C2929BA822D4EFBF0056E043 /* Model */,
@@ -352,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				C2B4B80022CF4F570096CDC0 /* URLS.swift */,
+				C289187522D5EF8A00A4DFB9 /* Constants.swift */,
 			);
 			path = UTILITIES;
 			sourceTree = "<group>";
@@ -397,6 +421,7 @@
 		C2C583B022CCAFBC004CBCBF /* Tips-Mart */ = {
 			isa = PBXGroup;
 			children = (
+				C289187222D5EBD100A4DFB9 /* DATABASE */,
 				C2C583C922CCB2F6004CBCBF /* Networking */,
 				C2B4B80222CF5D500096CDC0 /* UserData */,
 				C2B4B7FF22CF4F450096CDC0 /* UTILITIES */,
@@ -689,11 +714,13 @@
 				C2C5840A22CE01E4004CBCBF /* AuthView.swift in Sources */,
 				C2C583E322CCCB51004CBCBF /* RegXib.swift in Sources */,
 				C2C583B422CCAFBC004CBCBF /* LoginContoller.swift in Sources */,
+				C289187422D5EBE800A4DFB9 /* ShopsDatRealm.swift in Sources */,
 				C2B4B7FE22CF4E470096CDC0 /* UserData.swift in Sources */,
 				C2175B6522D4A0DE0011839E /* ProfileController.swift in Sources */,
 				C2C583EC22CCD5A7004CBCBF /* UIColor +Color.swift in Sources */,
 				C2C5840422CDF987004CBCBF /* NavigationItem + Item.swift in Sources */,
 				C2929BA722D4EFB80056E043 /* ShopsModel.swift in Sources */,
+				C289187622D5EF8A00A4DFB9 /* Constants.swift in Sources */,
 				C2175B6C22D4C0E40011839E /* BalaceNetworkService.swift in Sources */,
 				C2B4B80622CF75D60096CDC0 /* RegistrationNetworkSerwice.swift in Sources */,
 				C2B4B80922CF760B0096CDC0 /* NetworkProtocol.swift in Sources */,
@@ -716,6 +743,7 @@
 				C2B4B80122CF4F570096CDC0 /* URLS.swift in Sources */,
 				C28D33D522D37F780072A95C /* MainPageController.swift in Sources */,
 				C2B4B82B22CF93180096CDC0 /* RegistrationViewModel.swift in Sources */,
+				C289187822D5F14000A4DFB9 /* ShopsDataBaseService.swift in Sources */,
 				C28D33D722D387820072A95C /* MainPageView.swift in Sources */,
 				C2B4B7FC22CF4B8A0096CDC0 /* LoginNetworkService.swift in Sources */,
 				C28CBEA722D340E700F53838 /* UITextField + RightPasswordView.swift in Sources */,

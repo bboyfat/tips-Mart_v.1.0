@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
+import RealmSwift
 //NETWORK SERVICE TO REFRESH BALANCE
 
 class BalanceNetworkService: NetworkServiceProtocol{
@@ -39,7 +41,7 @@ class BalanceNetworkService: NetworkServiceProtocol{
 
 //NETWORK SERVICE TO REFRESH Notifications
 class NotificationsNetworkService: RefreshServiceProtocol{
-    var accessToken: String = ""
+    
     
     func sendRequest(handler: @escaping (Bool) -> ()) {
         guard let url = URL(string: URLS.notifications.rawValue) else { handler(false); return}
@@ -66,7 +68,7 @@ class NotificationsNetworkService: RefreshServiceProtocol{
 
 
 class SelectedShopsNetworkService: RefreshServiceProtocol{
-    var accessToken: String = ""
+    
     func sendRequest(handler: @escaping (Bool) -> ()) {
         guard let url = URL(string: URLS.selectedShops.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
@@ -92,8 +94,9 @@ class SelectedShopsNetworkService: RefreshServiceProtocol{
 
 class ShopNetworkService: RefreshServiceProtocol{
     
-    var accessToken: String = ""
+    
     var pathToShop: String!
+    
     func sendRequest(handler: @escaping (Bool) -> ()) {
         guard let url = URL(string: URLS.shopInfo.rawValue + pathToShop) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
@@ -122,9 +125,7 @@ class ShopNetworkService: RefreshServiceProtocol{
 //MARK: MAINSHOPS Request
 
 class MainShopsNetworkService: RefreshServiceProtocol{
-    
-    var accessToken: String = ""
-    
+    var shopsDataService: ShopsDataBaseProtocol!
     func sendRequest(handler: @escaping (Bool) -> ()) {
         guard let url = URL(string: URLS.shopsInfo.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
@@ -136,11 +137,57 @@ class MainShopsNetworkService: RefreshServiceProtocol{
             if let response = response.data{
                 do{
                     let answer  = try JSONDecoder().decode([ShopsModel].self, from: response)
-                    print(answer)
-                } catch{
-                    print(Error.self)
+                    //Saving data to realm
+                    if self.checkDataRealm(answer: answer){
+                        self.shopsDataService = ShopsDataBaseService(model: answer)
+                        self.shopsDataService.saveShopsToData()
+                    }
+                    handler(true)
+                } catch let shopErr{
+                    print("MainShopRequestError", shopErr)
+                    handler(false)
                 }
             }
         }
     }
+    
+    // private func to check if there something new with shops
+    private func checkDataRealm(answer: [ShopsModel]) -> Bool{
+        var shopsModelArray: [ShopDataRealm] = []
+        do{
+            let realm = try Realm()
+            shopsModelArray = Array(realm.objects(ShopDataRealm.self))
+        } catch {
+            print("Can't FETCH!!")
+        }
+        if shopsModelArray.count != answer.count || shopsModelArray.count == 0{
+            return true
+        } else {
+            return false
+        }
+    }
+}
+//Object to get Logo
+class LogoNetworkService{
+    
+    func getImages(with path: String, handler: @escaping (UIImage?) -> Void){
+        
+        guard let url = URL(string: "https://tips-mart.com/images/shops/\(path)/logotype.png") else { return }
+        var request = URLRequest(url: url)
+        request.cachePolicy = .useProtocolCachePolicy
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error{
+                print("cant get an image", error)
+            }
+            if let data = data{
+                guard let image = UIImage(data: data) else {return}
+                handler(image)
+            } else {
+                handler(nil)
+            }
+            
+            }.resume()
+    
+    }
+    
 }

@@ -110,23 +110,18 @@ struct ListCashBack: Codable {
 //MARK: SHOPS REQUEST MODEL
 
 struct ShopsModel: Decodable {
-    
-    var pathToShop: String
-    var name: String
-    var type: String
     var shopID: Int
+    var type: String
+    var name: String
+    var pathToShop: String
     var pathToImage: String
-    var countReviews: Int
-    var isInExtension: Bool
-    var categories: [Int]
     var maxCashback: Cashback
-    
-    var status: Int
+    var categories: [Int]
 }
 
 
 struct Cashback: Decodable {
-    var currency: String
+    var typeCurrency: String
     var value: Double
 }
 

@@ -14,7 +14,8 @@ class LoginNetworkService: NetworkServiceProtocol{
     
     typealias loginModel = LoginModel
     private var dataBaseService: RealmServiceProtocol?
-    private var userOutput: UsersData?
+    private let userDefaults = UserDefaults.standard
+    
     // with first request i will get a tokens
     func sendRequest(with params: LoginModel, handler: @escaping(_ status: Bool) ->()) {
         let data = try! JSONEncoder().encode(params)
@@ -26,13 +27,16 @@ class LoginNetworkService: NetworkServiceProtocol{
             do{
                 let json = try JSONDecoder().decode(LoginToken.self, from: data)
                 if let data = json.data{
+                    // set values for tokens
+                    self.userDefaults.set(data.accessToken.value, forKey: "accessToken")
+                    self.userDefaults.set(data.refreshToken.value, forKey: "refreshToken")
+                    //set expires for tokens
+                    self.userDefaults.set(data.accessToken.expires, forKey: "accessExpires")
+                    self.userDefaults.set(data.refreshToken.expires, forKey: "refreshExpires")
                     print(data)
                     InitUserService().sendRequest(with: data, handler: { (_) in
-                      
                     })
-                    BalanceNetworkService().sendRequest(with: data, handler: { (_) in
-                        
-                    })
+        
                 } else {
                     handler(false)
                 }
@@ -44,12 +48,6 @@ class LoginNetworkService: NetworkServiceProtocol{
         }
         }
     }
-    
-    private func saveSession(userData: UsersData){
-//        userOutput = UsersData(userid: userData.userid, phoneNumber: userData.phoneNumber, name: userData.name, surname: userData.surname, createdTime: userData.createdTime, refreshToken: userData.refreshToken, accessToken: userData.accessToken, balance: userData.balance)
-        
-    }
-    
     
     
 }

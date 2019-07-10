@@ -8,8 +8,18 @@
 
 import UIKit
 
-class ShopCollectionCell: UICollectionViewCell {
+class ShopCollectionCell: UICollectionViewCell, ShopsCellProtocol {
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var flameIcon: UIImageView!
+    @IBOutlet weak var selectBtn: UIImageView!
+    @IBOutlet weak var shopName: UILabel!
+    @IBOutlet weak var cashBackUpTobl: UILabel!
+    @IBOutlet weak var cashbackValue: UILabel!
+    @IBOutlet weak var cashbackCurrency: UILabel!
+    
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
