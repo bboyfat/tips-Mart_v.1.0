@@ -15,6 +15,7 @@ target 'Tips-Mart' do
    pod 'Alamofire'
    pod 'AlamofireImage'
    
+   
 
 
 end

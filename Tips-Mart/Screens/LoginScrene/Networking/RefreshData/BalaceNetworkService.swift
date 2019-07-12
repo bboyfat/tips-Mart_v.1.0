@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 import RealmSwift
+
 //NETWORK SERVICE TO REFRESH BALANCE
 
 class BalanceNetworkService: NetworkServiceProtocol{
@@ -125,6 +126,7 @@ class ShopNetworkService: RefreshServiceProtocol{
 //MARK: MAINSHOPS Request
 
 class MainShopsNetworkService: RefreshServiceProtocol{
+    let notificationCenter = NotificationCenter.default
     var shopsDataService: ShopsDataBaseProtocol!
     func sendRequest(handler: @escaping (Bool) -> ()) {
         guard let url = URL(string: URLS.shopsInfo.rawValue) else { handler(false); return}
@@ -142,7 +144,9 @@ class MainShopsNetworkService: RefreshServiceProtocol{
                         self.shopsDataService = ShopsDataBaseService(model: answer)
                         self.shopsDataService.saveShopsToData()
                     }
+                    
                     handler(true)
+                    self.notificationCenter.post(name: NSNotification.Name.savingIsFinished, object: self)
                 } catch let shopErr{
                     print("MainShopRequestError", shopErr)
                     handler(false)
@@ -173,8 +177,8 @@ class LogoNetworkService{
     
     func getImages(with path: String, handler: @escaping (UIImage?) -> Void){
         
-        guard let url = URL(string: "https://tips-mart.com/images/shops/\(path)/logotype.png") else { return }
-       
+        guard let url = URL(string: "https://tips-mart.com/images/shops/\(path)/logotype.svg") else { return }
+        
         var request = URLRequest(url: url)
         request.cachePolicy = .useProtocolCachePolicy
         

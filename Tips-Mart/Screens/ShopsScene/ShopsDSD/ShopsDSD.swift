@@ -61,13 +61,14 @@ class ShopsDataSource: NSObject, UICollectionViewDataSource{
         }
     }
     init(collectionView: UICollectionView, collectionType: CollectionType, shopType: ShopType) {
+        viewModel = ShopViewModel(shopType: shopType)
         self.collectionView = collectionView
         self.collectionType = collectionType
         let nibTable = UINib(nibName: "TableShopCell", bundle: nil)
         collectionView.register(nibTable, forCellWithReuseIdentifier: "tableShopCell")
         let nibCollect = UINib(nibName: "ShopCollectionCell", bundle: nil)
         collectionView.register(nibCollect, forCellWithReuseIdentifier: "collectShopcCell")
-        viewModel = ShopViewModel(shopType: shopType)
+        
         
     }
     deinit {

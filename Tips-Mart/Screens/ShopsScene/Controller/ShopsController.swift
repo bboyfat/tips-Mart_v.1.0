@@ -12,6 +12,8 @@ import UIKit
 
 class ShopsController: UIViewController {
     
+    let notificationCenter = NotificationCenter.default
+    
     var isTable = true{
         didSet{
             if self.isTable{
@@ -31,20 +33,33 @@ class ShopsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         checkData()
+        self.ccollectionViewDSDS = ShopsDataSource(collectionView: self.collectionView, collectionType: self.collectionType, shopType: .allShops)
+        self.collectionView.delegate = self.ccollectionViewDSDS
+        self.collectionView.dataSource = self.ccollectionViewDSDS
+        
         networkRefreshProtocol = MainShopsNetworkService()
         networkRefreshProtocol.sendRequest { (finished) in
             if finished{
-                self.ccollectionViewDSDS = ShopsDataSource(collectionView: self.collectionView, collectionType: self.collectionType, shopType: .allShops)
-                self.collectionView.delegate = self.ccollectionViewDSDS
-                self.collectionView.dataSource = self.ccollectionViewDSDS
-                self.collectionView.reloadData()
+                
             }
         }
+        
+       
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView.reloadData()
+        
+    }
+    
+    //Notification to get the information about saving of data with shops
+    func checkData(){
+        notificationCenter.addObserver(self, selector: #selector(handleReload), name: NSNotification.Name.savingIsFinished, object: nil)
+    }
+    
+    @objc func handleReload(){
+        self.collectionView.reloadData()
     }
     
     
@@ -58,7 +73,9 @@ class ShopsController: UIViewController {
         
     }
     
-    
+    deinit {
+        notificationCenter.removeObserver(self)
+    }
     
     
 }

@@ -18,7 +18,6 @@ class ShopViewModel: ShopViewModelProtocol{
     
     var configeredShops: ConfiguredShopsProtocol!
     var shops: [ShopDataRealm]
-    var networking: RefreshServiceProtocol!
     func itemsCount() -> Int{
         return shops.count
     }

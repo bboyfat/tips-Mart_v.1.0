@@ -6,14 +6,14 @@
 //  Copyright © 2019 Andrey Petrovskiy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RealmSwift
 protocol ShopsDataBaseProtocol {
     func saveShopsToData()
 }
 
 class ShopsDataBaseService: ShopsDataBaseProtocol{
-    
+    let notificationCenter = NotificationCenter.default
     var model: [ShopsModel]!
     //Saving shops to realm
     func saveShopsToData(){
@@ -33,12 +33,15 @@ class ShopsDataBaseService: ShopsDataBaseProtocol{
                 do{
                     try realm.write {
                         realm.add(shopsRealmData)
+                       
                     }
+                    
                 } catch {
                     print("realm.write is not working")
                 }
             }
         })
+        
         
     }
     
@@ -71,8 +74,6 @@ class ConfiguredShops: NSObject, ConfiguredShopsProtocol{
     //fetching shops FromData
     private func configArray(shopType: ShopType) -> [ShopDataRealm]{
         
-        
-        
         switch shopType {
         case .selected:
             return selectedShops
@@ -92,6 +93,7 @@ class ConfiguredShops: NSObject, ConfiguredShopsProtocol{
                         self.selectedShops.append(shop)
                     }
                 }
+              
             } catch {
                 print("Can't FETCH!!")
             }

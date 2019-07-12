@@ -15,6 +15,8 @@ extension NSNotification.Name {
     public static let loginPressed = NSNotification.Name("loginPressed")
     
     public static let authCodeBtnPressed = NSNotification.Name("authCodeBtnPressed")
+    
+    public static let savingIsFinished = NSNotification.Name("savingIsFinished")
    
     
 }

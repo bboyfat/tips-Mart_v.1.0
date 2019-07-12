@@ -47,6 +47,7 @@ class MainCategoriesController: UIViewController {
         getOvserver()
         
         
+        
     }
     
     func switchCategoriesFor(){
