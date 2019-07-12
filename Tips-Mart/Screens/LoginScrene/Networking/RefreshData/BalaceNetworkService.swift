@@ -168,13 +168,16 @@ class MainShopsNetworkService: RefreshServiceProtocol{
     }
 }
 //Object to get Logo
+
 class LogoNetworkService{
     
     func getImages(with path: String, handler: @escaping (UIImage?) -> Void){
         
         guard let url = URL(string: "https://tips-mart.com/images/shops/\(path)/logotype.png") else { return }
+       
         var request = URLRequest(url: url)
         request.cachePolicy = .useProtocolCachePolicy
+        
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error{
                 print("cant get an image", error)
@@ -185,9 +188,9 @@ class LogoNetworkService{
             } else {
                 handler(nil)
             }
-            
+
             }.resume()
-    
+
     }
     
 }

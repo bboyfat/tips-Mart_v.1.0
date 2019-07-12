@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 protocol ShopsDataBaseProtocol {
-   func saveShopsToData()
+    func saveShopsToData()
 }
 
 class ShopsDataBaseService: ShopsDataBaseProtocol{
@@ -62,27 +62,17 @@ protocol ConfiguredShopsProtocol{
 
 class ConfiguredShops: NSObject, ConfiguredShopsProtocol{
     
-    
+    var selectedShops: [ShopDataRealm]!
+    var allShops: [ShopDataRealm]!
     func getShops(shopType: ShopType) ->[ShopDataRealm]{
         return configArray(shopType: shopType)
     }
     
     //fetching shops FromData
     private func configArray(shopType: ShopType) -> [ShopDataRealm]{
-        var selectedShops: [ShopDataRealm] = []
-        var allShops: [ShopDataRealm] = []
-        do{
-            let realm = try Realm()
-            let array = Array(realm.objects(ShopDataRealm.self))
-            allShops = array
-            array.forEach { (shop) in
-                if shop.isSelected{
-                    selectedShops.append(shop)
-                }
-            }
-        } catch {
-            print("Can't FETCH!!")
-        }
+        
+        
+        
         switch shopType {
         case .selected:
             return selectedShops
@@ -90,5 +80,42 @@ class ConfiguredShops: NSObject, ConfiguredShopsProtocol{
             return allShops
         }
         
+    }
+    private func fetchData(){
+        
+            do{
+                let realm = try Realm()
+                let array = Array(realm.objects(ShopDataRealm.self))
+                self.allShops = array
+                array.forEach { (shop) in
+                    if shop.isSelected{
+                        self.selectedShops.append(shop)
+                    }
+                }
+            } catch {
+                print("Can't FETCH!!")
+            }
+        
+    }
+    override init() {
+        super.init()
+        fetchData()
+    }
 }
+
+//Want to create a comlited array of shops
+class ShopsDecorator{
+    
+    
+}
+struct DecoratedShops{
+    var url: String
+    var name: String
+    var type: String
+    var shopID: Int
+    var pathImage: UIImage
+    var categories:[Int]
+    var currency: String
+    var value: Double
+    var isSelected: Bool
 }

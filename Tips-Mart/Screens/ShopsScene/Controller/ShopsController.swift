@@ -11,7 +11,7 @@ import UIKit
 
 
 class ShopsController: UIViewController {
-
+    
     var isTable = true{
         didSet{
             if self.isTable{
@@ -25,6 +25,7 @@ class ShopsController: UIViewController {
     var collectionType: CollectionType = .table
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var ccollectionViewDSDS: ShopsDataSource!
     
     
@@ -32,11 +33,18 @@ class ShopsController: UIViewController {
         super.viewDidLoad()
         networkRefreshProtocol = MainShopsNetworkService()
         networkRefreshProtocol.sendRequest { (finished) in
-            print("Yeah")
+            if finished{
+                self.ccollectionViewDSDS = ShopsDataSource(collectionView: self.collectionView, collectionType: self.collectionType, shopType: .allShops)
+                self.collectionView.delegate = self.ccollectionViewDSDS
+                self.collectionView.dataSource = self.ccollectionViewDSDS
+                self.collectionView.reloadData()
+            }
         }
-        ccollectionViewDSDS = ShopsDataSource(collectionView: collectionView, collectionType: collectionType, shopType: .allShops)
-        collectionView.delegate = ccollectionViewDSDS
-        collectionView.dataSource = ccollectionViewDSDS
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
     }
     
     
@@ -45,12 +53,12 @@ class ShopsController: UIViewController {
         if isTable{
             sender.image = #imageLiteral(resourceName: "shopsCollection")
         } else {
-             sender.image = #imageLiteral(resourceName: "tableCollect")
+            sender.image = #imageLiteral(resourceName: "tableCollect")
         }
-       
+        
     }
     
-
-   
-
+    
+    
+    
 }

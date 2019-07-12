@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro.ttf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="Tips_Mart" customModuleProvider="target">
+            <connections>
+                <outlet property="btnForView" destination="cWh-EH-CI2" id="njI-aU-pNv"/>
+                <outlet property="categoriLabel" destination="Wjh-5s-Jgu" id="ZFp-kG-jaf"/>
+                <outlet property="shopsCount" destination="g79-Qs-Eox" id="9wd-EM-rIg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="602" height="135"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6M-7e-cPi">
+                    <rect key="frame" x="0.0" y="0.0" width="602" height="101"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWh-EH-CI2" customClass="CategoryButton" customModule="Tips_Mart" customModuleProvider="target">
+                            <rect key="frame" x="10" y="35.5" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="cWh-EH-CI2" secondAttribute="height" multiplier="1:1" id="P2H-z6-8q8"/>
+                                <constraint firstAttribute="width" constant="30" id="hbZ-fO-gMh"/>
+                            </constraints>
+                            <color key="tintColor" red="0.35686274509999999" green="0.58823529409999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" image="notSelected">
+                                <color key="titleColor" red="0.27058823529999998" green="0.78823529410000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wjh-5s-Jgu">
+                            <rect key="frame" x="55" y="43" width="46.5" height="15.5"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g79-Qs-Eox">
+                            <rect key="frame" x="121.5" y="50.5" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
+                            <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="cWh-EH-CI2" firstAttribute="centerY" secondItem="d6M-7e-cPi" secondAttribute="centerY" id="4pU-W2-rBG"/>
+                        <constraint firstItem="cWh-EH-CI2" firstAttribute="leading" secondItem="d6M-7e-cPi" secondAttribute="leading" constant="10" id="FhW-rI-fU2"/>
+                        <constraint firstItem="g79-Qs-Eox" firstAttribute="centerY" secondItem="Wjh-5s-Jgu" secondAttribute="centerY" id="eqr-aN-xSJ"/>
+                        <constraint firstItem="g79-Qs-Eox" firstAttribute="leading" secondItem="Wjh-5s-Jgu" secondAttribute="trailing" constant="20" id="l13-RC-bbb"/>
+                        <constraint firstItem="Wjh-5s-Jgu" firstAttribute="leading" secondItem="cWh-EH-CI2" secondAttribute="trailing" constant="15" id="lcG-dI-3QF"/>
+                        <constraint firstItem="Wjh-5s-Jgu" firstAttribute="centerY" secondItem="d6M-7e-cPi" secondAttribute="centerY" id="nhI-06-d7O"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="d6M-7e-cPi" secondAttribute="bottom" id="KnU-5b-xHB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="d6M-7e-cPi" secondAttribute="trailing" id="OYh-HX-jPM"/>
+                <constraint firstItem="d6M-7e-cPi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RCX-Va-bp3"/>
+                <constraint firstItem="d6M-7e-cPi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wfq-P7-koy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="242.0289855072464" y="173.77232142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="notSelected" width="16" height="16"/>
+    </resources>
+</document>

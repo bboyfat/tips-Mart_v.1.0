@@ -15,6 +15,7 @@ class MainTabBarController: UITabBarController {
       let shopsVc = UIStoryboard(name: "ShopsScene", bundle: nil).instantiateViewController(withIdentifier: "ShopsVC") as! ShopsController
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mainVc.tabBarItem = UITabBarItem(title: NSLocalizedString("Main", comment: ""), image: #imageLiteral(resourceName: "main"), tag: 0)
         shopsVc.tabBarItem = UITabBarItem(title: NSLocalizedString("Shops", comment: ""), image: #imageLiteral(resourceName: "Shops"), tag: 1)
         viewControllers = [mainVc, shopsVc]

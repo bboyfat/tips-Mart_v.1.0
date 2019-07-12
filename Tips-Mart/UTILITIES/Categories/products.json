@@ -1,0 +1,330 @@
+
+[
+    {
+        "categoryID":100,
+        "name":"Обувь и аксессуары",
+        "subCategories":[
+            {
+                "categoryID":101,
+                "name":"Аксессуары"
+            },
+            {
+                "categoryID":102,
+                "name":"Женская обувь"
+            },
+            {
+                "categoryID":103,
+                "name":"Мужская обувь"
+            },
+            {
+                "categoryID":104,
+                "name":"Украшения"
+            }
+        ]
+    },
+    {
+        "categoryID":200,
+        "name":"Одежда",
+        "subCategories":[
+            {
+                "categoryID":201,
+                "name":"Женская одежда"
+            },
+            {
+                "categoryID":202,
+                "name":"Мужская одежда"
+            },
+            {
+                "categoryID":203,
+                "name":"Нижнее белье"
+            },
+            {
+                "categoryID":204,
+                "name":"Спортивная одежда"
+            }
+        ]
+    },
+    {
+        "categoryID":300,
+        "name":"Товары для детей",
+        "subCategories":[
+            {
+                "categoryID":301,
+                "name":"Детская мебель и текстиль"
+            },
+            {
+                "categoryID":302,
+                "name":"Детская одежда и обувь"
+            },
+            {
+                "categoryID":303,
+                "name":"Детские питание"
+            },
+            {
+                "categoryID":304,
+                "name":"Игрушки"
+            },
+            {
+                "categoryID":305,
+                "name":"Коляски и автокресла"
+            },
+            {
+                "categoryID":306,
+                "name":"Уход и гигиена"
+            },
+            {
+                "categoryID":307,
+                "name":"Школьные товары"
+            }
+        ]
+    },
+    {
+        "categoryID":400,
+        "name":"Электроника и техника",
+        "subCategories":[
+            {
+                "categoryID":401,
+                "name":"Бытовая техника"
+            },
+            {
+                "categoryID":402,
+                "name":"Дроны и прочие гаджеты"
+            },
+            {
+                "categoryID":403,
+                "name":"Компьютеры и периферия"
+            },
+            {
+                "categoryID":404,
+                "name":"Мобильные телефоны и аксессуары"
+            }
+        ]
+    },
+    {
+        "categoryID":500,
+        "name":"Досуг и развлечения",
+        "subCategories":[
+            {
+                "categoryID":501,
+                "name":"Дискотеки и ночные клубы"
+            },
+            {
+                "categoryID":502,
+                "name":"Зоопарки"
+            },
+            {
+                "categoryID":503,
+                "name":"Кинотеатры"
+            },
+            {
+                "categoryID":504,
+                "name":"Концерты и спектакли"
+            },
+            {
+                "categoryID":505,
+                "name":"Экскурсии"
+            }
+        ]
+    },
+    {
+        "categoryID":600,
+        "name":"Красота и здоровье",
+        "subCategories":[
+            {
+                "categoryID":601,
+                "name":"СПА"
+            },
+            {
+                "categoryID":602,
+                "name":"Больницы и клиники"
+            },
+            {
+                "categoryID":603,
+                "name":"Салоны красоты"
+            },
+            {
+                "categoryID":604,
+                "name":"Спортивные клубы"
+            },
+            {
+                "categoryID":605,
+                "name":"Стоматология"
+            }
+        ]
+    },
+    {
+        "categoryID":700,
+        "name":"Питание",
+        "subCategories":[
+            {
+                "categoryID":701,
+                "name":"Доставка еды"
+            },
+            {
+                "categoryID":702,
+                "name":"Кофейни"
+            },
+            {
+                "categoryID":703,
+                "name":"Рестораны, бары и кафе"
+            }
+        ]
+    },
+    {
+        "categoryID":800,
+        "name":"Аптеки и медицина",
+        "subCategories":[
+            {
+                "categoryID":801,
+                "name":"Аптеки"
+            },
+            {
+                "categoryID":802,
+                "name":"Медтехника"
+            },
+            {
+                "categoryID":803,
+                "name":"Оптика"
+            }
+        ]
+    },
+    {
+        "categoryID":900,
+        "name":"Все для дома",
+        "subCategories":[
+            {
+                "categoryID":901,
+                "name":"Домашний текстиль"
+            },
+            {
+                "categoryID":902,
+                "name":"Мебель"
+            },
+            {
+                "categoryID":903,
+                "name":"Освещение"
+            },
+            {
+                "categoryID":904,
+                "name":"Посуда"
+            },
+            {
+                "categoryID":905,
+                "name":"Сад и огород"
+            }
+        ]
+    },
+    {
+        "categoryID":1000,
+        "name":"Зоотовары",
+        "subCategories":[
+            {
+                "categoryID":1001,
+                "name":"Аквариумистика"
+            },
+            {
+                "categoryID":1002,
+                "name":"Корм и уход"
+            },
+            {
+                "categoryID":1003,
+                "name":"Другие зоотовары"
+            }
+        ]
+    },
+    {
+        "categoryID":1100,
+        "name":"Продукты и быт.химия",
+        "subCategories":[
+            {
+                "categoryID":1101,
+                "name":"Алкоголь"
+            },
+            {
+                "categoryID":1102,
+                "name":"Бытовая химия"
+            },
+            {
+                "categoryID":1103,
+                "name":"Продукты"
+            },
+            {
+                "categoryID":1104,
+                "name":"Хозяйственные товары"
+            }
+        ]
+    },
+    {
+        "categoryID":1200,
+        "name":"Спорт и хобби",
+        "subCategories":[
+            {
+                "categoryID":1201,
+                "name":"Рыбалка и охота"
+            },
+            {
+                "categoryID":1202,
+                "name":"Спортивный инвентарь"
+            }
+        ]
+    },
+    {
+        "categoryID":1300,
+        "name":"Товары для красоты",
+        "subCategories":[
+            {
+                "categoryID":1301,
+                "name":"Косметика"
+            },
+            {
+                "categoryID":1302,
+                "name":"Парфюмерия"
+            }
+        ]
+    },
+    {
+        "categoryID":1400,
+        "name":"Товары для ремонта",
+        "subCategories":[
+            {
+                "categoryID":1401,
+                "name":"Инструменты"
+            },
+            {
+                "categoryID":1402,
+                "name":"Плитка и ламинат"
+            },
+            {
+                "categoryID":1403,
+                "name":"Сантехника"
+            },
+            {
+                "categoryID":1404,
+                "name":"Стройматериалы"
+            }
+        ]
+    },
+    {
+        "categoryID":1500,
+        "name":"Транспорт",
+        "subCategories":[
+            {
+                "categoryID":1501,
+                "name":"Автомобили и комплектующие"
+            },
+            {
+                "categoryID":1502,
+                "name":"Велосипеды и велотовары"
+            },
+            {
+                "categoryID":1503,
+                "name":"Мотоциклы и мототовары"
+            },
+            {
+                "categoryID":1504,
+                "name":"Электротранспорт и комплектующие"
+            }
+        ]
+        
+    }
+]

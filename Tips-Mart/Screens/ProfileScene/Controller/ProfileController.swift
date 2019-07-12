@@ -10,15 +10,58 @@ import UIKit
 
 class ProfileController: UIViewController {
 
+    //MARK: Properties
+    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .forceLeftToRight)
+    let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Icon"), with: "", with: .forceRightToLeft)
+    //StatusBar style
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .default
+    }
+    //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        addTargets() // add targets fot items
+        setNavigation() // setup navigation bar
     }
     
-    @IBAction func dismissBtn(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    
+    //MARK: Methods
+    private func setNavigation(){
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+       
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: setItems(button: rightBarButton))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
+        navigationController?.navigationBar.isTranslucent = true
+        
     }
+    private func setItems(button: UIButton) -> UIView{
+        let view = UIView()
+        view.addSubview(button)
+        view.frame = button.bounds
+        return view
+    }
+    
+    //add targets to items
+    private func addTargets(){
+        leftBarButton.addTarget(self, action: #selector(handlePop), for: .touchUpInside)
+        rightBarButton.addTarget(self, action: #selector(handlePush), for: .touchUpInside)
+    }
+    @objc func handlePop(){
+         self.dismiss(animated: true, completion: nil)
+      
+        
+    }
+    @objc func handlePush(){
+      
+    }
+    
+   
     
     /*
     // MARK: - Navigation

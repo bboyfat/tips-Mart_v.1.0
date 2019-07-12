@@ -1,0 +1,112 @@
+
+[   {
+    "categoryID":1600,
+    "name":"Бытовые услуги",
+    "subCategories":[
+        {
+            "categoryID":1601,
+            "name":"Прокат одежды"
+        },
+        {
+            "categoryID":1602,
+            "name":"Ремонт и пошив одежды и обуви"
+        },
+        {
+            "categoryID":1603,
+            "name":"Химчистки"
+        }
+    ]
+},
+{
+    "categoryID":1700,
+    "name":"Образование",
+    "subCategories":[
+        {
+            "categoryID":1701,
+            "name":"Автошколы"
+        },
+        {
+            "categoryID":1702,
+            "name":"Курсы"
+        },
+        {
+            "categoryID":1703,
+            "name":"Мастер-классы"
+        },
+        {
+            "categoryID":1704,
+            "name":"Спортивные школы"
+        },
+        {
+            "categoryID":1705,
+            "name":"Тренинги"
+        }
+    ]
+},
+{
+    "categoryID":1800,
+    "name":"Ремонт",
+    "subCategories":[
+        {
+            "categoryID":1801,
+            "name":"Клининговые услуги"
+        },
+        {
+            "categoryID":1802,
+            "name":"Строительство и ремонт"
+        }
+    ]
+},
+{
+    "categoryID":1900,
+    "name":"Транспорт",
+    "subCategories":[
+        {
+            "categoryID":1901,
+            "name":"Автомойки"
+        },
+        {
+            "categoryID":1902,
+            "name":"Аренда авто и мототехники"
+        },
+        {
+            "categoryID":1903,
+            "name":"Аренда велосипедов и электротранспорта"
+        },
+        {
+            "categoryID":1904,
+            "name":"Ремонт вело-, мото- и электротранспорта"
+        },
+        {
+            "categoryID":1905,
+            "name":"СТО"
+        },
+        {
+            "categoryID":1906,
+            "name":"Такси"
+        }
+    ]
+},
+{
+    "categoryID":2000,
+    "name":"Финансы и страхование",
+    "subCategories":[
+        {
+            "categoryID":2001,
+            "name":"Банковские услуги"
+        },
+        {
+            "categoryID":2002,
+            "name":"Кредиты"
+        },
+        {
+            "categoryID":2003,
+            "name":"Платежы и переводы"
+        },
+        {
+            "categoryID":2004,
+            "name":"Страхование"
+        }
+    ]
+}
+]

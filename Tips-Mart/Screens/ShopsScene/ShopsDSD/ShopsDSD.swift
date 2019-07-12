@@ -27,6 +27,7 @@ class ShopsDataSource: NSObject, UICollectionViewDataSource{
         didSet{
             let indexPath = collectionView.indexPathsForVisibleItems
             collectionView.reloadItems(at: indexPath)
+           
         }
     }
     
@@ -52,23 +53,22 @@ class ShopsDataSource: NSObject, UICollectionViewDataSource{
         someCell.shopName.text = shop.name
         someCell.cashbackValue.text = String(shop.value)
         someCell.cashbackCurrency.text = shop.currency
+        
         LogoNetworkService().getImages(with: shop.pathImage) { (image) in
             OperationQueue.main.addOperation {
-                 someCell.logoImage.image = image
-                
+                someCell.logoImage.image = image
             }
-            
         }
-       
     }
     init(collectionView: UICollectionView, collectionType: CollectionType, shopType: ShopType) {
-        viewModel = ShopViewModel(shopType: shopType)
+        self.collectionView = collectionView
+        self.collectionType = collectionType
         let nibTable = UINib(nibName: "TableShopCell", bundle: nil)
         collectionView.register(nibTable, forCellWithReuseIdentifier: "tableShopCell")
         let nibCollect = UINib(nibName: "ShopCollectionCell", bundle: nil)
         collectionView.register(nibCollect, forCellWithReuseIdentifier: "collectShopcCell")
-        self.collectionView = collectionView
-        self.collectionType = collectionType
+        viewModel = ShopViewModel(shopType: shopType)
+        
     }
     deinit {
         self.collectionView.reloadData()
