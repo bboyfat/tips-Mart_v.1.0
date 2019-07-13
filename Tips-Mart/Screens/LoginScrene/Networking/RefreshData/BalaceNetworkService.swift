@@ -126,8 +126,9 @@ class ShopNetworkService: RefreshServiceProtocol{
 //MARK: MAINSHOPS Request
 
 class MainShopsNetworkService: RefreshServiceProtocol{
-    let notificationCenter = NotificationCenter.default
+   
     var shopsDataService: ShopsDataBaseProtocol!
+   
     func sendRequest(handler: @escaping (Bool) -> ()) {
         guard let url = URL(string: URLS.shopsInfo.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
@@ -144,9 +145,7 @@ class MainShopsNetworkService: RefreshServiceProtocol{
                         self.shopsDataService = ShopsDataBaseService(model: answer)
                         self.shopsDataService.saveShopsToData()
                     }
-                    
                     handler(true)
-                    self.notificationCenter.post(name: NSNotification.Name.savingIsFinished, object: self)
                 } catch let shopErr{
                     print("MainShopRequestError", shopErr)
                     handler(false)

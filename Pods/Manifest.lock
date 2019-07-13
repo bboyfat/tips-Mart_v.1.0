@@ -11,6 +11,10 @@ PODS:
   - Realm/Headers (3.17.0)
   - RealmSwift (3.17.0):
     - Realm (= 3.17.0)
+  - RxRealm (1.0.0):
+    - RealmSwift (~> 3.14)
+    - RxSwift (~> 5.0)
+  - RxSwift (5.0.0)
   - SwiftPhoneNumberFormatter (1.5)
   - SwiftSoup (2.2.0)
 
@@ -20,6 +24,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - ReachabilitySwift
   - RealmSwift
+  - RxRealm
   - SwiftPhoneNumberFormatter
   - SwiftSoup
 
@@ -31,6 +36,8 @@ SPEC REPOS:
     - ReachabilitySwift
     - Realm
     - RealmSwift
+    - RxRealm
+    - RxSwift
     - SwiftPhoneNumberFormatter
     - SwiftSoup
 
@@ -41,9 +48,11 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   Realm: b30db41ff34fc858ffc25ba8d44a82c164e7ccd0
   RealmSwift: fe733e459d60dc7b6971d4cbee2eb4854097d12c
+  RxRealm: 1e81dcfca1fb50c3e9b3e1f8102bc875c5156a2e
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftPhoneNumberFormatter: 0cc91f4daa06dd606a9defb21048a75c36a771a2
   SwiftSoup: 230991361c5ba249d140161860a3864a28b63860
 
-PODFILE CHECKSUM: f2a02a194a3b7c57b76bc45299313f19ebb1ac0c
+PODFILE CHECKSUM: 737bdc1b6ac5397d420bf00ec60db4100533a206
 
 COCOAPODS: 1.5.3

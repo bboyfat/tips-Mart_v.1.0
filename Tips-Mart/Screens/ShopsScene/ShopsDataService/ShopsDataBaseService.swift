@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import RxRealm
 protocol ShopsDataBaseProtocol {
     func saveShopsToData()
 }
@@ -60,6 +61,7 @@ enum ShopType{
 
 protocol ConfiguredShopsProtocol{
     func getShops(shopType: ShopType) ->[ShopDataRealm]
+    func getRealmModel(handler: (Results<ShopDataRealm>)->())
 }
 
 
@@ -73,17 +75,25 @@ class ConfiguredShops: NSObject, ConfiguredShopsProtocol{
     
     //fetching shops FromData
     private func configArray(shopType: ShopType) -> [ShopDataRealm]{
-        
         switch shopType {
         case .selected:
             return selectedShops
         case .allShops:
             return allShops
         }
+    }
+    
+    func getRealmModel(handler: (Results<ShopDataRealm>)->()){
+        
+        do{
+            let realm = try Realm()
+            handler(realm.objects(ShopDataRealm.self))
+        } catch{
+            print(getRealmModel)
+        }
         
     }
     private func fetchData(){
-        
             do{
                 let realm = try Realm()
                 let array = Array(realm.objects(ShopDataRealm.self))
@@ -101,23 +111,7 @@ class ConfiguredShops: NSObject, ConfiguredShopsProtocol{
     }
     override init() {
         super.init()
-        fetchData()
+//        fetchData()
     }
 }
 
-//Want to create a comlited array of shops
-class ShopsDecorator{
-    
-    
-}
-struct DecoratedShops{
-    var url: String
-    var name: String
-    var type: String
-    var shopID: Int
-    var pathImage: UIImage
-    var categories:[Int]
-    var currency: String
-    var value: Double
-    var isSelected: Bool
-}

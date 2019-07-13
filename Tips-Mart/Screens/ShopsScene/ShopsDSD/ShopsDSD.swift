@@ -15,18 +15,15 @@ enum CollectionType{
 
 class ShopsDataSource: NSObject, UICollectionViewDataSource{
     
-    var viewModel: ShopViewModelProtocol!{
-        didSet{
-            collectionView.reloadData()
-        }
-    }
+    var viewModel: ShopViewModelProtocol!
     
     var collectionView: UICollectionView!
     
     var collectionType: CollectionType = .table{
         didSet{
-            let indexPath = collectionView.indexPathsForVisibleItems
-            collectionView.reloadItems(at: indexPath)
+            collectionView.reloadData()
+//            let indexPath = collectionView.indexPathsForVisibleItems
+//            collectionView.reloadItems(at: indexPath)
            
         }
     }
@@ -60,16 +57,24 @@ class ShopsDataSource: NSObject, UICollectionViewDataSource{
             }
         }
     }
-    init(collectionView: UICollectionView, collectionType: CollectionType, shopType: ShopType) {
+    func setViewModel(){
+        viewModel.dataUpdated = {[weak self] in
+            self?.collectionView.reloadData()
+            
+        }
+    }
+    init(cv: UICollectionView, collectionType: CollectionType, shopType: ShopType) {
         viewModel = ShopViewModel(shopType: shopType)
-        self.collectionView = collectionView
+        viewModel.dataUpdated = {[weak cv] in
+            cv?.reloadData()
+            
+        }
+        self.collectionView = cv
         self.collectionType = collectionType
         let nibTable = UINib(nibName: "TableShopCell", bundle: nil)
-        collectionView.register(nibTable, forCellWithReuseIdentifier: "tableShopCell")
+        cv.register(nibTable, forCellWithReuseIdentifier: "tableShopCell")
         let nibCollect = UINib(nibName: "ShopCollectionCell", bundle: nil)
-        collectionView.register(nibCollect, forCellWithReuseIdentifier: "collectShopcCell")
-        
-        
+        cv.register(nibCollect, forCellWithReuseIdentifier: "collectShopcCell")
     }
     deinit {
         self.collectionView.reloadData()
