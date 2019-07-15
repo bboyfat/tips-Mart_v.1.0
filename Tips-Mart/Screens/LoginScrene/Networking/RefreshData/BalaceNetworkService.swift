@@ -65,41 +65,15 @@ class NotificationsNetworkService: RefreshServiceProtocol{
     }
 }
 
-//NETWORK SERVICE TO GET SELECTED SHOPS ARRAY
-
-
-class SelectedShopsNetworkService: RefreshServiceProtocol{
-    
-    func sendRequest(handler: @escaping (Bool) -> ()) {
-        guard let url = URL(string: URLS.selectedShops.rawValue) else { handler(false); return}
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
-        
-        Alamofire.request(urlRequest).responseJSON { response in
-            if let response = response.data{
-                do{
-                    let answer  = try JSONDecoder().decode(SelectedShops.self, from: response)
-                    print(answer)
-                    
-                } catch{
-                    print(Error.self)
-                }
-            }
-        }
-    }
-}
-
 //NETWORK SERVICE TO GET ONE SHOPS
 
-class ShopNetworkService: RefreshServiceProtocol{
+class ShopNetworkService{
     
     
     var pathToShop: String!
     
-    func sendRequest(handler: @escaping (Bool) -> ()) {
-        guard let url = URL(string: URLS.shopInfo.rawValue + pathToShop) else { handler(false); return}
+    func sendRequest(handler: @escaping (Shop) -> ()) {
+        guard let url = URL(string: URLS.shopInfo.rawValue + pathToShop) else { return }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
         
@@ -110,7 +84,7 @@ class ShopNetworkService: RefreshServiceProtocol{
                 do{
                     let answer  = try JSONDecoder().decode(Shop.self, from: response)
                     print(answer)
-                    
+                    handler(answer)
                 } catch{
                     print(Error.self)
                 }
@@ -126,9 +100,9 @@ class ShopNetworkService: RefreshServiceProtocol{
 //MARK: MAINSHOPS Request
 
 class MainShopsNetworkService: RefreshServiceProtocol{
-   
+    
     var shopsDataService: ShopsDataBaseProtocol!
-   
+    
     func sendRequest(handler: @escaping (Bool) -> ()) {
         guard let url = URL(string: URLS.shopsInfo.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
@@ -141,10 +115,8 @@ class MainShopsNetworkService: RefreshServiceProtocol{
                 do{
                     let answer  = try JSONDecoder().decode([ShopsModel].self, from: response)
                     //Saving data to realm
-                    if self.checkDataRealm(answer: answer){
-                        self.shopsDataService = ShopsDataBaseService(model: answer)
-                        self.shopsDataService.saveShopsToData()
-                    }
+                    self.shopsDataService = ShopsDataBaseService(model: answer)
+                    self.shopsDataService.ifHasChanges()
                     handler(true)
                 } catch let shopErr{
                     print("MainShopRequestError", shopErr)
@@ -154,21 +126,36 @@ class MainShopsNetworkService: RefreshServiceProtocol{
         }
     }
     
-    // private func to check if there something new with shops
-    private func checkDataRealm(answer: [ShopsModel]) -> Bool{
-        var shopsModelArray: [ShopDataRealm] = []
-        do{
-            let realm = try Realm()
-            shopsModelArray = Array(realm.objects(ShopDataRealm.self))
-        } catch {
-            print("Can't FETCH!!")
-        }
-        if shopsModelArray.count != answer.count || shopsModelArray.count == 0{
-            return true
-        } else {
-            return false
+    
+}
+//NETWORK SERVICE TO GET SELECTED SHOPS ARRAY
+class SelectedShopsService{
+   
+    
+    
+    func sendRequest(handler: @escaping ([String]) -> ()) {
+        guard let url = URL(string: URLS.selectedShopsUrl.rawValue) else { handler([]); return}
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = HTTPMethod.get.rawValue
+        
+        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        Alamofire.request(urlRequest).responseJSON { response in
+            if let response = response.data{
+                do{
+                    let answer  = try JSONDecoder().decode(SelectedShops.self, from: response)
+                    
+                  handler(answer.data)
+                   
+                } catch let shopErr{
+                    print("MainShopRequestError", shopErr)
+                    handler([])
+                }
+            }
         }
     }
+    
+   
 }
 //Object to get Logo
 
@@ -176,7 +163,7 @@ class LogoNetworkService{
     
     func getImages(with path: String, handler: @escaping (UIImage?) -> Void){
         
-        guard let url = URL(string: "https://tips-mart.com/images/shops/\(path)/logotype.svg") else { return }
+        guard let url = URL(string: "https://tips-mart.com/images/shops/\(path)/logotype.png") else { return }
         
         var request = URLRequest(url: url)
         request.cachePolicy = .useProtocolCachePolicy
@@ -191,9 +178,9 @@ class LogoNetworkService{
             } else {
                 handler(nil)
             }
-
+            
             }.resume()
-
+        
     }
     
 }

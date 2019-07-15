@@ -10,9 +10,19 @@ import UIKit
 
 class ReviewCell: UITableViewCell {
 
+    @IBOutlet weak var showMoreInfoBtn: UIButton!
+    
+    @IBOutlet weak var heightOfView: NSLayoutConstraint!
+    var showMoreDidClicked: () -> () = {}
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        showMoreInfoBtn.addTarget(self, action: #selector(handleShowMore), for: .touchUpInside)
+    }
+    @objc func handleShowMore(){
+        showMoreInfoBtn.isHidden = true
+       
+        showMoreDidClicked()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

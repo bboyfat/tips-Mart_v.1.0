@@ -16,6 +16,7 @@ class ShopDataRealm: Object{
     @objc dynamic var type: String = ""
     @objc dynamic var shopID: Int = 0
     @objc dynamic var pathImage: String = ""
+    @objc dynamic var pathToShop: String = ""
     var categories = List<Int>()
     @objc dynamic var currency = ""
     @objc dynamic var value = 0.0

@@ -33,7 +33,6 @@ class LoginNetworkService: NetworkServiceProtocol{
                     //set expires for tokens
                     self.userDefaults.set(data.accessToken.expires, forKey: "accessExpires")
                     self.userDefaults.set(data.refreshToken.expires, forKey: "refreshExpires")
-                    print(data)
                     InitUserService().sendRequest(with: data, handler: { (_) in
                     })
         

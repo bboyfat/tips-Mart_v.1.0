@@ -19,9 +19,11 @@ protocol ShopViewModelProtocol {
 
 class ShopViewModel: ShopViewModelProtocol{
     
-    var configeredShops: ConfiguredShopsProtocol!
+    var configeredShops: ObservableShopsProtocol!
     
     var shops: [ShopDataRealm] = []
+    var selectedShopsList: [String] = []
+    var selectedShops: [ShopDataRealm] = []
     var dataUpdated: () -> () = {}
     var bag = DisposeBag()
     func itemsCount() -> Int{
@@ -30,28 +32,40 @@ class ShopViewModel: ShopViewModelProtocol{
     func getShop(with indexPath: IndexPath) -> ShopDataRealm{
         return shops[indexPath.row]
     }
+    
     func setShopsType(shopType: ShopType) {
         switch shopType {
         case .allShops:
-            shops.sort{$0.name < $1.name}
+            fetchModel(selectedShopsList: [])
         case .selected:
-            shops.filter({ (shops) -> Bool in
-                shops.isSelected == true
+            shops.forEach({ (shop) in
+                selectedShopsList.forEach({ (name) in
+                    if shop.pathToShop == name{
+                        selectedShops.append(shop)
+                    } else {
+                        print(shop.pathToShop, name)
+                    }
+                })
             })
+            shops = selectedShops
         }
-        
     }
     
-    init(shopType: ShopType) {
-      //getting data fram realm with config
-        self.configeredShops = ConfiguredShops()
-//        self.shops =  self.configeredShops.getShops(shopType: shopType)
+    func fetchModel(selectedShopsList: [String]){
+        self.configeredShops = ObservableShops()
+        self.selectedShopsList = selectedShopsList
         _ = self.configeredShops.getRealmModel { (result) in
             Observable.collection(from: result).subscribe(onNext: { [weak self] (arrayShops) in
-                    self?.shops = Array(arrayShops)
+                self?.shops = Array(arrayShops)
                 self?.dataUpdated()
-                }).disposed(by: bag)
+            }).disposed(by: bag)
         }
+    }
+    
+    init(shopType: ShopType, selectedShopsList: [String]) {
+      //getting data fram realm with config
+       fetchModel(selectedShopsList: selectedShopsList)
+        setShopsType(shopType: shopType)
         
     }
 }

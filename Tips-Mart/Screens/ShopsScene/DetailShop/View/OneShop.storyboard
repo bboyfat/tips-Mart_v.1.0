@@ -21,8 +21,8 @@
         <!--Detail Shop Controller-->
         <scene sceneID="DWY-Xd-t7O">
             <objects>
-                <viewController id="q6s-la-YRW" customClass="DetailShopController" customModule="Tips_Mart" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kyn-Va-BZO">
+                <viewController storyboardIdentifier="DetailShop" id="q6s-la-YRW" customClass="DetailShopController" customModule="Tips_Mart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kyn-Va-BZO" customClass="DetailShopView" customModule="Tips_Mart" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -525,12 +525,18 @@
                             <constraint firstAttribute="bottom" secondItem="X5H-OX-JRF" secondAttribute="bottom" id="y6T-KV-FiO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gtX-Qt-Wwp"/>
+                        <connections>
+                            <outlet property="cashBackValueLbl" destination="DUV-Pp-3Gc" id="PE4-M0-9Je"/>
+                            <outlet property="cashbackCurrencyLbl" destination="eKW-4w-KxG" id="8K0-Vw-jv3"/>
+                            <outlet property="logoImageVIew" destination="3pb-Gn-zRi" id="DrR-fj-ypo"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="iPq-OA-i3B"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
                         <outlet property="reviewTableView" destination="EHD-g9-DDB" id="dPH-ED-L3Z"/>
+                        <outlet property="shopView" destination="Kyn-Va-BZO" id="PhF-T7-Yoy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0M-xu-nEU" userLabel="First Responder" sceneMemberID="firstResponder"/>

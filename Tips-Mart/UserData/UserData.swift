@@ -113,6 +113,7 @@ struct ShopsModel: Decodable {
     var shopID: Int
     var type: String
     var name: String
+    var isSelected: Bool?
     var pathToShop: String
     var pathToImage: String
     var maxCashback: Cashback

@@ -10,14 +10,16 @@ import UIKit
 import RealmSwift
 import RxRealm
 protocol ShopsDataBaseProtocol {
-    func saveShopsToData()
+    func ifHasChanges()
 }
 
 class ShopsDataBaseService: ShopsDataBaseProtocol{
     let notificationCenter = NotificationCenter.default
     var model: [ShopsModel]!
     //Saving shops to realm
-    func saveShopsToData(){
+    var shopData: [ShopDataRealm] = []
+    
+    func madeAnArray(){
         model.forEach({ (shop) in
             let shopsRealmData = ShopDataRealm()
             shopsRealmData.setValue(shop.pathToShop, forKey: "url")
@@ -26,28 +28,66 @@ class ShopsDataBaseService: ShopsDataBaseProtocol{
             shopsRealmData.setValue(shop.pathToImage, forKey: "pathImage")
             shopsRealmData.setValue(shop.name, forKey: "name")
             shopsRealmData.setValue(shop.categories, forKey: "categories")
+            shopsRealmData.setValue(shop.pathToShop, forKey: "pathToShop")
             shopsRealmData.setValue(shop.maxCashback.typeCurrency, forKey: "currency")
             shopsRealmData.setValue(shop.maxCashback.value, forKey: "value")
-            
-            OperationQueue.main.addOperation {
-                let realm = try! Realm()
-                do{
-                    try realm.write {
-                        realm.add(shopsRealmData)
-                       
-                    }
-                    
-                } catch {
-                    print("realm.write is not working")
-                }
-            }
+            shopData.append(shopsRealmData)
         })
+        
+    }
+    func saveShopsToData(){
+        
+        do{
+            let realm = try Realm()
+            try realm.write {
+                realm.add(shopData, update: .error)
+            }
+            
+        } catch {
+            print("realm.write is not working")
+        }
         
         
     }
     
+    func ifHasChanges(){
+        do{
+            let realm = try Realm()
+            let result = Array(realm.objects(ShopDataRealm.self))
+            if result.isEmpty{
+                self.saveShopsToData()
+            } else if result != shopData{
+                self.updateData()
+            }
+        } catch {
+            print(ifHasChanges)
+        }
+        
+    }
+    
+    func updateData(){
+        clearData()
+        saveShopsToData()
+    }
+    
+    func clearData(){
+        do{
+            let realm = try Realm()
+            let results = realm.objects(ShopDataRealm.self)
+            try realm.write {
+                realm.delete(results)
+            }
+        } catch{
+            print("Delete all")
+        }
+    }
+    
+    
+    
+    
     init(model: [ShopsModel]) {
         self.model = model
+        madeAnArray()
     }
     
     
@@ -59,29 +99,13 @@ enum ShopType{
     case allShops
 }
 
-protocol ConfiguredShopsProtocol{
-    func getShops(shopType: ShopType) ->[ShopDataRealm]
+protocol ObservableShopsProtocol{
+    
     func getRealmModel(handler: (Results<ShopDataRealm>)->())
 }
 
 
-class ConfiguredShops: NSObject, ConfiguredShopsProtocol{
-    
-    var selectedShops: [ShopDataRealm]!
-    var allShops: [ShopDataRealm]!
-    func getShops(shopType: ShopType) ->[ShopDataRealm]{
-        return configArray(shopType: shopType)
-    }
-    
-    //fetching shops FromData
-    private func configArray(shopType: ShopType) -> [ShopDataRealm]{
-        switch shopType {
-        case .selected:
-            return selectedShops
-        case .allShops:
-            return allShops
-        }
-    }
+class ObservableShops: NSObject, ObservableShopsProtocol{
     
     func getRealmModel(handler: (Results<ShopDataRealm>)->()){
         
@@ -93,25 +117,10 @@ class ConfiguredShops: NSObject, ConfiguredShopsProtocol{
         }
         
     }
-    private func fetchData(){
-            do{
-                let realm = try Realm()
-                let array = Array(realm.objects(ShopDataRealm.self))
-                self.allShops = array
-                array.forEach { (shop) in
-                    if shop.isSelected{
-                        self.selectedShops.append(shop)
-                    }
-                }
-              
-            } catch {
-                print("Can't FETCH!!")
-            }
-        
-    }
+    
     override init() {
         super.init()
-//        fetchData()
+        
     }
 }
 

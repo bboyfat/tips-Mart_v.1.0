@@ -53,6 +53,9 @@
                                     <segment title="Selected"/>
                                 </segments>
                                 <color key="tintColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentIndexChanged:" destination="gtX-xD-3Jf" eventType="valueChanged" id="wEP-qP-Dsp"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="maK-1s-82f">
                                 <rect key="frame" x="0.0" y="184" width="414" height="678"/>

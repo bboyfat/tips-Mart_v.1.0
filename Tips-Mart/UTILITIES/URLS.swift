@@ -17,7 +17,7 @@ enum URLS: String{
     case userInit = "https://app-client.tips-mart.com/user/init"
     case changeInfo = "https://app-client.tips-mart.com/profile/v1/change-data"
     case notifications = "https://app-client.tips-mart.com/user/notifications"
-    case selectedShops = "https://app-client.tips-mart.com/user/selected_shops"
+    case selectedShopsUrl = "https://app-client.tips-mart.com/user/selected_shops"
     case shopInfo = "https://app-client.tips-mart.com/shops/"
     case shopsInfo = "https://tips-mart.com/files/shops.json"
     case refreshToken = "https://auth.tips-mart.com/app-client/token"

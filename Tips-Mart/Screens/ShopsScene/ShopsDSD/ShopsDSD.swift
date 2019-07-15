@@ -16,14 +16,22 @@ enum CollectionType{
 class ShopsDataSource: NSObject, UICollectionViewDataSource{
     
     var viewModel: ShopViewModelProtocol!
-    
+    var viewController: UIViewController!
     var collectionView: UICollectionView!
+    
+    var selectedList: [String] = []
+    
+    var shopType: ShopType = .allShops{
+        didSet{
+            viewModel = ShopViewModel(shopType: shopType, selectedShopsList: selectedList)
+            collectionView.reloadData()
+        }
+    }
     
     var collectionType: CollectionType = .table{
         didSet{
-            collectionView.reloadData()
-//            let indexPath = collectionView.indexPathsForVisibleItems
-//            collectionView.reloadItems(at: indexPath)
+            let indexPath = collectionView.indexPathsForVisibleItems
+            collectionView.reloadItems(at: indexPath)
            
         }
     }
@@ -63,8 +71,10 @@ class ShopsDataSource: NSObject, UICollectionViewDataSource{
             
         }
     }
-    init(cv: UICollectionView, collectionType: CollectionType, shopType: ShopType) {
-        viewModel = ShopViewModel(shopType: shopType)
+    init(cv: UICollectionView, collectionType: CollectionType, shopType: ShopType, selectedList: [String], viewController: UIViewController) {
+        self.selectedList = selectedList
+        self.viewController = viewController
+        viewModel = ShopViewModel(shopType: shopType, selectedShopsList: self.selectedList)
         viewModel.dataUpdated = {[weak cv] in
             cv?.reloadData()
             
@@ -97,5 +107,17 @@ extension ShopsDataSource: UICollectionViewDelegateFlowLayout{
     
 }
 extension ShopsDataSource: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       let shop =  viewModel.getShop(with: indexPath)
+        let detailShopController = UIStoryboard(name: "OneShop", bundle: nil).instantiateViewController(withIdentifier: "DetailShop") as! DetailShopController
+          detailShopController.shopData = shop
+           detailShopController.pathToShop = shop.pathToShop
+        // dummyViewController.view.backgroundColor = .blue
+       
+        let navController = UINavigationController(rootViewController: detailShopController)
+      
+        viewController.present(navController, animated: true, completion: nil)
+        
+        print(indexPath)
+    }
 }

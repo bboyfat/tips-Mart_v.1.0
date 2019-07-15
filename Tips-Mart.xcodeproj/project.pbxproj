@@ -36,6 +36,7 @@
 		C220EADA22CF9DC9002C6B90 /* LogXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C220EADC22CF9DC9002C6B90 /* LogXib.xib */; };
 		C220EAE322CF9F47002C6B90 /* RegXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C220EAE522CF9F47002C6B90 /* RegXib.xib */; };
 		C220EAF422CFA708002C6B90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C220EAF622CFA708002C6B90 /* Localizable.strings */; };
+		C24CE5B422DCC1E000F17255 /* DetailShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CE5B322DCC1E000F17255 /* DetailShopView.swift */; };
 		C268149322D761F600B6B6F5 /* CategoriesFor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C268149222D761F600B6B6F5 /* CategoriesFor.swift */; };
 		C268149622D7624400B6B6F5 /* MainCategoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C268149522D7624400B6B6F5 /* MainCategoriesController.swift */; };
 		C268149922D7626100B6B6F5 /* CategoriesMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C268149822D7626100B6B6F5 /* CategoriesMain.storyboard */; };
@@ -140,6 +141,7 @@
 		C220EAF522CFA708002C6B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C220EAF722CFA70C002C6B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C220EAF822CFA70E002C6B90 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C24CE5B322DCC1E000F17255 /* DetailShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShopView.swift; sourceTree = "<group>"; };
 		C256AB1C22CFFC5700970D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C256AB2122CFFC6E00970D7E /* uk */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = uk; path = uk.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C256AB2222CFFC7200970D7E /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -317,11 +319,9 @@
 		C2185ECB22D8AE4F009F3321 /* DetailShop */ = {
 			isa = PBXGroup;
 			children = (
+				C263CEFB22DCC14C00C551E9 /* View */,
 				C2B0424622D8D3EF0039243A /* DSD */,
 				C21F730522D8D18A000240D6 /* Controller */,
-				C2185ECC22D8AE69009F3321 /* OneShop.storyboard */,
-				C21F730122D8CE37000240D6 /* ReviewCell.swift */,
-				C21F730222D8CE37000240D6 /* ReviewCell.xib */,
 			);
 			path = DetailShop;
 			sourceTree = "<group>";
@@ -366,6 +366,17 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C263CEFB22DCC14C00C551E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2185ECC22D8AE69009F3321 /* OneShop.storyboard */,
+				C21F730122D8CE37000240D6 /* ReviewCell.swift */,
+				C21F730222D8CE37000240D6 /* ReviewCell.xib */,
+				C24CE5B322DCC1E000F17255 /* DetailShopView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C268149122D760B800B6B6F5 /* Categories */ = {
@@ -921,6 +932,7 @@
 				C289187622D5EF8A00A4DFB9 /* Constants.swift in Sources */,
 				C2185EC022D769BC009F3321 /* CategoryModels.swift in Sources */,
 				C2175B6C22D4C0E40011839E /* BalaceNetworkService.swift in Sources */,
+				C24CE5B422DCC1E000F17255 /* DetailShopView.swift in Sources */,
 				C2B4B80622CF75D60096CDC0 /* RegistrationNetworkSerwice.swift in Sources */,
 				C2B4B80922CF760B0096CDC0 /* NetworkProtocol.swift in Sources */,
 				C2929B9C22D4E85B0056E043 /* TableShopCell.swift in Sources */,

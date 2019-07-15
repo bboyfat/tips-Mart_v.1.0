@@ -12,6 +12,12 @@ import UIKit
 
 class ShopsController: UIViewController {
     
+    var shopType: ShopType = .allShops{
+        didSet{
+            ccollectionViewDSDS.shopType = self.shopType
+        }
+    }
+    
     var isTable = true{
         didSet{
             if self.isTable{
@@ -21,6 +27,10 @@ class ShopsController: UIViewController {
             }
         }
     }
+    
+    var selectedShops: [String] = []
+    
+    
     var networkRefreshProtocol: RefreshServiceProtocol!
     var collectionType: CollectionType = .table
     
@@ -31,19 +41,32 @@ class ShopsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.ccollectionViewDSDS = ShopsDataSource(cv: self.collectionView, collectionType: self.collectionType, shopType: .allShops)
-        self.collectionView.delegate = self.ccollectionViewDSDS
-        self.collectionView.dataSource = self.ccollectionViewDSDS
+        
         networkRefreshProtocol = MainShopsNetworkService()
-        networkRefreshProtocol.sendRequest { (finished) in
-
+        networkRefreshProtocol.sendRequest { (_) in
+            SelectedShopsService().sendRequest(handler: { (selected) in
+                self.selectedShops = selected
+                self.ccollectionViewDSDS = ShopsDataSource(cv: self.collectionView, collectionType: self.collectionType, shopType: self.shopType, selectedList: self.selectedShops, viewController: self)
+                self.collectionView.delegate = self.ccollectionViewDSDS
+                self.collectionView.dataSource = self.ccollectionViewDSDS
+            })
         }
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+   
+    @IBAction func segmentIndexChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+           shopType = .allShops
+        case 1:
+           shopType = .selected
+        default:
+            break;
+        }
     }
+    
+    
     
     
     
