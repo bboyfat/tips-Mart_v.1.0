@@ -41,17 +41,21 @@ class ShopsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         networkRefreshProtocol = MainShopsNetworkService()
         networkRefreshProtocol.sendRequest { (_) in
             SelectedShopsService().sendRequest(handler: { (selected) in
                 self.selectedShops = selected
-                self.ccollectionViewDSDS = ShopsDataSource(cv: self.collectionView, collectionType: self.collectionType, shopType: self.shopType, selectedList: self.selectedShops, viewController: self)
-                self.collectionView.delegate = self.ccollectionViewDSDS
-                self.collectionView.dataSource = self.ccollectionViewDSDS
+                self.setupDelegate()
             })
         }
         
+    }
+    
+    private func setupDelegate(){
+        self.ccollectionViewDSDS = ShopsDataSource(cv: self.collectionView, collectionType: self.collectionType, shopType: self.shopType, selectedList: self.selectedShops, viewController: self)
+        self.collectionView.delegate = self.ccollectionViewDSDS
+        self.collectionView.dataSource = self.ccollectionViewDSDS
     }
    
     @IBAction func segmentIndexChanged(_ sender: UISegmentedControl) {

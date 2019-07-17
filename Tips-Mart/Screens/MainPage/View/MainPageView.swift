@@ -26,6 +26,8 @@ class MainPageView: UIView {
         otherCardsBtn.clipsToBounds = true
         otherCardsBtn.layer.cornerRadius = 10
         otherCardsBtn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        otherCardsBtn.layer.borderWidth = 1.2
+        otherCardsBtn.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).cgColor
         // settings for top
         myCardBtn.clipsToBounds = true
         myCardBtn.layer.cornerRadius = 10

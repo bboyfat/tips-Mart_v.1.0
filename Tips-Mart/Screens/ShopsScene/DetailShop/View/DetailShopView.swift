@@ -9,21 +9,29 @@
 import UIKit
 
 class DetailShopView: UIView {
+    
+    //MARK: Outlets
+    
     @IBOutlet weak var logoImageVIew: UIImageView!
     
     @IBOutlet weak var cashBackValueLbl: UILabel!
     @IBOutlet weak var cashbackCurrencyLbl: UILabel!
+    @IBOutlet weak var informationLabel: UILabel!
+    @IBOutlet weak var cashbackTimeLbl: UILabel!
     
+    @IBOutlet weak var attentionLbl: UILabel!
+    @IBOutlet weak var cashbackValueLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+       
     }
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
+    
 }

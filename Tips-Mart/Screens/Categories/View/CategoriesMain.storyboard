@@ -38,7 +38,7 @@
                                         <barButtonItem key="rightBarButtonItem" image="filtered" id="qZB-ga-ueD">
                                             <color key="tintColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <action selector="closeVcBtn:" destination="BmK-Jy-lbH" id="x4m-gg-Kdw"/>
+                                                <action selector="filterActionSheetPresent:" destination="BmK-Jy-lbH" id="J0N-Dg-Dfl"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

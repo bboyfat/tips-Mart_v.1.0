@@ -60,8 +60,12 @@ class ProfileController: UIViewController {
     @objc func handlePush(){
       
     }
+    //MARK: IBAction
+    @IBAction func presentPurchaseHistory(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PurchaseVC") as! PurchaseHistoryController
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
-   
     
     /*
     // MARK: - Navigation

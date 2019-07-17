@@ -160,6 +160,24 @@ class MainCategoriesController: UIViewController {
         
         
     }
+    @IBAction func filterActionSheetPresent(_ sender: Any) {
+        let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let popularity = UIAlertAction(title: "По популярности", style: .default) { (_) in
+            
+        }
+        let cashbackValue = UIAlertAction(title: "По размеру кэшбэка ", style: .default) { (_) in
+            
+        }
+        let cancelAction = UIAlertAction(title: "Отменить", style: .cancel) { (_) in
+            
+        }
+        
+        ac.addAction(popularity)
+        ac.addAction(cashbackValue)
+        ac.addAction(cancelAction)
+        
+        present(ac, animated: true, completion: nil)
+    }
     
     @IBAction func closeVcBtn(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)

@@ -83,15 +83,13 @@ struct Shop: Codable {
 }
 struct ShopData: Codable {
 
+    var rating: Rating
     var status: Int
+    var listCashbacks: [ListCashBack]?
     var timeProcessing: String
     var description: String
-    var warningInfo: String
+    var warningInfo: String?
     var refLink: String
-    var  created: String
-    var rating: Rating
-    var listCashbacks: ListCashBack
-   
 }
 
 struct Rating: Codable {
@@ -101,10 +99,15 @@ struct Rating: Codable {
 }
 
 struct ListCashBack: Codable {
-    var name: String
-    var value: String
+    var value: Double
+    var _id: String?
     var typeCurrency: String
+    var name: CashbackName
 }
+    struct CashbackName: Codable {
+        var ua: String
+        var ru: String
+    }
 
 
 //MARK: SHOPS REQUEST MODEL

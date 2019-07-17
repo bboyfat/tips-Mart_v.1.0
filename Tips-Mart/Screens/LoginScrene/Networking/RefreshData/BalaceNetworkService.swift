@@ -85,8 +85,8 @@ class ShopNetworkService{
                     let answer  = try JSONDecoder().decode(Shop.self, from: response)
                     print(answer)
                     handler(answer)
-                } catch{
-                    print(Error.self)
+                } catch let shopErr{
+                    print(shopErr)
                 }
             }
         }
