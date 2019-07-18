@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="gotham_pro_medium.ttf">
+            <string>GothamPro-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -27,17 +32,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEo-VG-Usf">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="760"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mq0-lF-TwP">
-                                                <rect key="frame" x="33" y="80" width="76" height="41"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mq0-lF-TwP">
+                                                <rect key="frame" x="25" y="80" width="77" height="41"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rv8-2p-rdu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="36"/>
                                                         <state key="normal">
                                                             <attributedString key="attributedTitle">
-                                                                <fragment content="Вхід">
+                                                                <fragment content="Login">
                                                                     <attributes>
                                                                         <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <font key="NSFont" size="27" name="GothamPro"/>
+                                                                        <font key="NSFont" size="27" name="GothamPro-Medium"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -48,7 +53,7 @@
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0j-C5-wsd">
-                                                        <rect key="frame" x="0.0" y="37" width="76" height="4"/>
+                                                        <rect key="frame" x="0.0" y="37" width="77" height="4"/>
                                                         <color key="backgroundColor" red="0.18823529411764706" green="0.78823529411764703" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="4" id="uOm-qx-5hc"/>
@@ -86,21 +91,15 @@
                                                     <constraint firstAttribute="bottom" secondItem="4lB-YX-3v4" secondAttribute="bottom" id="mVl-3j-FpC"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" clipsSubviews="YES" contentMode="center" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Gve-GF-ZSa">
-                                                <rect key="frame" x="107" y="80" width="180" height="37"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gve-GF-ZSa">
+                                                <rect key="frame" x="120" y="80" width="180" height="37"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ley-Pc-1CJ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ley-Pc-1CJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="37"/>
-                                                        <state key="normal">
-                                                            <attributedString key="attributedTitle">
-                                                                <fragment content="Реєстрація">
-                                                                    <attributes>
-                                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="0.40122003424657532" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <font key="NSFont" size="28" name="GothamPro"/>
-                                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                    </attributes>
-                                                                </fragment>
-                                                            </attributedString>
+                                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="28"/>
+                                                        <inset key="titleEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Registration">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="0.40122003424657532" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="choseRegBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1s1-Wj-aWw"/>
@@ -127,8 +126,8 @@
                                             <constraint firstAttribute="trailing" secondItem="8zs-yM-vD6" secondAttribute="trailing" id="Ken-HU-eU0"/>
                                             <constraint firstItem="8zs-yM-vD6" firstAttribute="top" secondItem="Mq0-lF-TwP" secondAttribute="bottom" constant="25" id="MQp-57-xl7"/>
                                             <constraint firstItem="Mq0-lF-TwP" firstAttribute="top" secondItem="ZEo-VG-Usf" secondAttribute="top" constant="80" id="W89-Xh-6eo"/>
-                                            <constraint firstItem="Mq0-lF-TwP" firstAttribute="leading" secondItem="ZEo-VG-Usf" secondAttribute="leading" constant="33" id="Y1K-Ax-7LM"/>
-                                            <constraint firstAttribute="trailing" secondItem="Gve-GF-ZSa" secondAttribute="trailing" constant="33" id="lkE-X7-IIT"/>
+                                            <constraint firstItem="Mq0-lF-TwP" firstAttribute="leading" secondItem="ZEo-VG-Usf" secondAttribute="leading" constant="25" id="Y1K-Ax-7LM"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gve-GF-ZSa" secondAttribute="trailing" constant="20" id="lkE-X7-IIT"/>
                                             <constraint firstItem="8zs-yM-vD6" firstAttribute="leading" secondItem="ZEo-VG-Usf" secondAttribute="leading" id="qdO-hl-02g"/>
                                             <constraint firstItem="Gve-GF-ZSa" firstAttribute="top" secondItem="ZEo-VG-Usf" secondAttribute="top" constant="80" id="wKx-xE-Ni5"/>
                                         </constraints>

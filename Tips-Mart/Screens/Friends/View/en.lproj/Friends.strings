@@ -1,0 +1,39 @@
+
+/* Class = "UINavigationItem"; title = "More"; ObjectID = "67M-Dq-GDj"; */
+"67M-Dq-GDj.title" = "More";
+
+/* Class = "UIButton"; normalTitle = "Invite"; ObjectID = "9Ox-c3-9cg"; */
+"9Ox-c3-9cg.normalTitle" = "Invite";
+
+/* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "9qs-nz-Xym"; */
+"9qs-nz-Xym.normalTitle" = "0 hum";
+
+/* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "EfR-Yg-Aqd"; */
+"EfR-Yg-Aqd.normalTitle" = "0 hum";
+
+/* Class = "UILabel"; text = "Familiars"; ObjectID = "NsC-Mk-tZ7"; */
+"NsC-Mk-tZ7.text" = "Familiars";
+
+/* Class = "UILabel"; text = "000000 uah"; ObjectID = "QLk-Tk-3on"; */
+"QLk-Tk-3on.text" = "000000 uah";
+
+/* Class = "UILabel"; text = "How to earn more?"; ObjectID = "TuE-6I-lmh"; */
+"TuE-6I-lmh.text" = "How to earn more?";
+
+/* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "WAb-bV-FYe"; */
+"WAb-bV-FYe.normalTitle" = "0 hum";
+
+/* Class = "UILabel"; text = "Friends"; ObjectID = "jGl-Up-AHh"; */
+"jGl-Up-AHh.text" = "Friends";
+
+/* Class = "UILabel"; text = "Strangers"; ObjectID = "sny-DO-5Ci"; */
+"sny-DO-5Ci.text" = "Strangers";
+
+/* Class = "UINavigationItem"; title = "Friends"; ObjectID = "ubK-ao-pFA"; */
+"ubK-ao-pFA.title" = "Friends";
+
+/* Class = "UILabel"; text = "Your total bonuses"; ObjectID = "vl7-8K-lNI"; */
+"vl7-8K-lNI.text" = "Your total bonuses";
+
+/* Class = "UIButton"; normalTitle = "Invite"; ObjectID = "vzS-m8-2xA"; */
+"vzS-m8-2xA.normalTitle" = "Invite";

@@ -36,7 +36,13 @@
 		C220EADA22CF9DC9002C6B90 /* LogXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C220EADC22CF9DC9002C6B90 /* LogXib.xib */; };
 		C220EAE322CF9F47002C6B90 /* RegXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = C220EAE522CF9F47002C6B90 /* RegXib.xib */; };
 		C220EAF422CFA708002C6B90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C220EAF622CFA708002C6B90 /* Localizable.strings */; };
+		C229B2D922E0AAAB000E9F17 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229B2D822E0AAAB000E9F17 /* FriendsController.swift */; };
+		C229B2DB22E0AB07000E9F17 /* AboutCashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229B2DA22E0AB07000E9F17 /* AboutCashController.swift */; };
+		C229B2DD22E0AC95000E9F17 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C229B2DC22E0AC95000E9F17 /* FriendsView.swift */; };
+		C246AC8422E07AD3002F4A51 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C246AC8622E07AD3002F4A51 /* Friends.storyboard */; };
 		C24CE5B422DCC1E000F17255 /* DetailShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CE5B322DCC1E000F17255 /* DetailShopView.swift */; };
+		C260F69D22E0BB9000ED6D9F /* ShareVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F69C22E0BB9000ED6D9F /* ShareVIew.swift */; };
+		C260F69F22E0BBC000ED6D9F /* ShareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260F69E22E0BBC000ED6D9F /* ShareController.swift */; };
 		C263879422DF18C600CBA01B /* PurchaseHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263879322DF18C600CBA01B /* PurchaseHistoryController.swift */; };
 		C263879B22DF1AF300CBA01B /* PurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263879922DF1AF300CBA01B /* PurchaseCell.swift */; };
 		C263879C22DF1AF300CBA01B /* PurchaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C263879A22DF1AF300CBA01B /* PurchaseCell.xib */; };
@@ -151,10 +157,19 @@
 		C220EAF522CFA708002C6B90 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C220EAF722CFA70C002C6B90 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C220EAF822CFA70E002C6B90 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C229B2D322E0AA26000E9F17 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Friends.strings; sourceTree = "<group>"; };
+		C229B2D422E0AA29000E9F17 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Friends.strings; sourceTree = "<group>"; };
+		C229B2D522E0AA2D000E9F17 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Friends.strings; sourceTree = "<group>"; };
+		C229B2D822E0AAAB000E9F17 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
+		C229B2DA22E0AB07000E9F17 /* AboutCashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCashController.swift; sourceTree = "<group>"; };
+		C229B2DC22E0AC95000E9F17 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		C246AC8522E07AD3002F4A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Friends.storyboard; sourceTree = "<group>"; };
+		C246AC9422E08406002F4A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C246AC9E22E08DD8002F4A51 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C246AC9F22E08DDD002F4A51 /* uk */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = uk; path = uk.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C24CE5B322DCC1E000F17255 /* DetailShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShopView.swift; sourceTree = "<group>"; };
-		C256AB1C22CFFC5700970D7E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Login.storyboard; sourceTree = "<group>"; };
-		C256AB2122CFFC6E00970D7E /* uk */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = uk; path = uk.lproj/Login.storyboard; sourceTree = "<group>"; };
-		C256AB2222CFFC7200970D7E /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Login.storyboard; sourceTree = "<group>"; };
+		C260F69C22E0BB9000ED6D9F /* ShareVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShareVIew.swift; path = "Tips-Mart/Screens/Friends/ShareController/view/ShareVIew.swift"; sourceTree = SOURCE_ROOT; };
+		C260F69E22E0BBC000ED6D9F /* ShareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareController.swift; sourceTree = "<group>"; };
 		C263879322DF18C600CBA01B /* PurchaseHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistoryController.swift; sourceTree = "<group>"; };
 		C263879922DF1AF300CBA01B /* PurchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCell.swift; sourceTree = "<group>"; };
 		C263879A22DF1AF300CBA01B /* PurchaseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PurchaseCell.xib; sourceTree = "<group>"; };
@@ -354,6 +369,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		C229B2D622E0AA7D000E9F17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C246AC8622E07AD3002F4A51 /* Friends.storyboard */,
+				C229B2DC22E0AC95000E9F17 /* FriendsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C229B2D722E0AA88000E9F17 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C229B2D822E0AAAB000E9F17 /* FriendsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C245948422D3606700B6902E /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +418,50 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C246AC8122E06BDF002F4A51 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				C260F69B22E0BB6700ED6D9F /* AboutFriendsControl */,
+				C260F69822E0BB3F00ED6D9F /* ShareController */,
+				C229B2D722E0AA88000E9F17 /* Controller */,
+				C229B2D622E0AA7D000E9F17 /* View */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		C260F69822E0BB3F00ED6D9F /* ShareController */ = {
+			isa = PBXGroup;
+			children = (
+				C260F69A22E0BB5E00ED6D9F /* view */,
+				C260F69922E0BB5800ED6D9F /* Controller */,
+			);
+			path = ShareController;
+			sourceTree = "<group>";
+		};
+		C260F69922E0BB5800ED6D9F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C260F69E22E0BBC000ED6D9F /* ShareController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C260F69A22E0BB5E00ED6D9F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C260F69C22E0BB9000ED6D9F /* ShareVIew.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C260F69B22E0BB6700ED6D9F /* AboutFriendsControl */ = {
+			isa = PBXGroup;
+			children = (
+				C229B2DA22E0AB07000E9F17 /* AboutCashController.swift */,
+			);
+			path = AboutFriendsControl;
 			sourceTree = "<group>";
 		};
 		C263879022DF185500CBA01B /* VIew */ = {
@@ -718,11 +794,12 @@
 			isa = PBXGroup;
 			children = (
 				C268149122D760B800B6B6F5 /* Categories */,
-				C2929B9322D4E0970056E043 /* ShopsScene */,
-				C28D33DC22D398E10072A95C /* MainTabBar */,
-				C28D33D822D389F20072A95C /* ProfileScene */,
-				C245948422D3606700B6902E /* MainPage */,
 				C2C583C422CCB2A8004CBCBF /* LoginScrene */,
+				C28D33DC22D398E10072A95C /* MainTabBar */,
+				C245948422D3606700B6902E /* MainPage */,
+				C28D33D822D389F20072A95C /* ProfileScene */,
+				C2929B9322D4E0970056E043 /* ShopsScene */,
+				C246AC8122E06BDF002F4A51 /* Friends */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -919,6 +996,7 @@
 				C2C583BC22CCAFBD004CBCBF /* LaunchScreen.storyboard in Resources */,
 				C26387C622DF58E200CBA01B /* PurchaseAlertController.xib in Resources */,
 				C2185EB122D7684B009F3321 /* HeaderView.xib in Resources */,
+				C246AC8422E07AD3002F4A51 /* Friends.storyboard in Resources */,
 				C220EAF422CFA708002C6B90 /* Localizable.strings in Resources */,
 				C2929B9522D4E0EF0056E043 /* ShopsScene.storyboard in Resources */,
 				C268149922D7626100B6B6F5 /* CategoriesMain.storyboard in Resources */,
@@ -1005,6 +1083,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C229B2DD22E0AC95000E9F17 /* FriendsView.swift in Sources */,
 				C2929B9722D4E45F0056E043 /* ShopsController.swift in Sources */,
 				C28D33E022D399770072A95C /* MainTabBarController.swift in Sources */,
 				C2C5840A22CE01E4004CBCBF /* AuthView.swift in Sources */,
@@ -1019,9 +1098,11 @@
 				C268149322D761F600B6B6F5 /* CategoriesFor.swift in Sources */,
 				C2B0424522D8D2260039243A /* DetailShopController.swift in Sources */,
 				C2B0424822D8D4070039243A /* ReviewDSD.swift in Sources */,
+				C260F69F22E0BBC000ED6D9F /* ShareController.swift in Sources */,
 				C268149622D7624400B6B6F5 /* MainCategoriesController.swift in Sources */,
 				C2175B6522D4A0DE0011839E /* ProfileController.swift in Sources */,
 				C2185EAC22D767CF009F3321 /* CategoryButton.swift in Sources */,
+				C229B2D922E0AAAB000E9F17 /* FriendsController.swift in Sources */,
 				C21F730322D8CE37000240D6 /* ReviewCell.swift in Sources */,
 				C2C583EC22CCD5A7004CBCBF /* UIColor +Color.swift in Sources */,
 				C2C5840422CDF987004CBCBF /* NavigationItem + Item.swift in Sources */,
@@ -1058,6 +1139,7 @@
 				C2B4B80C22CF76E20096CDC0 /* RegistrationModels.swift in Sources */,
 				C2B4B80122CF4F570096CDC0 /* URLS.swift in Sources */,
 				C28D33D522D37F780072A95C /* MainPageController.swift in Sources */,
+				C260F69D22E0BB9000ED6D9F /* ShareVIew.swift in Sources */,
 				C2B4B82B22CF93180096CDC0 /* RegistrationViewModel.swift in Sources */,
 				C289187822D5F14000A4DFB9 /* ShopsDataBaseService.swift in Sources */,
 				C28D33D722D387820072A95C /* MainPageView.swift in Sources */,
@@ -1067,6 +1149,7 @@
 				C2C583F722CCFA5B004CBCBF /* Notification + Name.swift in Sources */,
 				C2C583F222CCE673004CBCBF /* PreLoginController.swift in Sources */,
 				C2185EB822D768C2009F3321 /* CategoryViewModel.swift in Sources */,
+				C229B2DB22E0AB07000E9F17 /* AboutCashController.swift in Sources */,
 				C263879422DF18C600CBA01B /* PurchaseHistoryController.swift in Sources */,
 				C20B327222CE464600533F75 /* PasswordBtn.swift in Sources */,
 				C2929B9222D4DF240056E043 /* RefreshProtocol.swift in Sources */,
@@ -1132,12 +1215,23 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		C246AC8622E07AD3002F4A51 /* Friends.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C246AC8522E07AD3002F4A51 /* Base */,
+				C229B2D322E0AA26000E9F17 /* en */,
+				C229B2D422E0AA29000E9F17 /* ru */,
+				C229B2D522E0AA2D000E9F17 /* uk */,
+			);
+			name = Friends.storyboard;
+			sourceTree = "<group>";
+		};
 		C2C583B522CCAFBC004CBCBF /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C256AB1C22CFFC5700970D7E /* en */,
-				C256AB2122CFFC6E00970D7E /* uk */,
-				C256AB2222CFFC7200970D7E /* ru */,
+				C246AC9422E08406002F4A51 /* Base */,
+				C246AC9E22E08DD8002F4A51 /* ru */,
+				C246AC9F22E08DDD002F4A51 /* uk */,
 			);
 			name = Login.storyboard;
 			sourceTree = "<group>";

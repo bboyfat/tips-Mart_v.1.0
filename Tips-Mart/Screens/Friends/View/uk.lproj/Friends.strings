@@ -1,0 +1,39 @@
+
+/* Class = "UINavigationItem"; title = "Детальніше"; ObjectID = "67M-Dq-GDj"; */
+"67M-Dq-GDj.title" = "Детальніше";
+
+/* Class = "UIButton"; normalTitle = "Запросити"; ObjectID = "9Ox-c3-9cg"; */
+"9Ox-c3-9cg.normalTitle" = "Запросити";
+
+/* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "9qs-nz-Xym"; */
+"9qs-nz-Xym.normalTitle" = "0 hum";
+
+/* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "EfR-Yg-Aqd"; */
+"EfR-Yg-Aqd.normalTitle" = "0 hum";
+
+/* Class = "UILabel"; text = "Знайомі"; ObjectID = "NsC-Mk-tZ7"; */
+"NsC-Mk-tZ7.text" = "Знайомі";
+
+/* Class = "UILabel"; text = "000000 uah"; ObjectID = "QLk-Tk-3on"; */
+"QLk-Tk-3on.text" = "000000 uah";
+
+/* Class = "UILabel"; text = "Як заробляти більше? "; ObjectID = "TuE-6I-lmh"; */
+"TuE-6I-lmh.text" = "Як заробляти більше? ";
+
+/* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "WAb-bV-FYe"; */
+"WAb-bV-FYe.normalTitle" = "0 hum";
+
+/* Class = "UILabel"; text = "Друзі"; ObjectID = "jGl-Up-AHh"; */
+"jGl-Up-AHh.text" = "Друзі";
+
+/* Class = "UILabel"; text = "Незнайомці"; ObjectID = "sny-DO-5Ci"; */
+"sny-DO-5Ci.text" = "Незнайомці";
+
+/* Class = "UINavigationItem"; title = "Друзі"; ObjectID = "ubK-ao-pFA"; */
+"ubK-ao-pFA.title" = "Друзі";
+
+/* Class = "UILabel"; text = "Ваш загальний бонус"; ObjectID = "vl7-8K-lNI"; */
+"vl7-8K-lNI.text" = "Ваш загальний бонус";
+
+/* Class = "UIButton"; normalTitle = "Порахувати"; ObjectID = "vzS-m8-2xA"; */
+"vzS-m8-2xA.normalTitle" = "Порахувати";
