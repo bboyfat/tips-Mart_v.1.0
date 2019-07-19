@@ -14,28 +14,19 @@ class AboutCashController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigation()
+    
         addTargets()
         
     }
     
-    private func setNavigation(){
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1)
-        let attributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-        navigationController?.navigationBar.titleTextAttributes = attributes
-        navigationItem.title = NSLocalizedString("More Details", comment: "")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-        navigationController?.navigationBar.isTranslucent = true
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setClearNavigation(with: #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1), with: NSLocalizedString("More Details", comment: ""))
+        addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
+        setTitleColor(with: .black)
     }
-    private func setItems(button: UIButton) -> UIView{
-        let view = UIView()
-        view.addSubview(button)
-        view.frame = button.bounds
-        return view
-    }
+    
+  
     
     //add targets to items
     private func addTargets(){
@@ -43,7 +34,6 @@ class AboutCashController: UIViewController {
     }
     @objc func handlePop(){
         navigationController?.popViewController(animated: true)
-        
         
     }
 

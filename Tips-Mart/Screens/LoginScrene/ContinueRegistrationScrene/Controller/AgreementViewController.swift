@@ -22,29 +22,16 @@ class AgreementViewController: UIViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addTargets() // add targets fot items
-        setNavigation() // setup navigation bar
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setClearNavigation(with: .purple, with: "")
+        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
+        addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
+    }
     
-    //MARK: Methods
-    private func setNavigation(){
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.tintColor = .purple
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: setItems(button: rightBarButton))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-        navigationController?.navigationBar.isTranslucent = true
-        
-    }
-     private func setItems(button: UIButton) -> UIView{
-        let view = UIView()
-        view.addSubview(button)
-        view.frame = button.bounds
-        return view
-    }
     
     //add targets to items
     private func addTargets(){

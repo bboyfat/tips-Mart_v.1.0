@@ -23,10 +23,12 @@ class ContinueRegistrationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setPlaceHolder()
-        setNavigation()
+        
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setClearNavigation(with: .white, with: "")
+    }
     
     //MARK: IBActionStack
     
@@ -42,16 +44,9 @@ class ContinueRegistrationController: UIViewController {
     }
     // MARK: Methods
     
-    private func setNavigation(){
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = true
-    }
+
     
     
-    //MARK: View Settings
-//    private func setPlaceHolder(){
-//        authTextField.attributedPlaceholder = NSAttributedString(string: "Код", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-//    }
+
     
 }

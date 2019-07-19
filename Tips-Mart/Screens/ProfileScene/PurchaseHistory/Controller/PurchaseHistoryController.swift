@@ -20,8 +20,7 @@ class PurchaseHistoryController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigation()
-        
+    
         tableDSD = PurchaseDSD(tableView: tableView, controller: self)
         
         tableView.dataSource = tableDSD
@@ -29,26 +28,15 @@ class PurchaseHistoryController: UIViewController {
         
         addTargets()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setClearNavigation(with: #colorLiteral(red: 0.0386101231, green: 0.8220543265, blue: 0.5023989081, alpha: 1), with: "")
+        addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
+        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
+    }
    
     
     //MARK: Methods
-    private func setNavigation(){
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1)
-        navigationItem.title = "История операций"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: setItems(button: rightBarButton))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-        navigationController?.navigationBar.isTranslucent = true
-        
-    }
-    private func setItems(button: UIButton) -> UIView{
-        let view = UIView()
-        view.addSubview(button)
-        view.frame = button.bounds
-        return view
-    }
     
     //add targets to items
     private func addTargets(){

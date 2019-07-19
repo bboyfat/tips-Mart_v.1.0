@@ -16,33 +16,14 @@ class ShareController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setNavigation()
         addTargets()
-        
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        let attributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-        navigationController?.navigationBar.titleTextAttributes = attributes
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setClearNavigation(with: .white, with: NSLocalizedString("More Details", comment: ""))
+        addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
+        setTitleColor(with: .white)
         
-    }
-    private func setNavigation(){
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.tintColor = .white
-        let attributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = attributes
-        navigationItem.title = "Invite"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-        navigationController?.navigationBar.isTranslucent = true
-        
-    }
-    private func setItems(button: UIButton) -> UIView{
-        let view = UIView()
-        view.addSubview(button)
-        view.frame = button.bounds
-        return view
     }
     
     //add targets to items
@@ -50,14 +31,7 @@ class ShareController: UIViewController {
         leftBarButton.addTarget(self, action: #selector(handlePop), for: .touchUpInside)
     }
     @objc func handlePop(){
-        
         navigationController?.popViewController(animated: true)
-        
-        
     }
-
     
-
-   
-
 }

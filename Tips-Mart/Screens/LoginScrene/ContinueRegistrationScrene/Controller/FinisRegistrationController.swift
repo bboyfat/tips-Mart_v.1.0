@@ -20,9 +20,14 @@ class FinisRegistrationController: UIViewController {
         super.viewDidLoad()
         originalPosition = self.view.bounds
         addTargets()
-        setNavigation()
         addTap()
         addNotifForKeyboard()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setClearNavigation(with: .white, with: "")
+        addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
+        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
     }
     func addNotifForKeyboard(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -55,20 +60,7 @@ class FinisRegistrationController: UIViewController {
         return .lightContent
     }
     //MARK: Methods
-    private func setNavigation(){
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.tintColor = .white
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: setItems(button: rightBarButton))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-        navigationController?.navigationBar.isTranslucent = true
-    }
-    private func setItems(button: UIButton) -> UIView{
-        let view = UIView()
-        view.addSubview(button)
-        view.frame = button.bounds
-        return view
-    }
+  
     @objc func handlePop(){
         self.navigationController?.popViewController(animated: true)
         

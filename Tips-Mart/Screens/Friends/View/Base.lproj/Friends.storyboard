@@ -397,6 +397,9 @@
                                                         <integer key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="showMembersBtn:" destination="MDN-JX-5zk" eventType="touchUpInside" id="0Ze-ZP-MGY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -621,11 +624,44 @@
                     <navigationItem key="navigationItem" title="Bonuses from friends" id="6RH-k4-g74"/>
                     <connections>
                         <outlet property="statisticView" destination="tLh-fE-OJM" id="ncz-Il-Kxg"/>
+                        <segue destination="gRG-It-1yO" kind="push" id="5rC-Gu-PFN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qf-uh-HAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5278.125" y="352.81690140845069"/>
+        </scene>
+        <!--Members Controller-->
+        <scene sceneID="DNp-lt-IJD">
+            <objects>
+                <viewController storyboardIdentifier="membersVC" id="gRG-It-1yO" customClass="MembersController" customModule="Tips_Mart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="naC-pj-8yQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZfI-5L-4Ox">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="N6U-DZ-1Hc" firstAttribute="trailing" secondItem="ZfI-5L-4Ox" secondAttribute="trailing" id="Luh-cB-yya"/>
+                            <constraint firstItem="N6U-DZ-1Hc" firstAttribute="bottom" secondItem="ZfI-5L-4Ox" secondAttribute="bottom" id="U1p-L7-zUv"/>
+                            <constraint firstItem="ZfI-5L-4Ox" firstAttribute="leading" secondItem="N6U-DZ-1Hc" secondAttribute="leading" id="VEM-9K-HuY"/>
+                            <constraint firstItem="ZfI-5L-4Ox" firstAttribute="top" secondItem="N6U-DZ-1Hc" secondAttribute="top" id="t0P-aD-bbD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N6U-DZ-1Hc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rjj-2Z-J1F"/>
+                    <connections>
+                        <outlet property="tableView" destination="ZfI-5L-4Ox" id="UL7-WW-aYe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Az7-F5-lMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6161" y="359"/>
         </scene>
         <!--Share Controller-->
         <scene sceneID="rdQ-fs-xXS">

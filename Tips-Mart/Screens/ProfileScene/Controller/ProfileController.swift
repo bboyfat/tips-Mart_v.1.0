@@ -21,31 +21,17 @@ class ProfileController: UIViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addTargets() // add targets fot items
-        setNavigation() // setup navigation bar
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setClearNavigation(with: .white, with: "")
+        addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
+        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
+    }
     
     //MARK: Methods
-    private func setNavigation(){
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.tintColor = .white
-       
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: setItems(button: rightBarButton))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-        navigationController?.navigationBar.isTranslucent = true
-        
-    }
-    private func setItems(button: UIButton) -> UIView{
-        let view = UIView()
-        view.addSubview(button)
-        view.frame = button.bounds
-        return view
-    }
+   
     
     //add targets to items
     private func addTargets(){
@@ -67,14 +53,6 @@ class ProfileController: UIViewController {
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

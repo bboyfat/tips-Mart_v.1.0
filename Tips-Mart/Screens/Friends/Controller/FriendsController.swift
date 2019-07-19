@@ -16,7 +16,14 @@ class FriendsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         statisticController = storyboard?.instantiateViewController(withIdentifier: "StatVC") as! StatisticController
-        
+        showMoreDetailsClosure()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setTitleColor(with: .black)
+    }
+    //MARK: Methods
+    private func showMoreDetailsClosure(){
         friendsView.moreDetailsPressed = {[weak self] in
             let vc = self?.storyboard?.instantiateViewController(withIdentifier: "MoreDetailsVC") as! AboutCashController
             self?.navigationController?.pushViewController(vc, animated: true)

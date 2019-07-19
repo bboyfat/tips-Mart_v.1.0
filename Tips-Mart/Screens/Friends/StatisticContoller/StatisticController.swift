@@ -35,30 +35,17 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigation()
         addTargets()
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1)
+        setClearNavigation(with: #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1), with: "Bonuses")
+        setTitleColor(with: .black)
+        addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
     }
     
-    private func setNavigation(){
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        let attributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-        navigationController?.navigationBar.titleTextAttributes = attributes
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-        navigationController?.navigationBar.isTranslucent = true
-        
-    }
-    private func setItems(button: UIButton) -> UIView{
-        let view = UIView()
-        view.addSubview(button)
-        view.frame = button.bounds
-        return view
-    }
+
     private func statisticForChenged(){
         switch statisticFor {
         case .friends:
@@ -97,6 +84,10 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
         
     }
     
+    @IBAction func showMembersBtn(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "membersVC") as! MembersController
+        navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func switchSegmentController(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
@@ -115,25 +106,3 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
 
 
 
-extension UIViewController{
-    #warning("Don't forget to made this part to clean alo of space")
-    
-    //    private func setNavigation(tintColor: UIColor, button: UIButton){
-    //        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    //        navigationController?.navigationBar.shadowImage = UIImage()
-    //        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1)
-    //        let attributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-    //        navigationController?.navigationBar.titleTextAttributes = attributes
-    //        navigationItem.title = NSLocalizedString("More Details", comment: "")
-    //        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-    //        navigationController?.navigationBar.isTranslucent = true
-    //
-    //    }
-    //    private func setItems(button: UIButton) -> UIView{
-    //        let view = UIView()
-    //        view.addSubview(button)
-    //        view.frame = button.bounds
-    //        return view
-    //    }
-    //
-}
