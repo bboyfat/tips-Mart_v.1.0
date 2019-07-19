@@ -29,7 +29,7 @@ class PurchaseHistoryController: UIViewController {
         
         addTargets()
     }
-    
+   
     
     //MARK: Methods
     private func setNavigation(){
@@ -56,6 +56,7 @@ class PurchaseHistoryController: UIViewController {
         rightBarButton.addTarget(self, action: #selector(handlePush), for: .touchUpInside)
     }
     @objc func handlePop(){
+         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
       navigationController?.popViewController(animated: true)
         
         

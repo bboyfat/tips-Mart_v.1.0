@@ -71,6 +71,8 @@
 		C2929BA322D4EF9C0056E043 /* ShopsDSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2929BA222D4EF9C0056E043 /* ShopsDSD.swift */; };
 		C2929BA522D4EFAD0056E043 /* ShopsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2929BA422D4EFAD0056E043 /* ShopsViewModel.swift */; };
 		C2929BA722D4EFB80056E043 /* ShopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2929BA622D4EFB80056E043 /* ShopsModel.swift */; };
+		C2AE38B222E1B30D00DB3C5A /* StatisticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE38B122E1B30D00DB3C5A /* StatisticController.swift */; };
+		C2AE38B522E1BC6100DB3C5A /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE38B422E1BC6100DB3C5A /* StatisticView.swift */; };
 		C2B0424522D8D2260039243A /* DetailShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0424422D8D2260039243A /* DetailShopController.swift */; };
 		C2B0424822D8D4070039243A /* ReviewDSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B0424722D8D4070039243A /* ReviewDSD.swift */; };
 		C2B4B7FA22CF49F70096CDC0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4B7F922CF49F70096CDC0 /* LoginViewModel.swift */; };
@@ -198,6 +200,8 @@
 		C2929BA222D4EF9C0056E043 /* ShopsDSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsDSD.swift; sourceTree = "<group>"; };
 		C2929BA422D4EFAD0056E043 /* ShopsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewModel.swift; sourceTree = "<group>"; };
 		C2929BA622D4EFB80056E043 /* ShopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsModel.swift; sourceTree = "<group>"; };
+		C2AE38B122E1B30D00DB3C5A /* StatisticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticController.swift; sourceTree = "<group>"; };
+		C2AE38B422E1BC6100DB3C5A /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		C2B0424422D8D2260039243A /* DetailShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailShopController.swift; sourceTree = "<group>"; };
 		C2B0424722D8D4070039243A /* ReviewDSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDSD.swift; sourceTree = "<group>"; };
 		C2B4B7F922CF49F70096CDC0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 		C246AC8122E06BDF002F4A51 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				C2AE38B022E1B2D500DB3C5A /* StatisticContoller */,
 				C260F69B22E0BB6700ED6D9F /* AboutFriendsControl */,
 				C260F69822E0BB3F00ED6D9F /* ShareController */,
 				C229B2D722E0AA88000E9F17 /* Controller */,
@@ -694,6 +699,23 @@
 				C2929BA222D4EF9C0056E043 /* ShopsDSD.swift */,
 			);
 			path = ShopsDSD;
+			sourceTree = "<group>";
+		};
+		C2AE38B022E1B2D500DB3C5A /* StatisticContoller */ = {
+			isa = PBXGroup;
+			children = (
+				C2AE38B322E1BC4E00DB3C5A /* View */,
+				C2AE38B122E1B30D00DB3C5A /* StatisticController.swift */,
+			);
+			path = StatisticContoller;
+			sourceTree = "<group>";
+		};
+		C2AE38B322E1BC4E00DB3C5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2AE38B422E1BC6100DB3C5A /* StatisticView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C2B0424622D8D3EF0039243A /* DSD */ = {
@@ -1108,11 +1130,13 @@
 				C2C5840422CDF987004CBCBF /* NavigationItem + Item.swift in Sources */,
 				C2929BA722D4EFB80056E043 /* ShopsModel.swift in Sources */,
 				C2185EAF22D7682E009F3321 /* HeaderView.swift in Sources */,
+				C2AE38B522E1BC6100DB3C5A /* StatisticView.swift in Sources */,
 				C289187622D5EF8A00A4DFB9 /* Constants.swift in Sources */,
 				C2185EC022D769BC009F3321 /* CategoryModels.swift in Sources */,
 				C2175B6C22D4C0E40011839E /* BalaceNetworkService.swift in Sources */,
 				C24CE5B422DCC1E000F17255 /* DetailShopView.swift in Sources */,
 				C2B4B80622CF75D60096CDC0 /* RegistrationNetworkSerwice.swift in Sources */,
+				C2AE38B222E1B30D00DB3C5A /* StatisticController.swift in Sources */,
 				C2B4B80922CF760B0096CDC0 /* NetworkProtocol.swift in Sources */,
 				C2929B9C22D4E85B0056E043 /* TableShopCell.swift in Sources */,
 				C2BF712222DE097E00564D06 /* ReviewViewController.swift in Sources */,

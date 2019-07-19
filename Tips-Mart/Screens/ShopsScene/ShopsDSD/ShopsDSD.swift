@@ -112,8 +112,6 @@ extension ShopsDataSource: UICollectionViewDelegate{
         let detailShopController = UIStoryboard(name: "OneShop", bundle: nil).instantiateViewController(withIdentifier: "DetailShop") as! DetailShopController
           detailShopController.shopData = shop
            detailShopController.pathToShop = shop.pathToShop
-        // dummyViewController.view.backgroundColor = .blue
-       
         let navController = UINavigationController(rootViewController: detailShopController)
       
         viewController.present(navController, animated: true, completion: nil)

@@ -11,12 +11,12 @@ import UIKit
 class FriendsController: UIViewController {
     //MARK: Properties
     @IBOutlet var friendsView: FriendsView!
-    
+    var statisticController: StatisticControllerProtocol!
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        let attributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
-        navigationController?.navigationBar.titleTextAttributes = attributes
+        statisticController = storyboard?.instantiateViewController(withIdentifier: "StatVC") as! StatisticController
+        
         friendsView.moreDetailsPressed = {[weak self] in
             let vc = self?.storyboard?.instantiateViewController(withIdentifier: "MoreDetailsVC") as! AboutCashController
             self?.navigationController?.pushViewController(vc, animated: true)
@@ -27,6 +27,24 @@ class FriendsController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-
     
+    @IBAction func friendsStatAction(_ sender: UIButton) {
+        let nav = UINavigationController(rootViewController: statisticController as! StatisticController)
+        navigationController?.present(nav, animated: true, completion: {
+            self.statisticController.statisticFor = .friends
+        })
+    }
+    
+    @IBAction func familiarStatAction(_ sender: Any) {
+        let nav = UINavigationController(rootViewController: statisticController as! StatisticController)
+        navigationController?.present(nav, animated: true, completion: {
+            self.statisticController.statisticFor = .familiars
+        })
+    }
+    @IBAction func strangerStatAction(_ sender: Any) {
+        let nav = UINavigationController(rootViewController: statisticController as! StatisticController)
+        navigationController?.present(nav, animated: true, completion: {
+            self.statisticController.statisticFor = .strangers
+        })
+    }
 }

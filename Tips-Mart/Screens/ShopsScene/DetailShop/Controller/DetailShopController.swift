@@ -33,6 +33,12 @@ class DetailShopController: UIViewController {
         getShopData()  //getting network data
         addTarget()  //adding target to nav button
         setDelegates()
+        LogoNetworkService().getImages(with: shopData.pathImage) { (image) in
+            OperationQueue.main.addOperation {
+                self.shopView.logoImageVIew.image = image
+            }
+            
+        }
         
     }
 
