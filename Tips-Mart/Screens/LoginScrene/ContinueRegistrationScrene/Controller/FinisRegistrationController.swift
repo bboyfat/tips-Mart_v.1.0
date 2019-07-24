@@ -10,12 +10,14 @@ import UIKit
 
 class FinisRegistrationController: UIViewController {
     
+    @IBOutlet var finishRegView: FinishRegView!
     //MARK: Properties
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow-2"), with: " Назад", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow-1"), with: "Пропустить ", with: .forceRightToLeft)
     let keyboardHeight: CGFloat = 200
     var originalPosition: CGRect! //= UIScreen.main.bounds
     //MARK: Life cycle
+    var userProfile: UserProfile!
     override func viewDidLoad() {
         super.viewDidLoad()
         originalPosition = self.view.bounds
@@ -79,7 +81,21 @@ class FinisRegistrationController: UIViewController {
         self.view.endEditing(true)
     }
     @objc func handlePush(){
-        //        navigationController?.popViewController(animated: true)
+        
     }
     
+    @IBAction func sendUserSettings(_ sender: UIButton) {
+//        UserProfile
+        let birthDay = finishRegView.birthDateTF.text!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        let date = dateFormatter.date(from: birthDay)
+        let timeInterval = date?.timeIntervalSince1970
+        let unixDate = Int(timeInterval!)
+        userProfile = UserProfile(name: finishRegView.nameTf.text!, surname: finishRegView.surnameTf.text!, birthday: unixDate, maritalStatus: "single")
+        UserSettingsNetwork(model: self.userProfile).sendRequest { (op) in
+            
+        }
+    }
 }

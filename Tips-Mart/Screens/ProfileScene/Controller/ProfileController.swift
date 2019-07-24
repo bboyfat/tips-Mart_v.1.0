@@ -48,6 +48,9 @@ class ProfileController: UIViewController {
     }
     //MARK: IBAction
     @IBAction func presentPurchaseHistory(_ sender: UIButton) {
+        let purch = PurchaseReq(statuses: nil, isArchived: nil, createdFrom: nil, createdTo: nil)
+        
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "PurchaseVC") as! PurchaseHistoryController
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -133,3 +133,13 @@ struct ImageLogo{
     var image: UIImage
 }
 
+//Struct for profile settings
+struct ProfileSettings: Codable{
+    var data: UserProfile
+}
+struct UserProfile: Codable {
+    var name: String
+    var surname: String
+    var birthday: Int
+    var maritalStatus: String
+}

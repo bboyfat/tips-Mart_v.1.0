@@ -2,4 +2,1236 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/ContinueRegistrationScrene/Controller/ContinueRegistrationController.swift"
+            timestampString = "585669781.490803"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "checkAuthBtn(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.ContinueRegistrationController.checkAuthBtn(__C.UIButton) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/ContinueRegistrationScrene/Controller/ContinueRegistrationController.swift"
+                  timestampString = "585666126.950559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "671">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in Tips_Mart.ContinueRegistrationController.checkAuthBtn(__C.UIButton) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/ContinueRegistrationScrene/Controller/ContinueRegistrationController.swift"
+                  timestampString = "585666126.95306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/ContinueRegistrationScrene/Controller/ContinueRegistrationController.swift"
+            timestampString = "585669781.490936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "checkAuthBtn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491009"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491061"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491114"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491169"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.49121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491253"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491292"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491331"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.49139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.RegistrationSecondStep.sendRequest(with: Tips_Mart.SecondStepRegistration, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+                  timestampString = "585666126.9955961"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1309">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DefaultDataResponse) -&gt; () in Tips_Mart.RegistrationSecondStep.sendRequest(with: Tips_Mart.SecondStepRegistration, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+                  timestampString = "585666126.997697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491432"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.491492"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.4915299"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DefaultDataResponse) -&gt; () in Tips_Mart.RegistrationSecondStep.sendRequest(with: Tips_Mart.SecondStepRegistration, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+                  timestampString = "585666127.011687"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1735">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DefaultDataResponse) -&gt; () in Tips_Mart.RegistrationSecondStep.sendRequest(with: Tips_Mart.SecondStepRegistration, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+                  timestampString = "585666127.013639"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1864">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DefaultDataResponse) -&gt; () in Tips_Mart.RegistrationSecondStep.sendRequest(with: Tips_Mart.SecondStepRegistration, handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+                  timestampString = "585666127.015492"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2263">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.491621"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.491688"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.0269099"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "223"
+                  endingLineNumber = "223"
+                  offsetFromSymbolStart = "5239">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.028977"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "223"
+                  endingLineNumber = "223"
+                  offsetFromSymbolStart = "877">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.491747"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.033699"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "223"
+                  endingLineNumber = "223"
+                  offsetFromSymbolStart = "5239">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.035506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "223"
+                  endingLineNumber = "223"
+                  offsetFromSymbolStart = "877">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.4918031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.039309"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "832">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.041018"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "911">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.491871"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.49195"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492021"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492089"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.05414"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "4935">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.055469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "217">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.49226"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492311"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.49236"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492416"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.4924591"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492517"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+            timestampString = "585669781.492615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "sendRequest(handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.090248"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "832">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tips_Mart.UserSettingsNetwork.sendRequest(handler: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
+                  timestampString = "585666127.0917211"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "911">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.492681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.4927239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.492771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
+            timestampString = "585669781.492818"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/ProfileScene/Controller/ProfileController.swift"
+            timestampString = "585669781.492884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "presentPurchaseHistory(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.ProfileController.presentPurchaseHistory(__C.UIButton) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/Controller/ProfileController.swift"
+                  timestampString = "585666127.111214"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "131">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.ProfileController.presentPurchaseHistory(__C.UIButton) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/Controller/ProfileController.swift"
+                  timestampString = "585666127.112799"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "672">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/ProfileScene/PurchaseHistory/PurchaseViewModel/PurchaseViewModel.swift"
+            timestampString = "585669781.492978"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/ProfileScene/PurchaseHistory/PurchaseViewModel/PurchaseViewModel.swift"
+            timestampString = "585669781.49303"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/ProfileScene/PurchaseHistory/PurchaseViewModel/PurchaseViewModel.swift"
+            timestampString = "585669781.493068"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getArray()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/ProfileScene/PurchaseHistory/PurchaseViewModel/PurchaseViewModel.swift"
+            timestampString = "585669781.4931099"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getArray()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/ProfileScene/PurchaseHistory/PurchaseViewModel/PurchaseViewModel.swift"
+            timestampString = "585669781.493147"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getArray()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.49322"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.493265"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.493305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.PurchaseHistoryNetworking.sendRequest(with: Tips_Mart.PurchaseReq, handler: (Swift.Array&lt;Tips_Mart.PurchaseObject&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+                  timestampString = "585666127.141013"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1515">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_Mart.PurchaseHistoryNetworking.sendRequest(with: Tips_Mart.PurchaseReq, handler: (Swift.Array&lt;Tips_Mart.PurchaseObject&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+                  timestampString = "585666127.14281"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "201">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.493347"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.493386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.4934371"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_Mart.PurchaseHistoryNetworking.sendRequest(with: Tips_Mart.PurchaseReq, handler: (Swift.Array&lt;Tips_Mart.PurchaseObject&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+                  timestampString = "585666127.153645"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "853">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_Mart.PurchaseHistoryNetworking.sendRequest(with: Tips_Mart.PurchaseReq, handler: (Swift.Array&lt;Tips_Mart.PurchaseObject&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+                  timestampString = "585666127.155256"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "980">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Tips_Mart.PurchaseHistoryNetworking.sendRequest(with: Tips_Mart.PurchaseReq, handler: (Swift.Array&lt;Tips_Mart.PurchaseObject&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+                  timestampString = "585666127.157093"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.493486"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.493525"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.4935631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.493606"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
+            timestampString = "585669781.493656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "sendRequest(with:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

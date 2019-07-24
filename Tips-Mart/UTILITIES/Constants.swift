@@ -13,3 +13,4 @@ var accessToken = UserDefaults.standard.value(forKey: "accessToken") as! String
 var refreshToken = UserDefaults.standard.value(forKey: "refreshToken") as! String
 var accessExpires = UserDefaults.standard.value(forKey: "accessExpires") as! Double
 var refreshExpires = UserDefaults.standard.value(forKey: "refreshExpires") as! Double
+var authCode = UserDefaults.standard.value(forKey: "authCode") as! Int

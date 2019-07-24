@@ -12,22 +12,39 @@ class PurchaseDSD: NSObject, UITableViewDataSource{
     
     var tableView: UITableView!
     var controller: UIViewController!
+    var viewModel: PurchaseViewModel!
+    var model: [PurchaseObject]
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return 15
+        return model.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "purchaseCell", for: indexPath) as! PurchaseCell
+        let model = self.model[indexPath.row]
+        
+        cell.sumPurchaseLbl.text = NSLocalizedString("Transaction amount", comment: "") + " " + String(model.sumPurchase)
+        cell.createdTime.text = model.created
+        cell.operationID.text = NSLocalizedString("Operation ID", comment: "") + " " + model.cashbackID
+        cell.cashbackSum.text = String(model.userCashback)
+        
+        LogoNetworkService().getImages(with: model.shopData.pathToImage) { (image) in
+            OperationQueue.main.addOperation {
+                cell.shopLogo.image = image
+            }
+        }
         return cell
     }
     
-    init(tableView: UITableView, controller: UIViewController) {
+    init(tableView: UITableView, controller: UIViewController, model: [PurchaseObject]) {
+        self.model = model
         self.tableView = tableView
         self.controller = controller
         let nib = UINib(nibName: "PurchaseCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "purchaseCell")
+        viewModel = PurchaseViewModel()
+        self.tableView.reloadData()
     }
 }
 
@@ -39,6 +56,7 @@ extension PurchaseDSD: UITableViewDelegate{
         ac.modalPresentationStyle = .overCurrentContext
         ac.detailsDidTapped = {[weak self] in
             ac.dismiss(animated: true, completion: nil)
+            purchaseDetail.model = self?.model[indexPath.row]
             self?.controller.navigationController?.pushViewController(purchaseDetail, animated: true)
             
         }

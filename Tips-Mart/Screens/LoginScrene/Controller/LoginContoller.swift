@@ -24,6 +24,7 @@ class LoginController: UIViewController {
     var viewModel: LoginViewModelProtocol!
     
     var regeistrModel: RegistrationModelRequset!
+    var secondStepReg: SecondStepRegistration!
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -43,13 +44,18 @@ class LoginController: UIViewController {
     @objc private func handleRegistration(_ notification: NSNotification){
         if let userInfo = notification.userInfo as NSDictionary?{
             guard let phoneNumber = userInfo["PhoneNumber"] as? String else {return}
-            self.regeistrModel = RegistrationModelRequset(options: OptionsForRegistration(inviter: "", phoneNumber: phoneNumber))
+            guard let password = userInfo["password"] as? String else {return}
+            let result = phoneNumber.filter("+01234567890".contains)
+            self.regeistrModel = RegistrationModelRequset(phoneNumber: result )
+            self.secondStepReg = SecondStepRegistration(phoneNumber: result, authCode: 0, password: password, inviter: "", isMobileApp: true)
             self.viewModel = RegistrationViewModel(registrationModel: self.regeistrModel)
             self.viewModel.letsGo()
            
         }
-        let vc =  UIStoryboard(name: "ContinueRegistration", bundle: nil).instantiateViewController(withIdentifier: "ContinueNavigation")
-        present(vc, animated: true, completion: nil)
+        let vc =  UIStoryboard(name: "ContinueRegistration", bundle: nil).instantiateViewController(withIdentifier: "AuthVc") as! ContinueRegistrationController
+        let nav = UINavigationController.init(rootViewController: vc)
+        vc.model = self.secondStepReg
+        present(nav, animated: true, completion: nil)
     }
     //OBserver for Login Btn Action
     private func addObserverForLoginBtn(){

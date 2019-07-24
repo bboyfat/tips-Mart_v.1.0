@@ -8,22 +8,20 @@
 
 import Foundation
 
+
+//Struct to send first request after registration to get the AuthCode
 //MARK: First step Registration
-//Struct to send first request after registration to get the AuthCode
 struct RegistrationModelRequset: Codable {
-    var options: OptionsForRegistration
+    var phoneNumber: String
 }
 //Struct to send first request after registration to get the AuthCode
-struct OptionsForRegistration: Codable {
-    #warning("Ask about this property")
-    var inviter: String = ""
-    var phoneNumber: String
-    
-}
+
+
 //Struct to get AuthCode
 struct AuthOutput: Codable {
     var success: Bool
-    var code: Int
+    var code: Int?
+    var text: String?
 }
 
 //MARK: Second step Registration
@@ -33,13 +31,12 @@ struct SecondStepRegistration: Codable {
     var authCode: Int
     var password: String
     var inviter: String
+    var isMobileApp: Bool = true
 }
 
 // Struct to get the tokens after Registration
 
 struct TokkensAfterRegistration: Codable {
-    var succes: Bool
-    var userid: Int
-    var refreshToken: RefresshToken
-    var accessToke: AccesToken
+    var success: Bool
+    var data: Tokens
 }

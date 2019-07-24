@@ -20,11 +20,15 @@ class PurchaseHistoryController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PurchaseHistoryNetworking().sendRequest(with: PurchaseReq()) { (model) in
+            self.tableDSD = PurchaseDSD(tableView: self.tableView, controller: self, model: model)
+            self.tableView.dataSource = self.tableDSD
+            self.tableView.delegate = self.tableDSD
+        }
     
-        tableDSD = PurchaseDSD(tableView: tableView, controller: self)
         
-        tableView.dataSource = tableDSD
-        tableView.delegate = tableDSD
+        
+        
         
         addTargets()
     }

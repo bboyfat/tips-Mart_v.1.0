@@ -184,3 +184,49 @@ class LogoNetworkService{
     }
     
 }
+//Final step of fucking registration
+class UserSettingsNetwork: RefreshServiceProtocol{
+    
+    var model: UserProfile!
+    func sendRequest(handler: @escaping (Bool) -> ()) {
+        guard let url = URL(string: URLS.changeInfo.rawValue) else { handler(false); return}
+        
+        let params: NSMutableDictionary = NSMutableDictionary()
+        params.setValue(model.name, forKey: "name")
+        params.setValue(model.surname, forKey: "surname")
+        params.setValue(model.birthday, forKey: "birthday")
+        params.setValue(model.maritalStatus, forKey: "maritalStatus")
+        
+        let header = accessToken
+        let jsonDatasonData = try? JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
+        let optionsObject = NSString(data: jsonDatasonData!, encoding: String.Encoding.utf8.rawValue)! as String
+        let postParamsString = "data=\(optionsObject)"
+        
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        request.httpBody = postParamsString.data(using: String.Encoding.utf8)
+        request.addValue("Bearer \(header)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            guard let data = data else {return}
+            
+            do{
+                let answer = try JSONSerialization.jsonObject(with: data, options: [])
+               print(answer)
+                
+                
+            } catch {
+                print("!!!!!!!!!!!!!!!!!!OOPS, we have an error",error)
+            }
+            }.resume()
+    }
+    
+    init(model: UserProfile) {
+        self.model = model
+    }
+    
+
+    
+}

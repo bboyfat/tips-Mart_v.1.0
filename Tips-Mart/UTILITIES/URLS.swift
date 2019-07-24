@@ -12,10 +12,11 @@ import Foundation
 
 //reachebi
 enum URLS: String{
-    case authURL = "https://app-client.tips-mart.com/auth/v1/registration"
+    case authURL = "https://tips-mart.com/auth/auth-code"
+    case regURL = "https://auth.tips-mart.com/app-client/registration"
     case login = "https://auth.tips-mart.com/app-client/login"
     case userInit = "https://app-client.tips-mart.com/user/init"
-    case changeInfo = "https://app-client.tips-mart.com/profile/v1/change-data"
+    case changeInfo = "https://update.tips-mart.com/profile/settings"
     case notifications = "https://app-client.tips-mart.com/user/notifications"
     case selectedShopsUrl = "https://app-client.tips-mart.com/user/selected_shops"
     case shopInfo = "https://app-client.tips-mart.com/shops/"
@@ -23,5 +24,5 @@ enum URLS: String{
     case refreshToken = "https://auth.tips-mart.com/app-client/token"
     case refreshBalance = "https://app-client.tips-mart.com/user/balance"
     case referalsIncome = "https://app-client.tips-mart.com/profile/v1/user"
-    case purchasesInfo = "https://app-client.tips-mart.com/profile/v1/purchases"
+    case purchasesInfo = "https://app-client.tips-mart.com/purchases"
 }

@@ -11,13 +11,18 @@ import UIKit
 class PurchaseDetailController: UIViewController {
     
     //MARK: Properties
+    var model: PurchaseObject!
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: " Назад", with: .forceLeftToRight)
     
+    @IBOutlet var purchaseDetailView: PurchaseDetailView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addTargets()
+        if model != nil{
+            setLabels(model: model)
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -36,8 +41,16 @@ class PurchaseDetailController: UIViewController {
     }
     @objc func handlePop(){
         navigationController?.popViewController(animated: true)
-        
-        
+    }
+    
+    private func setLabels(model: PurchaseObject){
+        purchaseDetailView.operationID.text = model.cashbackID
+        purchaseDetailView.operationState.text = ""
+        purchaseDetailView.shopNameLbl.text = model.shopData.name
+        purchaseDetailView.sumPurchaseLbl.text = String(model.sumPurchase)
+        purchaseDetailView.cashbackSum.text = String(model.userCashback)
+        purchaseDetailView.createdLbl.text = model.created
+        purchaseDetailView.updatedLbl.text = model.updated
     }
    
     

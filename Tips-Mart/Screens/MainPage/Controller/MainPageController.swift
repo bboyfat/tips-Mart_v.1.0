@@ -29,8 +29,7 @@ class MainPageController: UIViewController {
     }
     // presenting of profile screen
     @objc func handlePresent(){
-        
-       
+    
         let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileNavigation") 
         present(vc, animated: true, completion: nil)
         

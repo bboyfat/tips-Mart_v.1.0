@@ -11,7 +11,9 @@ import UIKit
 class ContinueRegistrationController: UIViewController {
     //MARK: Properties
     
-    
+   
+    var model: SecondStepRegistration!
+    var networkService = RegistrationSecondStep()
     
     //StatusBar style
     
@@ -38,6 +40,11 @@ class ContinueRegistrationController: UIViewController {
     
     
     @IBAction func checkAuthBtn(_ sender: UIButton) {
+        model.authCode = authCode
+        model.inviter = ""
+        networkService.sendRequest(with: model) { (finish) in
+            
+        }
         let vc = UIStoryboard(name: "ContinueRegistration", bundle: nil).instantiateViewController(withIdentifier: "AgreementVc") as! AgreementViewController
         self.navigationController?.pushViewController(vc, animated: true)
         

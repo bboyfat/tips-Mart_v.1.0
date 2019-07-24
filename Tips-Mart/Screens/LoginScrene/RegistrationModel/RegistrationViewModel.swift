@@ -13,18 +13,18 @@ class RegistrationViewModel: LoginViewModelProtocol{
     
     //    var networkProtocol: LoginNetworkService.loginModel
     var networkService = RegistrationNetworkService()
+    
     var registrationModel: RegistrationModelRequset!
+    
     // func ro send request for login
     func letsGo() {
         networkService.sendRequest(with: registrationModel) { (finish) in
-            if finish{
-                print(self.registrationModel as Any)
-            }
         }
     }
-    //private func to set data for login
+    //private func to set data for registration
     private func fetch(registrationModel: RegistrationModelRequset){
         self.registrationModel = registrationModel
+        
     }
     
     //init to be sure that model can't be a nil
