@@ -14,7 +14,7 @@ enum LoginSuccess{
 }
 
 protocol LoginViewModelProtocol{
-    func letsGo()
+    func letsGo(handelr: @escaping (Bool) -> ())
 }
 
 class LoginViewModel: LoginViewModelProtocol{
@@ -23,10 +23,13 @@ class LoginViewModel: LoginViewModelProtocol{
     var networkService = LoginNetworkService()
     var loginModel: LoginModel!
     // func ro send request for login
-    func letsGo() {
+    func letsGo(handelr: @escaping (Bool) -> ()) {
         networkService.sendRequest(with: loginModel) { (finish) in
             if finish{
                 print(self.loginModel as Any)
+                handelr(true)
+            } else {
+                handelr(false)
             }
         }
     }

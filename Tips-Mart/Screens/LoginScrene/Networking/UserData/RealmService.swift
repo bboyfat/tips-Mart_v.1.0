@@ -32,10 +32,10 @@ class RealmService: RealmServiceProtocol{
     //save data method
     func save() {
         let userDataRealm = RealmUserData()
-        userDataRealm.setValue(userData.name, forKey: "name")
+        userDataRealm.setValue(userData.nickname, forKey: "nickname")
         userDataRealm.setValue(userData.phoneNumber, forKey: "phoneNumber")
-        userDataRealm.setValue(userData.surname, forKey: "surName")
-        let idString = String(userData.userid)
+        userDataRealm.setValue(userData.created, forKey: "created")
+        let idString = String(userData.userid ?? 0)
         userDataRealm.setValue(idString, forKey: "id")
         
         let realm = try! Realm()
@@ -59,8 +59,12 @@ class RealmService: RealmServiceProtocol{
     }
     
     
-    init(userData: UsersData) {
+    init(userData: UsersData?) {
+        if let userData = userData{
         self.userData = userData
+        } else {
+            self.userData = UsersData()
+        }
     }
     
     

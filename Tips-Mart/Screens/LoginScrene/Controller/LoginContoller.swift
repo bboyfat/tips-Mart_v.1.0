@@ -19,6 +19,8 @@ class LoginController: UIViewController {
     @IBOutlet weak var regWidth: NSLayoutConstraint!
     //MARK: Properties
     let notificationCenter = NotificationCenter.default
+    var regValidator: RegistrationValidator!
+     
     //StatusBar style
     var loginModel = LoginModel()
     var viewModel: LoginViewModelProtocol!
@@ -31,6 +33,7 @@ class LoginController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        regValidator = RegistrationValidator(self)
         enterBtnoutlet.setTitle(NSLocalizedString("Enter", comment: ""), for: .normal)
         addObserverForRegistrationBtn()
         addObserverForLoginBtn()
@@ -45,11 +48,17 @@ class LoginController: UIViewController {
         if let userInfo = notification.userInfo as NSDictionary?{
             guard let phoneNumber = userInfo["PhoneNumber"] as? String else {return}
             guard let password = userInfo["password"] as? String else {return}
+            guard let rePassword = userInfo["rePassword"] as? String else {return}
             let result = phoneNumber.filter("+01234567890".contains)
+            if self.regValidator.checkPassAndRepeatPass(password, rePassword) && self.regValidator.checkPhoneNumber(phoneNumber){
             self.regeistrModel = RegistrationModelRequset(phoneNumber: result )
             self.secondStepReg = SecondStepRegistration(phoneNumber: result, authCode: 0, password: password, inviter: "", isMobileApp: true)
             self.viewModel = RegistrationViewModel(registrationModel: self.regeistrModel)
-            self.viewModel.letsGo()
+            self.viewModel.letsGo { (_) in
+                
+                }} else {
+                
+            }
            
         }
         let vc =  UIStoryboard(name: "ContinueRegistration", bundle: nil).instantiateViewController(withIdentifier: "AuthVc") as! ContinueRegistrationController
@@ -66,14 +75,14 @@ class LoginController: UIViewController {
             self.loginModel.phoneNumber = userInfo["phone"] as? String
             self.loginModel.password = userInfo["pass"] as? String
             viewModel = LoginViewModel(loginModel: self.loginModel)
-            viewModel.letsGo()
-             OperationQueue.main.addOperation {
-            let tabBarController = UIStoryboard(name: "MainTabBar", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarController
-           
-                self.present(tabBarController, animated: true) {
-                    
+            viewModel.letsGo { (isSaved) in
+                if isSaved{
+                    self.presentMainTabBar()
+                } else {
+                    LoginAnswerrErrors().presentInfoController(controller: self)
                 }
             }
+           
         }
     }
     // Gesture for end editing
@@ -109,6 +118,17 @@ class LoginController: UIViewController {
         regWidth.constant = self.view.frame.width
         UIView.animate(withDuration: 0.25) {
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    //Present MAIN TAB BAR
+    func presentMainTabBar(){
+        OperationQueue.main.addOperation {
+            let tabBarController = UIStoryboard(name: "MainTabBar", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarController
+            
+            self.present(tabBarController, animated: true) {
+                
+            }
         }
     }
     

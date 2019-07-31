@@ -15,33 +15,38 @@ struct TokenRefresh: Codable{
     var userid: Int
     
 }
- //Secons step of Login
-class InitUserService: NetworkServiceProtocol{
+//Second step of Login
+//With this request you will get  User's Information such as: created;nickname;phoneNumber;userid ;
+//You can use this reques aniwhere only if you have the access token
+class InitUserService: RefreshServiceProtocol{
     
-    typealias loginModel = Tokens
+    private var dataBaseService: RealmServiceProtocol?
     
-    //Secons step of Login
-    func sendRequest(with params: Tokens, handler: @escaping (Bool) -> ()) {
+    //Second step of Login
+    func sendRequest(handler: @escaping (Bool) -> ()) {
         
         guard let url = URL(string: URLS.userInit.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
         
-        urlRequest.addValue("Bearer \(params.accessToken.value)", forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
                 do{
+                    let json = try JSONSerialization.jsonObject(with: response, options: [])
                     let answer  = try JSONDecoder().decode(UsersOutput.self, from: response)
+                    guard let userData = answer.data else {return}
+                    self.dataBaseService = RealmService(userData: userData)
+                    self.dataBaseService?.save()
                     
+                    print(json)
                     
-                    
-                    print(answer)
-                    
-                } catch{
-                    print(Error.self)
+                } catch let initErr{
+                    print(initErr)
                 }
             }
+            
         }
     }
     

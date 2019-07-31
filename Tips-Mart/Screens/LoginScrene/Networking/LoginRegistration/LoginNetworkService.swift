@@ -13,7 +13,6 @@ import Alamofire
 class LoginNetworkService: NetworkServiceProtocol{
     
     typealias loginModel = LoginModel
-    private var dataBaseService: RealmServiceProtocol?
     private let userDefaults = UserDefaults.standard
     
     // with first request i will get a tokens
@@ -26,6 +25,11 @@ class LoginNetworkService: NetworkServiceProtocol{
             if let data = dataResponse.data{
             do{
                 let json = try JSONDecoder().decode(LoginToken.self, from: data)
+                if let text = json.text{
+                    print(text)
+                    self.userDefaults.set(text, forKey: "loginError")
+                    handler(false)
+                }
                 if let data = json.data{
                     // set values for tokens
                     self.userDefaults.set(data.accessToken.value, forKey: "accessToken")
@@ -33,9 +37,7 @@ class LoginNetworkService: NetworkServiceProtocol{
                     //set expires for tokens
                     self.userDefaults.set(data.accessToken.expires, forKey: "accessExpires")
                     self.userDefaults.set(data.refreshToken.expires, forKey: "refreshExpires")
-                    InitUserService().sendRequest(with: data, handler: { (_) in
-                    })
-        
+                    handler(true)
                 } else {
                     handler(false)
                 }

@@ -13,11 +13,11 @@ class RegistrationViewModel: LoginViewModelProtocol{
     
     //    var networkProtocol: LoginNetworkService.loginModel
     var networkService = RegistrationNetworkService()
-    
+   
     var registrationModel: RegistrationModelRequset!
     
     // func ro send request for login
-    func letsGo() {
+    func letsGo(handelr: @escaping (Bool) -> ()) {
         networkService.sendRequest(with: registrationModel) { (finish) in
         }
     }

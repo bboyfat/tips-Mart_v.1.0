@@ -11,9 +11,8 @@ import RealmSwift
 
 
 class RealmUserData: Object{
-    @objc dynamic var name: String = ""
-    @objc dynamic var surName: String = ""
+    @objc dynamic var nickname: String = ""
     @objc dynamic var phoneNumber: String = ""
     @objc dynamic var id: String = ""
-    @objc dynamic var birthDate: String = ""
+    @objc dynamic var created: String = ""
 }

@@ -50,7 +50,7 @@ class RegXib: UIView{
         registrationBtn.addTarget(self, action: #selector(handlePost), for: .touchUpInside)
     }
     @objc private func handlePost(){
-        let userInfo: [String : Any] = ["PhoneNumber": phoneNumber.text!, "password": password.text!]
+        let userInfo: [String : Any] = ["PhoneNumber": phoneNumber.text!, "password": password.text!, "rePassword": repeatPassword.text!]
         
         notificationCenter.post(name: NSNotification.Name.registrationPressed, object: self, userInfo: userInfo)
     }
@@ -88,7 +88,7 @@ extension RegXib: UITextFieldDelegate{
         setMaskForPhone()
     }
     func setMaskForPhone(){
-        phoneNumber.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: " ### ### ## ##")
+        phoneNumber.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: " (###) ###-##-##")
         phoneNumber.prefix = "+38"
     }
 }

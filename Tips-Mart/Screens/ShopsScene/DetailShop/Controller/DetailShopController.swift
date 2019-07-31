@@ -90,6 +90,13 @@ class DetailShopController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
   
+    @IBAction func goToShop(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "ShopWebView", bundle: nil).instantiateViewController(withIdentifier: "ShopWebViewVC") as! ShopWebViewController
+        vc.url = "https://tips-mart.com/view/\(pathToShop)"
+//        let nav = UINavigationController(rootViewController: vc)
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func presentReviewScreen(_ sender: UIButton) {
         let vc = UIStoryboard(name: "OneShop", bundle: nil).instantiateViewController(withIdentifier: "ReviewVC") as! ReviewViewController
         navigationController?.pushViewController(vc, animated: true)

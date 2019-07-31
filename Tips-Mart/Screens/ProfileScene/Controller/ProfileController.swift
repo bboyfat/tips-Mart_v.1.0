@@ -10,9 +10,13 @@ import UIKit
 
 class ProfileController: UIViewController {
 
+    @IBOutlet var profileView: ProfileView!
+    var balanceAlerts: BalanceAlerts!
     //MARK: Properties
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Icon"), with: "", with: .forceRightToLeft)
+    var model: RealmUserData!
+    
     //StatusBar style
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -21,7 +25,9 @@ class ProfileController: UIViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        balanceAlerts = BalanceAlerts(controller: self)
         addTargets() // add targets fot items
+        setLabels()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,16 +52,27 @@ class ProfileController: UIViewController {
     @objc func handlePush(){
       
     }
+    
+    func setLabels(){
+        if let model = model{
+            profileView.nicknameLabel.text = model.nickname
+            profileView.idLabel.text = model.id.separate(every: 2, with: " ")
+        }
+    }
     //MARK: IBAction
     @IBAction func presentPurchaseHistory(_ sender: UIButton) {
-        let purch = PurchaseReq(statuses: nil, isArchived: nil, createdFrom: nil, createdTo: nil)
-        
-        
         let vc = storyboard?.instantiateViewController(withIdentifier: "PurchaseVC") as! PurchaseHistoryController
+        vc.purchaseSender = .profile
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func greenBalanceInfo(_ sender: UIButton) {
+        balanceAlerts.presentInfo("Зеленый кошелек", BalanceAlertMessage.greenMessage.rawValue)
+    }
     
+    @IBAction func grayBalanceInfo(_ sender: Any) {
+        balanceAlerts.presentInfo("Серый кошелек", BalanceAlertMessage.grayMessage.rawValue)
+    }
     
 
 }

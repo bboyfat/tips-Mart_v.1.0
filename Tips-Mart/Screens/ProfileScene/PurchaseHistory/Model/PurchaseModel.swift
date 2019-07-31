@@ -17,7 +17,12 @@ struct PurchaseData: Codable {
     var data: [PurchaseObject]
 }
 
-struct PurchaseObject: Codable {
+struct PurchaseObject: Codable, Equatable, Hashable{
+    
+    static func == (lhs: PurchaseObject, rhs: PurchaseObject) -> Bool {
+        return true
+    }
+    
     var _purchase: String
     var status: Int
     var created: String
@@ -29,17 +34,36 @@ struct PurchaseObject: Codable {
    
 }
 
-struct ShopObject: Codable {
+struct ShopObject: Codable, Hashable {
     var name: String
     var pathToImage: String
 }
 
 
 //Struct to send request
-
+struct PurchaseReqData: Codable {
+    var data: PurchaseReq
+}
 struct PurchaseReq: Codable {
     var statuses: [Int]?   //Сортировка по статусам
     var isArchived: Bool?
     var createdFrom: Int?
     var createdTo: Int?
+}
+
+
+//Struct for changing purchase state
+enum PurchaseState: String {
+    case remove = "isRemoved"
+    case archive = "isArchived"
+}
+
+struct PurchaseStateModel: Codable{
+    var newState: [String]
+    var _purchase: String
+}
+
+struct StateAnswer: Codable {
+    var success: Bool
+    var text: String?
 }

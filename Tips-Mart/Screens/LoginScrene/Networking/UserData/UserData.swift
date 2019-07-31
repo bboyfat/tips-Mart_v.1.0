@@ -12,14 +12,14 @@ import UIKit
 struct UsersOutput: Codable{
     var success: Bool?
     var data: UsersData?
+    var text: String?
 }
 // struct for getting data after login
 struct UsersData: Codable{
-    var userid: Int
-    var phoneNumber: String
-    var name: String
-    var surname: String?
-    var created: String
+    var userid: Int?
+    var phoneNumber: String?
+    var nickname: String?
+    var created: String?
     
 }
 //MARK: Tokens

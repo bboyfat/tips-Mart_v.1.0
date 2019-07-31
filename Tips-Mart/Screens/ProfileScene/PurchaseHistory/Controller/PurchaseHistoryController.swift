@@ -8,7 +8,14 @@
 
 import UIKit
 
+enum PurchaseSender{
+    case profile
+    case more
+}
+
 class PurchaseHistoryController: UIViewController {
+    
+    var purchaseSender: PurchaseSender = .profile
     
     //MARK: Properties
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .forceLeftToRight)
@@ -20,10 +27,13 @@ class PurchaseHistoryController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PurchaseHistoryNetworking().sendRequest(with: PurchaseReq()) { (model) in
-            self.tableDSD = PurchaseDSD(tableView: self.tableView, controller: self, model: model)
-            self.tableView.dataSource = self.tableDSD
-            self.tableView.delegate = self.tableDSD
+        PurchaseHistoryNetworking().sendRequest(with: PurchaseReqData(data: PurchaseReq())) { (model) in
+            OperationQueue.main.addOperation {
+                self.tableDSD = PurchaseDSD(tableView: self.tableView, controller: self, model: model)
+                self.tableView.dataSource = self.tableDSD
+                self.tableView.delegate = self.tableDSD
+            }
+          
         }
     
         
@@ -34,7 +44,7 @@ class PurchaseHistoryController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setClearNavigation(with: #colorLiteral(red: 0.0386101231, green: 0.8220543265, blue: 0.5023989081, alpha: 1), with: "")
+        setClearNavigation(with: #colorLiteral(red: 0.0386101231, green: 0.8220543265, blue: 0.5023989081, alpha: 1), with: "Purchase history")
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
         addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
     }
@@ -49,7 +59,11 @@ class PurchaseHistoryController: UIViewController {
     }
     @objc func handlePop(){
          navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        if purchaseSender == .profile{
       navigationController?.popViewController(animated: true)
+        }  else {
+            self.dismiss(animated: true, completion: nil)
+        }
         
         
     }

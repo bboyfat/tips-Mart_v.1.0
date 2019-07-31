@@ -19,7 +19,7 @@ class PurchaseViewModel: PurchaseViewModelProtocol {
         return model.count
     }
     func getArray(){
-        PurchaseHistoryNetworking().sendRequest(with: PurchaseReq()) { (model) in
+        PurchaseHistoryNetworking().sendRequest(with: PurchaseReqData(data: PurchaseReq())) { (model) in
             self.model = model
         }
     }

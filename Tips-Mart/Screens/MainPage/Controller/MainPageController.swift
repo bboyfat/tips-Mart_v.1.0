@@ -12,13 +12,32 @@ class MainPageController: UIViewController {
     //MARK: Properties
     @IBOutlet weak var mainView: MainPageView!
     @IBOutlet weak var collectionBanerView: UICollectionView!
+    var viewModel = MainPageViewModel()
+    var model: RealmUserData!
     
+    var balancaAlert: BalanceAlerts!
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionBanerView.delegate = self
         collectionBanerView.dataSource = self
         addGesturetoStack()
+        balancaAlert = BalanceAlerts(controller: self)
+        InitUserService().sendRequest { (_) in
+            
+        }
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setViews()
+    }
+    @IBAction func myCardBtnAction(_ sender: Any) {
+        let vc = UIStoryboard(name: "MyCard", bundle: nil).instantiateViewController(withIdentifier: "MyCardVC") as! MyCardController
+        vc.model = self.model
+        let nav = UINavigationController(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
         
     }
     
@@ -30,10 +49,27 @@ class MainPageController: UIViewController {
     // presenting of profile screen
     @objc func handlePresent(){
     
-        let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileNavigation") 
-        present(vc, animated: true, completion: nil)
+        let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC") as! ProfileController
+        vc.model = self.model
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
         
         
+    }
+    func setViews(){
+        viewModel.infoUpdated = {[weak self] in
+            guard let model = self?.viewModel.getModel() else {return}
+            self?.model = model
+            self?.mainView.idLabel.text = model.id.separate(every: 2, with: " ")
+            self?.mainView.nicknameLabel.text = model.nickname
+        }
+       
+    }
+    @IBAction func grayBalanceInfo(_ sender: UIButton) {
+        balancaAlert.presentInfo("Серый кошелек", BalanceAlertMessage.grayMessage.rawValue)
+    }
+    @IBAction func greenBalanceInfo(_ sender: UIButton) {
+         balancaAlert.presentInfo("Зеленый кошелек", BalanceAlertMessage.greenMessage.rawValue)
     }
 }
 extension MainPageController: UICollectionViewDelegate, UICollectionViewDataSource{

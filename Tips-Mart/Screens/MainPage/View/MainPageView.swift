@@ -8,12 +8,18 @@
 
 import UIKit
 
+
 class MainPageView: UIView {
 
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var profileStackView: UIStackView!
     @IBOutlet weak var myCardBtn: UIButton!
     @IBOutlet weak var otherCardsBtn: UIButton!
+    //User info stack
+    
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setCornersForButtons()
