@@ -26,12 +26,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/ContinueRegistrationScrene/Controller/ContinueRegistrationController.swift"
-                  timestampString = "586298299.515285"
+                  timestampString = "586363422.518088"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
                   endingLineNumber = "45"
-                  offsetFromSymbolStart = "648">
+                  offsetFromSymbolStart = "671">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +41,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/ContinueRegistrationScrene/Controller/ContinueRegistrationController.swift"
-                  timestampString = "586298299.5199521"
+                  timestampString = "586363422.520951"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
                   endingLineNumber = "47"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -218,12 +218,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
-                  timestampString = "586298299.761326"
+                  timestampString = "586363422.565079"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
                   endingLineNumber = "51"
-                  offsetFromSymbolStart = "992">
+                  offsetFromSymbolStart = "1309">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -233,12 +233,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
-                  timestampString = "586298299.767161"
+                  timestampString = "586363422.5669841"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "52"
                   endingLineNumber = "52"
-                  offsetFromSymbolStart = "168">
+                  offsetFromSymbolStart = "236">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -298,12 +298,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
-                  timestampString = "586298299.810549"
+                  timestampString = "586363422.584049"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "412">
+                  offsetFromSymbolStart = "1735">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -313,12 +313,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
-                  timestampString = "586298299.815377"
+                  timestampString = "586363422.58611"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "1308">
+                  offsetFromSymbolStart = "1864">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -328,12 +328,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/LoginRegistration/RegistrationNetworkSerwice.swift"
-                  timestampString = "586298299.818397"
+                  timestampString = "586363422.587972"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "63"
                   endingLineNumber = "63"
-                  offsetFromSymbolStart = "1400">
+                  offsetFromSymbolStart = "2263">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -441,12 +441,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.860749"
+                  timestampString = "586363422.619361"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "98"
                   endingLineNumber = "98"
-                  offsetFromSymbolStart = "108">
+                  offsetFromSymbolStart = "114">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -456,7 +456,7 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.863808"
+                  timestampString = "586363422.621174"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "100"
@@ -505,12 +505,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
-                  timestampString = "586298299.8779809"
+                  timestampString = "586363422.6317821"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
                   endingLineNumber = "107"
-                  offsetFromSymbolStart = "396">
+                  offsetFromSymbolStart = "785">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -520,12 +520,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
-                  timestampString = "586298299.88138"
+                  timestampString = "586363422.633898"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
                   endingLineNumber = "107"
-                  offsetFromSymbolStart = "608">
+                  offsetFromSymbolStart = "931">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -535,12 +535,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
-                  timestampString = "586298299.885329"
+                  timestampString = "586363422.637198"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
                   endingLineNumber = "107"
-                  offsetFromSymbolStart = "712">
+                  offsetFromSymbolStart = "1324">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -584,12 +584,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.910828"
+                  timestampString = "586363422.64947"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "1336">
+                  offsetFromSymbolStart = "1691">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -599,12 +599,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.916362"
+                  timestampString = "586363422.651765"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "88">
+                  offsetFromSymbolStart = "94">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -632,12 +632,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.9271441"
+                  timestampString = "586363422.660352"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "106"
                   endingLineNumber = "106"
-                  offsetFromSymbolStart = "108">
+                  offsetFromSymbolStart = "114">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -647,7 +647,7 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.9317631"
+                  timestampString = "586363422.662842"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -680,12 +680,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.952455"
+                  timestampString = "586363422.670994"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
                   endingLineNumber = "108"
-                  offsetFromSymbolStart = "492">
+                  offsetFromSymbolStart = "556">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -695,7 +695,7 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.957128"
+                  timestampString = "586363422.673322"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -728,12 +728,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.971954"
+                  timestampString = "586363422.680218"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
                   endingLineNumber = "108"
-                  offsetFromSymbolStart = "492">
+                  offsetFromSymbolStart = "556">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -743,7 +743,7 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/ProfileScene/PurchaseHistory/DSD/PurchaseDSD.swift"
-                  timestampString = "586298299.978212"
+                  timestampString = "586363422.682062"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -824,12 +824,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
-                  timestampString = "586298300.024232"
+                  timestampString = "586363422.7047091"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
                   endingLineNumber = "102"
-                  offsetFromSymbolStart = "1012">
+                  offsetFromSymbolStart = "1304">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -839,12 +839,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/PurchaseHistoryNetworking/PurchaseHistoryNetworking.swift"
-                  timestampString = "586298300.030256"
+                  timestampString = "586363422.706934"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "103"
                   endingLineNumber = "103"
-                  offsetFromSymbolStart = "152">
+                  offsetFromSymbolStart = "201">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1016,7 +1016,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
-            timestampString = "586267770.501515"
+            timestampString = "586364274.537221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "216"
@@ -1032,7 +1032,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
-            timestampString = "586267770.501821"
+            timestampString = "586364274.537354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "217"
@@ -1048,7 +1048,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
-            timestampString = "586267770.502017"
+            timestampString = "586364274.537428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "219"
@@ -1064,12 +1064,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
-                  timestampString = "586298300.151351"
+                  timestampString = "586363422.769471"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "220"
                   endingLineNumber = "220"
-                  offsetFromSymbolStart = "664">
+                  offsetFromSymbolStart = "832">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1079,12 +1079,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/LoginScrene/Networking/RefreshData/BalaceNetworkService.swift"
-                  timestampString = "586298300.157439"
+                  timestampString = "586363422.77132"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "220"
                   endingLineNumber = "220"
-                  offsetFromSymbolStart = "732">
+                  offsetFromSymbolStart = "911">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1112,7 +1112,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-Mart/Screens/MoreScreen/MoreController.swift"
-            timestampString = "586298298.8578351"
+            timestampString = "586364274.537589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -1128,7 +1128,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-Mart/Screens/MoreScreen/MoreController.swift"
-            timestampString = "586298298.858529"
+            timestampString = "586364274.5377001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -1144,7 +1144,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tips-Mart/Screens/MoreScreen/MoreController.swift"
-            timestampString = "586298298.859048"
+            timestampString = "586364274.537781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -1160,12 +1160,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/MoreScreen/MoreController.swift"
-                  timestampString = "586298300.20796"
+                  timestampString = "586363422.796896"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "140">
+                  offsetFromSymbolStart = "114">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1175,12 +1175,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/MoreScreen/MoreController.swift"
-                  timestampString = "586298300.211537"
+                  timestampString = "586363422.7996269"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "192">
+                  offsetFromSymbolStart = "128">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1190,12 +1190,12 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/MoreScreen/MoreController.swift"
-                  timestampString = "586298300.215494"
+                  timestampString = "586363422.801899"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "18">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1205,14 +1205,124 @@
                   moduleName = "Tips-Mart"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/MoreScreen/MoreController.swift"
-                  timestampString = "586298300.218987"
+                  timestampString = "586363422.804939"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
                   endingLineNumber = "13"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/Friends/StatisticContoller/StatisticController.swift"
+            timestampString = "586364274.537879"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "statisticFor"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.StatisticController.statisticFor.modify : Tips_Mart.StatisticFor"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/Friends/StatisticContoller/StatisticController.swift"
+                  timestampString = "586363422.816901"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.StatisticController.statisticFor.modify : Tips_Mart.StatisticFor with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/Friends/StatisticContoller/StatisticController.swift"
+                  timestampString = "586363422.819559"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.StatisticController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Tips_Mart.StatisticController"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/Friends/StatisticContoller/StatisticController.swift"
+                  timestampString = "586363422.822397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tips_Mart.StatisticController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Tips_Mart.StatisticController&gt;"
+                  moduleName = "Tips-Mart"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andreypetrovskiy/Desktop/Tips-Mart.v.1.0/Tips-Mart/Tips-Mart/Screens/Friends/StatisticContoller/StatisticController.swift"
+                  timestampString = "586363422.825211"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "320">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/Friends/StatisticContoller/StatisticController.swift"
+            timestampString = "586364274.537989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "statisticFor"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tips-Mart/Screens/Friends/StatisticContoller/StatisticController.swift"
+            timestampString = "586364274.538054"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "switchSegmentController(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

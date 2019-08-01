@@ -10,7 +10,7 @@ import UIKit
 
 class OperationFilterController: UIViewController {
 
-    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .unspecified)
+    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "     ", with: .forceLeftToRight)
     
     
     override func viewDidLoad() {

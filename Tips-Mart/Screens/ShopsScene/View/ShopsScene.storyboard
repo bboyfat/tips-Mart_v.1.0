@@ -32,9 +32,6 @@
                                                 <action selector="switchCollectionType:" destination="gtX-xD-3Jf" id="ieI-0E-42M"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="Right" id="o8x-Yv-ote">
-                                            <color key="tintColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -106,7 +103,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Right" width="90" height="24"/>
         <image name="shopsCollection" width="24" height="18"/>
     </resources>
 </document>

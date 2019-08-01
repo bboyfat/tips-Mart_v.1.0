@@ -16,3 +16,5 @@
 "More Details" = "Подробнее";
 "Operation ID" = "ID Операции";
 "Transaction amount" = "Сумма операции";
+"uah" = "грн";
+"hum" = "чел";

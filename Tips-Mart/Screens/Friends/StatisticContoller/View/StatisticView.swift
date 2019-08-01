@@ -9,6 +9,8 @@
 import UIKit
 
 class StatisticView: UIView {
+    @IBOutlet weak var creditedBtn: UIButton!
+    @IBOutlet weak var pendingBtn: UIButton!
     @IBOutlet weak var segmentController: UISegmentedControl!
     @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var membersBtn: UIButton!

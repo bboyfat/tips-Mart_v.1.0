@@ -275,7 +275,7 @@
                                                         <attributes>
                                                             <color key="NSColor" red="0.30748403070000002" green="0.27058823529999998" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <font key="NSFont" size="14" name="GothamPro-Medium"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="14" paragraphSpacingBefore="1" firstLineHeadIndent="10" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" paragraphSpacing="14" paragraphSpacingBefore="14" firstLineHeadIndent="10" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -560,8 +560,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WBA-lM-Ouz"/>
                         <connections>
+                            <outlet property="bonusLbl" destination="Veu-8M-iuI" id="Ztj-Ch-t2Z"/>
                             <outlet property="idLabel" destination="izo-AW-gW0" id="rbL-Ze-Cr1"/>
+                            <outlet property="invaitedLbl" destination="9mK-4b-Rh8" id="r67-nO-6UN"/>
+                            <outlet property="membersLbl" destination="cq4-VI-VWA" id="Si5-Km-6oY"/>
                             <outlet property="nicknameLabel" destination="Ipf-jx-aHD" id="Mul-3D-8LW"/>
+                            <outlet property="operationsCountLbl" destination="nSo-Zc-2Wv" id="WYb-Of-1R2"/>
+                            <outlet property="totalCashback" destination="UyP-za-J4Z" id="gay-re-Gui"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="L2a-x8-3d3"/>

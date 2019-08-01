@@ -12,7 +12,7 @@ class MembersController: UIViewController {
     
     
     //MARK: Properties
-    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .forceRightToLeft)
+    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "    ", with: .forceLeftToRight)
     let nib = UINib(nibName: "MembersCell", bundle: nil)
     //MARK: Lyficycle
     @IBOutlet weak var tableView: UITableView!
@@ -26,8 +26,9 @@ class MembersController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        setClearNavigation(with: #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1), with: "Members")
+        setTitleColor(with: .black)
+//        setClearNavigation(with: #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1), with: "Members")
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1)
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
     }
     //MARK: Methods
@@ -57,5 +58,8 @@ extension MembersController: UITableViewDataSource{
     
 }
 extension MembersController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "OUSVC") as! OUSContoller
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

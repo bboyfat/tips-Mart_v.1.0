@@ -12,7 +12,7 @@ class OperationsController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .unspecified)
+    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "    ", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "fillter"), with: "", with: .unspecified)
     let nib = UINib(nibName: "OperationsCell", bundle: nil)
     override func viewDidLoad() {
@@ -36,10 +36,7 @@ class OperationsController: UIViewController {
         rightBarButton.addTarget(self, action: #selector(handleShowFilters), for: .touchUpInside)
     }
     @objc func handlePop(){
-        dismiss(animated: true) {
-            
-        }
-        
+        self.navigationController?.popViewController(animated: true)
     }
     @objc func handleShowFilters(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "OperationFilterVC") as! OperationFilterController

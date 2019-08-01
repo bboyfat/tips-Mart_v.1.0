@@ -9,7 +9,10 @@
 import UIKit
 
 class OUSCell: UITableViewCell {
-
+    @IBOutlet weak var operationIDLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var cahsBackValue: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

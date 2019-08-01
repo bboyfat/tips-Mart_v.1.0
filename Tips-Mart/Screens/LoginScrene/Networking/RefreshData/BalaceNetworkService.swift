@@ -230,3 +230,57 @@ class UserSettingsNetwork: RefreshServiceProtocol{
 
     
 }
+// Object that will get data for Profile screen
+class ProfileNetworkService{
+
+    func sendRequest(handler: @escaping (ProfilesData?) -> ()) {
+        guard let url = URL(string: URLS.profileStatistics.rawValue) else { handler(nil); return}
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = HTTPMethod.get.rawValue
+        
+        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        Alamofire.request(urlRequest).responseJSON { response in
+            if let response = response.data{
+                do{
+                    let json = try JSONSerialization.jsonObject(with: response, options: [])
+                    print(json)
+                    let answer  = try JSONDecoder().decode(ProfileAnswer.self, from: response)
+                    
+                    handler(answer.data)
+                    
+                } catch let profErr{
+                    print("ProfileNetworkService", profErr)
+                    handler(nil)
+                }
+            }
+        }
+    }
+    
+    
+}
+class FriendsNetworkService{
+    
+    func sendRequest(handler: @escaping ([Referals]?) -> ()) {
+        guard let url = URL(string: URLS.friendsInfo.rawValue) else { handler(nil); return}
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = HTTPMethod.get.rawValue
+        
+        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        
+        Alamofire.request(urlRequest).responseJSON { response in
+            if let response = response.data{
+                do{
+                    let answer  = try JSONDecoder().decode(FriendsAnswer.self, from: response)
+                    handler(answer.data)
+                } catch let profErr{
+                    print("ProfileNetworkService", profErr)
+                    handler(nil)
+                }
+            }
+        }
+    }
+    
+    
+}
+

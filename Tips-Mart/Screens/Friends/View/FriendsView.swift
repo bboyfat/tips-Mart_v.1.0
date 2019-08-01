@@ -10,6 +10,10 @@ import UIKit
 
 class FriendsView: UIView {
 
+    @IBOutlet weak var totalBonusBtnLbl: UILabel!
+    @IBOutlet weak var strangersBtnOutlet: UIButton!
+    @IBOutlet weak var familiarsBtnOutlet: UIButton!
+    @IBOutlet weak var friendsBtnOutlet: UIButton!
     @IBOutlet weak var moreDetailsBanner: UIImageView!
     var moreDetailsPressed: () -> () = {}
     override func awakeFromNib() {

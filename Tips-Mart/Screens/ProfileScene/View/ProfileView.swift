@@ -13,6 +13,11 @@ class ProfileView: UIView {
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
 
+    @IBOutlet weak var bonusLbl: UILabel!
+    @IBOutlet weak var invaitedLbl: UILabel!
+    @IBOutlet weak var membersLbl: UILabel!
+    @IBOutlet weak var totalCashback: UILabel!
+    @IBOutlet weak var operationsCountLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }

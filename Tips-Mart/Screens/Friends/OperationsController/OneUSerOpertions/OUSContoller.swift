@@ -12,7 +12,7 @@ class OUSContoller: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .unspecified)
+    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "    ", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "fillter"), with: "", with: .unspecified)
     let nib = UINib(nibName: "OUSCell", bundle: nil)
     override func viewDidLoad() {

@@ -26,4 +26,6 @@ enum URLS: String{
     case referalsIncome = "https://app-client.tips-mart.com/profile/v1/user"
     case purchasesInfo = "https://app-client.tips-mart.com/purchases"
     case purchaseState = "https://app-client.tips-mart.com/purchases/state"
+    case profileStatistics = "https://app-client.tips-mart.com/referrals/statistics"
+    case friendsInfo = "https://app-client.tips-mart.com/referrals/income"
 }

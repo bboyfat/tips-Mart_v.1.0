@@ -244,7 +244,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JXh-LF-n4K"/>
                         <connections>
+                            <outlet property="familiarsBtnOutlet" destination="EfR-Yg-Aqd" id="4o9-gu-gbK"/>
+                            <outlet property="friendsBtnOutlet" destination="9qs-nz-Xym" id="Om1-ek-uej"/>
                             <outlet property="moreDetailsBanner" destination="gDJ-eQ-JvQ" id="Lxx-lK-nen"/>
+                            <outlet property="strangersBtnOutlet" destination="WAb-bV-FYe" id="0fv-LW-Ibh"/>
+                            <outlet property="totalBonusBtnLbl" destination="QLk-Tk-3on" id="Kok-r1-Q0b"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="ubK-ao-pFA"/>
@@ -618,8 +622,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oZK-p3-roT"/>
                         <connections>
+                            <outlet property="creditedBtn" destination="Eht-Yf-8Oe" id="FYX-g4-s9b"/>
                             <outlet property="membersBtn" destination="2Fe-MB-qpy" id="hRz-CM-Fvw"/>
                             <outlet property="operationsBtn" destination="OUH-ks-PFo" id="Mdp-3n-KeL"/>
+                            <outlet property="pendingBtn" destination="iEu-ay-A9T" id="W6Z-zs-MOm"/>
                             <outlet property="percentLabel" destination="nEj-gN-ONA" id="aBk-ms-wvn"/>
                             <outlet property="segmentController" destination="Gfe-Ra-aW6" id="RJQ-2Y-OGi"/>
                         </connections>

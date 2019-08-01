@@ -18,7 +18,7 @@ class PurchaseHistoryController: UIViewController {
     var purchaseSender: PurchaseSender = .profile
     
     //MARK: Properties
-    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .forceLeftToRight)
+    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "       ", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "fillter"), with: "", with: .forceRightToLeft)
     
     @IBOutlet weak var tableView: UITableView!

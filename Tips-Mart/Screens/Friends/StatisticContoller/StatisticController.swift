@@ -16,6 +16,7 @@ enum StatisticFor{
 
 protocol StatisticControllerProtocol: class{
     var statisticFor: StatisticFor { get set }
+    var modelArray: [Referals] {get set}
 }
 
 class StatisticController: UIViewController, StatisticControllerProtocol {
@@ -23,12 +24,13 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
     //MARK: Properties
     
     @IBOutlet var statisticView: StatisticView!
-
-    var statisticFor: StatisticFor = .friends{
+    var modelArray = [Referals]()
+    var statisticFor: StatisticFor = .strangers{
         didSet{
             statisticForChenged()
         }
     }
+    
     
     
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: " Назад", with: .forceLeftToRight)
@@ -45,10 +47,11 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
     }
     
-
+    
     private func statisticForChenged(){
         switch statisticFor {
         case .friends:
+            setInfo(with: modelArray[0])
             statisticView.membersBtn.isEnabled = true
             statisticView.operationsBtn.isEnabled = true
             statisticView.membersBtn.setImage(#imageLiteral(resourceName: "Arrow-1"), for: .normal)
@@ -56,14 +59,16 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
             statisticView.segmentController.selectedSegmentIndex = 0
             navigationItem.title = "Bonuses from friends"
         case .familiars:
+            setInfo(with: modelArray[1])
             statisticView.membersBtn.isEnabled = false
             statisticView.operationsBtn.isEnabled = false
             statisticView.membersBtn.setImage(UIImage(), for: .normal)
             statisticView.operationsBtn.setImage(UIImage(), for: .normal)
             navigationItem.title = "Bonuses from familiars"
             statisticView.segmentController.selectedSegmentIndex = 1
-           
+            
         default:
+            setInfo(with: modelArray[2])
             statisticView.membersBtn.isEnabled = false
             statisticView.operationsBtn.isEnabled = false
             statisticView.membersBtn.setImage(UIImage(), for: .normal)
@@ -81,6 +86,14 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
         dismiss(animated: true) {
             
         }
+        
+    }
+    private func setInfo(with model: Referals?){
+        guard let model = model else { return }
+        statisticView.membersBtn.setTitle(String(model.members) + " " + peopleCount, for: .normal)
+        statisticView.operationsBtn.setTitle(String(model.orders), for: .normal)
+        statisticView.pendingBtn.setTitle(String(model.pending) + " " + currency, for: .normal)
+        statisticView.creditedBtn.setTitle(String(model.credited) + " " + currency, for: .normal)
         
     }
     
@@ -104,8 +117,6 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
             break
         }
     }
-    
-    
 }
 
 

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,10 +42,10 @@
                                     <constraint firstAttribute="height" constant="31" id="Nbt-Ih-OVw"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayHeart" translatesAutoresizingMaskIntoConstraints="NO" id="gn7-FN-3VM">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayHeart" translatesAutoresizingMaskIntoConstraints="NO" id="gn7-FN-3VM">
                                 <rect key="frame" x="135" y="5" width="24" height="21"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-hC-dXP">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame_icon" translatesAutoresizingMaskIntoConstraints="NO" id="hWf-hC-dXP">
                                 <rect key="frame" x="5" y="125" width="24" height="24"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorsFor" translatesAutoresizingMaskIntoConstraints="NO" id="vNJ-Kw-Iie">
@@ -95,6 +94,12 @@
                             <constraint firstAttribute="bottom" secondItem="8Ca-sc-R55" secondAttribute="bottom" constant="2" id="vwg-X4-vcG"/>
                             <constraint firstItem="9TX-CJ-AMp" firstAttribute="top" secondItem="nQ6-W2-EeV" secondAttribute="bottom" constant="5" id="xKC-3D-SzA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gn7-FN-3VM"/>
+                                <exclude reference="hWf-hC-dXP"/>
+                            </mask>
+                        </variation>
                     </view>
                 </subviews>
             </view>

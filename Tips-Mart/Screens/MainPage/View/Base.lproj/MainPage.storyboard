@@ -137,7 +137,7 @@
                                             <constraint firstItem="N4l-yh-0iR" firstAttribute="leading" secondItem="WVN-CV-K4F" secondAttribute="trailing" constant="8" id="yx6-8e-E9B"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5Q-cZ-mpj">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5Q-cZ-mpj">
                                         <rect key="frame" x="288" y="28" width="16" height="22"/>
                                         <state key="normal" image="Icon"/>
                                     </button>
@@ -208,7 +208,7 @@
                                             <constraint firstAttribute="width" secondItem="HUX-Co-ulv" secondAttribute="height" multiplier="4:1" id="tdI-dE-Uzp"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZT-Pn-UFm">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZT-Pn-UFm">
                                         <rect key="frame" x="16" y="28" width="16" height="22"/>
                                         <state key="normal" image="Loo"/>
                                     </button>
@@ -241,7 +241,7 @@
                                 <rect key="frame" x="0.0" y="208" width="320" height="360"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5V-i6-7g0">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="595"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="295"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-18-8rj">
                                                 <rect key="frame" x="0.0" y="-5" width="320" height="142"/>
@@ -275,10 +275,10 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-eP-vaP">
-                                                <rect key="frame" x="0.0" y="295" width="320" height="300"/>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-eP-vaP">
+                                                <rect key="frame" x="0.0" y="295" width="320" height="0.0"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="pA0-pk-aKn"/>
+                                                    <constraint firstAttribute="height" id="pA0-pk-aKn"/>
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khx-Ds-eOC">
