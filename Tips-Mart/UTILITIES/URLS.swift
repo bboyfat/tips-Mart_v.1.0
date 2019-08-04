@@ -28,4 +28,6 @@ enum URLS: String{
     case purchaseState = "https://app-client.tips-mart.com/purchases/state"
     case profileStatistics = "https://app-client.tips-mart.com/referrals/statistics"
     case friendsInfo = "https://app-client.tips-mart.com/referrals/income"
+    case membersInfo = "https://app-client.tips-mart.com/referrals/friends"
+    case ousInfo = "https://app-client.tips-mart.com/referrals/purchases"
 }

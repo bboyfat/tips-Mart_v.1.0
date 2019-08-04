@@ -26,7 +26,6 @@ class LoginViewModel: LoginViewModelProtocol{
     func letsGo(handelr: @escaping (Bool) -> ()) {
         networkService.sendRequest(with: loginModel) { (finish) in
             if finish{
-                print(self.loginModel as Any)
                 handelr(true)
             } else {
                 handelr(false)

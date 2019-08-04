@@ -11,7 +11,7 @@ import UIKit
 class DetailShopController: UIViewController {
     
     //MARK: Properties
-    
+    var customBlurAnimtion = CustomBlurView()
     var dataSourceDelegate: ReviewDSD!
     var model: Shop!
     var shopData: ShopDataRealm!
@@ -29,7 +29,7 @@ class DetailShopController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupAnimation()
         getShopData()  //getting network data
         addTarget()  //adding target to nav button
         setDelegates()
@@ -41,9 +41,13 @@ class DetailShopController: UIViewController {
         }
         
     }
-
         
     //MARK: Methods
+    private func setupAnimation(){
+        customBlurAnimtion.frame = self.view.bounds
+        self.view.addSubview(customBlurAnimtion)
+        customBlurAnimtion.startAnimation()
+    }
     private func setItems(button: UIButton) -> UIView{
         let view = UIView()
         view.addSubview(button)
@@ -71,6 +75,7 @@ class DetailShopController: UIViewController {
         shopView.attentionLbl.text = htmlParser.parseHTML(htmlContent: model.data?.warningInfo ?? "<WARNING INFO>")
         shopView.cashbackTimeLbl.text = model.data?.timeProcessing
         shopView.informationLabel.text = htmlParser.parseHTML(htmlContent: model.data?.description ?? "<HER TAM>")
+         customBlurAnimtion.stopAnim()
     }
     
     //add target to items

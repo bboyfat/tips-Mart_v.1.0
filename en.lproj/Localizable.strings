@@ -20,3 +20,7 @@
 "Transaction amount" = "Transaction amount";
 "uah" = "uah";
 "hum" = "hum";
+"err" = "Error";
+"canceled" = "Canceled";
+"pending" = "Pending";
+"credited" = "Credited";

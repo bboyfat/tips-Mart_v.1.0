@@ -18,6 +18,9 @@ class LoginController: UIViewController {
     //MARK NSLayoutConsttaint
     @IBOutlet weak var regWidth: NSLayoutConstraint!
     //MARK: Properties
+    
+    var customBlurAnimtion = CustomBlurView()
+    
     let notificationCenter = NotificationCenter.default
     var regValidator: RegistrationValidator!
      
@@ -71,6 +74,7 @@ class LoginController: UIViewController {
         notificationCenter.addObserver(self, selector: #selector(handleLogin), name: NSNotification.Name.loginPressed, object: nil)
     }
     @objc private func handleLogin(_ notification: NSNotification){
+        self.setupAnimation()
         if let userInfo = notification.userInfo as NSDictionary?{
             self.loginModel.phoneNumber = userInfo["phone"] as? String
             self.loginModel.password = userInfo["pass"] as? String
@@ -79,6 +83,7 @@ class LoginController: UIViewController {
                 if isSaved{
                     self.presentMainTabBar()
                 } else {
+                    self.customBlurAnimtion.stopAnim()
                     LoginAnswerrErrors().presentInfoController(controller: self)
                 }
             }
@@ -127,11 +132,15 @@ class LoginController: UIViewController {
             let tabBarController = UIStoryboard(name: "MainTabBar", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarController
             
             self.present(tabBarController, animated: true) {
-                
+                self.customBlurAnimtion.stopAnim()
             }
         }
     }
-    
+    private func setupAnimation(){
+        customBlurAnimtion.frame = self.view.bounds
+        self.view.addSubview(customBlurAnimtion)
+        customBlurAnimtion.startAnimation()
+    }
     
     private func setHidden(view: UIView){
         view.isHidden = true

@@ -18,3 +18,7 @@
 "Transaction amount" = "Сумма операции";
 "uah" = "грн";
 "hum" = "чел";
+"err" = "Ошибка";
+"canceled" = "Отменено";
+"pending" = "В одидании";
+"credited" = "Зачислено";

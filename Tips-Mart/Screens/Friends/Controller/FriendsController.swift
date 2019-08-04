@@ -45,10 +45,12 @@ class FriendsController: UIViewController {
     }
     
     private func funcSetBtnlbls(){
+        if modelArray.count > 0{
        friendsView.friendsBtnOutlet.setTitle(String(modelArray[0].members) + " " + peopleCount, for: .normal)
         friendsView.familiarsBtnOutlet.setTitle(String(modelArray[1].members) + " " + peopleCount, for: .normal)
         friendsView.strangersBtnOutlet.setTitle(String(modelArray[2].members) + " " + peopleCount, for: .normal)
         friendsView.totalBonusBtnLbl.text = String(modelArray[0].credited + modelArray[1].credited + modelArray[2].credited) + " " + currency
+        }
     }
     
     @IBAction func inviteBtnAction(_ sender: Any) {

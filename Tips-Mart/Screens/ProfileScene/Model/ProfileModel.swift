@@ -35,6 +35,6 @@ struct Referals: Codable {
 
 struct PersonalCashback: Codable {
     var countPurchases: Int
-    var grayBalance: Int
-    var greenBalance: Int
+    var grayBalance: Double
+    var greenBalance: Double
 }

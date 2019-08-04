@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +20,7 @@
         <!--Controller-->
         <scene sceneID="ZAN-dq-cH3">
             <objects>
-                <viewController id="GGU-hp-7TC" customClass="WDController" customModule="Tips_Mart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WDScreen" id="GGU-hp-7TC" customClass="WDController" customModule="Tips_Mart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rzz-2m-Y1p" customClass="WDView" customModule="Tips_Mart" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,13 +32,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9v-9Y-rHW">
-                                <rect key="frame" x="134" y="96.5" width="52" height="11"/>
+                                <rect key="frame" x="134" y="74.5" width="52" height="11"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="0.70047624143835618" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-vC-YgB">
-                                <rect key="frame" x="77.5" y="47" width="165.5" height="39.5"/>
+                                <rect key="frame" x="77.5" y="25" width="165.5" height="39.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2215" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I50-Qr-2ro">
                                         <rect key="frame" x="0.0" y="0.0" width="99" height="39.5"/>
@@ -142,7 +141,7 @@
                                 </subviews>
                             </stackView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJR-d8-X8e">
-                                <rect key="frame" x="0.0" y="282.5" width="320" height="213.5"/>
+                                <rect key="frame" x="0.0" y="282.5" width="320" height="0.0"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSg-xG-b14">
                                         <rect key="frame" x="25" y="39.5" width="270" height="1"/>
@@ -167,7 +166,7 @@
                                         <rect key="frame" x="25" y="75" width="270" height="15"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mrt-Is-4vX">
                                         <rect key="frame" x="25" y="96" width="270" height="1"/>
@@ -191,7 +190,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-OS-RPx">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-OS-RPx" customClass="PhoneFormattedTextField" customModule="SwiftPhoneNumberFormatter">
                                         <rect key="frame" x="25" y="18.5" width="270" height="15"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
@@ -212,8 +211,8 @@
                                     <constraint firstItem="Nwv-KS-J0S" firstAttribute="top" secondItem="Mrt-Is-4vX" secondAttribute="bottom" constant="32" id="QL1-DU-Rou"/>
                                     <constraint firstItem="Wrj-VS-4bT" firstAttribute="leading" secondItem="dJR-d8-X8e" secondAttribute="leading" constant="25" id="TAd-LH-EAd"/>
                                     <constraint firstItem="Nwv-KS-J0S" firstAttribute="leading" secondItem="dJR-d8-X8e" secondAttribute="leading" constant="16" id="Zjv-3k-CLD"/>
+                                    <constraint firstAttribute="height" id="cMk-lb-J8X"/>
                                     <constraint firstItem="JRJ-sN-LCj" firstAttribute="leading" secondItem="dJR-d8-X8e" secondAttribute="leading" constant="25" id="cyP-P7-xQD"/>
-                                    <constraint firstAttribute="width" secondItem="dJR-d8-X8e" secondAttribute="height" multiplier="1.5:1" id="dEg-cB-T9J"/>
                                     <constraint firstItem="Mrt-Is-4vX" firstAttribute="centerX" secondItem="BGI-A8-3F2" secondAttribute="centerX" id="jOo-uC-uz4"/>
                                     <constraint firstItem="JRJ-sN-LCj" firstAttribute="top" secondItem="jSg-xG-b14" secondAttribute="bottom" constant="16" id="pHt-cq-W3P"/>
                                     <constraint firstItem="8uI-OS-RPx" firstAttribute="top" secondItem="Wrj-VS-4bT" secondAttribute="bottom" constant="6" id="ptY-SH-ESk"/>
@@ -244,7 +243,7 @@
                             <constraint firstItem="9Mj-n8-BBk" firstAttribute="top" secondItem="rzz-2m-Y1p" secondAttribute="top" id="Zlh-86-Toc"/>
                             <constraint firstItem="q9v-9Y-rHW" firstAttribute="top" secondItem="mvs-vC-YgB" secondAttribute="bottom" constant="10" id="asd-Kz-bhn"/>
                             <constraint firstItem="DmQ-6H-S0j" firstAttribute="trailing" secondItem="9Mj-n8-BBk" secondAttribute="trailing" id="bR9-g2-M3W"/>
-                            <constraint firstItem="mvs-vC-YgB" firstAttribute="top" secondItem="DmQ-6H-S0j" secondAttribute="top" constant="27" id="c2Y-Ry-9z4"/>
+                            <constraint firstItem="mvs-vC-YgB" firstAttribute="top" secondItem="DmQ-6H-S0j" secondAttribute="top" constant="5" id="c2Y-Ry-9z4"/>
                             <constraint firstItem="q9v-9Y-rHW" firstAttribute="centerX" secondItem="9Mj-n8-BBk" secondAttribute="centerX" id="eCw-BA-RMA"/>
                             <constraint firstItem="DmQ-6H-S0j" firstAttribute="trailing" secondItem="7vc-V5-8uu" secondAttribute="trailing" constant="16" id="oFb-8y-SxH"/>
                             <constraint firstItem="n7u-zL-fgf" firstAttribute="leading" secondItem="DmQ-6H-S0j" secondAttribute="leading" constant="16" id="yrf-zD-D1f"/>
@@ -252,7 +251,10 @@
                         <viewLayoutGuide key="safeArea" id="DmQ-6H-S0j"/>
                         <connections>
                             <outlet property="cardView" destination="GCn-th-Oye" id="Csw-70-r4j"/>
+                            <outlet property="numberTextField" destination="8uI-OS-RPx" id="apA-Nx-MTZ"/>
                             <outlet property="phoneView" destination="ptO-BQ-FH5" id="4ON-t4-6eG"/>
+                            <outlet property="textFieldName" destination="Wrj-VS-4bT" id="7o8-Iy-fW6"/>
+                            <outlet property="wdFieldWidth" destination="cMk-lb-J8X" id="quU-0V-XkI"/>
                         </connections>
                     </view>
                     <connections>

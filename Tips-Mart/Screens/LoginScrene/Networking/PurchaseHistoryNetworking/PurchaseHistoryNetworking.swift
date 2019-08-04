@@ -70,7 +70,8 @@ class PurchaseHistoryNetworking: PurchaseServiceProtocol{
         
         urlRequest.httpMethod = "POST"
         urlRequest.httpBody = purchDataFinalString.data(using: String.Encoding.utf8)
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         //creating a url session
         let session = URLSession.shared
         session.dataTask(with: urlRequest) { (data, response, error) in

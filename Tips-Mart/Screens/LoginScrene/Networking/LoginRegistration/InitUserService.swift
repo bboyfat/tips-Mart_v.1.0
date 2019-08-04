@@ -28,8 +28,8 @@ class InitUserService: RefreshServiceProtocol{
         guard let url = URL(string: URLS.userInit.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
@@ -37,6 +37,7 @@ class InitUserService: RefreshServiceProtocol{
                     let json = try JSONSerialization.jsonObject(with: response, options: [])
                     let answer  = try JSONDecoder().decode(UsersOutput.self, from: response)
                     guard let userData = answer.data else {return}
+                    UserDefaults.standard.set(answer.data?.userid, forKey: "userId")
                     self.dataBaseService = RealmService(userData: userData)
                     self.dataBaseService?.save()
                     

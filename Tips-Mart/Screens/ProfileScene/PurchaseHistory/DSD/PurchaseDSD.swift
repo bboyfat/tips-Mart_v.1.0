@@ -33,7 +33,7 @@ class PurchaseDSD: NSObject, UITableViewDataSource{
         cell.createdTime.text = model.created
         cell.operationID.text = NSLocalizedString("Operation ID", comment: "") + " " + model.cashbackID
         cell.cashbackSum.text = String(model.userCashback)
-        
+        cell.state = model.status
         LogoNetworkService().getImages(with: model.shopData.pathToImage) { (image) in
             OperationQueue.main.addOperation {
                 cell.shopLogo.image = image
@@ -100,12 +100,15 @@ extension PurchaseDSD: UITableViewDelegate{
             })
 //            self?.model.remove(model)
 //            self?.tableView.reloadRows(at: tableView.indexPathsForVisibleRows!, with: .bottom)
+            ac.dismiss(animated: true, completion: nil)
         }
         ac.toChallengeDidTapped = {print("challenge")}
         ac.archiveDidTapped = {[weak self] in
             self?.changeStateService.sendRequest(with: PurchaseStateModel(newState: [PurchaseState.archive.rawValue], _purchase: model._purchase), handler: { (_) in
                 
-            })}
+            })
+            ac.dismiss(animated: true, completion: nil)
+        }
         controller.present(ac, animated: true, completion: nil)
     }
     

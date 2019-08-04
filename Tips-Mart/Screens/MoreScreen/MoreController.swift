@@ -46,7 +46,9 @@ class MoreController: UIViewController {
             self?.present(nav, animated: true, completion: nil)
         }
         moreView.wdDidTapped = {[weak self] in
-            print("WDWDWDWD WD WD WD")
+            let vc = UIStoryboard(name: "Withdrawal", bundle: nil).instantiateViewController(withIdentifier: "WDScreen") as! WDController
+            let nav = UINavigationController(rootViewController: vc)
+             self?.present(nav, animated: true, completion: nil)
         }
         moreView.bonusesDidTapped = {[weak self] in
             self?.tabBarController?.selectedViewController = self?.tabBarController?.viewControllers![2]
@@ -63,8 +65,10 @@ class MoreController: UIViewController {
             
         }
         moreView.logoutDidTapped = {[weak self] in
-            
+            UserDefaults.standard.set(nil, forKey: "refreshToken")
+            UserDefaults.standard.set(nil, forKey: "accessToken")
             self?.tabBarController?.dismiss(animated: true, completion: nil
+                
             )
         }
         

@@ -13,7 +13,7 @@ class MyCardController: UIViewController {
     @IBOutlet var myCardView: MyCardView!
     
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "    ", with: .forceRightToLeft)
-    let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "creditCardWhite"), with: "", with: .unspecified)
+    let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "creditCardWhite"), with: "      ", with: .forceRightToLeft)
     var generator = BarCodeGenerator()
     var model: RealmUserData!
     override func viewDidLoad() {
@@ -70,9 +70,13 @@ class MyCardController: UIViewController {
     //add targets to items
     private func addTargets(){
         leftBarButton.addTarget(self, action: #selector(handlePop), for: .touchUpInside)
+        rightBarButton.addTarget(self, action: #selector(handleAlert), for: .touchDragInside)
     }
     
-    
+    @objc func handleAlert(){
+        let balanceAlerts = BalanceAlerts(controller: self)
+        balanceAlerts.presentUpdateAlert()
+    }
     @objc func handlePop(){
         self.dismiss(animated: true, completion: nil)
         

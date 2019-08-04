@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -260,6 +259,17 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="familiarsBponusGreen" destination="Ehj-Wp-b1x" id="HES-Vf-Ijv"/>
+                <outlet property="familiarsCount" destination="UmZ-xq-lKQ" id="XZg-Zo-VMk"/>
+                <outlet property="familirsBonusGray" destination="ajC-id-taH" id="J7e-nW-N9h"/>
+                <outlet property="friendsBonusGray" destination="qzQ-DM-Lsk" id="LiU-cJ-dK3"/>
+                <outlet property="friendsBonusGreen" destination="Iz6-4K-fOG" id="HHr-gA-R4f"/>
+                <outlet property="ifLbl" destination="9Kj-CQ-Kw9" id="ESI-Wb-tGz"/>
+                <outlet property="nicknameLbl" destination="848-Q9-S9S" id="07M-zF-T0q"/>
+                <outlet property="operationsLbl" destination="j5c-xs-Ebs" id="B2L-Wp-ni6"/>
+                <outlet property="strangersCount" destination="I90-jv-zmP" id="tMd-FU-U6M"/>
+            </connections>
             <point key="canvasLocation" x="169.56521739130437" y="39.508928571428569"/>
         </tableViewCell>
     </objects>

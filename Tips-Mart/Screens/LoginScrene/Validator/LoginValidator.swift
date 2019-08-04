@@ -23,7 +23,7 @@ class LoginValidator{
 
 class LoginAnswerrErrors{
     func presentInfoController(controller: UIViewController){
-        let ac = UIAlertController(title: nil, message: loginError, preferredStyle: .actionSheet)
+        let ac = UIAlertController(title: nil, message: loginError(), preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         ac.addAction(action)
         controller.present(ac, animated: true, completion: nil)

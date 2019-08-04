@@ -12,7 +12,7 @@ class ShareController: UIViewController {
     
     @IBOutlet var shareView: ShareVIew!
     
-    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "", with: .forceLeftToRight)
+    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "       ", with: .forceLeftToRight)
     
     override func viewDidLoad() {
         super.viewDidLoad()

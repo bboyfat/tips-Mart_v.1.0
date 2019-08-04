@@ -24,6 +24,12 @@ class BalanceAlerts{
         ac.addAction(action)
         controller.present(ac, animated: true, completion: nil)
     }
+    func presentUpdateAlert(){
+        let ac = UIAlertController(title: "ОБНОВЛЕНИЕ", message: "Следите за обновлениям, совсем скоро данная возможность будет доступна", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        ac.addAction(action)
+        controller.present(ac, animated: true, completion: nil)
+    }
     init(controller: UIViewController) {
         self.controller = controller
     }

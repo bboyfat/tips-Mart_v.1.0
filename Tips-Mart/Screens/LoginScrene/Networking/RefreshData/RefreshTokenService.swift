@@ -12,7 +12,7 @@ import Alamofire
 class RefreshToken: NetworkServiceProtocol{
     
     typealias loginModel = TokenRefresh
-    
+    let userDefaults = UserDefaults.standard
     func sendRequest(with params: TokenRefresh, handler: @escaping (Bool) -> ()) {
         let data = try! JSONEncoder().encode(params)
         guard let params = try! JSONSerialization.jsonObject(with: data, options: []) as? Parameters else { handler(false); return }
@@ -21,13 +21,14 @@ class RefreshToken: NetworkServiceProtocol{
             if let data = dataResponse.data{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    
+                    let answer = try JSONDecoder().decode(LoginToken.self, from: data)
                     // set values for tokens
-//                    self.userDefaults.set(data.accessToken.value, forKey: "accessToken")
-//                    self.userDefaults.set(data.refreshToken.value, forKey: "refreshToken")
+                    self.userDefaults.set(answer.data?.accessToken.value, forKey: "accessToken")
+                    self.userDefaults.set(answer.data?.refreshToken.value, forKey: "refreshToken")
 //                    //set expires for tokens
-//                    self.userDefaults.set(data.accessToken.expires, forKey: "accessExpires")
-//                    self.userDefaults.set(data.refreshToken.expires, forKey: "refreshExpires")
+                    self.userDefaults.set(answer.data?.accessToken.expires, forKey: "accessExpires")
+                    self.userDefaults.set(answer.data?.refreshToken.expires, forKey: "refreshExpires")
+                    handler(true)
                 } catch {
                     handler(false)
                 }

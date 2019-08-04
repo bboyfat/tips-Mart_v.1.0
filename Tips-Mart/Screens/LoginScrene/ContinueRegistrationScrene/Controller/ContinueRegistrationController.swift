@@ -40,7 +40,7 @@ class ContinueRegistrationController: UIViewController {
     
     
     @IBAction func checkAuthBtn(_ sender: UIButton) {
-        model.authCode = authCode
+        model.authCode = authCode()
         model.inviter = ""
         networkService.sendRequest(with: model) { (finish) in
             

@@ -91,6 +91,8 @@
 		C2929BA322D4EF9C0056E043 /* ShopsDSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2929BA222D4EF9C0056E043 /* ShopsDSD.swift */; };
 		C2929BA522D4EFAD0056E043 /* ShopsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2929BA422D4EFAD0056E043 /* ShopsViewModel.swift */; };
 		C2929BA722D4EFB80056E043 /* ShopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2929BA622D4EFB80056E043 /* ShopsModel.swift */; };
+		C2A3E72822F43C0300A8F3E0 /* MembersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A3E72722F43C0300A8F3E0 /* MembersModel.swift */; };
+		C2A3E72C22F4492700A8F3E0 /* OUSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A3E72B22F4492700A8F3E0 /* OUSModel.swift */; };
 		C2AE38B222E1B30D00DB3C5A /* StatisticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE38B122E1B30D00DB3C5A /* StatisticController.swift */; };
 		C2AE38B522E1BC6100DB3C5A /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE38B422E1BC6100DB3C5A /* StatisticView.swift */; };
 		C2AE38B922E1E85600DB3C5A /* UIViewController + ClearNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE38B822E1E85600DB3C5A /* UIViewController + ClearNavigation.swift */; };
@@ -140,6 +142,8 @@
 		C2E98B1322F1C28300175EB3 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E98B1222F1C28300175EB3 /* LoginValidator.swift */; };
 		C2E98B1522F1C28F00175EB3 /* RegistrationValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E98B1422F1C28F00175EB3 /* RegistrationValidator.swift */; };
 		C2E98B1822F1D3ED00175EB3 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E98B1722F1D3ED00175EB3 /* More.storyboard */; };
+		C2EEE9BB22F715040088706B /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEE9BA22F715040088706B /* CustomBlurView.swift */; };
+		C2EEE9BD22F7221B0088706B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2EEE9BC22F7221B0088706B /* WebKit.framework */; };
 		C2FB700A22DDD95F000A3FE7 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB700922DDD95F000A3FE7 /* HTMLParser.swift */; };
 /* End PBXBuildFile section */
 
@@ -255,6 +259,8 @@
 		C2929BA222D4EF9C0056E043 /* ShopsDSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsDSD.swift; sourceTree = "<group>"; };
 		C2929BA422D4EFAD0056E043 /* ShopsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewModel.swift; sourceTree = "<group>"; };
 		C2929BA622D4EFB80056E043 /* ShopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsModel.swift; sourceTree = "<group>"; };
+		C2A3E72722F43C0300A8F3E0 /* MembersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersModel.swift; sourceTree = "<group>"; };
+		C2A3E72B22F4492700A8F3E0 /* OUSModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUSModel.swift; sourceTree = "<group>"; };
 		C2AE38B122E1B30D00DB3C5A /* StatisticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticController.swift; sourceTree = "<group>"; };
 		C2AE38B422E1BC6100DB3C5A /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		C2AE38B822E1E85600DB3C5A /* UIViewController + ClearNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ClearNavigation.swift"; sourceTree = "<group>"; };
@@ -311,6 +317,8 @@
 		C2E98B1222F1C28300175EB3 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
 		C2E98B1422F1C28F00175EB3 /* RegistrationValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationValidator.swift; sourceTree = "<group>"; };
 		C2E98B1722F1D3ED00175EB3 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		C2EEE9BA22F715040088706B /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
+		C2EEE9BC22F7221B0088706B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C2FB700922DDD95F000A3FE7 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		D808B406DD4D9FA9FFD62B6E /* Pods_Tips_Mart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_Mart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -320,6 +328,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2EEE9BD22F7221B0088706B /* WebKit.framework in Frameworks */,
 				4E81E302E85B0984E52EAB9C /* Pods_Tips_Mart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +350,7 @@
 		89FA4530CF71F43268B309B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2EEE9BC22F7221B0088706B /* WebKit.framework */,
 				C2B4B82122CF80D60096CDC0 /* XCTest.framework */,
 				D808B406DD4D9FA9FFD62B6E /* Pods_Tips_Mart.framework */,
 				87FE2A4375636C5D15B4E063 /* Pods_Tips_Mart_Tips_MartTests.framework */,
@@ -551,6 +561,7 @@
 		C246AC8122E06BDF002F4A51 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				C2E717F022E5E52B00E2412D /* OneUSerOpertions */,
 				C24EDF3E22E5F271002992F1 /* OperationsFilter */,
 				C2AE38BD22E1FD0400DB3C5A /* OperationsController */,
 				C2AE38BC22E1FCDB00DB3C5A /* MembersController */,
@@ -818,9 +829,9 @@
 		C2929B9322D4E0970056E043 /* ShopsScene */ = {
 			isa = PBXGroup;
 			children = (
+				C289187922D5F87900A4DFB9 /* ShopsDataService */,
 				C2185ECB22D8AE4F009F3321 /* DetailShop */,
 				C2185EBC22D7690F009F3321 /* Filter */,
-				C289187922D5F87900A4DFB9 /* ShopsDataService */,
 				C2929BAA22D4EFDB0056E043 /* ShopsDSD */,
 				C2929BA922D4EFC50056E043 /* ViewModel */,
 				C2929BA822D4EFBF0056E043 /* Model */,
@@ -874,6 +885,30 @@
 			path = ShopsDSD;
 			sourceTree = "<group>";
 		};
+		C2A3E72622F43BE000A8F3E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2A3E72722F43C0300A8F3E0 /* MembersModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2A3E72922F4491000A8F3E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2A3E72B22F4492700A8F3E0 /* OUSModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2A3E72A22F4491800A8F3E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C24EDF3722E5EB26002992F1 /* OUSContoller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C2AE38B022E1B2D500DB3C5A /* StatisticContoller */ = {
 			isa = PBXGroup;
 			children = (
@@ -894,6 +929,7 @@
 		C2AE38BC22E1FCDB00DB3C5A /* MembersController */ = {
 			isa = PBXGroup;
 			children = (
+				C2A3E72622F43BE000A8F3E0 /* Model */,
 				C2AE38C322E2052D00DB3C5A /* Controller */,
 				C2AE38BE22E1FD7000DB3C5A /* View */,
 			);
@@ -903,7 +939,6 @@
 		C2AE38BD22E1FD0400DB3C5A /* OperationsController */ = {
 			isa = PBXGroup;
 			children = (
-				C2E717F022E5E52B00E2412D /* OneUSerOpertions */,
 				C2E717EB22E5B8F400E2412D /* Cell */,
 				C2E717E922E5B84C00E2412D /* OperationsController.swift */,
 			);
@@ -960,6 +995,7 @@
 				C289187522D5EF8A00A4DFB9 /* Constants.swift */,
 				C2FB700922DDD95F000A3FE7 /* HTMLParser.swift */,
 				C22DE14322F314FE00D588F1 /* LocalizableConstants.swift */,
+				C2EEE9BA22F715040088706B /* CustomBlurView.swift */,
 			);
 			path = UTILITIES;
 			sourceTree = "<group>";
@@ -1191,10 +1227,12 @@
 		C2E717F022E5E52B00E2412D /* OneUSerOpertions */ = {
 			isa = PBXGroup;
 			children = (
+				C2A3E72A22F4491800A8F3E0 /* Controller */,
+				C2A3E72922F4491000A8F3E0 /* Model */,
 				C24EDF3922E5EB33002992F1 /* cell */,
-				C24EDF3722E5EB26002992F1 /* OUSContoller.swift */,
 			);
-			path = OneUSerOpertions;
+			name = OneUSerOpertions;
+			path = OperationsController/OneUSerOpertions;
 			sourceTree = "<group>";
 		};
 		C2E98B0822F1A49A00175EB3 /* View */ = {
@@ -1409,8 +1447,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A3E72822F43C0300A8F3E0 /* MembersModel.swift in Sources */,
 				C229B2DD22E0AC95000E9F17 /* FriendsView.swift in Sources */,
 				C2929B9722D4E45F0056E043 /* ShopsController.swift in Sources */,
+				C2EEE9BB22F715040088706B /* CustomBlurView.swift in Sources */,
 				C22DE14422F314FE00D588F1 /* LocalizableConstants.swift in Sources */,
 				C28D33E022D399770072A95C /* MainTabBarController.swift in Sources */,
 				C2C5840A22CE01E4004CBCBF /* AuthView.swift in Sources */,
@@ -1497,6 +1537,7 @@
 				C2185EBB22D768E0009F3321 /* CategoryModel.swift in Sources */,
 				C2B4B7FC22CF4B8A0096CDC0 /* LoginNetworkService.swift in Sources */,
 				C28CBEA722D340E700F53838 /* UITextField + RightPasswordView.swift in Sources */,
+				C2A3E72C22F4492700A8F3E0 /* OUSModel.swift in Sources */,
 				C2B0449822E7157700D633AC /* WDView.swift in Sources */,
 				C2C583F722CCFA5B004CBCBF /* Notification + Name.swift in Sources */,
 				C2E717EA22E5B84C00E2412D /* OperationsController.swift in Sources */,

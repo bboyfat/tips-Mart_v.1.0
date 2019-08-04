@@ -37,6 +37,7 @@ class LoginNetworkService: NetworkServiceProtocol{
                     //set expires for tokens
                     self.userDefaults.set(data.accessToken.expires, forKey: "accessExpires")
                     self.userDefaults.set(data.refreshToken.expires, forKey: "refreshExpires")
+                    
                     handler(true)
                 } else {
                     handler(false)

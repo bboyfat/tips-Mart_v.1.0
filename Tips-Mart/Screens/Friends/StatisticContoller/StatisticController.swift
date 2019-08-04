@@ -97,14 +97,19 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
         
     }
     
-    @IBAction func showMembersBtn(_ sender: Any) {
+    private func presentMembersVc(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "membersVC") as! MembersController
         navigationController?.pushViewController(vc, animated: true)
     }
-    @IBAction func showOperationsBtn(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "OperationsVC") as! OperationsController
-        navigationController?.pushViewController(vc, animated: true)
+    
+    @IBAction func showMembersBtn(_ sender: Any) {
+       presentMembersVc()
     }
+    @IBAction func showOperationsBtn(_ sender: UIButton) {
+        presentMembersVc()
+    }
+    
+    
     @IBAction func switchSegmentController(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:

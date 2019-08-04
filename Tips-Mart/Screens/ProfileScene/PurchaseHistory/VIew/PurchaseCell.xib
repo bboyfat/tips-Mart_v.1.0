@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -126,6 +125,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cahsCurrency" destination="BVU-bV-EWG" id="xcO-xA-DU7"/>
                 <outlet property="cashbackState" destination="3uw-95-M3d" id="7x0-qP-w7i"/>
                 <outlet property="cashbackSum" destination="yVf-Ti-6f9" id="J0B-jg-y5Q"/>
                 <outlet property="createdTime" destination="muN-B1-4D7" id="Y6V-e6-0tt"/>

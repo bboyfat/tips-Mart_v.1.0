@@ -12,24 +12,40 @@ class PreLoginController: UIViewController {
     //MARK: NSLayout Constraint
     @IBOutlet weak var activityBottomConastraint: NSLayoutConstraint!
     // Properties
-    let userDefaults = UserDefaults.standard
+    var networkService = RefreshToken()
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.modalTransitionStyle = .partialCurl
+        self.modalPresentationStyle = .none
         animateView()
-     
-        if userDefaults.bool(forKey: "isFirstLogin"){
-          presentVc()
+        
+    }
+    private func checkRefresh(){
+        if refreshToken() != nil{
+            networkService.sendRequest(with: TokenRefresh(token: refreshToken()!, userid: userId()!)) { (finish) in
+                if finish{
+                    self.presentTab()
+                } else {
+                    self.presentVc()
+                }
+            }
         } else {
-          presentVc()
+            presentVc()
         }
     }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkRefresh()
     }
 
     // MARK: Methods
+    private func presentTab(){
+        OperationQueue.main.addOperation {
+            let tabBarController = UIStoryboard(name: "MainTabBar", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarController
+            self.present(tabBarController, animated: true) { }
+        }
+    }
     private func presentVc(){
         OperationQueue.main.addOperation {
             let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginVc") as! LoginController

@@ -14,7 +14,7 @@ class MainPageController: UIViewController {
     @IBOutlet weak var collectionBanerView: UICollectionView!
     var viewModel = MainPageViewModel()
     var model: RealmUserData!
-    
+    let networkService = InitUserService()
     var balancaAlert: BalanceAlerts!
     //MARK: Life cycle
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class MainPageController: UIViewController {
         collectionBanerView.dataSource = self
         addGesturetoStack()
         balancaAlert = BalanceAlerts(controller: self)
-        InitUserService().sendRequest { (_) in
+        networkService.sendRequest { (_) in
             
         }
         
@@ -70,6 +70,9 @@ class MainPageController: UIViewController {
     }
     @IBAction func greenBalanceInfo(_ sender: UIButton) {
          balancaAlert.presentInfo("Зеленый кошелек", BalanceAlertMessage.greenMessage.rawValue)
+    }
+    @IBAction func otherCardsAction(_ sender: Any) {
+        balancaAlert.presentUpdateAlert()
     }
 }
 extension MainPageController: UICollectionViewDelegate, UICollectionViewDataSource{

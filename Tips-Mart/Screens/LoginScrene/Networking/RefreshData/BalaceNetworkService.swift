@@ -22,8 +22,8 @@ class BalanceNetworkService: NetworkServiceProtocol{
         guard let url = URL(string: URLS.refreshBalance.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(params.accessToken.value)", forHTTPHeaderField: "Authorization")
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
@@ -48,8 +48,8 @@ class NotificationsNetworkService: RefreshServiceProtocol{
         guard let url = URL(string: URLS.notifications.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
@@ -65,7 +65,7 @@ class NotificationsNetworkService: RefreshServiceProtocol{
     }
 }
 
-//NETWORK SERVICE TO GET ONE SHOPS
+//NETWORK SERVICE TO GET ONE SHOP
 
 class ShopNetworkService{
     
@@ -76,8 +76,8 @@ class ShopNetworkService{
         guard let url = URL(string: URLS.shopInfo.rawValue + pathToShop) else { return }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
@@ -107,8 +107,8 @@ class MainShopsNetworkService: RefreshServiceProtocol{
         guard let url = URL(string: URLS.shopsInfo.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
@@ -130,23 +130,23 @@ class MainShopsNetworkService: RefreshServiceProtocol{
 }
 //NETWORK SERVICE TO GET SELECTED SHOPS ARRAY
 class SelectedShopsService{
-   
+    
     
     
     func sendRequest(handler: @escaping ([String]) -> ()) {
         guard let url = URL(string: URLS.selectedShopsUrl.rawValue) else { handler([]); return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
                 do{
                     let answer  = try JSONDecoder().decode(SelectedShops.self, from: response)
                     
-                  handler(answer.data)
-                   
+                    handler(answer.data)
+                    
                 } catch let shopErr{
                     print("MainShopRequestError", shopErr)
                     handler([])
@@ -155,7 +155,7 @@ class SelectedShopsService{
         }
     }
     
-   
+    
 }
 //Object to get Logo
 
@@ -197,7 +197,7 @@ class UserSettingsNetwork: RefreshServiceProtocol{
         params.setValue(model.birthday, forKey: "birthday")
         params.setValue(model.maritalStatus, forKey: "maritalStatus")
         
-        let header = accessToken
+        guard let header = accessToken() else {return}
         let jsonDatasonData = try? JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
         let optionsObject = NSString(data: jsonDatasonData!, encoding: String.Encoding.utf8.rawValue)! as String
         let postParamsString = "data=\(optionsObject)"
@@ -214,7 +214,7 @@ class UserSettingsNetwork: RefreshServiceProtocol{
             
             do{
                 let answer = try JSONSerialization.jsonObject(with: data, options: [])
-               print(answer)
+                print(answer)
                 
                 
             } catch {
@@ -227,18 +227,18 @@ class UserSettingsNetwork: RefreshServiceProtocol{
         self.model = model
     }
     
-
+    
     
 }
 // Object that will get data for Profile screen
 class ProfileNetworkService{
-
+    
     func sendRequest(handler: @escaping (ProfilesData?) -> ()) {
         guard let url = URL(string: URLS.profileStatistics.rawValue) else { handler(nil); return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        guard  let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
@@ -259,14 +259,15 @@ class ProfileNetworkService{
     
     
 }
+// Object that getting data for friends screen
 class FriendsNetworkService{
     
     func sendRequest(handler: @escaping ([Referals]?) -> ()) {
         guard let url = URL(string: URLS.friendsInfo.rawValue) else { handler(nil); return}
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.get.rawValue
-        
-        urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         Alamofire.request(urlRequest).responseJSON { response in
             if let response = response.data{
@@ -283,4 +284,75 @@ class FriendsNetworkService{
     
     
 }
+//Objec that getting data about referals
+class MembersNetworkService{
+    func sendRequest(handler: @escaping ([MembersData]?) -> ()) {
+        guard let url = URL(string: URLS.membersInfo.rawValue) else { handler(nil); return}
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = HTTPMethod.post.rawValue
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        Alamofire.request(urlRequest).responseJSON { response in
+            if let response = response.data{
+                do{
+                    let answer  = try JSONDecoder().decode(MembersAnswer.self, from: response)
+                    handler(answer.data)
+                } catch let profErr{
+                    print("MembersNetworkService", profErr)
+                    handler(nil)
+                }
+            }
+        }
+    }
+    
+}
+
+class OUSNetworkService{
+    
+    var model: OUSRequest!
+    
+    func sendRequest(handler: @escaping ([OUSData]?) -> ()) {
+//        let data = try! JSONEncoder().encode(model)
+//        guard let params = try? JSONSerialization.jsonObject(with: data, options: []) as! Parameters else {return}
+        guard let url = URL(string: URLS.ousInfo.rawValue) else { handler(nil); return}
+        
+        let params: NSMutableDictionary = NSMutableDictionary()
+        params.setValue(model._user, forKey: "_user")
+         params.setValue(model.statuses, forKey: "statuses")
+         params.setValue(model.createdFrom, forKey: "createdFrom")
+         params.setValue(model.createdTo, forKey: "createdTo")
+        
+        guard let header = accessToken() else {return}
+        let jsonDatasonData = try? JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
+        let optionsObject = NSString(data: jsonDatasonData!, encoding: String.Encoding.utf8.rawValue)! as String
+        let postParamsString = "data=\(optionsObject)"
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        request.httpBody = postParamsString.data(using: String.Encoding.utf8)
+        request.addValue("Bearer \(header)", forHTTPHeaderField: "Authorization")
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            guard let data = data else {return}
+            
+            do{
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                print(json)
+                let answer = try JSONDecoder().decode(OUSAnswer.self, from: data)
+                print(answer)
+                OperationQueue.main.addOperation {
+                     handler(answer.data)
+                }
+               
+            } catch {
+                print("OUSNetworkService",error)
+            }
+            }.resume()
+    }
+}
+    
+
+
+
 
