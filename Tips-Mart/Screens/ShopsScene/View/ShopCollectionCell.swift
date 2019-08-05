@@ -23,6 +23,7 @@ class ShopCollectionCell: UICollectionViewCell, ShopsCellProtocol {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cashBackUpTobl.text = NSLocalizedString("cashbackUpTo", comment: "")
     }
 
 }

@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import WebKit
 
 class AgreementViewController: UIViewController {
     
     
     //MARK: Properties
+    @IBOutlet var webVIew: WKWebView!
+    
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow-2"), with: " Назад", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow-1"), with: " Принимаю ", with: .forceRightToLeft)
     //StatusBar style
@@ -19,10 +22,28 @@ class AgreementViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .default
     }
+    var url: String?
+    
+    
+    
+    
+    
+    
+    
+    func loadUrl(stringUrl: String){
+        guard  let url = URL(string: stringUrl) else {
+            return
+        }
+        let urlReq = URLRequest(url: url)
+        webVIew.load(urlReq)
+    }
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addTargets() // add targets fot items
+        if let url = url{
+            loadUrl(stringUrl: url)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

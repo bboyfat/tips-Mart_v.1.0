@@ -14,7 +14,7 @@ class ProfileController: UIViewController {
     var balanceAlerts: BalanceAlerts!
     //MARK: Properties
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "        ", with: .forceLeftToRight)
-    let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Icon"), with: "", with: .forceRightToLeft)
+    let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Icon"), with: "     ", with: .forceRightToLeft)
    
     let networking = ProfileNetworkService()
     //StatusBar style
@@ -65,8 +65,18 @@ class ProfileController: UIViewController {
         
     }
     @objc func handlePush(){
+        let shopsVc = UIStoryboard(name: "ShopsScene", bundle: nil).instantiateViewController(withIdentifier: "ShopsVC") as! ShopsController
+        let nav = UINavigationController(rootViewController: shopsVc)
+        shopsVc.modalPresentationStyle = .overFullScreen
+        shopsVc.addRightButton()
+        shopsVc.senderIs = .search
+        self.present(nav, animated: true) {
+             shopsVc.addSwipe()
+        }
         
     }
+   
+    
     private func setLabels(with model: ProfilesData?){
         guard let model = model else {return}
         profileView.membersLbl.text = "  " + String(model.referrals[0].members)
@@ -87,17 +97,20 @@ class ProfileController: UIViewController {
     @IBAction func editProfile(_ sender: UIButton) {
         let vc = UIStoryboard(name: "EditProfile", bundle: nil).instantiateViewController(withIdentifier: "EditProfileScreen") as! EditProfileController
         let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .pageSheet
+        nav.modalTransitionStyle = .coverVertical
+        nav.modalPresentationStyle = .overFullScreen
         self.present(nav, animated: true, completion: nil)
     }
     
     @IBAction func greenBalanceInfo(_ sender: UIButton) {
-        balanceAlerts.presentInfo("Зеленый кошелек", BalanceAlertMessage.greenMessage.rawValue)
+        balanceAlerts.presentInfo(NSLocalizedString("greenWallet", comment: ""), BalanceAlertMessage.greenMessage.rawValue)
     }
     
     @IBAction func grayBalanceInfo(_ sender: Any) {
-        balanceAlerts.presentInfo("Серый кошелек", BalanceAlertMessage.grayMessage.rawValue)
+        balanceAlerts.presentInfo(NSLocalizedString("grayWallet", comment: ""), BalanceAlertMessage.grayMessage.rawValue)
     }
     
     
 }
+
+

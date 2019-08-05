@@ -41,6 +41,13 @@ class MainPageController: UIViewController {
         self.present(nav, animated: true, completion: nil)
         
     }
+    @IBAction func searchBtn(_ sender: Any) {
+        
+        if let shops = self.tabBarController?.viewControllers?[1] as? ShopsController{
+            shops.senderIs = .search
+        self.tabBarController?.selectedViewController = self.tabBarController?.viewControllers?[1]
+        }
+    }
     
     //MARK: Methods
     func addGesturetoStack(){

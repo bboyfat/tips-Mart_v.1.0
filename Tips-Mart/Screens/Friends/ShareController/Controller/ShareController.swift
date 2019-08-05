@@ -25,6 +25,24 @@ class ShareController: UIViewController {
         setTitleColor(with: .white)
         
     }
+    @IBAction func copyBtn(_ sender: Any) {
+        copyToClipBoard(textToCopy: shareView.linkTf.text!)
+    }
+    
+    @IBAction func shareBtnAction(_ sender: Any) {
+        presentActivityControler(text: [shareView.linkTf.text!])
+    }
+    func presentActivityControler(text: [Any]){
+        let textToShare = text
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        // exclude some activity types from the list (optional)
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.postToTwitter, UIActivity.ActivityType.copyToPasteboard ]
+        
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
     
     //add targets to items
     private func addTargets(){

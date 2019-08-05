@@ -38,6 +38,7 @@ class MyCardController: UIViewController {
         guard let id = userId() else {return}
         guard let greenBalance = greenBalance() else {return}
         guard let grayBalance = grayBalance() else {return}
+        self.myCardView.barCodeImage.image = generator.generateBrCode(qrOrBar: .barCode, from: String(id))
         self.myCardView.nickNameLbl.text = nick
         self.myCardView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
         self.myCardView.grayBalance.text = String(grayBalance) + " " + NSLocalizedString("uah", comment: "")

@@ -119,3 +119,18 @@ extension ShopsDataSource: UICollectionViewDelegate{
         print(indexPath)
     }
 }
+
+
+extension ShopsDataSource: UISearchBarDelegate{
+    
+        
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            self.viewController.view.endEditing(true)
+        }
+        
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            
+            viewModel.searchShops(with: searchText)
+        }
+      
+}

@@ -7,14 +7,17 @@
 //
 
 import UIKit
-
+import WebKit
 class BuyingRulesController: UIViewController {
 
+    @IBOutlet weak var webView: WKWebView!
+    let urlString  = "https://tips-mart.com/shopping-rules"
     //button for navigation bar
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow-2"), with: " Назад", with: .forceLeftToRight)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadUrl(stringUrl: urlString)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
         navigationItem.title = "Правила покупок"
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1882352941, green: 0.7882352941, blue: 0.4274509804, alpha: 1)
@@ -22,6 +25,14 @@ class BuyingRulesController: UIViewController {
         // Do any additional setup after loading the view.
     }
     //MARK: Methods
+    
+    func loadUrl(stringUrl: String){
+        guard  let url = URL(string: stringUrl) else {
+            return
+        }
+        let urlReq = URLRequest(url: url)
+        webView.load(urlReq)
+    }
     private func setItems(button: UIButton) -> UIView{
         let view = UIView()
         view.addSubview(button)

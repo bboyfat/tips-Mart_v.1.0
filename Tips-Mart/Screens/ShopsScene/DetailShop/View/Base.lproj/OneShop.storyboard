@@ -197,7 +197,7 @@
                                                         <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FPv-eG-w8t">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FPv-eG-w8t">
                                                         <rect key="frame" x="16" y="271.5" width="70" height="16.5"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_Fire_alarm_751097" translatesAutoresizingMaskIntoConstraints="NO" id="zot-ay-jbA">
@@ -549,12 +549,15 @@
                         <viewLayoutGuide key="safeArea" id="gtX-Qt-Wwp"/>
                         <connections>
                             <outlet property="attentionLbl" destination="5ac-Kj-N6J" id="Tpr-Rp-chP"/>
+                            <outlet property="cashBackUpTobl" destination="IGH-Qx-lsY" id="BJe-ex-oh3"/>
                             <outlet property="cashBackValueLbl" destination="DUV-Pp-3Gc" id="PE4-M0-9Je"/>
                             <outlet property="cashbackCurrencyLbl" destination="eKW-4w-KxG" id="8K0-Vw-jv3"/>
                             <outlet property="cashbackTimeLbl" destination="Xed-IM-NSo" id="bsv-co-fTM"/>
                             <outlet property="cashbackValueLbl" destination="4va-BX-Z8Q" id="ciY-YQ-rNq"/>
+                            <outlet property="goToShop" destination="ZWl-UH-dAj" id="15S-I5-kU1"/>
                             <outlet property="informationLabel" destination="1q5-T9-9Ov" id="h2M-Ge-toy"/>
                             <outlet property="logoImageVIew" destination="3pb-Gn-zRi" id="DrR-fj-ypo"/>
+                            <outlet property="shoppingRules" destination="Ym9-pi-XIv" id="r6X-RN-sTZ"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="iPq-OA-i3B"/>
@@ -578,10 +581,29 @@
                     <view key="view" contentMode="scaleToFill" id="LqA-As-XRx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oik-e6-6I8">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uLb-xq-lZf" firstAttribute="trailing" secondItem="oik-e6-6I8" secondAttribute="trailing" id="BfS-07-8iL"/>
+                            <constraint firstItem="oik-e6-6I8" firstAttribute="leading" secondItem="LqA-As-XRx" secondAttribute="leading" id="R9Z-HK-mEh"/>
+                            <constraint firstItem="uLb-xq-lZf" firstAttribute="bottom" secondItem="oik-e6-6I8" secondAttribute="bottom" id="ozP-ax-V4u"/>
+                            <constraint firstItem="oik-e6-6I8" firstAttribute="top" secondItem="uLb-xq-lZf" secondAttribute="top" id="wrX-19-htE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uLb-xq-lZf"/>
                     </view>
                     <navigationItem key="navigationItem" id="zGV-iE-4Q9"/>
+                    <connections>
+                        <outlet property="webView" destination="oik-e6-6I8" id="Yds-XA-qhD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nai-53-eZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

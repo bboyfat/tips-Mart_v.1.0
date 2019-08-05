@@ -6,22 +6,22 @@
 "9Ox-c3-9cg.normalTitle" = "Пригласить";
 
 /* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "9qs-nz-Xym"; */
-"9qs-nz-Xym.normalTitle" = "0 hum";
+"9qs-nz-Xym.normalTitle" = "0 чел";
 
 /* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "EfR-Yg-Aqd"; */
-"EfR-Yg-Aqd.normalTitle" = "0 hum";
+"EfR-Yg-Aqd.normalTitle" = "0 чел";
 
 /* Class = "UILabel"; text = "Знакомые"; ObjectID = "NsC-Mk-tZ7"; */
 "NsC-Mk-tZ7.text" = "Знакомые";
 
 /* Class = "UILabel"; text = "000000 uah"; ObjectID = "QLk-Tk-3on"; */
-"QLk-Tk-3on.text" = "000000 uah";
+"QLk-Tk-3on.text" = "000000 грн";
 
 /* Class = "UILabel"; text = "Как зарабатывать больше?"; ObjectID = "TuE-6I-lmh"; */
 "TuE-6I-lmh.text" = "Как зарабатывать больше?";
 
 /* Class = "UIButton"; normalTitle = "0 hum"; ObjectID = "WAb-bV-FYe"; */
-"WAb-bV-FYe.normalTitle" = "0 hum";
+"WAb-bV-FYe.normalTitle" = "0 чел";
 
 /* Class = "UILabel"; text = "Друзья"; ObjectID = "jGl-Up-AHh"; */
 "jGl-Up-AHh.text" = "Друзья";
@@ -33,7 +33,7 @@
 "ubK-ao-pFA.title" = "Друзья";
 
 /* Class = "UILabel"; text = "Your total bonuses"; ObjectID = "vl7-8K-lNI"; */
-"vl7-8K-lNI.text" = "Your total bonuses";
+"vl7-8K-lNI.text" = "Ваш общий бонус";
 
 /* Class = "UIButton"; normalTitle = "Посчитать"; ObjectID = "vzS-m8-2xA"; */
 "vzS-m8-2xA.normalTitle" = "Посчитать";

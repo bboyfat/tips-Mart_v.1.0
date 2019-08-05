@@ -8,9 +8,20 @@
 
 import UIKit
 
-
+enum SenderForShops{
+    case tabBar
+    case search
+}
 
 class ShopsController: UIViewController {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var navBar: UINavigationBar!
+    
+    
+    //MARK: Properties
+    let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "tableCollect"), with: "        ", with: .forceLeftToRight)
+    let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "done"), with: "      ", with: .forceRightToLeft)
     
     
     var customBlurAnimtion = CustomBlurView()
@@ -19,7 +30,7 @@ class ShopsController: UIViewController {
             ccollectionViewDSDS.shopType = self.shopType
         }
     }
-    
+    var senderIs: SenderForShops = .tabBar
     var isTable = true{
         didSet{
             if self.isTable{
@@ -39,11 +50,12 @@ class ShopsController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var ccollectionViewDSDS: ShopsDataSource!
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       setupAnimation()
+        setupAnimation()
+        setNavigation()
         networkRefreshProtocol = MainShopsNetworkService()
         networkRefreshProtocol.sendRequest { (_) in
             SelectedShopsService().sendRequest(handler: { (selected) in
@@ -57,14 +69,61 @@ class ShopsController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.title = NSLocalizedString("Shops", comment: "")
+        setNavigation()
+        addTargets()
+        checkSender()
+    }
+    func setNavigation(){
+        setClearNavigation(with: #colorLiteral(red: 0.0386101231, green: 0.8220543265, blue: 0.5023989081, alpha: 1), with: NSLocalizedString("Shops", comment: ""))
+        setTitleColor(with: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+        addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
+       
+    }
+    func addRightButton(){
+         addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
+    }
+    func addSwipe(){
+//        let swipe = UISwipeGestureRecognizer()
+//        swipe.direction = .down
+//        swipe.addTarget(self, action: #selector(handleDismiss))
+//        self.navBar.addGestureRecognizer(swipe)
     }
     
-    
+    //add targets to items
+    private func addTargets(){
+        leftBarButton.addTarget(self, action: #selector(handlePop), for: .touchUpInside)
+        rightBarButton.addTarget(self, action: #selector(handlePush), for: .touchUpInside)
+    }
+    @objc func handlePop(_ sender: UIButton){
+        isTable = !isTable
+        if isTable{
+          sender.setImage(#imageLiteral(resourceName: "shopsCollection"), for: .normal)
+        } else {
+          sender.setImage(#imageLiteral(resourceName: "tableCollect"), for: .normal)
+        }
+        
+        
+    }
+    @objc func handlePush(){
+         self.dismiss(animated: true, completion: nil)
+        
+    }
+    @objc func handleDismiss(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    func checkSender(){
+        switch senderIs {
+        case .tabBar:
+            self.view.endEditing(true)
+        case .search:
+            searchBar.becomeFirstResponder()
+        }
+    }
     private func setupDelegate(){
         self.ccollectionViewDSDS = ShopsDataSource(cv: self.collectionView, collectionType: self.collectionType, shopType: self.shopType, selectedList: self.selectedShops, viewController: self)
         self.collectionView.delegate = self.ccollectionViewDSDS
         self.collectionView.dataSource = self.ccollectionViewDSDS
+        self.searchBar.delegate = self.ccollectionViewDSDS
         customBlurAnimtion.stopAnim()
     }
     private func setupAnimation(){
@@ -72,14 +131,14 @@ class ShopsController: UIViewController {
         self.view.addSubview(customBlurAnimtion)
         customBlurAnimtion.startAnimation()
     }
-   
+    
     @IBAction func segmentIndexChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex
         {
         case 0:
-           shopType = .allShops
+            shopType = .allShops
         case 1:
-           shopType = .selected
+            shopType = .selected
         default:
             break;
         }

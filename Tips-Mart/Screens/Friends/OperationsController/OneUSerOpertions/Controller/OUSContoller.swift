@@ -48,7 +48,7 @@ class OUSContoller: UIViewController {
     }
     
     private func setNavigation(){
-        setClearNavigation(with: .white, with: "User's operations")
+        setClearNavigation(with: .white, with: NSLocalizedString("User's operations", comment: ""))
         setTitleColor(with: .white)
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
         addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))

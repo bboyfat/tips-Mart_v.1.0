@@ -8,20 +8,44 @@
 
 import UIKit
 
+enum BarCodeQrCode{
+    case barCode
+    case QRCode
+}
+
 class BarCodeGenerator{
     
-    func generateBrCode(from string: String) -> UIImage?{
+    func generateBrCode(qrOrBar: BarCodeQrCode ,from string: String) -> UIImage?{
         
         let data = string.data(using: String.Encoding.ascii)
-        
-        if let filter = CIFilter(name: "CICode128BarcodeGenerator"){
-            filter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 3, y: 3)
-            
-            if let output = filter.outputImage?.transformed(by: transform){
-                return UIImage(ciImage: output)
+        switch qrOrBar {
+        case .barCode:
+            if let filter = CIFilter(name: "CICode128BarcodeGenerator"){
+                filter.setValue(data, forKey: "inputMessage")
+                let transform = CGAffineTransform(scaleX: 3, y: 3)
+                
+                if let output = filter.outputImage?.transformed(by: transform){
+                    return UIImage(ciImage: output)
+                }
+            }
+        case .QRCode:
+            if let filter = CIFilter(name: "CIQRCodeGenerator"){
+                filter.setValue(data, forKey: "inputMessage")
+                let transform = CGAffineTransform(scaleX: 3, y: 3)
+                
+                if let output = filter.outputImage?.transformed(by: transform){
+                    return UIImage(ciImage: output)
+                }
             }
         }
+//        if let filter = CIFilter(name: "CICode128BarcodeGenerator"){
+//            filter.setValue(data, forKey: "inputMessage")
+//            let transform = CGAffineTransform(scaleX: 3, y: 3)
+//            
+//            if let output = filter.outputImage?.transformed(by: transform){
+//                return UIImage(ciImage: output)
+//            }
+//        }
         
         
         

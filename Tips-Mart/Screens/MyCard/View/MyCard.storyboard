@@ -146,13 +146,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="pJO-9N-O4C" secondAttribute="bottom" id="EgW-Yp-dVf"/>
-                            <constraint firstItem="88T-fS-dgB" firstAttribute="trailing" secondItem="pJO-9N-O4C" secondAttribute="trailing" id="NHq-RQ-YxY"/>
+                            <constraint firstAttribute="trailing" secondItem="pJO-9N-O4C" secondAttribute="trailing" id="NHq-RQ-YxY"/>
                             <constraint firstItem="is7-N5-qWz" firstAttribute="top" secondItem="88T-fS-dgB" secondAttribute="top" constant="35" id="SVJ-nd-yUl"/>
                             <constraint firstItem="pJO-9N-O4C" firstAttribute="top" secondItem="S4f-tz-Vh9" secondAttribute="top" id="XiF-Wl-aU9"/>
                             <constraint firstItem="is7-N5-qWz" firstAttribute="leading" secondItem="88T-fS-dgB" secondAttribute="leading" constant="16" id="fZP-lO-rBb"/>
                             <constraint firstItem="88T-fS-dgB" firstAttribute="trailing" secondItem="is7-N5-qWz" secondAttribute="trailing" constant="16" id="gy1-Rj-RRm"/>
                             <constraint firstAttribute="bottom" secondItem="is7-N5-qWz" secondAttribute="bottom" priority="800" constant="523" id="v6T-W6-9hd"/>
-                            <constraint firstItem="pJO-9N-O4C" firstAttribute="leading" secondItem="88T-fS-dgB" secondAttribute="leading" id="vYS-35-Utf"/>
+                            <constraint firstItem="pJO-9N-O4C" firstAttribute="leading" secondItem="S4f-tz-Vh9" secondAttribute="leading" id="vYS-35-Utf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="88T-fS-dgB"/>
                         <connections>

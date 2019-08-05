@@ -17,12 +17,13 @@ class MainTabBarController: UITabBarController {
     let moreScreen = UIStoryboard(name: "More", bundle: nil).instantiateViewController(withIdentifier: "MoreNavigation") 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let shonNav = UINavigationController(rootViewController: shopsVc)
         reloadBalance()
         mainVc.tabBarItem = UITabBarItem(title: NSLocalizedString("Main", comment: ""), image: #imageLiteral(resourceName: "main"), tag: 0)
-        shopsVc.tabBarItem = UITabBarItem(title: NSLocalizedString("Shops", comment: ""), image: #imageLiteral(resourceName: "Shops"), tag: 1)
+        shonNav.tabBarItem = UITabBarItem(title: NSLocalizedString("Shops", comment: ""), image: #imageLiteral(resourceName: "Shops"), tag: 1)
         friendsVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Friends", comment: ""), image: #imageLiteral(resourceName: "friendsBar"), tag: 2)
-        moreScreen.tabBarItem = UITabBarItem(title: "More", image: #imageLiteral(resourceName: "moreIcon"), tag: 3)
-        viewControllers = [mainVc, shopsVc, friendsVC, moreScreen]
+        moreScreen.tabBarItem = UITabBarItem(title: NSLocalizedString("More", comment: ""), image: #imageLiteral(resourceName: "moreIcon"), tag: 3)
+        viewControllers = [mainVc, shonNav, friendsVC, moreScreen]
     }
     
     private func reloadBalance(){

@@ -12,6 +12,8 @@ class DetailShopView: UIView {
     
     //MARK: Outlets
     
+    @IBOutlet weak var shoppingRules: UIButton!
+    @IBOutlet weak var goToShop: UIButton!
     @IBOutlet weak var logoImageVIew: UIImageView!
     
     @IBOutlet weak var cashBackValueLbl: UILabel!
@@ -19,12 +21,15 @@ class DetailShopView: UIView {
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var cashbackTimeLbl: UILabel!
     
+    @IBOutlet weak var cashBackUpTobl: UILabel!
     @IBOutlet weak var attentionLbl: UILabel!
     @IBOutlet weak var cashbackValueLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+       cashBackUpTobl.text = NSLocalizedString("cashbackUpTo", comment: "")
+        goToShop.setTitle(NSLocalizedString("goToShop", comment: ""), for: .normal)
+        shoppingRules.setTitle(NSLocalizedString("shoppingRules", comment: ""), for: .normal)
     }
     /*
      // Only override draw() if you perform custom drawing.

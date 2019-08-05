@@ -29,7 +29,7 @@ class TableShopCell: UICollectionViewCell, ShopsCellProtocol {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        cashBackUpTobl.text = NSLocalizedString("cashbackUpTo", comment: "")
     }
     
 }

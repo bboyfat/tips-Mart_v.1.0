@@ -33,7 +33,7 @@ class MembersController: UIViewController {
         super.viewWillAppear(animated)
         setTitleColor(with: .black)
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1)
-        navigationItem.title = "Members"
+        navigationItem.title = NSLocalizedString("members", comment: "")
         MembersNetworkService().sendRequest { (members) in
             if let member = members{
                 self.model = member

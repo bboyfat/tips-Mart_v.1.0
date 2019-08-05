@@ -1,0 +1,45 @@
+
+/* Class = "UINavigationItem"; title = "Информация"; ObjectID = "123-vX-MI0"; */
+"123-vX-MI0.title" = "Информация";
+
+/* Class = "UILabel"; text = "Потратить средства"; ObjectID = "5Bg-Gs-Drz"; */
+"5Bg-Gs-Drz.text" = "Потратить средства";
+
+/* Class = "UILabel"; text = "Все магазины"; ObjectID = "8sD-rl-e9D"; */
+"8sD-rl-e9D.text" = "Все магазины";
+
+/* Class = "UILabel"; text = "ID:"; ObjectID = "93a-m8-ud6"; */
+"93a-m8-ud6.text" = "ID:";
+
+/* Class = "UILabel"; text = "грн"; ObjectID = "BW9-vw-WXs"; */
+"BW9-vw-WXs.text" = "грн";
+
+/* Class = "UILabel"; text = "Личный кабинет"; ObjectID = "JPh-iM-xoB"; */
+"JPh-iM-xoB.text" = "Личный кабинет";
+
+/* Class = "UILabel"; text = "Избранные магазины"; ObjectID = "Ja5-30-fyU"; */
+"Ja5-30-fyU.text" = "Избранные магазины";
+
+/* Class = "UILabel"; text = "Выход"; ObjectID = "SOS-F3-Myz"; */
+"SOS-F3-Myz.text" = "Выход";
+
+/* Class = "UILabel"; text = "История операций"; ObjectID = "Tex-xO-RUa"; */
+"Tex-xO-RUa.text" = "История операций";
+
+/* Class = "UILabel"; text = "Оставить отзыв"; ObjectID = "e7k-2Q-i54"; */
+"e7k-2Q-i54.text" = "Оставить отзыв";
+
+/* Class = "UILabel"; text = "Бонус от друзей"; ObjectID = "n1k-ZB-xc9"; */
+"n1k-ZB-xc9.text" = "Бонус от друзей";
+
+/* Class = "UILabel"; text = "213.16"; ObjectID = "o9Q-c1-a4z"; */
+"o9Q-c1-a4z.text" = "213.16";
+
+/* Class = "UILabel"; text = " 100000"; ObjectID = "q6N-vj-Be5"; */
+"q6N-vj-Be5.text" = " 100000";
+
+/* Class = "UILabel"; text = "грн"; ObjectID = "rza-fx-xeJ"; */
+"rza-fx-xeJ.text" = "грн";
+
+/* Class = "UILabel"; text = "213.16"; ObjectID = "u4b-gw-9hU"; */
+"u4b-gw-9hU.text" = "213.16";

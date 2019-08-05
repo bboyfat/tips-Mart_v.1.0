@@ -22,7 +22,7 @@ protocol StatisticControllerProtocol: class{
 class StatisticController: UIViewController, StatisticControllerProtocol {
     
     //MARK: Properties
-    
+    let bonusSrting = NSLocalizedString("bonusesFrom", comment: "")
     @IBOutlet var statisticView: StatisticView!
     var modelArray = [Referals]()
     var statisticFor: StatisticFor = .strangers{
@@ -42,7 +42,7 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setClearNavigation(with: #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1), with: "Bonuses")
+        setClearNavigation(with: #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1), with: NSLocalizedString("Bonuses", comment: ""))
         setTitleColor(with: .black)
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
     }
@@ -56,15 +56,17 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
             statisticView.operationsBtn.isEnabled = true
             statisticView.membersBtn.setImage(#imageLiteral(resourceName: "Arrow-1"), for: .normal)
             statisticView.operationsBtn.setImage(#imageLiteral(resourceName: "Arrow-1"), for: .normal)
-            statisticView.segmentController.selectedSegmentIndex = 0
-            navigationItem.title = "Bonuses from friends"
+           statisticView.percentLabel.text = NSLocalizedString("willGetFriends", comment: "")
+           statisticView.segmentController.selectedSegmentIndex = 0
+            navigationItem.title = bonusSrting + " " + NSLocalizedString("friends", comment: "")
         case .familiars:
             setInfo(with: modelArray[1])
             statisticView.membersBtn.isEnabled = false
             statisticView.operationsBtn.isEnabled = false
             statisticView.membersBtn.setImage(UIImage(), for: .normal)
             statisticView.operationsBtn.setImage(UIImage(), for: .normal)
-            navigationItem.title = "Bonuses from familiars"
+            statisticView.percentLabel.text = NSLocalizedString("willGetFamiliars", comment: "")
+            navigationItem.title = bonusSrting + " " + NSLocalizedString("familiars", comment: "")
             statisticView.segmentController.selectedSegmentIndex = 1
             
         default:
@@ -74,7 +76,8 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
             statisticView.membersBtn.setImage(UIImage(), for: .normal)
             statisticView.operationsBtn.setImage(UIImage(), for: .normal)
             statisticView.segmentController.selectedSegmentIndex = 2
-            navigationItem.title = "Bonuses from strangers"
+            statisticView.percentLabel.text = NSLocalizedString("willGetStrangers", comment: "")
+            navigationItem.title = bonusSrting + " " + NSLocalizedString("strangers", comment: "") 
         }
     }
     
@@ -103,7 +106,7 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
     }
     
     @IBAction func showMembersBtn(_ sender: Any) {
-       presentMembersVc()
+        presentMembersVc()
     }
     @IBAction func showOperationsBtn(_ sender: UIButton) {
         presentMembersVc()

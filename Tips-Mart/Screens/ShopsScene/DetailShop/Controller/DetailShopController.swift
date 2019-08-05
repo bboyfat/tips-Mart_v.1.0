@@ -68,7 +68,7 @@ class DetailShopController: UIViewController {
     }
     func setViews(){
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: setItems(button: leftBarButton))
-        navigationItem.title = pathToShop.uppercased()
+//        navigationItem.title = .uppercased()
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1882352941, green: 0.7882352941, blue: 0.4274509804, alpha: 1)
         shopView.cashbackCurrencyLbl.text = shopData.currency
         shopView.cashBackValueLbl.text = String(shopData.value)
@@ -92,6 +92,7 @@ class DetailShopController: UIViewController {
     
     @IBAction func buyingRules(_ sender: UIButton) {
         let vc = UIStoryboard(name: "OneShop", bundle: nil).instantiateViewController(withIdentifier: "RulesVc") as! BuyingRulesController
+       
         navigationController?.pushViewController(vc, animated: true)
     }
   

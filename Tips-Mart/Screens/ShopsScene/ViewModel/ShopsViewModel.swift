@@ -9,12 +9,13 @@
 import UIKit
 import RxRealm
 import RxSwift
-
+import RealmSwift
 protocol ShopViewModelProtocol {
     func itemsCount() -> Int
     func getShop(with indexPath: IndexPath) -> ShopDataRealm
     var dataUpdated: () -> () { get set }
-
+    func searchShops(with text: String)
+    
 }
 
 class ShopViewModel: ShopViewModelProtocol{
@@ -50,7 +51,17 @@ class ShopViewModel: ShopViewModelProtocol{
             shops = selectedShops
         }
     }
-    
+    func searchShops(with text: String){
+        let searchString = text
+        let realm = try! Realm()
+        let predicate = NSPredicate(format: "name contains[c] %@", searchString)
+        let result = realm.objects(ShopDataRealm.self).filter(predicate)
+        self.shops  = Array(result)
+        self.dataUpdated()
+        if shops.count == 0{
+            fetchModel(selectedShopsList: selectedShopsList)
+        }
+    }
     func fetchModel(selectedShopsList: [String]){
         self.configeredShops = ObservableShops()
         self.selectedShopsList = selectedShopsList
@@ -63,8 +74,8 @@ class ShopViewModel: ShopViewModelProtocol{
     }
     
     init(shopType: ShopType, selectedShopsList: [String]) {
-      //getting data fram realm with config
-       fetchModel(selectedShopsList: selectedShopsList)
+        //getting data fram realm with config
+        fetchModel(selectedShopsList: selectedShopsList)
         setShopsType(shopType: shopType)
         
     }

@@ -1,0 +1,9 @@
+
+/* Class = "UISegmentedControl"; Vop-dH-0YP.segmentTitles[0] = "All shops"; ObjectID = "Vop-dH-0YP"; */
+"Vop-dH-0YP.segmentTitles[0]" = "Все магазины";
+
+/* Class = "UISegmentedControl"; Vop-dH-0YP.segmentTitles[1] = "Selected"; ObjectID = "Vop-dH-0YP"; */
+"Vop-dH-0YP.segmentTitles[1]" = "Избраные";
+
+/* Class = "UINavigationItem"; title = "Shops"; ObjectID = "gH3-84-54R"; */
+"gH3-84-54R.title" = "Магазины";

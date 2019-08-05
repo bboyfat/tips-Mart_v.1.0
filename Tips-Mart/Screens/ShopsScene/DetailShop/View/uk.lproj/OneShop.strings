@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "Aliexpress - це один з найбільших та найпопулярніших інтернет-магазинів світу. Тут ви можете знайти еще..."; ObjectID = "1q5-T9-9Ov"; */
+"1q5-T9-9Ov.text" = "Aliexpress - це один з найбільших та найпопулярніших інтернет-магазинів світу. Тут ви можете знайти еще...";
+
+/* Class = "UILabel"; text = "6%  Оплачене замовлення на предмети інтер'єру, садове приладдя.\n5%  Оплачене замовлення на мобільні аксесуари, одяг. еще..."; ObjectID = "4va-BX-Z8Q"; */
+"4va-BX-Z8Q.text" = "6%  Оплачене замовлення на предмети інтер'єру, садове приладдя.\n5%  Оплачене замовлення на мобільні аксесуари, одяг. еще...";
+
+/* Class = "UIButton"; normalTitle = "Напишите отзыв"; ObjectID = "5Jn-8L-rKZ"; */
+"5Jn-8L-rKZ.normalTitle" = "Напишите отзыв";
+
+/* Class = "UILabel"; text = "Чтобы максимально защитить ваш кэшбэк от блокировки сторонними сайтами или приложениями (например Adblock), рекомендуем в примечании к заказу добавить информацию:\n\nЗаказ сделан через платформу Tips Mart. ID: 23704384\n\nКэшбэк для \"Будинок Іграшок\" предоставляется для Украины еще..."; ObjectID = "5ac-Kj-N6J"; */
+"5ac-Kj-N6J.text" = "Чтобы максимально защитить ваш кэшбэк от блокировки сторонними сайтами или приложениями (например Adblock), рекомендуем в примечании к заказу добавить информацию:\n\nЗаказ сделан через платформу Tips Mart. ID: 23704384\n\nКэшбэк для \"Будинок Іграшок\" предоставляется для Украины еще...";
+
+/* Class = "UILabel"; text = "из 5"; ObjectID = "7Cy-AZ-ccU"; */
+"7Cy-AZ-ccU.text" = "из 5";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "DUV-Pp-3Gc"; */
+"DUV-Pp-3Gc.text" = "5";
+
+/* Class = "UILabel"; text = "Важно"; ObjectID = "EUC-RM-YSC"; */
+"EUC-RM-YSC.text" = "Важно";
+
+/* Class = "UILabel"; text = "Информация и условия"; ObjectID = "EaL-TW-422"; */
+"EaL-TW-422.text" = "Інформація там умови";
+
+/* Class = "UILabel"; text = "Время начисления кэшбэка"; ObjectID = "FYp-Da-vuI"; */
+"FYp-Da-vuI.text" = "Час нарахування кушбеку";
+
+/* Class = "UILabel"; text = "Up to"; ObjectID = "IGH-Qx-lsY"; */
+"IGH-Qx-lsY.text" = "до";
+
+/* Class = "UILabel"; text = "Отправить руководству без публикаци"; ObjectID = "RTv-Vz-vah"; */
+"RTv-Vz-vah.text" = "Отправить руководству без публикаци";
+
+/* Class = "UILabel"; text = "Среднее время ожидания: 37 дней"; ObjectID = "Xed-IM-NSo"; */
+"Xed-IM-NSo.text" = "Среднее время ожидания: 37 дней";
+
+/* Class = "UIButton"; normalTitle = "Правила покупок"; ObjectID = "Ym9-pi-XIv"; */
+"Ym9-pi-XIv.normalTitle" = "Правила покупок";
+
+/* Class = "UIButton"; normalTitle = "Коснитесь для оценки"; ObjectID = "Yre-Ad-N7K"; */
+"Yre-Ad-N7K.normalTitle" = "Коснитесь для оценки";
+
+/* Class = "UIButton"; normalTitle = "Перейти к покупкам"; ObjectID = "ZWl-UH-dAj"; */
+"ZWl-UH-dAj.normalTitle" = "Перейти к покупкам";
+
+/* Class = "UITextView"; text = "Оставьте свой отзыв"; ObjectID = "aMR-q0-lt0"; */
+"aMR-q0-lt0.text" = "Оставьте свой отзыв";
+
+/* Class = "UILabel"; text = "5,0"; ObjectID = "cpf-LH-cGo"; */
+"cpf-LH-cGo.text" = "5,0";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "eKW-4w-KxG"; */
+"eKW-4w-KxG.text" = "%";
+
+/* Class = "UILabel"; text = "Размер кэшбэка"; ObjectID = "fzR-gQ-VF7"; */
+"fzR-gQ-VF7.text" = "Розмрі кешбеку";
+
+/* Class = "UIButton"; normalTitle = "Оставить отзыв"; ObjectID = "oto-kg-Qxn"; */
+"oto-kg-Qxn.normalTitle" = "Оставить отзыв";
+
+/* Class = "UILabel"; text = "Оценки и отзывы"; ObjectID = "sS9-3u-Yry"; */
+"sS9-3u-Yry.text" = "Оценки и отзывы";
+
+/* Class = "UIButton"; normalTitle = "См. Все"; ObjectID = "xzz-PP-3Wf"; */
+"xzz-PP-3Wf.normalTitle" = "См. Все";

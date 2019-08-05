@@ -320,6 +320,9 @@
                         <viewLayoutGuide key="safeArea" id="zwI-Lx-DeH"/>
                     </view>
                     <navigationItem key="navigationItem" title="More" id="67M-Dq-GDj"/>
+                    <connections>
+                        <outlet property="aboutEarnLbl" destination="oCX-PK-cpW" id="iU8-Ri-MGK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OW9-OI-X09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -351,8 +354,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You get 10% of cashback invited" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEj-gN-ONA">
-                                <rect key="frame" x="16" y="158" width="196" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You get 10% of cashback invited" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEj-gN-ONA">
+                                <rect key="frame" x="16" y="158" width="304" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -614,6 +617,7 @@
                             <constraint firstItem="AZJ-CY-kUE" firstAttribute="leading" secondItem="oZK-p3-roT" secondAttribute="leading" constant="16" id="WoT-Xi-Owd"/>
                             <constraint firstItem="oZK-p3-roT" firstAttribute="trailing" secondItem="GQa-qN-tAf" secondAttribute="trailing" id="YDT-w2-UwZ"/>
                             <constraint firstItem="GQa-qN-tAf" firstAttribute="leading" secondItem="oZK-p3-roT" secondAttribute="leading" id="azZ-C9-a9P"/>
+                            <constraint firstItem="oZK-p3-roT" firstAttribute="trailing" secondItem="nEj-gN-ONA" secondAttribute="trailing" id="u8M-s4-Bc7"/>
                             <constraint firstItem="oZK-p3-roT" firstAttribute="trailing" secondItem="owT-7v-scT" secondAttribute="trailing" constant="16" id="wvk-3D-bMY"/>
                             <constraint firstItem="6hS-Mg-7Ov" firstAttribute="top" secondItem="nEj-gN-ONA" secondAttribute="bottom" constant="10" id="xSy-fE-23U"/>
                             <constraint firstItem="nEj-gN-ONA" firstAttribute="leading" secondItem="oZK-p3-roT" secondAttribute="leading" constant="16" id="yPn-b0-WTe"/>
@@ -622,11 +626,17 @@
                         <viewLayoutGuide key="safeArea" id="oZK-p3-roT"/>
                         <connections>
                             <outlet property="creditedBtn" destination="Eht-Yf-8Oe" id="FYX-g4-s9b"/>
+                            <outlet property="creditedLbl" destination="nAe-Un-qag" id="RWg-Ey-7Hs"/>
                             <outlet property="membersBtn" destination="2Fe-MB-qpy" id="hRz-CM-Fvw"/>
+                            <outlet property="membersLbl" destination="81W-DA-5zv" id="V2J-JD-aSz"/>
+                            <outlet property="moreDetailsBtn" destination="owT-7v-scT" id="5e7-Dw-j4Y"/>
                             <outlet property="operationsBtn" destination="OUH-ks-PFo" id="Mdp-3n-KeL"/>
+                            <outlet property="operationsLbl" destination="bGg-fU-N09" id="hqs-ba-Vxx"/>
                             <outlet property="pendingBtn" destination="iEu-ay-A9T" id="W6Z-zs-MOm"/>
+                            <outlet property="pendingLbl" destination="WFp-Vv-bBS" id="KFB-Fk-sR1"/>
                             <outlet property="percentLabel" destination="nEj-gN-ONA" id="aBk-ms-wvn"/>
                             <outlet property="segmentController" destination="Gfe-Ra-aW6" id="RJQ-2Y-OGi"/>
+                            <outlet property="statisticLbl" destination="AZJ-CY-kUE" id="skO-Qj-QNE"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Bonuses from friends" id="6RH-k4-g74"/>
@@ -1029,8 +1039,11 @@
                                                     <constraint firstAttribute="width" constant="40" id="urQ-Aa-4iF"/>
                                                 </constraints>
                                                 <state key="normal" image="copy"/>
+                                                <connections>
+                                                    <action selector="copyBtn:" destination="qyy-I6-MvT" eventType="touchUpInside" id="sdw-9k-Yc4"/>
+                                                </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="https//tips-mart.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-5N-6DD">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="https//tips-mart.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-5N-6DD">
                                                 <rect key="frame" x="10" y="0.0" width="218" height="40"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
@@ -1080,6 +1093,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="shareBtnAction:" destination="qyy-I6-MvT" eventType="touchUpInside" id="cR0-5c-pBj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1135,7 +1151,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="whz-Cl-4A4"/>
                         <connections>
+                            <outlet property="copyLbl" destination="nCZ-Cr-N1N" id="YhH-8d-DY2"/>
+                            <outlet property="inviteLbl" destination="NCN-QA-5Tn" id="J6u-8U-vuc"/>
+                            <outlet property="linkTf" destination="Bbd-5N-6DD" id="35v-kd-vK0"/>
                             <outlet property="linkView" destination="hZY-si-2fo" id="tWK-xl-6OY"/>
+                            <outlet property="qrImageVIew" destination="q1B-lX-b6F" id="qXx-aN-g3C"/>
+                            <outlet property="scanLbl" destination="nDO-yq-XFl" id="dBW-d0-NQT"/>
+                            <outlet property="shareBtn" destination="NMF-Ap-CFv" id="c5r-za-0lO"/>
+                            <outlet property="shareLbl" destination="6ns-7A-Clv" id="QJu-M2-pcU"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="pfN-6E-073"/>

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,32 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irE-uu-AUx">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Shops" id="gH3-84-54R">
-                                        <barButtonItem key="leftBarButtonItem" image="shopsCollection" id="5RU-VT-SGj">
-                                            <color key="tintColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="switchCollectionType:" destination="gtX-xD-3Jf" id="ieI-0E-42M"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="sMj-lG-G7k">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="49" width="414" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vop-dH-0YP">
-                                <rect key="frame" x="10" y="144" width="394" height="31"/>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vop-dH-0YP">
+                                <rect key="frame" x="10" y="105" width="394" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="vRZ-iw-ybF"/>
+                                    <constraint firstAttribute="height" id="vRZ-iw-ybF"/>
                                 </constraints>
                                 <segments>
                                     <segment title="All shops"/>
@@ -54,8 +36,8 @@
                                     <action selector="segmentIndexChanged:" destination="gtX-xD-3Jf" eventType="valueChanged" id="wEP-qP-Dsp"/>
                                 </connections>
                             </segmentedControl>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="maK-1s-82f">
-                                <rect key="frame" x="0.0" y="184" width="414" height="678"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="maK-1s-82f">
+                                <rect key="frame" x="0.0" y="115" width="414" height="747"/>
                                 <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xat-LQ-umX">
                                     <size key="itemSize" width="50" height="50"/>
@@ -79,22 +61,20 @@
                         <constraints>
                             <constraint firstItem="bJr-Nb-yRG" firstAttribute="trailing" secondItem="Vop-dH-0YP" secondAttribute="trailing" constant="10" id="AC1-t1-9tr"/>
                             <constraint firstItem="bJr-Nb-yRG" firstAttribute="trailing" secondItem="maK-1s-82f" secondAttribute="trailing" id="KGr-IH-1go"/>
-                            <constraint firstItem="irE-uu-AUx" firstAttribute="leading" secondItem="bJr-Nb-yRG" secondAttribute="leading" id="LXV-wZ-W7n"/>
                             <constraint firstItem="bJr-Nb-yRG" firstAttribute="bottom" secondItem="maK-1s-82f" secondAttribute="bottom" id="Oba-6t-VzF"/>
                             <constraint firstItem="maK-1s-82f" firstAttribute="top" secondItem="Vop-dH-0YP" secondAttribute="bottom" constant="10" id="P9B-4E-kGY"/>
                             <constraint firstItem="Vop-dH-0YP" firstAttribute="leading" secondItem="bJr-Nb-yRG" secondAttribute="leading" constant="10" id="Sb7-Qb-0kp"/>
-                            <constraint firstAttribute="trailing" secondItem="irE-uu-AUx" secondAttribute="trailing" id="TJT-cv-IeV"/>
-                            <constraint firstItem="sMj-lG-G7k" firstAttribute="top" secondItem="irE-uu-AUx" secondAttribute="bottom" id="Tfm-MF-bxW"/>
                             <constraint firstItem="Vop-dH-0YP" firstAttribute="top" secondItem="sMj-lG-G7k" secondAttribute="bottom" id="VeV-0d-aia"/>
                             <constraint firstItem="maK-1s-82f" firstAttribute="leading" secondItem="bJr-Nb-yRG" secondAttribute="leading" id="bC4-Ab-Ptp"/>
                             <constraint firstItem="sMj-lG-G7k" firstAttribute="leading" secondItem="bJr-Nb-yRG" secondAttribute="leading" id="ciq-cU-acf"/>
+                            <constraint firstItem="sMj-lG-G7k" firstAttribute="top" secondItem="bJr-Nb-yRG" secondAttribute="top" constant="5" id="hzN-Sy-0wN"/>
                             <constraint firstItem="sMj-lG-G7k" firstAttribute="trailing" secondItem="bJr-Nb-yRG" secondAttribute="trailing" id="se2-vt-fJa"/>
-                            <constraint firstItem="irE-uu-AUx" firstAttribute="top" secondItem="bJr-Nb-yRG" secondAttribute="top" id="ve7-Vb-dK5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bJr-Nb-yRG"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="maK-1s-82f" id="sjs-Sd-RLX"/>
+                        <outlet property="searchBar" destination="sMj-lG-G7k" id="7Me-UL-8Dw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWq-uM-Vt3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +82,4 @@
             <point key="canvasLocation" x="165" y="167"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="shopsCollection" width="24" height="18"/>
-    </resources>
 </document>
