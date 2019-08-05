@@ -11,6 +11,8 @@ import UIKit
 
 class MainPageView: UIView {
 
+    @IBOutlet weak var greenBalance: UILabel!
+    @IBOutlet weak var grayBalance: UILabel!
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var profileStackView: UIStackView!
     @IBOutlet weak var myCardBtn: UIButton!

@@ -10,6 +10,7 @@
 		4E81E302E85B0984E52EAB9C /* Pods_Tips_Mart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D808B406DD4D9FA9FFD62B6E /* Pods_Tips_Mart.framework */; };
 		C20B327222CE464600533F75 /* PasswordBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B327122CE464600533F75 /* PasswordBtn.swift */; };
 		C20B327422CE715500533F75 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B327322CE715500533F75 /* LoginModel.swift */; };
+		C215FC9222F831C300E23A02 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C215FC9122F831C300E23A02 /* EditProfileController.swift */; };
 		C2175B4422D4913E0011839E /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2175B4622D4913E0011839E /* Profile.storyboard */; };
 		C2175B5022D4916E0011839E /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2175B5222D4916E0011839E /* MainPage.storyboard */; };
 		C2175B6522D4A0DE0011839E /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2175B6422D4A0DE0011839E /* ProfileController.swift */; };
@@ -72,6 +73,8 @@
 		C289187422D5EBE800A4DFB9 /* ShopsDataRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289187322D5EBE800A4DFB9 /* ShopsDataRealm.swift */; };
 		C289187622D5EF8A00A4DFB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289187522D5EF8A00A4DFB9 /* Constants.swift */; };
 		C289187822D5F14000A4DFB9 /* ShopsDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C289187722D5F14000A4DFB9 /* ShopsDataBaseService.swift */; };
+		C28AE22E22F82B1E0001DD99 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C28AE22D22F82B1E0001DD99 /* EditProfile.storyboard */; };
+		C28AE23022F8309A0001DD99 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28AE22F22F8309A0001DD99 /* EditProfileView.swift */; };
 		C28CBEA722D340E700F53838 /* UITextField + RightPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28CBEA622D340E700F53838 /* UITextField + RightPasswordView.swift */; };
 		C28D33D522D37F780072A95C /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D33D422D37F780072A95C /* MainPageController.swift */; };
 		C28D33D722D387820072A95C /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D33D622D387820072A95C /* MainPageView.swift */; };
@@ -142,6 +145,7 @@
 		C2E98B1322F1C28300175EB3 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E98B1222F1C28300175EB3 /* LoginValidator.swift */; };
 		C2E98B1522F1C28F00175EB3 /* RegistrationValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E98B1422F1C28F00175EB3 /* RegistrationValidator.swift */; };
 		C2E98B1822F1D3ED00175EB3 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E98B1722F1D3ED00175EB3 /* More.storyboard */; };
+		C2EC8E1C22F85A2A00C2247E /* ProfileEditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EC8E1B22F85A2A00C2247E /* ProfileEditModel.swift */; };
 		C2EEE9BB22F715040088706B /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEE9BA22F715040088706B /* CustomBlurView.swift */; };
 		C2EEE9BD22F7221B0088706B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2EEE9BC22F7221B0088706B /* WebKit.framework */; };
 		C2FB700A22DDD95F000A3FE7 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB700922DDD95F000A3FE7 /* HTMLParser.swift */; };
@@ -155,6 +159,7 @@
 		87FE2A4375636C5D15B4E063 /* Pods_Tips_Mart_Tips_MartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_Mart_Tips_MartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20B327122CE464600533F75 /* PasswordBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordBtn.swift; sourceTree = "<group>"; };
 		C20B327322CE715500533F75 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		C215FC9122F831C300E23A02 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		C2175B4522D4913E0011839E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		C2175B5122D4916E0011839E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainPage.storyboard; sourceTree = "<group>"; };
 		C2175B6022D4A0150011839E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainPage.strings; sourceTree = "<group>"; };
@@ -240,6 +245,8 @@
 		C289187322D5EBE800A4DFB9 /* ShopsDataRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsDataRealm.swift; sourceTree = "<group>"; };
 		C289187522D5EF8A00A4DFB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C289187722D5F14000A4DFB9 /* ShopsDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsDataBaseService.swift; sourceTree = "<group>"; };
+		C28AE22D22F82B1E0001DD99 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
+		C28AE22F22F8309A0001DD99 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		C28CBEA622D340E700F53838 /* UITextField + RightPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + RightPasswordView.swift"; sourceTree = "<group>"; };
 		C28D33D422D37F780072A95C /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		C28D33D622D387820072A95C /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
@@ -317,6 +324,7 @@
 		C2E98B1222F1C28300175EB3 /* LoginValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidator.swift; sourceTree = "<group>"; };
 		C2E98B1422F1C28F00175EB3 /* RegistrationValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationValidator.swift; sourceTree = "<group>"; };
 		C2E98B1722F1D3ED00175EB3 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		C2EC8E1B22F85A2A00C2247E /* ProfileEditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditModel.swift; sourceTree = "<group>"; };
 		C2EEE9BA22F715040088706B /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
 		C2EEE9BC22F7221B0088706B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C2FB700922DDD95F000A3FE7 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
@@ -742,6 +750,17 @@
 				C289187722D5F14000A4DFB9 /* ShopsDataBaseService.swift */,
 			);
 			path = ShopsDataService;
+			sourceTree = "<group>";
+		};
+		C28AE22C22F82A9D0001DD99 /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+				C28AE22D22F82B1E0001DD99 /* EditProfile.storyboard */,
+				C28AE22F22F8309A0001DD99 /* EditProfileView.swift */,
+				C215FC9122F831C300E23A02 /* EditProfileController.swift */,
+				C2EC8E1B22F85A2A00C2247E /* ProfileEditModel.swift */,
+			);
+			path = ProfileEdit;
 			sourceTree = "<group>";
 		};
 		C28D33D822D389F20072A95C /* ProfileScene */ = {
@@ -1272,6 +1291,7 @@
 		C2E98B1622F1D3A000175EB3 /* MoreScreen */ = {
 			isa = PBXGroup;
 			children = (
+				C28AE22C22F82A9D0001DD99 /* ProfileEdit */,
 				C2E98B1722F1D3ED00175EB3 /* More.storyboard */,
 				C22DE13022F1E5FF00D588F1 /* MoreController.swift */,
 				C22DE13222F1E74600D588F1 /* MoreView.swift */,
@@ -1345,6 +1365,7 @@
 				C2E98B1822F1D3ED00175EB3 /* More.storyboard in Resources */,
 				C220EAE322CF9F47002C6B90 /* RegXib.xib in Resources */,
 				C27EF16322F19AFD0010833B /* MyCard.storyboard in Resources */,
+				C28AE22E22F82B1E0001DD99 /* EditProfile.storyboard in Resources */,
 				C2C583FE22CCFCA2004CBCBF /* ContinueRegistration.storyboard in Resources */,
 				C21F730422D8CE37000240D6 /* ReviewCell.xib in Resources */,
 				C2175B4422D4913E0011839E /* Profile.storyboard in Resources */,
@@ -1493,6 +1514,7 @@
 				C2929B9C22D4E85B0056E043 /* TableShopCell.swift in Sources */,
 				C2BF712222DE097E00564D06 /* ReviewViewController.swift in Sources */,
 				C22DE13D22F224DC00D588F1 /* BalanceAlerts.swift in Sources */,
+				C28AE23022F8309A0001DD99 /* EditProfileView.swift in Sources */,
 				C26387C922DF701300CBA01B /* PurchaseDetailController.swift in Sources */,
 				C2185EA722D76778009F3321 /* CategoruCellModel.swift in Sources */,
 				C2E98B0B22F1A4C100175EB3 /* MyCardView.swift in Sources */,
@@ -1535,6 +1557,7 @@
 				C289187822D5F14000A4DFB9 /* ShopsDataBaseService.swift in Sources */,
 				C28D33D722D387820072A95C /* MainPageView.swift in Sources */,
 				C2185EBB22D768E0009F3321 /* CategoryModel.swift in Sources */,
+				C2EC8E1C22F85A2A00C2247E /* ProfileEditModel.swift in Sources */,
 				C2B4B7FC22CF4B8A0096CDC0 /* LoginNetworkService.swift in Sources */,
 				C28CBEA722D340E700F53838 /* UITextField + RightPasswordView.swift in Sources */,
 				C2A3E72C22F4492700A8F3E0 /* OUSModel.swift in Sources */,
@@ -1545,6 +1568,7 @@
 				C2185EB822D768C2009F3321 /* CategoryViewModel.swift in Sources */,
 				C229B2DB22E0AB07000E9F17 /* AboutCashController.swift in Sources */,
 				C263879422DF18C600CBA01B /* PurchaseHistoryController.swift in Sources */,
+				C215FC9222F831C300E23A02 /* EditProfileController.swift in Sources */,
 				C2E98B1022F1B16A00175EB3 /* BarCodeGenerator.swift in Sources */,
 				C2285E3722EAFA9D0013D470 /* String + Separate.swift in Sources */,
 				C22DE13822F21F1900D588F1 /* ShopWebViewController.swift in Sources */,

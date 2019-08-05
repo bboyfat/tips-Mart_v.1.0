@@ -9,16 +9,18 @@
 import UIKit
 
 enum BalanceAlertMessage: String{
-    case greenMessage = "Сумма кэшбэка за покупки, которая зачисленна на ваш баланс."
-    case grayMessage = "Сумма кэшбэка, которая будет доступна после подтверждения вашей покупки магазином."
+    case greenMessage = "greenWalletInfo"
+    case grayMessage = "grayWalletInfo"
+    case wdCard = "wdRulesCard"
+    case wdPhone = "wdrulesPhone"
 }
 
 class BalanceAlerts{
     var controller: UIViewController!
     
     func presentInfo(_ title: String, _ message: BalanceAlertMessage.RawValue){
-        let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: "Принять", style: .cancel, handler: nil)
+        let ac = UIAlertController(title: title, message: NSLocalizedString(message, comment: ""), preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: NSLocalizedString("accept", comment: ""), style: .cancel, handler: nil)
         
         ac.view.tintColor = #colorLiteral(red: 0.1137254902, green: 0.8, blue: 0.4274509804, alpha: 1)
         ac.addAction(action)

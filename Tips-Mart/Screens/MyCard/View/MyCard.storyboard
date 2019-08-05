@@ -158,6 +158,10 @@
                         <connections>
                             <outlet property="barCodeImage" destination="Dhq-sb-3ev" id="tKh-eQ-mFd"/>
                             <outlet property="bottomConstraint" destination="v6T-W6-9hd" id="Z6L-kv-bYc"/>
+                            <outlet property="grayBalance" destination="MVp-cL-NrV" id="QVw-uc-NLX"/>
+                            <outlet property="grayCurrency" destination="Zco-dI-7Tk" id="3dC-hG-njm"/>
+                            <outlet property="greenBalance" destination="uHZ-IV-yHg" id="t1z-CQ-q6F"/>
+                            <outlet property="greenCurrency" destination="EX0-Wi-ZIO" id="gr5-4w-4ck"/>
                             <outlet property="idLbl" destination="83u-8X-Eoq" id="872-GD-vwL"/>
                             <outlet property="infoViewHeight" destination="Eyc-ba-u3m" id="BJD-wn-zmj"/>
                             <outlet property="nickNameLbl" destination="C8J-Sc-cGL" id="GJ7-9Y-cz9"/>

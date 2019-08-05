@@ -13,11 +13,9 @@ import RealmSwift
 
 //NETWORK SERVICE TO REFRESH BALANCE
 
-class BalanceNetworkService: NetworkServiceProtocol{
+class BalanceNetworkService{
     
-    typealias loginModel = Tokens
-    
-    func sendRequest(with params: Tokens, handler: @escaping (Bool) -> ()) {
+    func sendRequest(handler: @escaping (Bool) -> ()) {
         
         guard let url = URL(string: URLS.refreshBalance.rawValue) else { handler(false); return}
         var urlRequest = URLRequest(url: url)
@@ -30,7 +28,8 @@ class BalanceNetworkService: NetworkServiceProtocol{
                 do{
                     let answer  = try JSONDecoder().decode(Balance.self, from: response)
                     print(answer)
-                    
+                    UserDefaults.standard.set(answer.data?.greenBalance, forKey: "greenBalance")
+                    UserDefaults.standard.set(answer.data?.grayBalance, forKey: "grayBalance")
                 } catch{
                     print(Error.self)
                 }
@@ -195,6 +194,7 @@ class UserSettingsNetwork: RefreshServiceProtocol{
         params.setValue(model.name, forKey: "name")
         params.setValue(model.surname, forKey: "surname")
         params.setValue(model.birthday, forKey: "birthday")
+        params.setValue(model.email, forKey: "email")
         params.setValue(model.maritalStatus, forKey: "maritalStatus")
         
         guard let header = accessToken() else {return}
@@ -216,9 +216,10 @@ class UserSettingsNetwork: RefreshServiceProtocol{
                 let answer = try JSONSerialization.jsonObject(with: data, options: [])
                 print(answer)
                 
-                
+                handler(true)
             } catch {
                 print("!!!!!!!!!!!!!!!!!!OOPS, we have an error",error)
+                handler(false)
             }
             }.resume()
     }
@@ -352,7 +353,65 @@ class OUSNetworkService{
     }
 }
     
-
-
+//Objec that getting data to change Profile
+class ProfielEditNetService{
+    func sendRequest(handler: @escaping (ProfileData?) -> ()) {
+        guard let url = URL(string: URLS.getInfo.rawValue) else { handler(nil); return}
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = HTTPMethod.get.rawValue
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        Alamofire.request(urlRequest).responseJSON { response in
+            if let response = response.data{
+                do{
+                    let json = try JSONSerialization.jsonObject(with: response, options: [])
+                    print(json)
+                    let answer  = try JSONDecoder().decode(ProfileEditModel.self, from: response)
+                    OperationQueue.main.addOperation {
+                        handler(answer.data)
+                    }
+                    
+                } catch let profErr{
+                    print("ProfielEditNetService", profErr)
+                    handler(nil)
+                }
+            }
+        }
+    }
+    
+}
+//Object that will send the data to API wit shop name
+class BuyingNetworkService{
+    var pathToShop: String!
+    func sendRequest(handler: @escaping (Bool) -> ()) {
+        
+        guard let url = URL(string:"https://app-client.tips-mart.com/shops/\(pathToShop!)/view" ) else { handler(false); return}
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = HTTPMethod.post.rawValue
+        guard let token = accessToken() else {return}
+        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        Alamofire.request(urlRequest).responseJSON { response in
+            if let response = response.data{
+                do{
+                    let answer  = try JSONDecoder().decode(Balance.self, from: response)
+                    if answer.success ?? false{
+                        handler(true)
+                    } else {
+                        handler(false)
+                    }
+                  
+                } catch{
+                    print(Error.self)
+                }
+            }
+        }
+    }
+    init(path: String) {
+        self.pathToShop = path
+    }
+    
+}
 
 

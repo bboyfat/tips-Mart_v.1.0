@@ -15,7 +15,7 @@ class ProfileController: UIViewController {
     //MARK: Properties
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "        ", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Icon"), with: "", with: .forceRightToLeft)
-    var model: RealmUserData!
+   
     let networking = ProfileNetworkService()
     //StatusBar style
     
@@ -32,17 +32,27 @@ class ProfileController: UIViewController {
         }
         balanceAlerts = BalanceAlerts(controller: self)
         addTargets() // add targets fot items
-        setViews()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setUsersData()
         setClearNavigation(with: .white, with: "")
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
         addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
     }
     
     //MARK: Methods
-    
+    private func setUsersData(){
+        guard let nick = nickname() else { return}
+        guard let id = userId() else {return}
+        guard let greenBalance = greenBalance() else {return}
+        guard let grayBalance = grayBalance() else {return}
+        self.profileView.nicknameLabel.text = nick
+        self.profileView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.profileView.grayBalance.text = String(grayBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.profileView.idLabel.text = String(id).separate(every: 2, with: " ")
+    }
     
     //add targets to items
     private func addTargets(){
@@ -67,17 +77,18 @@ class ProfileController: UIViewController {
         profileView.operationsCountLbl.text = "  " + String(model.referrals[0].credited)
     }
     
-    func setViews(){
-        if let model = model{
-            profileView.nicknameLabel.text = model.nickname
-            profileView.idLabel.text = model.id.separate(every: 2, with: " ")
-        }
-    }
+    
     //MARK: IBAction
     @IBAction func presentPurchaseHistory(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "PurchaseVC") as! PurchaseHistoryController
         vc.purchaseSender = .profile
         navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func editProfile(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "EditProfile", bundle: nil).instantiateViewController(withIdentifier: "EditProfileScreen") as! EditProfileController
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .pageSheet
+        self.present(nav, animated: true, completion: nil)
     }
     
     @IBAction func greenBalanceInfo(_ sender: UIButton) {

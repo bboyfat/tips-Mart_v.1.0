@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomBlurView: UIView {
-
+    
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = #imageLiteral(resourceName: "eleph")
@@ -21,7 +21,7 @@ class CustomBlurView: UIView {
     }()
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        
     }
     override func layoutIfNeeded() {
         super.layoutIfNeeded()
@@ -40,7 +40,9 @@ class CustomBlurView: UIView {
         self.addSubview(imageView)
     }
     func stopAnim(){
-        self.removeFromSuperview()
+        OperationQueue.main.addOperation {
+            self.removeFromSuperview()
+        }
     }
     
     func addShapeLayer(strokeColor: UIColor, lineWidth: CGFloat, strokeEnd: CGFloat ) -> CAShapeLayer{

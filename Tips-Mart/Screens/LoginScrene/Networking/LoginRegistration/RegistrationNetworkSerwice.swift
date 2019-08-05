@@ -9,14 +9,11 @@
 import UIKit
 import Alamofire
 
-#warning("Think about structure of registration request")
-
 class RegistrationNetworkService: NetworkServiceProtocol{
     
     
     typealias loginModel = RegistrationModelRequset
-    // i need phone number here
-    var dataType: Any?
+   
     
     func sendRequest(with params: RegistrationModelRequset, handler: @escaping(_ status: Bool) ->()) {
         let data = try! JSONEncoder().encode(params)

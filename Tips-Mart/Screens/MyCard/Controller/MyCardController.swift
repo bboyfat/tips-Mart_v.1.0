@@ -15,7 +15,8 @@ class MyCardController: UIViewController {
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "    ", with: .forceRightToLeft)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "creditCardWhite"), with: "      ", with: .forceRightToLeft)
     var generator = BarCodeGenerator()
-    var model: RealmUserData!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad() 
         setClearNavigation(with: .white, with: "Моя карта")
@@ -33,9 +34,14 @@ class MyCardController: UIViewController {
         setViews()
     }
     private func setViews(){
-        myCardView.idLbl.text = model.id.separate(every: 2, with: " ")
-        myCardView.barCodeImage.image = generator.generateBrCode(from: model.id)
-        myCardView.nickNameLbl.text = model.nickname
+        guard let nick = nickname() else { return}
+        guard let id = userId() else {return}
+        guard let greenBalance = greenBalance() else {return}
+        guard let grayBalance = grayBalance() else {return}
+        self.myCardView.nickNameLbl.text = nick
+        self.myCardView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.myCardView.grayBalance.text = String(grayBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.myCardView.idLbl.text = String(id).separate(every: 2, with: " ")
     }
     
     override func viewDidAppear(_ animated: Bool) {

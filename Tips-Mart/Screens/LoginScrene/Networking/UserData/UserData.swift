@@ -138,8 +138,9 @@ struct ProfileSettings: Codable{
     var data: UserProfile
 }
 struct UserProfile: Codable {
-    var name: String
-    var surname: String
-    var birthday: Int
-    var maritalStatus: String
+    var name: String?
+    var surname: String?
+    var email: String?
+    var birthday: Int?
+    var maritalStatus: String?
 }

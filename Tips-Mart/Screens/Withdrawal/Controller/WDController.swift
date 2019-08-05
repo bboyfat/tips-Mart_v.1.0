@@ -18,12 +18,22 @@ class WDController: UIViewController {
         addNotifForKeyboard()
         wdView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleEndEditing)))
     }
-    @objc func handleEndEditing(){
-        self.view.endEditing(true)
-    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setNavigation()
+        setViews()
+    }
+    
+    
+    private func setViews(){
+        guard let greenBalance = greenBalance() else {return}
+        self.wdView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
+    }
+    
+    @objc func handleEndEditing(){
+        self.view.endEditing(true)
     }
     
     func addNotifForKeyboard(){
@@ -59,6 +69,20 @@ class WDController: UIViewController {
     
     @objc func handlePop(){
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func wdRulesInfo(_ sender: Any) {
+        presentAlertInfo()
+    }
+    
+    func presentAlertInfo(){
+        
+        switch wdView.switchPhoneCard {
+        case .card:
+            BalanceAlerts(controller: self).presentInfo(NSLocalizedString("yourAttention", comment: ""), BalanceAlertMessage.wdCard.rawValue)
+        case.phone:
+            BalanceAlerts(controller: self).presentInfo(NSLocalizedString("yourAttention", comment: ""), BalanceAlertMessage.wdPhone.rawValue)
+        }
+        
     }
     
     

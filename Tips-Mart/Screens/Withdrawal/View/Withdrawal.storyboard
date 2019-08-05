@@ -227,6 +227,9 @@
                                 <state key="normal" title="WD Rules">
                                     <color key="titleColor" red="0.11372549019607843" green="0.80000000000000004" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="wdRulesInfo:" destination="GGU-hp-7TC" eventType="touchUpInside" id="2Zn-Gl-0Hk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,6 +254,8 @@
                         <viewLayoutGuide key="safeArea" id="DmQ-6H-S0j"/>
                         <connections>
                             <outlet property="cardView" destination="GCn-th-Oye" id="Csw-70-r4j"/>
+                            <outlet property="currencyLbl" destination="X0J-HG-Qet" id="Bl3-ci-zhj"/>
+                            <outlet property="greenBalance" destination="I50-Qr-2ro" id="gcJ-oZ-XK5"/>
                             <outlet property="numberTextField" destination="8uI-OS-RPx" id="apA-Nx-MTZ"/>
                             <outlet property="phoneView" destination="ptO-BQ-FH5" id="4ON-t4-6eG"/>
                             <outlet property="textFieldName" destination="Wrj-VS-4bT" id="7o8-Iy-fW6"/>

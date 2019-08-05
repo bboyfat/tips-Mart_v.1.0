@@ -19,6 +19,8 @@ class WDView: UIView {
     @IBOutlet weak var phoneView: UIView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var wdFieldWidth: NSLayoutConstraint!
+    @IBOutlet weak var greenBalance: UILabel!
+    @IBOutlet weak var currencyLbl: UILabel!
     
     @IBOutlet weak var numberTextField: PhoneFormattedTextField!
     
@@ -39,6 +41,7 @@ class WDView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        currencyLbl.text = NSLocalizedString("uah", comment: "")
         setBorder()
         addTargets()
         numberTextField.delegate = self

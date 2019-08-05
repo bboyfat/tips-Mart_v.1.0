@@ -17,7 +17,7 @@ class MainTabBarController: UITabBarController {
     let moreScreen = UIStoryboard(name: "More", bundle: nil).instantiateViewController(withIdentifier: "MoreNavigation") 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        reloadBalance()
         mainVc.tabBarItem = UITabBarItem(title: NSLocalizedString("Main", comment: ""), image: #imageLiteral(resourceName: "main"), tag: 0)
         shopsVc.tabBarItem = UITabBarItem(title: NSLocalizedString("Shops", comment: ""), image: #imageLiteral(resourceName: "Shops"), tag: 1)
         friendsVC.tabBarItem = UITabBarItem(title: NSLocalizedString("Friends", comment: ""), image: #imageLiteral(resourceName: "friendsBar"), tag: 2)
@@ -25,6 +25,11 @@ class MainTabBarController: UITabBarController {
         viewControllers = [mainVc, shopsVc, friendsVC, moreScreen]
     }
     
+    private func reloadBalance(){
+        BalanceNetworkService().sendRequest { (finish) in
+        
+        }
+    }
 
 
 

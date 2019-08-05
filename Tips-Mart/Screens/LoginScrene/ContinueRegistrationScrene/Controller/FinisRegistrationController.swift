@@ -85,7 +85,6 @@ class FinisRegistrationController: UIViewController {
     }
     
     @IBAction func sendUserSettings(_ sender: UIButton) {
-//        UserProfile
         let birthDay = finishRegView.birthDateTF.text!
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
@@ -93,7 +92,7 @@ class FinisRegistrationController: UIViewController {
         let date = dateFormatter.date(from: birthDay)
         let timeInterval = date?.timeIntervalSince1970
         let unixDate = Int(timeInterval!)
-        userProfile = UserProfile(name: finishRegView.nameTf.text!, surname: finishRegView.surnameTf.text!, birthday: unixDate, maritalStatus: "single")
+        userProfile = UserProfile(name: finishRegView.nameTf.text, surname: finishRegView.surnameTf.text, email: nil, birthday: unixDate, maritalStatus: "single")
         UserSettingsNetwork(model: self.userProfile).sendRequest { (op) in
             
         }

@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileView: UIView {
     
+    @IBOutlet weak var grayBalance: UILabel!
+    @IBOutlet weak var greenBalance: UILabel!
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
 

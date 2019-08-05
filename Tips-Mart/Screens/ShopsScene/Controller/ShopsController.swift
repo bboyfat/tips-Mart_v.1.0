@@ -50,9 +50,14 @@ class ShopsController: UIViewController {
                 self.selectedShops = selected
                 self.setupDelegate()
             })
-//            self.customBlurAnimtion.stopAnim()
         }
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = NSLocalizedString("Shops", comment: "")
     }
     
     

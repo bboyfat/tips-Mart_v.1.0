@@ -26,7 +26,7 @@ class DetailShopController: UIViewController {
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow-2"), with: " Назад", with: .forceLeftToRight)
     
     //MARK: Lifecycle
-    
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAnimation()
@@ -96,11 +96,19 @@ class DetailShopController: UIViewController {
     }
   
     @IBAction func goToShop(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "ShopWebView", bundle: nil).instantiateViewController(withIdentifier: "ShopWebViewVC") as! ShopWebViewController
-        vc.url = "https://tips-mart.com/view/\(pathToShop)"
-//        let nav = UINavigationController(rootViewController: vc)
+        BuyingNetworkService(path: pathToShop).sendRequest { (finish) in
+            if finish{
+                let vc = UIStoryboard(name: "ShopWebView", bundle: nil).instantiateViewController(withIdentifier: "ShopWebViewVC") as! ShopWebViewController
+                vc.url = self.model.data?.refLink
+                OperationQueue.main.addOperation {
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                
+            } else {
+                
+            }
+        }
         
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func presentReviewScreen(_ sender: UIButton) {
         let vc = UIStoryboard(name: "OneShop", bundle: nil).instantiateViewController(withIdentifier: "ReviewVC") as! ReviewViewController

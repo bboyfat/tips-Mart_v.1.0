@@ -38,6 +38,7 @@ class InitUserService: RefreshServiceProtocol{
                     let answer  = try JSONDecoder().decode(UsersOutput.self, from: response)
                     guard let userData = answer.data else {return}
                     UserDefaults.standard.set(answer.data?.userid, forKey: "userId")
+                    UserDefaults.standard.set(answer.data?.nickname, forKey: "nickname")
                     self.dataBaseService = RealmService(userData: userData)
                     self.dataBaseService?.save()
                     

@@ -28,6 +28,8 @@ class MainPageController: UIViewController {
         }
         
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -35,7 +37,6 @@ class MainPageController: UIViewController {
     }
     @IBAction func myCardBtnAction(_ sender: Any) {
         let vc = UIStoryboard(name: "MyCard", bundle: nil).instantiateViewController(withIdentifier: "MyCardVC") as! MyCardController
-        vc.model = self.model
         let nav = UINavigationController(rootViewController: vc)
         self.present(nav, animated: true, completion: nil)
         
@@ -50,7 +51,6 @@ class MainPageController: UIViewController {
     @objc func handlePresent(){
     
         let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC") as! ProfileController
-        vc.model = self.model
         let nav = UINavigationController(rootViewController: vc)
         present(nav, animated: true, completion: nil)
         
@@ -63,13 +63,17 @@ class MainPageController: UIViewController {
             self?.mainView.idLabel.text = model.id.separate(every: 2, with: " ")
             self?.mainView.nicknameLabel.text = model.nickname
         }
+        guard let greenBalance = greenBalance() else {return}
+        guard let grayBalance = grayBalance() else {return}
+        self.mainView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.mainView.grayBalance.text = String(grayBalance) + " " + NSLocalizedString("uah", comment: "")
        
     }
     @IBAction func grayBalanceInfo(_ sender: UIButton) {
-        balancaAlert.presentInfo("Серый кошелек", BalanceAlertMessage.grayMessage.rawValue)
+        balancaAlert.presentInfo(NSLocalizedString("grayWallet", comment: ""), BalanceAlertMessage.grayMessage.rawValue)
     }
     @IBAction func greenBalanceInfo(_ sender: UIButton) {
-         balancaAlert.presentInfo("Зеленый кошелек", BalanceAlertMessage.greenMessage.rawValue)
+         balancaAlert.presentInfo(NSLocalizedString("greenWallet", comment: ""), BalanceAlertMessage.greenMessage.rawValue)
     }
     @IBAction func otherCardsAction(_ sender: Any) {
         balancaAlert.presentUpdateAlert()

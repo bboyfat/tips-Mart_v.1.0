@@ -13,6 +13,8 @@ class MoreView: UIView {
     
     @IBOutlet weak var nicknameLbl: UILabel!
     @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var greenBalance: UILabel!
+    @IBOutlet weak var grayBalance: UILabel!
     
     @IBOutlet weak var logoutView: UIView!
     @IBOutlet weak var reviewView: UIView!

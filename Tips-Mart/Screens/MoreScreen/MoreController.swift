@@ -26,10 +26,14 @@ class MoreController: UIViewController {
     
     
     func setViews(){
-        let realm = try! Realm()
-        let model = realm.objects(RealmUserData.self).last
-        self.moreView.idLabel.text = model?.id.separate(every: 2, with: " ")
-        self.moreView.nicknameLbl.text = model?.nickname
+        guard let nick = nickname() else { return}
+        guard let id = userId() else {return}
+        guard let greenBalance = greenBalance() else {return}
+        guard let grayBalance = grayBalance() else {return}
+        self.moreView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.moreView.grayBalance.text = String(grayBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.moreView.idLabel.text = String(id).separate(every: 2, with: " ")
+        self.moreView.nicknameLbl.text = nick
         
     }
     

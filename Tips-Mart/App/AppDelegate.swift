@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
    
+    func resetApp() {
+        OperationQueue.main.addOperation {
+            UIApplication.shared.windows[0].rootViewController = UIStoryboard(
+                name: "PreLoginScrene",
+                bundle: nil
+                ).instantiateInitialViewController()
+        }
+       
+    }
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         if OrientationManager.landscapeSupported {
