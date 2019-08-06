@@ -30,16 +30,28 @@ class PurchaseDSD: NSObject, UITableViewDataSource{
         let model = self.model[indexPath.row]
         
         cell.sumPurchaseLbl.text = NSLocalizedString("Transaction amount", comment: "") + " " + String(model.sumPurchase)
-        cell.createdTime.text = model.created
+        cell.createdTime.text = stringToDateToString(date: model.created)
         cell.operationID.text = NSLocalizedString("Operation ID", comment: "") + " " + model.cashbackID
-        cell.cashbackSum.text = String(model.userCashback)
+        cell.cashbackSum.text = String(model.userCashback) + " "
         cell.state = model.status
         LogoNetworkService().getImages(with: model.shopData.pathToImage) { (image) in
+            if let image = image{
             OperationQueue.main.addOperation {
                 cell.shopLogo.image = image
             }
+            }else {
+                cell.shopLogo.image = #imageLiteral(resourceName: "eleph")
+            }
         }
         return cell
+    }
+    private func stringToDateToString(date string: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzzZ"
+        let date = dateFormatter.date(from: string)
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let stringDate = dateFormatter.string(from: date!)
+        return stringDate
     }
     
     init(tableView: UITableView, controller: UIViewController, model: [PurchaseObject]) {

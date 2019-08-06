@@ -43,8 +43,8 @@ class MainPageController: UIViewController {
     }
     @IBAction func searchBtn(_ sender: Any) {
         
-        if let shops = self.tabBarController?.viewControllers?[1] as? ShopsController{
-            shops.senderIs = .search
+        if let shops = self.tabBarController?.viewControllers?[1] {
+            
         self.tabBarController?.selectedViewController = self.tabBarController?.viewControllers?[1]
         }
     }

@@ -17,9 +17,21 @@ class PurchaseDetailView: UIView {
     @IBOutlet weak var createdLbl: UILabel!
     @IBOutlet weak var updatedLbl: UILabel!
     
+    @IBOutlet weak var shopLbl: UILabel!
+    @IBOutlet weak var operSumLbl: UILabel!
+    @IBOutlet weak var cashSumLbl: UILabel!
+    @IBOutlet weak var createdLblLocalize: UILabel!
+    @IBOutlet weak var updatedLblLocalize: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        localize()
     }
     
-
+    private func localize(){
+        shopLbl.text = NSLocalizedString("shop", comment: "")
+            operSumLbl.text = NSLocalizedString("transAmount", comment: "")
+            cashSumLbl.text = NSLocalizedString("cashSum", comment: "")
+            createdLblLocalize.text = NSLocalizedString("createdLoc", comment: "")
+            updatedLblLocalize.text = NSLocalizedString("updatedLock", comment: "")
+    }
 }

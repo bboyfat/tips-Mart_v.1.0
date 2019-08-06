@@ -16,7 +16,7 @@ class MembersController: UIViewController {
     let nib = UINib(nibName: "MembersCell", bundle: nil)
     var model: [MembersData] = []{
         didSet{
-            self.tableView.reloadData()
+//            self.tableView.reloadData()
         }
     }
     //MARK: Lyficycle
@@ -34,9 +34,10 @@ class MembersController: UIViewController {
         setTitleColor(with: .black)
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1894809902, green: 0.7875444889, blue: 0.4261831641, alpha: 1)
         navigationItem.title = NSLocalizedString("members", comment: "")
-        MembersNetworkService().sendRequest { (members) in
+        MembersNetworkService(model: MembersRequest(lastCreated: nil)).sendRequest { (members) in
             if let member = members{
                 self.model = member
+                self.reload()
             }
         }
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
@@ -51,7 +52,11 @@ class MembersController: UIViewController {
        navigationController?.popViewController(animated: true)
         
     }
-    
+    private func reload(){
+        OperationQueue.main.addOperation {
+            self.tableView.reloadData()
+        }
+    }
     
     
    
@@ -92,5 +97,34 @@ extension MembersController: UITableViewDelegate{
         vc.requestModel = OUSRequest(_user: model._user, statuses: nil, createdFrom: nil, createdTo: nil)
         vc.usersNickName = model.nickname
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastItem = self.model.count - 1
+        if indexPath.row == lastItem{
+            loadMoreData()
+        }
+        
+    }
+    func loadMoreData(){
+        let created = self.model.last?.created
+        let memersLastCreated = MembersRequest(lastCreated: created!)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzzZ"
+        //        let date = dateFormatter.date(from: isoDate!)
+        MembersNetworkService(model: memersLastCreated).sendRequest { (membaers) in
+            let newMOdel = membaers!.filter(){ [unowned self] in
+                let newMode = self.model.map({ (data) -> String in
+                    return data._user
+                })
+                return !newMode.contains($0._user)
+            }
+                self.model.append(contentsOf: newMOdel)
+                if !newMOdel.isEmpty {
+                    self.reload()
+                }
+            }
+        
+       
     }
 }

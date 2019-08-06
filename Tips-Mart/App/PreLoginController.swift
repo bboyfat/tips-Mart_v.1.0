@@ -7,21 +7,53 @@
 //
 
 import UIKit
+import Reachability
 
 class PreLoginController: UIViewController {
     //MARK: NSLayout Constraint
     @IBOutlet weak var activityBottomConastraint: NSLayoutConstraint!
     // Properties
+    var reachability: Reachability!
     var networkService = RefreshToken()
+    let appDelegate = AppDelegate()
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.modalTransitionStyle = .partialCurl
+
         self.modalPresentationStyle = .none
         animateView()
         
     }
-    private func checkRefresh(){
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reachability = Reachability()!
+        startNotifyReachability()
+    }
+
+    // MARK: Methods
+    func startNotifyReachability(){
+        NotificationCenter.default.addObserver(self, selector: #selector(internetChanged), name: Notification.Name.reachabilityChanged, object: reachability)
+        do{
+            try reachability!.startNotifier()
+        } catch {
+            print("could not start notifier")
+        }
+        
+    }
+    
+    @objc func internetChanged(note: Notification){
+        let reachability = note.object as! Reachability
+        if reachability.connection != .none{
+            checkRefreshWithConnection()
+        } else {
+            checkRefreshWithoutConnection()
+        }
+        
+    }
+    private func checkRefreshWithConnection(){
+        
         if refreshToken() != nil{
             networkService.sendRequest(with: TokenRefresh(token: refreshToken()!, userid: userId()!)) { (finish) in
                 if finish{
@@ -34,12 +66,15 @@ class PreLoginController: UIViewController {
             presentVc()
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        checkRefresh()
+    private func checkRefreshWithoutConnection(){
+        
+        if refreshToken() != nil{
+           InternetAlert().tokenisNotEmpytAlert(controller: self)
+        } else {
+           InternetAlert().tokenisEmpytAlert(controller: self)
+          
+        }
     }
-
-    // MARK: Methods
     private func presentTab(){
         OperationQueue.main.addOperation {
             let tabBarController = UIStoryboard(name: "MainTabBar", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarController

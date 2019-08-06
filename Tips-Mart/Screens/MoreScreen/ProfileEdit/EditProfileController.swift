@@ -42,12 +42,20 @@ class EditProfileController: UIViewController {
             if let data = data{
                 self.editView.nameTf.text = data.name
                 self.editView.surnameTF.text = data.surname
-                self.editView.birthDateTF.text = data.birthday
+                self.editView.birthDateTF.text = self.stringToDateToString(date: data.birthday)
                 self.customAnimation.stopAnim()
             } else {
                 self.customAnimation.stopAnim()
             }
         }
+    }
+    private func stringToDateToString(date string: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzzZ"
+        let date = dateFormatter.date(from: string)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let stringDate = dateFormatter.string(from: date!)
+        return stringDate
     }
     
     func startAnim(){
@@ -65,8 +73,8 @@ class EditProfileController: UIViewController {
     }
     //Set clear navigation
     private func setNavigation(){
-        setClearNavigation(with: .green, with: "Prifile Editing")
-        setTitleColor(with: .purple)
+        setClearNavigation(with: #colorLiteral(red: 0.1137254902, green: 0.8, blue: 0.4274509804, alpha: 1), with: NSLocalizedString("editProfile", comment: ""))
+        setTitleColor(with: #colorLiteral(red: 0.3254901961, green: 0.003921568627, blue: 0.737254902, alpha: 1))
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
         addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
     }
@@ -99,12 +107,12 @@ class EditProfileController: UIViewController {
                     appDelegate.resetApp()
                 } else {
                     self.customAnimation.stopAnim()
-                    BalanceAlerts(controller: self).presentInfo("WARNING", BalanceAlertMessage.greenMessage.rawValue)
+                    self.addAllert()
                 }
             }
         } else {
             self.customAnimation.stopAnim()
-            BalanceAlerts(controller: self).presentInfo("WARNING", BalanceAlertMessage.greenMessage.rawValue)
+            self.addAllert()
         }
     }
     private func prepareDataToChange(){
@@ -123,6 +131,13 @@ class EditProfileController: UIViewController {
         let unixDate = Int(timeInterval ?? TimeInterval())
         return unixDate
     }
-    
+    func addAllert(){
+        let ac = UIAlertController(title: "Ooops", message: "Something went wrong, try later", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel) { (_) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        ac.addAction(action)
+        self.present(ac, animated: true, completion: nil)
+    }
     
 }

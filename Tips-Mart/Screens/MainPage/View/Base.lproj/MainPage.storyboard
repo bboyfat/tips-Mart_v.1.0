@@ -62,12 +62,13 @@
                                                 </constraints>
                                                 <state key="normal" image="greenBalance"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgz-SA-sM2">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgz-SA-sM2">
                                                 <rect key="frame" x="124" y="8" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="Pd8-9P-Jno"/>
                                                     <constraint firstAttribute="width" constant="24" id="RFY-nm-VjO"/>
                                                 </constraints>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="4"/>
                                                 <state key="normal" image="information копія"/>
                                                 <connections>
                                                     <action selector="greenBalanceInfo:" destination="qkf-rc-UWe" eventType="touchUpInside" id="VQY-aa-eDK"/>
@@ -111,6 +112,7 @@
                                                     <constraint firstAttribute="width" constant="24" id="B2H-Ub-Acj"/>
                                                     <constraint firstAttribute="height" constant="24" id="Epd-lg-uIU"/>
                                                 </constraints>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="3"/>
                                                 <state key="normal" image="information копія"/>
                                                 <connections>
                                                     <action selector="grayBalanceInfo:" destination="qkf-rc-UWe" eventType="touchUpInside" id="vLL-vN-2Dr"/>

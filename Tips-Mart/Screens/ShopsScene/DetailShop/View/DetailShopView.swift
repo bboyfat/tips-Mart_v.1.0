@@ -23,7 +23,7 @@ class DetailShopView: UIView {
     
     @IBOutlet weak var cashBackUpTobl: UILabel!
     @IBOutlet weak var attentionLbl: UILabel!
-    @IBOutlet weak var cashbackValueLbl: UILabel!
+    @IBOutlet weak var lisCashbackLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

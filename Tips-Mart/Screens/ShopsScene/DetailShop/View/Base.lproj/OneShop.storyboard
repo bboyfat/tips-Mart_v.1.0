@@ -22,14 +22,14 @@
             <objects>
                 <viewController storyboardIdentifier="DetailShop" id="q6s-la-YRW" customClass="DetailShopController" customModule="Tips_Mart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kyn-Va-BZO" customClass="DetailShopView" customModule="Tips_Mart" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X5H-OX-JRF">
-                                <rect key="frame" x="0.0" y="64" width="320" height="750"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXO-HE-yNb">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="750"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="762"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyT-Yi-Hn4">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
@@ -310,13 +310,6 @@
                                                     </mask>
                                                 </variation>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZD-0X-UfL">
-                                                <rect key="frame" x="0.0" y="822" width="320" height="1"/>
-                                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="Ekt-Ae-Pev"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zop-LX-kSK">
                                                 <rect key="frame" x="0.0" y="823" width="414" height="166"/>
                                                 <subviews>
@@ -489,19 +482,15 @@
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="88T-sc-gZY" firstAttribute="leading" secondItem="rXO-HE-yNb" secondAttribute="leading" id="1fZ-cX-JYS"/>
+                                            <constraint firstAttribute="bottom" secondItem="cAk-P3-bYO" secondAttribute="bottom" id="2X3-gd-3Ji"/>
                                             <constraint firstItem="eyT-Yi-Hn4" firstAttribute="top" secondItem="rXO-HE-yNb" secondAttribute="top" id="4Oy-4N-LfR"/>
                                             <constraint firstItem="ZWl-UH-dAj" firstAttribute="leading" secondItem="rXO-HE-yNb" secondAttribute="leading" constant="16" id="4bf-HT-6g2"/>
-                                            <constraint firstItem="TZD-0X-UfL" firstAttribute="top" secondItem="rXO-HE-yNb" secondAttribute="top" constant="822" id="5A9-7P-cwY"/>
                                             <constraint firstAttribute="trailing" secondItem="88T-sc-gZY" secondAttribute="trailing" id="5iD-uo-gzM"/>
-                                            <constraint firstItem="TZD-0X-UfL" firstAttribute="top" secondItem="2Ia-KA-z6C" secondAttribute="bottom" id="6KZ-P4-6vw"/>
                                             <constraint firstAttribute="trailing" secondItem="2Ia-KA-z6C" secondAttribute="trailing" id="FU3-e5-ins"/>
                                             <constraint firstItem="ATL-Mn-aDS" firstAttribute="leading" secondItem="rXO-HE-yNb" secondAttribute="leading" id="JhB-HA-9s4"/>
                                             <constraint firstAttribute="trailing" secondItem="cAk-P3-bYO" secondAttribute="trailing" id="Kxc-EP-0r7"/>
                                             <constraint firstItem="88T-sc-gZY" firstAttribute="top" secondItem="ATL-Mn-aDS" secondAttribute="bottom" id="M5B-bJ-njK"/>
-                                            <constraint firstItem="TZD-0X-UfL" firstAttribute="leading" secondItem="rXO-HE-yNb" secondAttribute="leading" id="Q2b-fg-fWN"/>
                                             <constraint firstAttribute="trailing" secondItem="Ym9-pi-XIv" secondAttribute="trailing" constant="16" id="U7f-5t-lJb"/>
-                                            <constraint firstItem="Zop-LX-kSK" firstAttribute="top" secondItem="TZD-0X-UfL" secondAttribute="bottom" id="UGy-aw-bn9"/>
-                                            <constraint firstAttribute="trailing" secondItem="TZD-0X-UfL" secondAttribute="trailing" id="USh-Or-Uvt"/>
                                             <constraint firstItem="ZWl-UH-dAj" firstAttribute="top" secondItem="eyT-Yi-Hn4" secondAttribute="bottom" constant="16" id="VVG-4p-iyU"/>
                                             <constraint firstAttribute="trailing" secondItem="Zop-LX-kSK" secondAttribute="trailing" id="Xzy-Qa-dxV"/>
                                             <constraint firstItem="cAk-P3-bYO" firstAttribute="top" secondItem="88T-sc-gZY" secondAttribute="bottom" id="Ywn-wN-uQJ"/>
@@ -509,7 +498,6 @@
                                             <constraint firstAttribute="trailing" secondItem="ZWl-UH-dAj" secondAttribute="trailing" constant="16" id="dgI-pA-npP"/>
                                             <constraint firstAttribute="trailing" secondItem="eyT-Yi-Hn4" secondAttribute="trailing" id="e5q-mt-9SP"/>
                                             <constraint firstAttribute="trailing" secondItem="EHD-g9-DDB" secondAttribute="trailing" id="evi-Vh-q6G"/>
-                                            <constraint firstAttribute="height" constant="750" id="jf0-Tf-YVg"/>
                                             <constraint firstItem="cAk-P3-bYO" firstAttribute="leading" secondItem="rXO-HE-yNb" secondAttribute="leading" id="lPG-DS-P6y"/>
                                             <constraint firstItem="eyT-Yi-Hn4" firstAttribute="leading" secondItem="rXO-HE-yNb" secondAttribute="leading" id="m1y-gO-Xu6"/>
                                             <constraint firstItem="2Ia-KA-z6C" firstAttribute="leading" secondItem="rXO-HE-yNb" secondAttribute="leading" id="mGZ-Q5-dbe"/>
@@ -531,7 +519,6 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="rXO-HE-yNb" firstAttribute="height" secondItem="X5H-OX-JRF" secondAttribute="height" id="HJF-wk-CCt"/>
                                     <constraint firstAttribute="trailing" secondItem="rXO-HE-yNb" secondAttribute="trailing" id="Hcx-1U-Gq3"/>
                                     <constraint firstAttribute="bottom" secondItem="rXO-HE-yNb" secondAttribute="bottom" constant="50" id="ULj-kq-a32"/>
                                     <constraint firstItem="rXO-HE-yNb" firstAttribute="width" secondItem="X5H-OX-JRF" secondAttribute="width" id="eHw-D4-JCD"/>
@@ -542,9 +529,10 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="X5H-OX-JRF" firstAttribute="top" secondItem="gtX-Qt-Wwp" secondAttribute="top" id="QHP-Pn-qoR"/>
-                            <constraint firstItem="X5H-OX-JRF" firstAttribute="leading" secondItem="gtX-Qt-Wwp" secondAttribute="leading" id="Spc-OU-pYR"/>
-                            <constraint firstItem="gtX-Qt-Wwp" firstAttribute="trailing" secondItem="X5H-OX-JRF" secondAttribute="trailing" id="jTf-rB-C5K"/>
+                            <constraint firstItem="X5H-OX-JRF" firstAttribute="leading" secondItem="gtX-Qt-Wwp" secondAttribute="leading" id="Ggs-A1-1Du"/>
+                            <constraint firstItem="X5H-OX-JRF" firstAttribute="top" secondItem="gtX-Qt-Wwp" secondAttribute="top" id="H6I-l3-n2m"/>
+                            <constraint firstItem="gtX-Qt-Wwp" firstAttribute="trailing" secondItem="X5H-OX-JRF" secondAttribute="trailing" id="JNK-Bv-hCq"/>
+                            <constraint firstItem="gtX-Qt-Wwp" firstAttribute="bottom" secondItem="X5H-OX-JRF" secondAttribute="bottom" id="nR1-iA-bhj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gtX-Qt-Wwp"/>
                         <connections>
@@ -553,16 +541,15 @@
                             <outlet property="cashBackValueLbl" destination="DUV-Pp-3Gc" id="PE4-M0-9Je"/>
                             <outlet property="cashbackCurrencyLbl" destination="eKW-4w-KxG" id="8K0-Vw-jv3"/>
                             <outlet property="cashbackTimeLbl" destination="Xed-IM-NSo" id="bsv-co-fTM"/>
-                            <outlet property="cashbackValueLbl" destination="4va-BX-Z8Q" id="ciY-YQ-rNq"/>
                             <outlet property="goToShop" destination="ZWl-UH-dAj" id="15S-I5-kU1"/>
                             <outlet property="informationLabel" destination="1q5-T9-9Ov" id="h2M-Ge-toy"/>
+                            <outlet property="lisCashbackLbl" destination="4va-BX-Z8Q" id="g3C-p9-Xn1"/>
                             <outlet property="logoImageVIew" destination="3pb-Gn-zRi" id="DrR-fj-ypo"/>
                             <outlet property="shoppingRules" destination="Ym9-pi-XIv" id="r6X-RN-sTZ"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="iPq-OA-i3B"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1000"/>
                     <connections>
                         <outlet property="reviewTableView" destination="EHD-g9-DDB" id="dPH-ED-L3Z"/>
                         <outlet property="shopView" destination="Kyn-Va-BZO" id="PhF-T7-Yoy"/>

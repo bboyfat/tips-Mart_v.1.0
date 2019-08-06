@@ -12,6 +12,9 @@ class FinisRegistrationController: UIViewController {
     
     @IBOutlet var finishRegView: FinishRegView!
     //MARK: Properties
+    let animation = CustomBlurView()
+    
+    
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow-2"), with: " Назад", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow-1"), with: "Пропустить ", with: .forceRightToLeft)
     let keyboardHeight: CGFloat = 200
@@ -30,6 +33,12 @@ class FinisRegistrationController: UIViewController {
         setClearNavigation(with: .white, with: "")
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
         addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
+    }
+    
+    private func startAnim(){
+        animation.frame = self.view.bounds
+        self.view.addSubview(animation)
+        animation.startAnimation()
     }
     func addNotifForKeyboard(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -81,10 +90,12 @@ class FinisRegistrationController: UIViewController {
         self.view.endEditing(true)
     }
     @objc func handlePush(){
-        
+        startAnim()
+        self.presentMainTabBar()
     }
     
     @IBAction func sendUserSettings(_ sender: UIButton) {
+        startAnim()
         let birthDay = finishRegView.birthDateTF.text!
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
@@ -94,7 +105,18 @@ class FinisRegistrationController: UIViewController {
         let unixDate = Int(timeInterval!)
         userProfile = UserProfile(name: finishRegView.nameTf.text, surname: finishRegView.surnameTf.text, email: nil, birthday: unixDate, maritalStatus: "single")
         UserSettingsNetwork(model: self.userProfile).sendRequest { (op) in
+           
+        }
+         self.presentMainTabBar()
+    }
+    
+    private func presentMainTabBar(){
+        OperationQueue.main.addOperation {
+            let tabBarController = UIStoryboard(name: "MainTabBar", bundle: nil).instantiateViewController(withIdentifier: "MainTabBar") as! MainTabBarController
             
+            self.present(tabBarController, animated: true) {
+                self.animation.stopAnim()
+            }
         }
     }
 }

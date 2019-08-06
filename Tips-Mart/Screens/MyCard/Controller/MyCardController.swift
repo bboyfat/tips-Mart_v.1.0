@@ -44,7 +44,9 @@ class MyCardController: UIViewController {
         self.myCardView.grayBalance.text = String(grayBalance) + " " + NSLocalizedString("uah", comment: "")
         self.myCardView.idLbl.text = String(id).separate(every: 2, with: " ")
     }
-    
+    func presentInternetErrorAlert(){
+        InternetAlert().tokenisNotEmpytAlert(controller: self)
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         OrientationManager.landscapeSupported = true

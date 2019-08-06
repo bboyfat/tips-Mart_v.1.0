@@ -15,7 +15,7 @@ target 'Tips-Mart' do
    pod 'Alamofire'
    pod 'AlamofireImage'
    pod 'RxRealm'
-   
+   pod 'ReachabilitySwift'
 
 
 end

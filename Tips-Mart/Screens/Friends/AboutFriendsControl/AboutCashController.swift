@@ -28,7 +28,12 @@ class AboutCashController: UIViewController {
         setTitleColor(with: .black)
     }
     
-  
+    @IBAction func calculateBtnAction(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "ShopWebView", bundle: nil).instantiateViewController(withIdentifier: "ShopWebViewVC") as! ShopWebViewController
+        vc.url = "https://tips-mart.com/referrals"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     //add targets to items
     private func addTargets(){

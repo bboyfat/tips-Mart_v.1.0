@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Детали"; ObjectID = "Cfb-Yh-qz2"; */
+"Cfb-Yh-qz2.text" = "Деталі";
+
+/* Class = "UILabel"; text = "Отменить"; ObjectID = "LTo-Nr-koI"; */
+"LTo-Nr-koI.text" = "Відмінити";
+
+/* Class = "UILabel"; text = "В архив"; ObjectID = "hKE-Xz-XH6"; */
+"hKE-Xz-XH6.text" = "В архив";
+
+/* Class = "UILabel"; text = "Оспорить"; ObjectID = "tjO-Qv-kXT"; */
+"tjO-Qv-kXT.text" = "Оспорить";
+
+/* Class = "UILabel"; text = "Удалить"; ObjectID = "wPP-Fh-An1"; */
+"wPP-Fh-An1.text" = "Удалить";

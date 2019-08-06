@@ -23,3 +23,5 @@ var nickname = {UserDefaults.standard.value(forKey: "nickname") as? String}
 //BALANCE
 let greenBalance = {UserDefaults.standard.value(forKey: "greenBalance") as? Double}
 let grayBalance = {UserDefaults.standard.value(forKey: "grayBalance") as? Double}
+//Created
+let createdAccDate = {UserDefaults.standard.value(forKey: "created") as? String}

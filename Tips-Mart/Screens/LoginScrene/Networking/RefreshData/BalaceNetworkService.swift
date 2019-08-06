@@ -287,25 +287,37 @@ class FriendsNetworkService{
 }
 //Objec that getting data about referals
 class MembersNetworkService{
+    var model: MembersRequest!
     func sendRequest(handler: @escaping ([MembersData]?) -> ()) {
         guard let url = URL(string: URLS.membersInfo.rawValue) else { handler(nil); return}
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = HTTPMethod.post.rawValue
-        guard let token = accessToken() else {return}
-        urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
-        Alamofire.request(urlRequest).responseJSON { response in
-            if let response = response.data{
+        guard let data = try? JSONEncoder().encode(model) else {return}
+        guard let params = try? JSONSerialization.jsonObject(with: data, options: []) as? Parameters else {return}
+        guard let token = accessToken() else {return}
+        let header: HTTPHeaders = [
+            "Authorization": "Bearer \(token)"
+        ]
+        
+        Alamofire.request(url, method: .post, parameters: params, headers: header).responseJSON { (dataReponse) in
+            if let data = dataReponse.data{
                 do{
-                    let answer  = try JSONDecoder().decode(MembersAnswer.self, from: response)
+                    let answer  = try JSONDecoder().decode(MembersAnswer.self, from: data)
                     handler(answer.data)
-                } catch let profErr{
-                    print("MembersNetworkService", profErr)
-                    handler(nil)
+                    OperationQueue.main.addOperation {
+                        handler(answer.data)
+                    }
+                } catch let err{
+                    print(err)
                 }
             }
         }
+        
     }
+    
+    init(model: MembersRequest) {
+        self.model = model
+    }
+    
     
 }
 
@@ -314,15 +326,15 @@ class OUSNetworkService{
     var model: OUSRequest!
     
     func sendRequest(handler: @escaping ([OUSData]?) -> ()) {
-//        let data = try! JSONEncoder().encode(model)
-//        guard let params = try? JSONSerialization.jsonObject(with: data, options: []) as! Parameters else {return}
+        //        let data = try! JSONEncoder().encode(model)
+        //        guard let params = try? JSONSerialization.jsonObject(with: data, options: []) as! Parameters else {return}
         guard let url = URL(string: URLS.ousInfo.rawValue) else { handler(nil); return}
         
         let params: NSMutableDictionary = NSMutableDictionary()
         params.setValue(model._user, forKey: "_user")
-         params.setValue(model.statuses, forKey: "statuses")
-         params.setValue(model.createdFrom, forKey: "createdFrom")
-         params.setValue(model.createdTo, forKey: "createdTo")
+        params.setValue(model.statuses, forKey: "statuses")
+        params.setValue(model.createdFrom, forKey: "createdFrom")
+        params.setValue(model.createdTo, forKey: "createdTo")
         
         guard let header = accessToken() else {return}
         let jsonDatasonData = try? JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
@@ -343,16 +355,16 @@ class OUSNetworkService{
                 let answer = try JSONDecoder().decode(OUSAnswer.self, from: data)
                 print(answer)
                 OperationQueue.main.addOperation {
-                     handler(answer.data)
+                    handler(answer.data)
                 }
-               
+                
             } catch {
                 print("OUSNetworkService",error)
             }
             }.resume()
     }
 }
-    
+
 //Objec that getting data to change Profile
 class ProfielEditNetService{
     func sendRequest(handler: @escaping (ProfileData?) -> ()) {
@@ -401,7 +413,7 @@ class BuyingNetworkService{
                     } else {
                         handler(false)
                     }
-                  
+                    
                 } catch{
                     print(Error.self)
                 }

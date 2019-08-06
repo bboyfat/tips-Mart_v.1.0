@@ -39,6 +39,7 @@ class InitUserService: RefreshServiceProtocol{
                     guard let userData = answer.data else {return}
                     UserDefaults.standard.set(answer.data?.userid, forKey: "userId")
                     UserDefaults.standard.set(answer.data?.nickname, forKey: "nickname")
+                    UserDefaults.standard.set(answer.data?.created, forKey: "created")
                     self.dataBaseService = RealmService(userData: userData)
                     self.dataBaseService?.save()
                     

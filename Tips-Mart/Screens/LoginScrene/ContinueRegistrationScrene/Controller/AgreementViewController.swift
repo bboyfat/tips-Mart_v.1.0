@@ -22,7 +22,7 @@ class AgreementViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .default
     }
-    var url: String?
+    var url: String? = "https://tips-mart.com/confidential"
     
     
     
@@ -53,6 +53,9 @@ class AgreementViewController: UIViewController {
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
     }
     
+    @IBAction func agreeeBtn(_ sender: Any) {
+        handlePush()
+    }
     
     //add targets to items
     private func addTargets(){

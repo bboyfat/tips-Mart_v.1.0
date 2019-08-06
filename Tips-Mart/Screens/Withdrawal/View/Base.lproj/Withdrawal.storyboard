@@ -162,7 +162,7 @@
                                         <color key="textColor" red="0.72549019609999998" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGI-A8-3F2">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGI-A8-3F2">
                                         <rect key="frame" x="25" y="75" width="270" height="15"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
@@ -189,8 +189,11 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="wdBtn:" destination="GGU-hp-7TC" eventType="touchUpInside" id="YRj-33-wr1"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-OS-RPx" customClass="PhoneFormattedTextField" customModule="SwiftPhoneNumberFormatter">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-OS-RPx" customClass="PhoneFormattedTextField" customModule="SwiftPhoneNumberFormatter">
                                         <rect key="frame" x="25" y="18.5" width="270" height="15"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="16"/>
@@ -259,6 +262,7 @@
                             <outlet property="numberTextField" destination="8uI-OS-RPx" id="apA-Nx-MTZ"/>
                             <outlet property="phoneView" destination="ptO-BQ-FH5" id="4ON-t4-6eG"/>
                             <outlet property="textFieldName" destination="Wrj-VS-4bT" id="7o8-Iy-fW6"/>
+                            <outlet property="wdAmountlbl" destination="BGI-A8-3F2" id="8gi-iS-Rxb"/>
                             <outlet property="wdFieldWidth" destination="cMk-lb-J8X" id="quU-0V-XkI"/>
                         </connections>
                     </view>

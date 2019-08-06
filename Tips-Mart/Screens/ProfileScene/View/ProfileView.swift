@@ -15,6 +15,7 @@ class ProfileView: UIView {
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
 
+    @IBOutlet weak var youWithUs: UILabel!
     @IBOutlet weak var bonusLbl: UILabel!
     @IBOutlet weak var invaitedLbl: UILabel!
     @IBOutlet weak var membersLbl: UILabel!

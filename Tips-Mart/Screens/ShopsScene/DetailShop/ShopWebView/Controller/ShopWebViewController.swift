@@ -14,14 +14,21 @@ class ShopWebViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     var url: String?
     
+    var animation = CustomBlurView()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startAnimatio()
         if let url = url{
             loadUrl(stringUrl: url)
         }
     }
-    
+    func startAnimatio(){
+        animation.frame = self.view.bounds
+        self.view.addSubview(animation)
+        animation.startAnimation()
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        
@@ -36,6 +43,8 @@ class ShopWebViewController: UIViewController {
         }
         let urlReq = URLRequest(url: url)
         webView.load(urlReq)
+        animation.stopAnim()
+    
     }
     
     

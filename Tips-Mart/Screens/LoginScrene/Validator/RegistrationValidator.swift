@@ -20,6 +20,13 @@ class RegistrationValidator{
         }
     }
     
+    func passworMustBe(){
+        let ac = UIAlertController(title: nil, message: NSLocalizedString("moreThen", comment: ""), preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        ac.addAction(action)
+        viewCOntroller.present(ac, animated: true, completion: nil)
+    }
+    
     func checkPhoneNumber(_ phoneNumber: String? = "") -> Bool{
         if phoneNumber!.count >= 16{
             return true

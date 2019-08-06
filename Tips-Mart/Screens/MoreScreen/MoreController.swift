@@ -30,8 +30,8 @@ class MoreController: UIViewController {
         guard let id = userId() else {return}
         guard let greenBalance = greenBalance() else {return}
         guard let grayBalance = grayBalance() else {return}
-        self.moreView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
-        self.moreView.grayBalance.text = String(grayBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.moreView.greenBalance.text = String(greenBalance)
+        self.moreView.grayBalance.text = String(grayBalance) 
         self.moreView.idLabel.text = String(id).separate(every: 2, with: " ")
         self.moreView.nicknameLbl.text = nick
         

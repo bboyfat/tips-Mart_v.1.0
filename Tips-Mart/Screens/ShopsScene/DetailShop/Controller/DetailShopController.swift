@@ -71,7 +71,15 @@ class DetailShopController: UIViewController {
 //        navigationItem.title = .uppercased()
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1882352941, green: 0.7882352941, blue: 0.4274509804, alpha: 1)
         shopView.cashbackCurrencyLbl.text = shopData.currency
+        var string: String = ""
+        model.data?.listCashbacks?.forEach({ (cash) in
+            string += "\n" + String(cash.value) + cash.typeCurrency + " " + cash.name.ru
+           
+           
+        })
         shopView.cashBackValueLbl.text = String(shopData.value)
+         shopView.lisCashbackLbl.text = string
+        
         shopView.attentionLbl.text = htmlParser.parseHTML(htmlContent: model.data?.warningInfo ?? "<WARNING INFO>")
         shopView.cashbackTimeLbl.text = model.data?.timeProcessing
         shopView.informationLabel.text = htmlParser.parseHTML(htmlContent: model.data?.description ?? "<HER TAM>")

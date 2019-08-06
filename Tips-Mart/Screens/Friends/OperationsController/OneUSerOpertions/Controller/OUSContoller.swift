@@ -51,7 +51,7 @@ class OUSContoller: UIViewController {
         setClearNavigation(with: .white, with: NSLocalizedString("User's operations", comment: ""))
         setTitleColor(with: .white)
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
-        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
+//        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
     }
     //add targets to items
     private func addTargets(){
@@ -81,23 +81,26 @@ extension OUSContoller: UITableViewDataSource{
         setCell(cell: cell, with: model)
         return cell
     }
+    private func stringToDateToString(date string: String) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzzZ"
+        let date = dateFormatter.date(from: string)
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let stringDate = dateFormatter.string(from: date!)
+        return stringDate
+    }
     func setCell(cell: OUSCell, with model: OUSData){
         cell.cahsBackValue.text = String(model.userCashback)
         cell.operationIDLbl.text = model.cashbackID
         cell.state = model.status
-        let date = Date(timeIntervalSinceReferenceDate: Double(model.created))
+        
+        let date = Date(timeIntervalSince1970: Double(model.created))
         let formatter = DateFormatter()
         // initially set the format based on your datepicker date / server String
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let dateStr = formatter.string(from: date)
         
-        let myString = formatter.string(from: date) // string purpose I add here
-        // convert your string to date
-        let yourDate = formatter.date(from: myString)
-        //then again set the date format whhich type of output you need
-        formatter.dateFormat = "dd-MMM-yyyy"
-        // again convert your date to string
-        let myStringafd = formatter.string(from: yourDate!)
-        cell.dateLbl.text = myStringafd
+        cell.dateLbl.text = dateStr
     }
     
     

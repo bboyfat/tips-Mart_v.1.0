@@ -20,18 +20,22 @@ class BalanceAlerts{
     
     func presentInfo(_ title: String, _ message: BalanceAlertMessage.RawValue){
         let ac = UIAlertController(title: title, message: NSLocalizedString(message, comment: ""), preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: NSLocalizedString("accept", comment: ""), style: .cancel, handler: nil)
+        let action = UIAlertAction(title: NSLocalizedString("accept", comment: ""), style: .cancel) { (_) in
+            self.controller.dismiss(animated: true, completion: nil)
+        }
         
         ac.view.tintColor = #colorLiteral(red: 0.1137254902, green: 0.8, blue: 0.4274509804, alpha: 1)
         ac.addAction(action)
         controller.present(ac, animated: true, completion: nil)
     }
     func presentUpdateAlert(){
-        let ac = UIAlertController(title: "ОБНОВЛЕНИЕ", message: "Следите за обновлениям, совсем скоро данная возможность будет доступна", preferredStyle: .alert)
+        let ac = UIAlertController(title: NSLocalizedString("yourAttention", comment: ""), message: NSLocalizedString("checkUpdate", comment: ""), preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         ac.addAction(action)
         controller.present(ac, animated: true, completion: nil)
     }
+    
+    
     init(controller: UIViewController) {
         self.controller = controller
     }

@@ -37,6 +37,7 @@ class ProfileController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setUsersData()
+        youWithUs()
         setClearNavigation(with: .white, with: "")
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
         addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
@@ -75,16 +76,26 @@ class ProfileController: UIViewController {
         }
         
     }
+    
+    func youWithUs(){
+        guard let created = createdAccDate() else {return}
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.zzzZ"
+        let date = dateFormatter.date(from: created)
+        let currentDate = Date()
+        let diffInDays = Calendar.current.dateComponents([.day], from: date!, to: currentDate).day
+        profileView.youWithUs.text = String(diffInDays!) + " " + NSLocalizedString("days", comment: "")
+        
+    }
    
     
     private func setLabels(with model: ProfilesData?){
         guard let model = model else {return}
         profileView.membersLbl.text = "  " + String(model.referrals[0].members)
         profileView.invaitedLbl.text = "  " + String(model.referrals[1].members + model.referrals[2].members)
-        profileView.bonusLbl.text = "  " + String(model.referrals[1].credited + model.referrals[2].credited) + " грн"
-        profileView.totalCashback.text = "  " + String(
-            model.referrals[0].credited + model.referrals[1].credited + model.referrals[2].credited) + " грн"
-        profileView.operationsCountLbl.text = "  " + String(model.referrals[0].credited)
+        profileView.bonusLbl.text = "  " + String(model.referrals[0].credited + model.referrals[1].credited + model.referrals[2].credited) + " грн"
+        profileView.totalCashback.text = "  " + String(model.personalCashback.greenBalance) + " грн"
+        profileView.operationsCountLbl.text = "  " + String(model.personalCashback.countPurchases)
     }
     
     

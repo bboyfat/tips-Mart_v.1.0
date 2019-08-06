@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "ID:"; ObjectID = "0Jp-zG-2eM"; */
+"0Jp-zG-2eM.text" = "ID:";
+
+/* Class = "UILabel"; text = "Operations:"; ObjectID = "1W3-kJ-7Oc"; */
+"1W3-kJ-7Oc.text" = "Операции:";
+
+/* Class = "UILabel"; text = "uah"; ObjectID = "7Bm-8S-mCc"; */
+"7Bm-8S-mCc.text" = "грн";
+
+/* Class = "UILabel"; text = "Name Surname"; ObjectID = "848-Q9-S9S"; */
+"848-Q9-S9S.text" = "Name Surname";
+
+/* Class = "UILabel"; text = "111111"; ObjectID = "9Kj-CQ-Kw9"; */
+"9Kj-CQ-Kw9.text" = "111111";
+
+/* Class = "UILabel"; text = "uah"; ObjectID = "EAK-qC-l6u"; */
+"EAK-qC-l6u.text" = "грн";
+
+/* Class = "UILabel"; text = "00.00"; ObjectID = "Ehj-Wp-b1x"; */
+"Ehj-Wp-b1x.text" = "00.00";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "I90-jv-zmP"; */
+"I90-jv-zmP.text" = "0";
+
+/* Class = "UILabel"; text = "00.00"; ObjectID = "Iz6-4K-fOG"; */
+"Iz6-4K-fOG.text" = "00.00";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "UmZ-xq-lKQ"; */
+"UmZ-xq-lKQ.text" = "0";
+
+/* Class = "UILabel"; text = "00.00"; ObjectID = "ajC-id-taH"; */
+"ajC-id-taH.text" = "00.00";
+
+/* Class = "UILabel"; text = "uah"; ObjectID = "b4Y-RH-ZJT"; */
+"b4Y-RH-ZJT.text" = "грн";
+
+/* Class = "UILabel"; text = "00"; ObjectID = "j5c-xs-Ebs"; */
+"j5c-xs-Ebs.text" = "00";
+
+/* Class = "UILabel"; text = "Familiars:"; ObjectID = "l59-7j-3ow"; */
+"l59-7j-3ow.text" = "Знакомые:";
+
+/* Class = "UILabel"; text = "uah"; ObjectID = "mBm-Ob-5f4"; */
+"mBm-Ob-5f4.text" = "грн";
+
+/* Class = "UILabel"; text = "Your bonus"; ObjectID = "p7e-bX-AZt"; */
+"p7e-bX-AZt.text" = "Ваш бонус";
+
+/* Class = "UILabel"; text = "00.00"; ObjectID = "qzQ-DM-Lsk"; */
+"qzQ-DM-Lsk.text" = "00.00";
+
+/* Class = "UILabel"; text = "Strangers:"; ObjectID = "xl1-GF-LjL"; */
+"xl1-GF-LjL.text" = "Незнакомцы:";

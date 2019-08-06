@@ -55,13 +55,16 @@ class LoginController: UIViewController {
             let result = phoneNumber.filter("+01234567890".contains)
             if self.regValidator.checkPassAndRepeatPass(password, rePassword) && self.regValidator.checkPhoneNumber(phoneNumber){
             self.regeistrModel = RegistrationModelRequset(phoneNumber: result )
-            self.secondStepReg = SecondStepRegistration(phoneNumber: result, authCode: 0, password: password, inviter: "", isMobileApp: true)
-            self.viewModel = RegistrationViewModel(registrationModel: self.regeistrModel)
-            self.viewModel.letsGo { (_) in
-                
-                }} else {
-                
-            }
+                if password.count > 8{
+                    self.secondStepReg = SecondStepRegistration(phoneNumber: result, authCode: 0, password: password, inviter: "", isMobileApp: true)
+                    self.viewModel = RegistrationViewModel(registrationModel: self.regeistrModel)
+                    self.viewModel.letsGo { (_) in
+                        
+                    }} else {
+                    RegistrationValidator(self).passworMustBe()
+                }
+                }
+            
            
         }
         let vc =  UIStoryboard(name: "ContinueRegistration", bundle: nil).instantiateViewController(withIdentifier: "AuthVc") as! ContinueRegistrationController

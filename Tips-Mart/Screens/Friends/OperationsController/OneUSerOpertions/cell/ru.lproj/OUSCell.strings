@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "your bonus"; ObjectID = "Giy-mU-Krf"; */
+"Giy-mU-Krf.text" = "Ваш бонус";
+
+/* Class = "UILabel"; text = "Date: "; ObjectID = "KMG-Pe-ke2"; */
+"KMG-Pe-ke2.text" = "Дата: ";
+
+/* Class = "UILabel"; text = "uah"; ObjectID = "Ntv-f6-FWl"; */
+"Ntv-f6-FWl.text" = "грн";
+
+/* Class = "UILabel"; text = "0000000"; ObjectID = "QkR-Bk-sAt"; */
+"QkR-Bk-sAt.text" = "0000000";
+
+/* Class = "UILabel"; text = "12.06.2019"; ObjectID = "SSw-qM-9YA"; */
+"SSw-qM-9YA.text" = "12.06.2019";
+
+/* Class = "UILabel"; text = "00.00"; ObjectID = "Udt-72-8dw"; */
+"Udt-72-8dw.text" = "00.00";
+
+/* Class = "UILabel"; text = "Operations's ID: "; ObjectID = "whH-tu-Z3m"; */
+"whH-tu-Z3m.text" = "ID Операции: ";

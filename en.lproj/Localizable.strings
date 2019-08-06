@@ -12,6 +12,7 @@
 "Repeat password" = "Repeat password";
 "Enter" = "Enter";
 "Main" = "Main";
+"Detail" = "Detail";
 "Shops" = "Shops";
 "More" = "More";
 "Friends" = "Friends";
@@ -32,7 +33,7 @@
 "grayWallet" = "Gray Wallet ";
 "greenWalletInfo" = "The cashback amount for purchases that is credited to your balance.";
 "grayWalletInfo" = "The amount of cashback that will be available after the store confirms your purchase";
-"wdRulesCard" = "When withdrawing to a bank card, use only Ukrainian Visa and MasterCard cards with the hryvnia currency, otherwise the payment will be refunded. The minimum withdrawal amount is 250 UAH. To withdraw a larger amount, contact the Care Service. \n You cannot withdraw funds from different accounts to the same details. \n  Indicate only real, registered data. \n  The withdrawal request will be processed within 1-3 business days. \n  Withdrawal commission 10%";
+"wdRulesCard" = "The minimum withdrawal amount is 250 UAH. \n To withdraw more than UAH 7000. - Contact Support. \n 1. Cannot withdraw funds from different accounts for the same details. \n 2. Enter only real, logged data. \n 3. The withdrawal request will be processed within 1-3 business days. \n 4. 10% Withdrawal Fee ";
 "wdrulesPhone" = "The minimum withdrawal amount is 5 UAH. \n To withdraw a larger amount, contact the Care Service.";
 "cashbackUpTo" = "cashbackUpTo";
 "goToShop" = "Go shopping";
@@ -49,8 +50,23 @@
 "statisticLbl" = "Statistic";
 "bonusesFrom" = "Bonuses from";
 "willGetFriends" = "Friends are the ones you invited. You get 10% off their cashback";
+"doesntMatch" = "Password doesn' correct";
 "willGetFamiliars" = "Familiars are those whom your friends have invited. You get 5% off their cashback";
 "willGetStrangers" = "Strangers are those whom friends of your friends have invited. you get 2% of their cashback";
 "Bonuses" = "Bonuses";
 "User's operations" = "User's operations";
+"warning"  =  "Warning";
+"needInternet" = "In order to Sighn In or Sign Up, you need an Internet connection";
+"fullServcie" = "To access all the functionality, make sure that you are connected to the network";
+"Purchase history" = "Purchase history";
 
+"shop" = "Shop";
+"transAmount" = "Transaction amount";
+"cashSum" = "Cashback amount";
+"createdLoc" = "Created";
+"updatedLock" = "Processed";
+"days" = "days";
+"checkUpdate" = "Stay tuned, soon this feature will be available";
+"WD" = "WD";
+"editProfile" = "Profile Edit";
+"moreThen" = "Password must be more then 8 characters and less then 30";

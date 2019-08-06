@@ -8,6 +8,9 @@
 
 import Foundation
 
+struct MembersRequest: Codable {
+    var lastCreated: Date?
+}
 
 struct MembersAnswer: Codable{
     var success: Bool

@@ -304,6 +304,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calculateBtnAction:" destination="5wm-1U-6Jl" eventType="touchUpInside" id="iuh-uu-B3Z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -624,6 +627,11 @@
                             <constraint firstItem="GQa-qN-tAf" firstAttribute="top" secondItem="6hS-Mg-7Ov" secondAttribute="bottom" id="yUh-IT-9Js"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oZK-p3-roT"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="owT-7v-scT"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outlet property="creditedBtn" destination="Eht-Yf-8Oe" id="FYX-g4-s9b"/>
                             <outlet property="creditedLbl" destination="nAe-Un-qag" id="RWg-Ey-7Hs"/>

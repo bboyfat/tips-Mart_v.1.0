@@ -22,6 +22,7 @@ class WDView: UIView {
     @IBOutlet weak var greenBalance: UILabel!
     @IBOutlet weak var currencyLbl: UILabel!
     
+    @IBOutlet weak var wdAmountlbl: UITextField!
     @IBOutlet weak var numberTextField: PhoneFormattedTextField!
     
     var switchPhoneCard: PhoneCard = .card{
@@ -39,12 +40,15 @@ class WDView: UIView {
         }
     }
     
+    var send: () -> () = {}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         currencyLbl.text = NSLocalizedString("uah", comment: "")
         setBorder()
         addTargets()
         numberTextField.delegate = self
+        
     }
     private func addTargets(){
         phoneView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlePhone)))
@@ -101,7 +105,9 @@ class WDView: UIView {
 
 extension WDView: UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.text?.count != 0{
         setMaskForPhone()
+        }
     }
     func setMaskForPhone(){
         var formet = ""
@@ -116,5 +122,27 @@ extension WDView: UITextFieldDelegate{
         }
         numberTextField.config.defaultConfiguration = PhoneFormat(defaultPhoneFormat: formet)
         numberTextField.prefix = prefix
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == wdAmountlbl{
+        switch switchPhoneCard{
+        case .phone:
+            if let amount = textField.text {
+                if let double = Double(amount){
+                    if double < 5{
+                        send()
+                    }
+                }
+            }
+        case .card:
+            if let amount = textField.text {
+                if let double = Double(amount){
+                if double < 250.0{
+                    send()
+                }
+                }
+            }
+        }
+        }
     }
 }

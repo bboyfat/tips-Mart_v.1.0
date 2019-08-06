@@ -9,7 +9,7 @@
 import UIKit
 
 class WDController: UIViewController {
-    
+     let animation = CustomBlurView()
     @IBOutlet var wdView: WDView!
    let leftBarButtom = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "           ", with: .forceLeftToRight)
     override func viewDidLoad() {
@@ -24,12 +24,17 @@ class WDController: UIViewController {
         super.viewWillAppear(animated)
         setNavigation()
         setViews()
+        wdView.wdAmountlbl.delegate = self
     }
     
     
     private func setViews(){
         guard let greenBalance = greenBalance() else {return}
-        self.wdView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
+        self.wdView.greenBalance.text = String(greenBalance)
+        wdView.send = {[weak self] in
+            self?.view.endEditing(true)
+            self?.presentAlertInfo()
+        }
     }
     
     @objc func handleEndEditing(){
@@ -58,7 +63,7 @@ class WDController: UIViewController {
     }
     
     private func setNavigation(){
-        setClearNavigation(with: .white, with: "WD")
+        setClearNavigation(with: .white, with: NSLocalizedString("WD", comment: ""))
         setTitleColor(with: .white)
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButtom))
     }
@@ -68,19 +73,31 @@ class WDController: UIViewController {
     
     
     @objc func handlePop(){
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            self.animation.stopAnim()
+        }
     }
     @IBAction func wdRulesInfo(_ sender: Any) {
         presentAlertInfo()
     }
     
+    @IBAction func wdBtn(_ sender: Any) {
+       
+        animation.frame = self.view.bounds
+        self.view.addSubview(animation)
+        animation.startAnimation()
+        presentAlertInfo()
+        
+    }
     func presentAlertInfo(){
         
         switch wdView.switchPhoneCard {
         case .card:
             BalanceAlerts(controller: self).presentInfo(NSLocalizedString("yourAttention", comment: ""), BalanceAlertMessage.wdCard.rawValue)
+            self.animation.stopAnim()
         case.phone:
             BalanceAlerts(controller: self).presentInfo(NSLocalizedString("yourAttention", comment: ""), BalanceAlertMessage.wdPhone.rawValue)
+            self.animation.stopAnim()
         }
         
     }
@@ -89,4 +106,14 @@ class WDController: UIViewController {
     
 }
 
-
+extension WDController: UITextFieldDelegate{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = textField.text{
+            if let double = Double(text){
+                if double < 100.0{
+                self.presentAlertInfo()
+                }
+            }
+        }
+    }
+}

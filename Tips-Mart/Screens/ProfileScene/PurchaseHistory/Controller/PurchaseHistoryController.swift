@@ -44,9 +44,9 @@ class PurchaseHistoryController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setClearNavigation(with: #colorLiteral(red: 0.0386101231, green: 0.8220543265, blue: 0.5023989081, alpha: 1), with: "Purchase history")
+        setClearNavigation(with: #colorLiteral(red: 0.0386101231, green: 0.8220543265, blue: 0.5023989081, alpha: 1), with: NSLocalizedString("Purchase history", comment:""))
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
-        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
+//        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
     }
    
     

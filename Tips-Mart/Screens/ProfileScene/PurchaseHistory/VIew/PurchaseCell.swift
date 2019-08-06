@@ -30,7 +30,7 @@ class PurchaseCell: UITableViewCell {
                 setStateColor(color: #colorLiteral(red: 0.7254901961, green: 0.7254901961, blue: 0.7254901961, alpha: 1), text: NSLocalizedString("pending", comment: ""))
             case .credited:
                 setStateColor(color: #colorLiteral(red: 0.0386101231, green: 0.8220543265, blue: 0.5023989081, alpha: 1), text: NSLocalizedString("credited", comment: ""))
-                
+              
             }
         }
     }
@@ -53,6 +53,7 @@ class PurchaseCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        cahsCurrency.text = NSLocalizedString("uah", comment: "")
         // Initialization code
     }
 
@@ -67,6 +68,9 @@ class PurchaseCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    override func prepareForReuse() {
+        shopLogo.image = #imageLiteral(resourceName: "eleph")
     }
     
 }

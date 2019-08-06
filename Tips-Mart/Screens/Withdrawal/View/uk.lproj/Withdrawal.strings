@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Mobile phone"; ObjectID = "58i-A3-FVJ"; */
+"58i-A3-FVJ.text" = "Мобільний телефон";
+
+/* Class = "UIButton"; normalTitle = "WD Rules"; ObjectID = "7vc-V5-8uu"; */
+"7vc-V5-8uu.normalTitle" = "Правила виведення";
+
+/* Class = "UILabel"; text = "2215"; ObjectID = "I50-Qr-2ro"; */
+"I50-Qr-2ro.text" = "2215";
+
+/* Class = "UILabel"; text = "Bank card"; ObjectID = "I7v-n7-8IM"; */
+"I7v-n7-8IM.text" = "Кредитна карта";
+
+/* Class = "UILabel"; text = "withdrawal amount"; ObjectID = "JRJ-sN-LCj"; */
+"JRJ-sN-LCj.text" = "Сума зняття";
+
+/* Class = "UIButton"; normalTitle = "Withdraw funds"; ObjectID = "Nwv-KS-J0S"; */
+"Nwv-KS-J0S.normalTitle" = "Вивести кошти";
+
+/* Class = "UILabel"; text = "Visa, Mastercard"; ObjectID = "V49-Ae-DHL"; */
+"V49-Ae-DHL.text" = "Visa, Mastercard";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Wrj-VS-4bT"; */
+"Wrj-VS-4bT.text" = "Label";
+
+/* Class = "UILabel"; text = "uah"; ObjectID = "X0J-HG-Qet"; */
+"X0J-HG-Qet.text" = "грн";
+
+/* Class = "UILabel"; text = "replenishment"; ObjectID = "b0f-H7-iFk"; */
+"b0f-H7-iFk.text" = "поповнення";
+
+/* Class = "UILabel"; text = "available"; ObjectID = "q9v-9Y-rHW"; */
+"q9v-9Y-rHW.text" = "доступно";

@@ -571,6 +571,7 @@
                             <outlet property="nicknameLabel" destination="Ipf-jx-aHD" id="Mul-3D-8LW"/>
                             <outlet property="operationsCountLbl" destination="nSo-Zc-2Wv" id="WYb-Of-1R2"/>
                             <outlet property="totalCashback" destination="UyP-za-J4Z" id="gay-re-Gui"/>
+                            <outlet property="youWithUs" destination="I9z-Zp-eEh" id="HLX-ma-Tri"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="L2a-x8-3d3"/>
@@ -843,13 +844,13 @@
                                                 <rect key="frame" x="24" y="17" width="89" height="38"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обработано" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mY-0V-bvu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="89" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="89" height="12.5"/>
                                                         <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
                                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQf-70-ErP">
-                                                        <rect key="frame" x="0.0" y="25.5" width="89" height="12.5"/>
+                                                        <rect key="frame" x="0.0" y="17.5" width="89" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="14"/>
                                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -893,13 +894,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zJp-cl-3qk"/>
                         <connections>
+                            <outlet property="cashSumLbl" destination="k4w-bL-nMC" id="ELW-iv-N53"/>
                             <outlet property="cashbackSum" destination="qzc-FT-JOY" id="MNK-ek-Shz"/>
                             <outlet property="createdLbl" destination="Dbn-hd-is5" id="kF7-Mm-Vdf"/>
+                            <outlet property="createdLblLocalize" destination="uEy-7A-9ls" id="Bbb-m9-Cgf"/>
+                            <outlet property="operSumLbl" destination="v0s-S5-sJV" id="KID-m0-5Yi"/>
                             <outlet property="operationID" destination="YjM-vM-8cf" id="efj-wU-APr"/>
                             <outlet property="operationState" destination="fhq-dM-XnM" id="uV2-q7-M49"/>
+                            <outlet property="shopLbl" destination="eMX-6i-I2P" id="ITB-vY-ilL"/>
                             <outlet property="shopNameLbl" destination="PuS-s2-fyH" id="oou-Rf-uM6"/>
                             <outlet property="sumPurchaseLbl" destination="CO9-wJ-2J8" id="B3N-FJ-aLz"/>
                             <outlet property="updatedLbl" destination="OQf-70-ErP" id="9tA-GT-FOl"/>
+                            <outlet property="updatedLblLocalize" destination="8mY-0V-bvu" id="tCe-Fq-vPA"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="5SI-wi-Zwx"/>

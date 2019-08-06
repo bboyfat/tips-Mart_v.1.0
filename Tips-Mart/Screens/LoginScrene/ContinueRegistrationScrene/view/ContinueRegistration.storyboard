@@ -35,13 +35,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мы отправили вам сообщение с кодом" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNk-V0-yC5">
-                                <rect key="frame" x="57" y="187" width="300.5" height="14"/>
+                                <rect key="frame" x="57" y="187" width="300.5" height="13.5"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEb-7Q-r4Y">
-                                <rect key="frame" x="35" y="421" width="344" height="54"/>
+                                <rect key="frame" x="35" y="420.5" width="344" height="54"/>
                                 <color key="backgroundColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="Aad-Pk-oFr"/>
@@ -63,24 +63,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="checkAuthBtn:" destination="qMP-gc-XZN" eventType="touchUpInside" id="67u-Cp-2h2"/>
+                                    <action selector="checkAuthBtn:" destination="qMP-gc-XZN" eventType="touchUpInside" id="qWW-b9-F9T"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Код" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kuk-ho-6O5">
-                                <rect key="frame" x="35" y="291" width="344" height="19"/>
+                                <rect key="frame" x="35" y="290.5" width="344" height="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7e-EC-N42">
-                                <rect key="frame" x="35" y="330" width="344" height="1"/>
+                                <rect key="frame" x="35" y="329.5" width="344" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="pVL-8a-VG5"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-am-sLl">
-                                <rect key="frame" x="35" y="515" width="344" height="26"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODy-am-sLl">
+                                <rect key="frame" x="35" y="514.5" width="344" height="26"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="15"/>
                                 <state key="normal" title="Прислать код повторно">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,6 +129,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="authView" destination="DGF-10-QL7" id="oHN-XQ-UDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zk0-JD-iVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,9 +167,12 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="agreeeBtn:" destination="DB4-ah-7fz" eventType="touchUpInside" id="eXQ-Ph-6gE"/>
+                                </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTV-ig-Oyi">
-                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="732"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -182,7 +188,7 @@
                             <constraint firstItem="sIL-xI-9cX" firstAttribute="trailing" secondItem="D39-xv-tK5" secondAttribute="trailing" constant="35" id="Zrp-w9-hWO"/>
                             <constraint firstItem="qTV-ig-Oyi" firstAttribute="top" secondItem="sIL-xI-9cX" secondAttribute="top" id="Zud-OV-peZ"/>
                             <constraint firstItem="sIL-xI-9cX" firstAttribute="bottom" secondItem="D39-xv-tK5" secondAttribute="bottom" constant="16" id="ckU-1e-ZN0"/>
-                            <constraint firstItem="D39-xv-tK5" firstAttribute="top" secondItem="qTV-ig-Oyi" secondAttribute="bottom" id="k9B-MQ-LHH"/>
+                            <constraint firstItem="D39-xv-tK5" firstAttribute="top" secondItem="qTV-ig-Oyi" secondAttribute="bottom" constant="16" id="k9B-MQ-LHH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sIL-xI-9cX"/>
                     </view>
@@ -306,7 +312,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="checkAuthBtn:" destination="qMP-gc-XZN" eventType="touchUpInside" id="fBJ-ln-OuT"/>
                                     <action selector="sendUserSettings:" destination="WHj-HV-m4H" eventType="touchUpInside" id="8fr-hv-HYm"/>
                                 </connections>
                             </button>
