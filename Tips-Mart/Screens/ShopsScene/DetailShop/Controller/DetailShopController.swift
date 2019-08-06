@@ -79,7 +79,7 @@ class DetailShopController: UIViewController {
         })
         shopView.cashBackValueLbl.text = String(shopData.value)
          shopView.lisCashbackLbl.text = string
-        
+        shopView.lisCashbackLbl.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         shopView.attentionLbl.text = htmlParser.parseHTML(htmlContent: model.data?.warningInfo ?? "<WARNING INFO>")
         shopView.cashbackTimeLbl.text = model.data?.timeProcessing
         shopView.informationLabel.text = htmlParser.parseHTML(htmlContent: model.data?.description ?? "<HER TAM>")
