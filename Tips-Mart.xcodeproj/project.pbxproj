@@ -53,6 +53,7 @@
 		C23C74BA22FF254B0002D5E0 /* ListCahsBack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23C74B922FF254B0002D5E0 /* ListCahsBack.storyboard */; };
 		C23C74BC22FF27490002D5E0 /* ListCashbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C74BB22FF27490002D5E0 /* ListCashbackController.swift */; };
 		C23C74BE22FF27880002D5E0 /* ListCashbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C74BD22FF27880002D5E0 /* ListCashbackCell.swift */; };
+		C23C74C023032B050002D5E0 /* String + toLatinToCirill.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C74BF23032B050002D5E0 /* String + toLatinToCirill.swift */; };
 		C246AC8422E07AD3002F4A51 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C246AC8622E07AD3002F4A51 /* Friends.storyboard */; };
 		C24CE5B422DCC1E000F17255 /* DetailShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CE5B322DCC1E000F17255 /* DetailShopView.swift */; };
 		C24EDF3822E5EB26002992F1 /* OUSContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24EDF3722E5EB26002992F1 /* OUSContoller.swift */; };
@@ -231,6 +232,7 @@
 		C23C74B922FF254B0002D5E0 /* ListCahsBack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListCahsBack.storyboard; sourceTree = "<group>"; };
 		C23C74BB22FF27490002D5E0 /* ListCashbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCashbackController.swift; sourceTree = "<group>"; };
 		C23C74BD22FF27880002D5E0 /* ListCashbackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCashbackCell.swift; sourceTree = "<group>"; };
+		C23C74BF23032B050002D5E0 /* String + toLatinToCirill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + toLatinToCirill.swift"; sourceTree = "<group>"; };
 		C246AC8522E07AD3002F4A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Friends.storyboard; sourceTree = "<group>"; };
 		C246AC9422E08406002F4A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C246AC9E22E08DD8002F4A51 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -1251,6 +1253,7 @@
 				C20B327122CE464600533F75 /* PasswordBtn.swift */,
 				C2285E3622EAFA9D0013D470 /* String + Separate.swift */,
 				C2ED723022F8CE9B00CE335F /* Controller + Copy.swift */,
+				C23C74BF23032B050002D5E0 /* String + toLatinToCirill.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1544,6 +1547,7 @@
 				C2C583E322CCCB51004CBCBF /* RegXib.swift in Sources */,
 				C23C74BE22FF27880002D5E0 /* ListCashbackCell.swift in Sources */,
 				C2185EB522D7687F009F3321 /* TableDataSourceDelegate.swift in Sources */,
+				C23C74C023032B050002D5E0 /* String + toLatinToCirill.swift in Sources */,
 				C22DE13322F1E74600D588F1 /* MoreView.swift in Sources */,
 				C2C583B422CCAFBC004CBCBF /* LoginContoller.swift in Sources */,
 				C289187422D5EBE800A4DFB9 /* ShopsDataRealm.swift in Sources */,

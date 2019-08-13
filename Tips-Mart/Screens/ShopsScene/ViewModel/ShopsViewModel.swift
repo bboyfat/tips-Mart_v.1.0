@@ -14,7 +14,7 @@ protocol ShopViewModelProtocol {
     func itemsCount() -> Int
     func getShop(with indexPath: IndexPath) -> ShopDataRealm
     var dataUpdated: () -> () { get set }
-    func searchShops(with text: String)
+    func searchShops(with latinKiriill: [String])
     
 }
 
@@ -51,15 +51,17 @@ class ShopViewModel: ShopViewModelProtocol{
             shops = selectedShops
         }
     }
-    func searchShops(with text: String){
-        let searchString = text
+    func searchShops(with text: [String]){
         let realm = try! Realm()
-        let predicate = NSPredicate(format: "name contains[c] %@", searchString)
-        let result = realm.objects(ShopDataRealm.self).filter(predicate)
-        self.shops  = Array(result)
+        guard let latinString = text.first, let cirillString = text.last else {return}
+        let latinPredicate = NSPredicate(format: "name contains[c] %@", latinString)
+        let latinResult = realm.objects(ShopDataRealm.self).filter(latinPredicate)
+        let cirillPredicate = NSPredicate(format: "name contains[c] %@", cirillString)
+        let cirillResult = realm.objects(ShopDataRealm.self).filter(cirillPredicate)
+        self.shops  = Array(latinResult) + Array(cirillResult)
         self.dataUpdated()
-        if shops.count == 0{
-           // fetchModel(selectedShopsList: selectedShopsList)
+        if latinString.isEmpty{
+            fetchModel(selectedShopsList: selectedShopsList)
         }
     }
     func fetchModel(selectedShopsList: [String]){
