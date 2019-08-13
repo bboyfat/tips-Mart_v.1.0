@@ -8,10 +8,15 @@
 
 import UIKit
 
+enum SenderForShare{
+    case tab
+    case popUp
+}
+
 class ShareController: UIViewController {
     
     @IBOutlet var shareView: ShareVIew!
-    
+    var senderIs: SenderForShare = .tab
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "       ", with: .forceLeftToRight)
     
     override func viewDidLoad() {
@@ -49,7 +54,16 @@ class ShareController: UIViewController {
         leftBarButton.addTarget(self, action: #selector(handlePop), for: .touchUpInside)
     }
     @objc func handlePop(){
-        navigationController?.popViewController(animated: true)
+        switch senderIs{
+        case.tab:
+            self.navigationController?.popViewController(animated: true)
+        case .popUp:
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
+           
+        }
+       
     }
-    
+    deinit {
+        
+    }
 }

@@ -18,10 +18,12 @@ enum BalanceAlertMessage: String{
 class BalanceAlerts{
     var controller: UIViewController!
     
-    func presentInfo(_ title: String, _ message: BalanceAlertMessage.RawValue){
+    func presentInfo(_ title: String, _ message: BalanceAlertMessage.RawValue, dismissOnEnd: Bool){
         let ac = UIAlertController(title: title, message: NSLocalizedString(message, comment: ""), preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: NSLocalizedString("accept", comment: ""), style: .cancel) { (_) in
-            self.controller.dismiss(animated: true, completion: nil)
+        let action = UIAlertAction(title: "OK", style: .cancel) { (_) in
+            if dismissOnEnd{
+                self.controller.dismiss(animated: true, completion: nil)
+            }
         }
         
         ac.view.tintColor = #colorLiteral(red: 0.1137254902, green: 0.8, blue: 0.4274509804, alpha: 1)

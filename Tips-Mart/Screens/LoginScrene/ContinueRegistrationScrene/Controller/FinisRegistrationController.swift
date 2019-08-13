@@ -96,11 +96,13 @@ class FinisRegistrationController: UIViewController {
     
     @IBAction func sendUserSettings(_ sender: UIButton) {
         startAnim()
-        let birthDay = finishRegView.birthDateTF.text!
+        let birthDay = finishRegView.birthDateTF.text
+        let currentDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
+        let dateString = dateFormatter.string(from: currentDate)
         dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
-        let date = dateFormatter.date(from: birthDay)
+        let date = dateFormatter.date(from: birthDay ?? dateString)
         let timeInterval = date?.timeIntervalSince1970
         let unixDate = Int(timeInterval!)
         userProfile = UserProfile(name: finishRegView.nameTf.text, surname: finishRegView.surnameTf.text, email: nil, birthday: unixDate, maritalStatus: "single")

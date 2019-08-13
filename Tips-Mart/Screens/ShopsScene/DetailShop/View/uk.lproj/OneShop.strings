@@ -42,7 +42,7 @@
 "Yre-Ad-N7K.normalTitle" = "Коснитесь для оценки";
 
 /* Class = "UIButton"; normalTitle = "Перейти к покупкам"; ObjectID = "ZWl-UH-dAj"; */
-"ZWl-UH-dAj.normalTitle" = "Перейти к покупкам";
+"ZWl-UH-dAj.normalTitle" = "Перейти до покупок";
 
 /* Class = "UITextView"; text = "Оставьте свой отзыв"; ObjectID = "aMR-q0-lt0"; */
 "aMR-q0-lt0.text" = "Оставьте свой отзыв";
@@ -54,13 +54,13 @@
 "eKW-4w-KxG.text" = "%";
 
 /* Class = "UILabel"; text = "Размер кэшбэка"; ObjectID = "fzR-gQ-VF7"; */
-"fzR-gQ-VF7.text" = "Розмрі кешбеку";
+"fzR-gQ-VF7.text" = "Розмір кешбеку";
 
 /* Class = "UIButton"; normalTitle = "Оставить отзыв"; ObjectID = "oto-kg-Qxn"; */
 "oto-kg-Qxn.normalTitle" = "Оставить отзыв";
 
 /* Class = "UILabel"; text = "Оценки и отзывы"; ObjectID = "sS9-3u-Yry"; */
-"sS9-3u-Yry.text" = "Оценки и отзывы";
+"sS9-3u-Yry.text" = "Оцінки та відгуки";
 
 /* Class = "UIButton"; normalTitle = "См. Все"; ObjectID = "xzz-PP-3Wf"; */
-"xzz-PP-3Wf.normalTitle" = "См. Все";
+"xzz-PP-3Wf.normalTitle" = "Див. Все";

@@ -33,7 +33,7 @@ class WDController: UIViewController {
         self.wdView.greenBalance.text = String(greenBalance)
         wdView.send = {[weak self] in
             self?.view.endEditing(true)
-            self?.presentAlertInfo()
+            self?.presentAlertInfo(dismissOnEnd: true)
         }
     }
     
@@ -78,7 +78,7 @@ class WDController: UIViewController {
         }
     }
     @IBAction func wdRulesInfo(_ sender: Any) {
-        presentAlertInfo()
+        presentAlertInfo(dismissOnEnd: false)
     }
     
     @IBAction func wdBtn(_ sender: Any) {
@@ -86,17 +86,17 @@ class WDController: UIViewController {
         animation.frame = self.view.bounds
         self.view.addSubview(animation)
         animation.startAnimation()
-        presentAlertInfo()
+        presentAlertInfo(dismissOnEnd: true)
         
     }
-    func presentAlertInfo(){
+    func presentAlertInfo(dismissOnEnd: Bool){
         
         switch wdView.switchPhoneCard {
         case .card:
-            BalanceAlerts(controller: self).presentInfo(NSLocalizedString("yourAttention", comment: ""), BalanceAlertMessage.wdCard.rawValue)
+            BalanceAlerts(controller: self).presentInfo(NSLocalizedString("yourAttention", comment: ""), BalanceAlertMessage.wdCard.rawValue, dismissOnEnd: dismissOnEnd)
             self.animation.stopAnim()
         case.phone:
-            BalanceAlerts(controller: self).presentInfo(NSLocalizedString("yourAttention", comment: ""), BalanceAlertMessage.wdPhone.rawValue)
+            BalanceAlerts(controller: self).presentInfo(NSLocalizedString("yourAttention", comment: ""), BalanceAlertMessage.wdPhone.rawValue, dismissOnEnd: dismissOnEnd)
             self.animation.stopAnim()
         }
         
@@ -111,7 +111,7 @@ extension WDController: UITextFieldDelegate{
         if let text = textField.text{
             if let double = Double(text){
                 if double < 100.0{
-                self.presentAlertInfo()
+                    self.presentAlertInfo(dismissOnEnd: true)
                 }
             }
         }

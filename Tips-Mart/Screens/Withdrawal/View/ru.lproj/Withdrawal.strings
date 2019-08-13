@@ -1,9 +1,9 @@
 
 /* Class = "UILabel"; text = "Mobile phone"; ObjectID = "58i-A3-FVJ"; */
-"58i-A3-FVJ.text" = "Мобильній телефон";
+"58i-A3-FVJ.text" = "Мобильный телефон";
 
 /* Class = "UIButton"; normalTitle = "WD Rules"; ObjectID = "7vc-V5-8uu"; */
-"7vc-V5-8uu.normalTitle" = "Правила вівода";
+"7vc-V5-8uu.normalTitle" = "Правила вывода";
 
 /* Class = "UILabel"; text = "2215"; ObjectID = "I50-Qr-2ro"; */
 "I50-Qr-2ro.text" = "2215";
@@ -27,7 +27,7 @@
 "X0J-HG-Qet.text" = "грн";
 
 /* Class = "UILabel"; text = "replenishment"; ObjectID = "b0f-H7-iFk"; */
-"b0f-H7-iFk.text" = "паполнить";
+"b0f-H7-iFk.text" = "пополнить";
 
 /* Class = "UILabel"; text = "available"; ObjectID = "q9v-9Y-rHW"; */
 "q9v-9Y-rHW.text" = "доступно";

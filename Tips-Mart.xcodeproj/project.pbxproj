@@ -50,6 +50,9 @@
 		C22DE13F22F2284400D588F1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DE13E22F2284400D588F1 /* ProfileView.swift */; };
 		C22DE14222F2E2B700D588F1 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DE14122F2E2B700D588F1 /* ProfileModel.swift */; };
 		C22DE14422F314FE00D588F1 /* LocalizableConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22DE14322F314FE00D588F1 /* LocalizableConstants.swift */; };
+		C23C74BA22FF254B0002D5E0 /* ListCahsBack.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23C74B922FF254B0002D5E0 /* ListCahsBack.storyboard */; };
+		C23C74BC22FF27490002D5E0 /* ListCashbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C74BB22FF27490002D5E0 /* ListCashbackController.swift */; };
+		C23C74BE22FF27880002D5E0 /* ListCashbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C74BD22FF27880002D5E0 /* ListCashbackCell.swift */; };
 		C246AC8422E07AD3002F4A51 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C246AC8622E07AD3002F4A51 /* Friends.storyboard */; };
 		C24CE5B422DCC1E000F17255 /* DetailShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24CE5B322DCC1E000F17255 /* DetailShopView.swift */; };
 		C24EDF3822E5EB26002992F1 /* OUSContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24EDF3722E5EB26002992F1 /* OUSContoller.swift */; };
@@ -153,6 +156,7 @@
 		C2EEE9BB22F715040088706B /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEE9BA22F715040088706B /* CustomBlurView.swift */; };
 		C2EEE9BD22F7221B0088706B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2EEE9BC22F7221B0088706B /* WebKit.framework */; };
 		C2FB700A22DDD95F000A3FE7 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FB700922DDD95F000A3FE7 /* HTMLParser.swift */; };
+		C2FF88F722FC31B70095FE6B /* EmptyPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF88F622FC31B70095FE6B /* EmptyPopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -224,6 +228,9 @@
 		C22DE13E22F2284400D588F1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C22DE14122F2E2B700D588F1 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		C22DE14322F314FE00D588F1 /* LocalizableConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableConstants.swift; sourceTree = "<group>"; };
+		C23C74B922FF254B0002D5E0 /* ListCahsBack.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListCahsBack.storyboard; sourceTree = "<group>"; };
+		C23C74BB22FF27490002D5E0 /* ListCashbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCashbackController.swift; sourceTree = "<group>"; };
+		C23C74BD22FF27880002D5E0 /* ListCashbackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCashbackCell.swift; sourceTree = "<group>"; };
 		C246AC8522E07AD3002F4A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Friends.storyboard; sourceTree = "<group>"; };
 		C246AC9422E08406002F4A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C246AC9E22E08DD8002F4A51 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Login.storyboard; sourceTree = "<group>"; };
@@ -243,9 +250,9 @@
 		C268149522D7624400B6B6F5 /* MainCategoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoriesController.swift; sourceTree = "<group>"; };
 		C268149822D7626100B6B6F5 /* CategoriesMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriesMain.storyboard; sourceTree = "<group>"; };
 		C27EF16222F19AFD0010833B /* MyCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyCard.storyboard; sourceTree = "<group>"; };
+		C27F95D322FA483700F6DAC6 /* uk */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = uk; path = uk.lproj/EditProfile.storyboard; sourceTree = "<group>"; };
+		C27F95D522FA486C00F6DAC6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/EditProfile.storyboard; sourceTree = "<group>"; };
 		C282B3ED22F983DA00F96FAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EditProfile.storyboard; sourceTree = "<group>"; };
-		C282B3F022F9841D00F96FAC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/EditProfile.strings; sourceTree = "<group>"; };
-		C282B3F222F9841F00F96FAC /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/EditProfile.strings; sourceTree = "<group>"; };
 		C289187322D5EBE800A4DFB9 /* ShopsDataRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsDataRealm.swift; sourceTree = "<group>"; };
 		C289187522D5EF8A00A4DFB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C289187722D5F14000A4DFB9 /* ShopsDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsDataBaseService.swift; sourceTree = "<group>"; };
@@ -353,6 +360,7 @@
 		C2EEE9BA22F715040088706B /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
 		C2EEE9BC22F7221B0088706B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C2FB700922DDD95F000A3FE7 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
+		C2FF88F622FC31B70095FE6B /* EmptyPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPopUp.swift; sourceTree = "<group>"; };
 		D808B406DD4D9FA9FFD62B6E /* Pods_Tips_Mart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tips_Mart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -472,6 +480,7 @@
 		C2185ECB22D8AE4F009F3321 /* DetailShop */ = {
 			isa = PBXGroup;
 			children = (
+				C23C74B822FF25380002D5E0 /* ListCashback */,
 				C22DE13422F21ED800D588F1 /* ShopWebView */,
 				C263CEFB22DCC14C00C551E9 /* View */,
 				C2B0424622D8D3EF0039243A /* DSD */,
@@ -554,6 +563,16 @@
 				C22DE14122F2E2B700D588F1 /* ProfileModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C23C74B822FF25380002D5E0 /* ListCashback */ = {
+			isa = PBXGroup;
+			children = (
+				C23C74B922FF254B0002D5E0 /* ListCahsBack.storyboard */,
+				C23C74BB22FF27490002D5E0 /* ListCashbackController.swift */,
+				C23C74BD22FF27880002D5E0 /* ListCashbackCell.swift */,
+			);
+			path = ListCashback;
 			sourceTree = "<group>";
 		};
 		C245948422D3606700B6902E /* MainPage */ = {
@@ -974,6 +993,7 @@
 		C2AE38BC22E1FCDB00DB3C5A /* MembersController */ = {
 			isa = PBXGroup;
 			children = (
+				C2FF88F522FC31980095FE6B /* EmptyPopUp */,
 				C2A3E72622F43BE000A8F3E0 /* Model */,
 				C2AE38C322E2052D00DB3C5A /* Controller */,
 				C2AE38BE22E1FD7000DB3C5A /* View */,
@@ -1329,6 +1349,14 @@
 			path = MoreScreen;
 			sourceTree = "<group>";
 		};
+		C2FF88F522FC31980095FE6B /* EmptyPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				C2FF88F622FC31B70095FE6B /* EmptyPopUp.swift */,
+			);
+			path = EmptyPopUp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1419,6 +1447,7 @@
 				C268149922D7626100B6B6F5 /* CategoriesMain.storyboard in Resources */,
 				C2929B9D22D4E85B0056E043 /* TableShopCell.xib in Resources */,
 				C2E717EF22E5B92100E2412D /* OperationsCell.xib in Resources */,
+				C23C74BA22FF254B0002D5E0 /* ListCahsBack.storyboard in Resources */,
 				C2929BA122D4E86F0056E043 /* ShopCollectionCell.xib in Resources */,
 				C28D33DE22D398F50072A95C /* MainTabBar.storyboard in Resources */,
 				C2175B5022D4916E0011839E /* MainPage.storyboard in Resources */,
@@ -1513,6 +1542,7 @@
 				C2C5840A22CE01E4004CBCBF /* AuthView.swift in Sources */,
 				C2ED723D22F96A9B00CE335F /* InternetAlert.swift in Sources */,
 				C2C583E322CCCB51004CBCBF /* RegXib.swift in Sources */,
+				C23C74BE22FF27880002D5E0 /* ListCashbackCell.swift in Sources */,
 				C2185EB522D7687F009F3321 /* TableDataSourceDelegate.swift in Sources */,
 				C22DE13322F1E74600D588F1 /* MoreView.swift in Sources */,
 				C2C583B422CCAFBC004CBCBF /* LoginContoller.swift in Sources */,
@@ -1614,7 +1644,9 @@
 				C20B327222CE464600533F75 /* PasswordBtn.swift in Sources */,
 				C2929B9222D4DF240056E043 /* RefreshProtocol.swift in Sources */,
 				C2BF712022DE060E00564D06 /* BuyingRulesController.swift in Sources */,
+				C2FF88F722FC31B70095FE6B /* EmptyPopUp.swift in Sources */,
 				C2929BA022D4E86F0056E043 /* ShopCollectionCell.swift in Sources */,
+				C23C74BC22FF27490002D5E0 /* ListCashbackController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1700,8 +1732,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				C282B3ED22F983DA00F96FAC /* Base */,
-				C282B3F022F9841D00F96FAC /* ru */,
-				C282B3F222F9841F00F96FAC /* uk */,
+				C27F95D322FA483700F6DAC6 /* uk */,
+				C27F95D522FA486C00F6DAC6 /* ru */,
 			);
 			name = EditProfile.storyboard;
 			sourceTree = "<group>";
@@ -1931,6 +1963,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57TF4LZK7H;
 				INFOPLIST_FILE = "$(SRCROOT)/Tips-Mart/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1951,6 +1984,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57TF4LZK7H;
 				INFOPLIST_FILE = "$(SRCROOT)/Tips-Mart/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -46,7 +46,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="213,68 грн" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YkD-To-Y5K">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_._ грн" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YkD-To-Y5K">
                                                         <rect key="frame" x="0.0" y="28" width="74" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
                                                         <color key="textColor" red="0.27470073099999998" green="0.79203361269999994" blue="0.47838234899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -55,20 +55,20 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zA9-2h-wDg">
-                                                <rect key="frame" x="18" y="12" width="16" height="16"/>
+                                                <rect key="frame" x="16" y="11" width="18" height="18"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="16" id="7tZ-le-X51"/>
-                                                    <constraint firstAttribute="width" constant="16" id="yMv-UK-mbU"/>
+                                                    <constraint firstAttribute="height" constant="18" id="7tZ-le-X51"/>
+                                                    <constraint firstAttribute="width" constant="18" id="yMv-UK-mbU"/>
                                                 </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
                                                 <state key="normal" image="greenBalance"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgz-SA-sM2">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="playback" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgz-SA-sM2">
                                                 <rect key="frame" x="124" y="8" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="Pd8-9P-Jno"/>
                                                     <constraint firstAttribute="width" constant="24" id="RFY-nm-VjO"/>
                                                 </constraints>
-                                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="4"/>
                                                 <state key="normal" image="information копія"/>
                                                 <connections>
                                                     <action selector="greenBalanceInfo:" destination="qkf-rc-UWe" eventType="touchUpInside" id="VQY-aa-eDK"/>
@@ -90,16 +90,16 @@
                                         <rect key="frame" x="159" y="135.5" width="161" height="72.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="N4l-yh-0iR">
-                                                <rect key="frame" x="34" y="10.5" width="93" height="51.5"/>
+                                                <rect key="frame" x="36" y="10.5" width="89" height="51.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pending" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="7QT-QS-qyB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="19"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="89" height="19"/>
                                                         <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44,95 грн" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="TuR-Vu-WLc">
-                                                        <rect key="frame" x="0.0" y="28" width="93" height="23.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_._ грн" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="TuR-Vu-WLc">
+                                                        <rect key="frame" x="0.0" y="28" width="89" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
                                                         <color key="textColor" red="0.72549019609999998" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -107,22 +107,21 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2T-Lh-TDI">
-                                                <rect key="frame" x="135" y="8" width="24" height="24"/>
+                                                <rect key="frame" x="133" y="8" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="B2H-Ub-Acj"/>
                                                     <constraint firstAttribute="height" constant="24" id="Epd-lg-uIU"/>
                                                 </constraints>
-                                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="3"/>
                                                 <state key="normal" image="information копія"/>
                                                 <connections>
                                                     <action selector="grayBalanceInfo:" destination="qkf-rc-UWe" eventType="touchUpInside" id="vLL-vN-2Dr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVN-CV-K4F">
-                                                <rect key="frame" x="10" y="12" width="16" height="16"/>
+                                                <rect key="frame" x="10" y="11" width="18" height="18"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="16" id="IqV-S5-f1U"/>
-                                                    <constraint firstAttribute="width" constant="16" id="qAV-ue-Xra"/>
+                                                    <constraint firstAttribute="height" constant="18" id="IqV-S5-f1U"/>
+                                                    <constraint firstAttribute="width" constant="18" id="qAV-ue-Xra"/>
                                                 </constraints>
                                                 <state key="normal" image="grayBalance"/>
                                             </button>
@@ -171,14 +170,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-Z1-dz7">
                                                         <rect key="frame" x="0.0" y="0.0" width="150" height="53.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QSS-ga-6BB">
-                                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="32.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QSS-ga-6BB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="17" height="32.5"/>
                                                                 <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
                                                                 <color key="textColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3Le-bk-n6U">
-                                                                <rect key="frame" x="0.0" y="31.5" width="94" height="22"/>
+                                                                <rect key="frame" x="0.0" y="31.5" width="55" height="22"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Mez-a8-Mlm">
                                                                         <rect key="frame" x="0.0" y="0.0" width="15" height="22"/>
@@ -187,16 +186,16 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZyV-qJ-jKG">
-                                                                        <rect key="frame" x="17" y="0.0" width="77" height="22"/>
+                                                                        <rect key="frame" x="17" y="0.0" width="38" height="22"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" 100000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xgw-2m-Rsy">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="22"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xgw-2m-Rsy">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="12" height="22"/>
                                                                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
                                                                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDC-56-Xat" customClass="CopyIDBtn" customModule="Tips_Mart" customModuleProvider="target">
-                                                                                <rect key="frame" x="61" y="0.0" width="16" height="22"/>
+                                                                                <rect key="frame" x="22" y="0.0" width="16" height="22"/>
                                                                                 <state key="normal" image="copy"/>
                                                                             </button>
                                                                         </subviews>
@@ -342,7 +341,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="30Z-OA-4PB">
+                                                    <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="30Z-OA-4PB">
                                                         <rect key="frame" x="116.5" y="-15" width="87" height="5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="5" id="y51-sy-EjM"/>
@@ -363,6 +362,11 @@
                                                     <constraint firstItem="8Yc-Ji-Zma" firstAttribute="centerY" secondItem="H5k-1J-hQK" secondAttribute="centerY" id="mZR-n7-Jau"/>
                                                     <constraint firstItem="30Z-OA-4PB" firstAttribute="centerX" secondItem="Khx-Ds-eOC" secondAttribute="centerX" id="qI5-lp-QBJ"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="30Z-OA-4PB"/>
+                                                    </mask>
+                                                </variation>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -427,14 +431,14 @@
     </scenes>
     <resources>
         <image name="Ava" width="44" height="44.5"/>
-        <image name="Group 12402" width="320" height="136.5"/>
+        <image name="Group 12402" width="375" height="160"/>
         <image name="Icon" width="24" height="24.5"/>
         <image name="Loo" width="110" height="28.5"/>
         <image name="copy" width="11.5" height="11.5"/>
         <image name="credit-card" width="22.5" height="18.5"/>
-        <image name="grayBalance" width="16" height="16.5"/>
-        <image name="greenBalance" width="16" height="16.5"/>
-        <image name="information копія" width="12" height="12.5"/>
+        <image name="grayBalance" width="15" height="16"/>
+        <image name="greenBalance" width="16" height="16"/>
+        <image name="information копія" width="16" height="16"/>
         <image name="map" width="414" height="237"/>
         <image name="mycard" width="27.5" height="32.5"/>
         <image name="navRect" width="324" height="193.5"/>

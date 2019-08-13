@@ -19,12 +19,15 @@ class MainPageController: UIViewController {
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         collectionBanerView.delegate = self
         collectionBanerView.dataSource = self
         addGesturetoStack()
         balancaAlert = BalanceAlerts(controller: self)
-        networkService.sendRequest { (_) in
-            
+        networkService.sendRequest { (finish) in
+            if finish{
+                self.setViews()
+            }
         }
         
     }
@@ -32,9 +35,10 @@ class MainPageController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+       
         setViews()
     }
+    
     @IBAction func myCardBtnAction(_ sender: Any) {
         let vc = UIStoryboard(name: "MyCard", bundle: nil).instantiateViewController(withIdentifier: "MyCardVC") as! MyCardController
         let nav = UINavigationController(rootViewController: vc)
@@ -42,11 +46,7 @@ class MainPageController: UIViewController {
         
     }
     @IBAction func searchBtn(_ sender: Any) {
-        
-        if let shops = self.tabBarController?.viewControllers?[1] {
-            
         self.tabBarController?.selectedViewController = self.tabBarController?.viewControllers?[1]
-        }
     }
     
     //MARK: Methods
@@ -56,11 +56,9 @@ class MainPageController: UIViewController {
     }
     // presenting of profile screen
     @objc func handlePresent(){
-    
         let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC") as! ProfileController
         let nav = UINavigationController(rootViewController: vc)
         present(nav, animated: true, completion: nil)
-        
         
     }
     func setViews(){
@@ -74,13 +72,14 @@ class MainPageController: UIViewController {
         guard let grayBalance = grayBalance() else {return}
         self.mainView.greenBalance.text = String(greenBalance) + " " + NSLocalizedString("uah", comment: "")
         self.mainView.grayBalance.text = String(grayBalance) + " " + NSLocalizedString("uah", comment: "")
+        
        
     }
     @IBAction func grayBalanceInfo(_ sender: UIButton) {
-        balancaAlert.presentInfo(NSLocalizedString("grayWallet", comment: ""), BalanceAlertMessage.grayMessage.rawValue)
+        balancaAlert.presentInfo(NSLocalizedString("grayWallet", comment: ""), BalanceAlertMessage.grayMessage.rawValue, dismissOnEnd: false)
     }
     @IBAction func greenBalanceInfo(_ sender: UIButton) {
-         balancaAlert.presentInfo(NSLocalizedString("greenWallet", comment: ""), BalanceAlertMessage.greenMessage.rawValue)
+        balancaAlert.presentInfo(NSLocalizedString("greenWallet", comment: ""), BalanceAlertMessage.greenMessage.rawValue, dismissOnEnd: false)
     }
     @IBAction func otherCardsAction(_ sender: Any) {
         balancaAlert.presentUpdateAlert()

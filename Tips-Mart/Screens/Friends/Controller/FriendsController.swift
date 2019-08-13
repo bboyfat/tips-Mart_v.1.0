@@ -46,36 +46,40 @@ class FriendsController: UIViewController {
     
     private func funcSetBtnlbls(){
         if modelArray.count > 0{
-       friendsView.friendsBtnOutlet.setTitle(String(modelArray[0].members) + " " + peopleCount, for: .normal)
-        friendsView.familiarsBtnOutlet.setTitle(String(modelArray[1].members) + " " + peopleCount, for: .normal)
-        friendsView.strangersBtnOutlet.setTitle(String(modelArray[2].members) + " " + peopleCount, for: .normal)
-        friendsView.totalBonusBtnLbl.text = String(modelArray[0].credited + modelArray[1].credited + modelArray[2].credited) + " " + currency
+            friendsView.friendsBtnOutlet.setTitle(String(modelArray[0].members) + " " + peopleCount, for: .normal)
+            friendsView.familiarsBtnOutlet.setTitle(String(modelArray[1].members) + " " + peopleCount, for: .normal)
+            friendsView.strangersBtnOutlet.setTitle(String(modelArray[2].members) + " " + peopleCount, for: .normal)
+            friendsView.totalBonusBtnLbl.text = String(modelArray[0].credited + modelArray[1].credited + modelArray[2].credited) + " " + currency
         }
     }
     
     @IBAction func inviteBtnAction(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ShareVC") as! ShareController
+        vc.senderIs = .tab
         navigationController?.pushViewController(vc, animated: true)
     }
     
     
     @IBAction func friendsStatAction(_ sender: UIButton) {
         self.statisticController.modelArray = modelArray
+        self.statisticController.statisticFor = .friends
         navigationController?.present(self.nav, animated: true, completion: {
-            self.statisticController.statisticFor = .friends
+            
         })
     }
     
     @IBAction func familiarStatAction(_ sender: Any) {
         statisticController.modelArray = self.modelArray
+        self.statisticController.statisticFor = .familiars
         navigationController?.present(nav, animated: true, completion: {
-            self.statisticController.statisticFor = .familiars
+            
         })
     }
     @IBAction func strangerStatAction(_ sender: Any) {
         statisticController.modelArray = self.modelArray
+        self.statisticController.statisticFor = .strangers
         navigationController?.present(nav, animated: true, completion: {
-            self.statisticController.statisticFor = .strangers
+            
         })
     }
 }

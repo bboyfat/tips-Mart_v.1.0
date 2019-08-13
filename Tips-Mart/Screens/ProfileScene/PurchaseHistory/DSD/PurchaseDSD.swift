@@ -54,6 +54,8 @@ class PurchaseDSD: NSObject, UITableViewDataSource{
         return stringDate
     }
     
+    
+    
     init(tableView: UITableView, controller: UIViewController, model: [PurchaseObject]) {
         self.model = model
         self.tableView = tableView
@@ -62,9 +64,11 @@ class PurchaseDSD: NSObject, UITableViewDataSource{
         tableView.register(nib, forCellReuseIdentifier: "purchaseCell")
         viewModel = PurchaseViewModel()
         self.tableView.reloadData()
+        
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastItem = model.count - 1
+        
         if indexPath.row == lastItem{
             loadMoreData()
         }
@@ -110,8 +114,6 @@ extension PurchaseDSD: UITableViewDelegate{
             self?.changeStateService.sendRequest(with: PurchaseStateModel(newState: [PurchaseState.remove.rawValue], _purchase: model._purchase), handler: { (_) in
                 
             })
-//            self?.model.remove(model)
-//            self?.tableView.reloadRows(at: tableView.indexPathsForVisibleRows!, with: .bottom)
             ac.dismiss(animated: true, completion: nil)
         }
         ac.toChallengeDidTapped = {print("challenge")}

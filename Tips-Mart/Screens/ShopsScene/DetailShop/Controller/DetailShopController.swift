@@ -10,7 +10,10 @@ import UIKit
 
 class DetailShopController: UIViewController {
     
+    
     //MARK: Properties
+    
+    @IBOutlet weak var showAllCashbackHeight: NSLayoutConstraint!
     var customBlurAnimtion = CustomBlurView()
     var dataSourceDelegate: ReviewDSD!
     var model: Shop!
@@ -72,11 +75,15 @@ class DetailShopController: UIViewController {
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.1882352941, green: 0.7882352941, blue: 0.4274509804, alpha: 1)
         shopView.cashbackCurrencyLbl.text = shopData.currency
         var string: String = ""
+        if model.data?.listCashbacks!.count ?? 0 <= 3{
+            self.showAllCashbackHeight.constant = 0
         model.data?.listCashbacks?.forEach({ (cash) in
             string += "\n" + String(cash.value) + cash.typeCurrency + " " + cash.name.ru
            
-           
-        })
+        })} else {
+             string = ""
+             self.showAllCashbackHeight.constant = 40
+        }
         shopView.cashBackValueLbl.text = String(shopData.value)
          shopView.lisCashbackLbl.text = string
         shopView.lisCashbackLbl.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
@@ -119,6 +126,16 @@ class DetailShopController: UIViewController {
         }
         
     }
+    @IBAction func showAllCashbacksBtn(_ sender: Any) {
+        let vc = UIStoryboard(name: "ListCahsBack", bundle: nil).instantiateViewController(withIdentifier: "listCahsController") as! ListCashbackController
+        guard let model = model.data?.listCashbacks else {
+            return
+        }
+        vc.model = model
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     @IBAction func presentReviewScreen(_ sender: UIButton) {
         let vc = UIStoryboard(name: "OneShop", bundle: nil).instantiateViewController(withIdentifier: "ReviewVC") as! ReviewViewController
         navigationController?.pushViewController(vc, animated: true)

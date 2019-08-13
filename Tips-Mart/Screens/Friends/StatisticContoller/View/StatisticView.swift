@@ -9,21 +9,22 @@
 import UIKit
 
 class StatisticView: UIView {
-    @IBOutlet weak var creditedBtn: UIButton!
-    @IBOutlet weak var pendingBtn: UIButton!
-    @IBOutlet weak var segmentController: UISegmentedControl!
-    @IBOutlet weak var percentLabel: UILabel!
-    @IBOutlet weak var membersBtn: UIButton!
-    @IBOutlet weak var operationsBtn: UIButton!
-    @IBOutlet weak var moreDetailsBtn: UIButton!
+    @IBOutlet  var creditedBtn: UIButton!
+    @IBOutlet  var pendingBtn: UIButton!
+    @IBOutlet  var segmentController: UISegmentedControl!
+    @IBOutlet  var percentLabel: UILabel!
+    @IBOutlet  var membersBtn: UIButton!
+    @IBOutlet  var operationsBtn: UIButton!
+    @IBOutlet  var moreDetailsBtn: UIButton!
     
-    @IBOutlet weak var statisticLbl: UILabel!
-    @IBOutlet weak var pendingLbl: UILabel!
-    @IBOutlet weak var creditedLbl: UILabel!
-    @IBOutlet weak var operationsLbl: UILabel!
-    @IBOutlet weak var membersLbl: UILabel!
+    @IBOutlet var statisticLbl: UILabel!
+    @IBOutlet var pendingLbl: UILabel!
+    @IBOutlet var creditedLbl: UILabel!
+    @IBOutlet var operationsLbl: UILabel!
+    @IBOutlet var membersLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        checkNil()
         segmentController.setTitle(NSLocalizedString("friends", comment: ""), forSegmentAt: 0)
         segmentController.setTitle(NSLocalizedString("familiars", comment: ""), forSegmentAt: 1)
         segmentController.setTitle(NSLocalizedString("strangers", comment: ""), forSegmentAt: 2)
@@ -35,4 +36,30 @@ class StatisticView: UIView {
         moreDetailsBtn.setTitle(NSLocalizedString("More Details", comment: ""), for: .normal)
     }
     
+    
+    func checkNil(){
+        if membersBtn == nil || operationsBtn == nil ||  pendingBtn == nil || creditedBtn == nil{
+            membersBtn = UIButton()
+            operationsBtn = UIButton()
+            pendingBtn = UIButton()
+            creditedBtn = UIButton()
+            segmentController = UISegmentedControl()
+            percentLabel = UILabel()
+            statisticLbl = UILabel()
+            pendingLbl = UILabel()
+            operationsLbl = UILabel()
+            creditedLbl = UILabel()
+            membersLbl = UILabel()
+        }
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+          checkNil()
+    }
+   
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 }

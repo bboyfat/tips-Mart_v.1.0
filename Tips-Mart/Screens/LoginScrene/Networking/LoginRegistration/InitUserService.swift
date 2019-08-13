@@ -44,9 +44,10 @@ class InitUserService: RefreshServiceProtocol{
                     self.dataBaseService?.save()
                     
                     print(json)
-                    
+                    handler(true)
                 } catch let initErr{
                     print(initErr)
+                    handler(false)
                 }
             }
             

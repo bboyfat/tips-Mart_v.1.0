@@ -24,10 +24,11 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
     //MARK: Properties
     let bonusSrting = NSLocalizedString("bonusesFrom", comment: "")
     @IBOutlet var statisticView: StatisticView!
+    
     var modelArray = [Referals]()
     var statisticFor: StatisticFor = .strangers{
         didSet{
-            statisticForChenged()
+            statisticForChanged()
         }
     }
     
@@ -38,6 +39,7 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         addTargets()
+        statisticForChanged()
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +50,7 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
     }
     
     
-    private func statisticForChenged(){
+    private func statisticForChanged(){
         switch statisticFor {
         case .friends:
             setInfo(with: modelArray[0])
@@ -58,7 +60,7 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
             statisticView.operationsBtn.setImage(#imageLiteral(resourceName: "Arrow-1"), for: .normal)
            statisticView.percentLabel.text = NSLocalizedString("willGetFriends", comment: "")
            statisticView.segmentController.selectedSegmentIndex = 0
-            navigationItem.title = bonusSrting + " " + NSLocalizedString("friends", comment: "")
+            navigationItem.title =  NSLocalizedString("BonusesFr", comment: "")
         case .familiars:
             setInfo(with: modelArray[1])
             statisticView.membersBtn.isEnabled = false
@@ -66,7 +68,7 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
             statisticView.membersBtn.setImage(UIImage(), for: .normal)
             statisticView.operationsBtn.setImage(UIImage(), for: .normal)
             statisticView.percentLabel.text = NSLocalizedString("willGetFamiliars", comment: "")
-            navigationItem.title = bonusSrting + " " + NSLocalizedString("familiars", comment: "")
+            navigationItem.title =  NSLocalizedString("BonusesFam", comment: "")
             statisticView.segmentController.selectedSegmentIndex = 1
             
         default:
@@ -77,7 +79,7 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
             statisticView.operationsBtn.setImage(UIImage(), for: .normal)
             statisticView.segmentController.selectedSegmentIndex = 2
             statisticView.percentLabel.text = NSLocalizedString("willGetStrangers", comment: "")
-            navigationItem.title = bonusSrting + " " + NSLocalizedString("strangers", comment: "") 
+            navigationItem.title = NSLocalizedString("BpnusesStr", comment: "")
         }
     }
     
@@ -93,10 +95,15 @@ class StatisticController: UIViewController, StatisticControllerProtocol {
     }
     private func setInfo(with model: Referals?){
         guard let model = model else { return }
+        if statisticView != nil{
         statisticView.membersBtn.setTitle(String(model.members) + " " + peopleCount, for: .normal)
         statisticView.operationsBtn.setTitle(String(model.orders), for: .normal)
         statisticView.pendingBtn.setTitle(String(model.pending) + " " + currency, for: .normal)
         statisticView.creditedBtn.setTitle(String(model.credited) + " " + currency, for: .normal)
+        } else {
+            statisticView = StatisticView()
+            setInfo(with: model)
+        }
         
     }
     

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -33,7 +33,7 @@
                                 <rect key="frame" x="10" y="5" width="21" height="8"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="1af-Jz-lYh">
-                                <rect key="frame" x="40" y="25" width="137.5" height="31"/>
+                                <rect key="frame" x="40" y="25" width="137.66666666666666" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="ObQ-h3-wW8"/>
                                     <constraint firstAttribute="width" constant="137.5" id="eSk-h4-3lR"/>
@@ -43,16 +43,16 @@
                                 <rect key="frame" x="10" y="71" width="24" height="24"/>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grayHeart" translatesAutoresizingMaskIntoConstraints="NO" id="zgW-dh-NLy">
-                                <rect key="frame" x="183.5" y="6" width="24" height="21"/>
+                                <rect key="frame" x="183.66666666666666" y="6.0000000000000018" width="24" height="20.666666666666671"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aliexpress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5T-0N-seQ">
-                                <rect key="frame" x="78.5" y="61" width="61" height="11"/>
+                                <rect key="frame" x="78.333333333333329" y="61" width="60.999999999999986" height="11"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                                 <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W60-2X-hjk">
-                                <rect key="frame" x="217.5" y="0.0" width="1" height="100"/>
+                                <rect key="frame" x="217.66666666666666" y="0.0" width="1" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Punctir" translatesAutoresizingMaskIntoConstraints="NO" id="Xjh-PE-Tg2">
                                         <rect key="frame" x="0.0" y="0.0" width="1" height="100"/>
@@ -67,50 +67,64 @@
                                     <constraint firstItem="Xjh-PE-Tg2" firstAttribute="leading" secondItem="W60-2X-hjk" secondAttribute="leading" id="vlt-JD-avs"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Cashback up to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="zJ8-6D-nzQ">
-                                <rect key="frame" x="230.5" y="25" width="101.5" height="12.5"/>
-                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
-                                <color key="textColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="JMR-R5-TyG">
-                                <rect key="frame" x="260.5" y="42.5" width="41" height="28.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofx-ci-kyq">
+                                <rect key="frame" x="218.66666666666666" y="0.0" width="125.33333333333334" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAF-zI-tZy">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="28.5"/>
-                                        <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="32"/>
-                                        <color key="textColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Cashback up to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="zJ8-6D-nzQ">
+                                        <rect key="frame" x="8.3333333333333428" y="25" width="108.33333333333333" height="12.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="14"/>
+                                        <color key="textColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROV-Mu-FPj">
-                                        <rect key="frame" x="23" y="9.5" width="18" height="19"/>
-                                        <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="21"/>
-                                        <color key="textColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JMR-R5-TyG">
+                                        <rect key="frame" x="20" y="42.666666666666664" width="85.333333333333329" height="28.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cAF-zI-tZy">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="28.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="32"/>
+                                                <color key="textColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="ROV-Mu-FPj">
+                                                <rect key="frame" x="45.000000000000028" y="9.6666666666666714" width="40.333333333333343" height="19"/>
+                                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="21"/>
+                                                <color key="textColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JMR-R5-TyG" firstAttribute="centerX" secondItem="zJ8-6D-nzQ" secondAttribute="centerX" id="18q-7D-iNE"/>
+                                    <constraint firstAttribute="trailing" secondItem="JMR-R5-TyG" secondAttribute="trailing" constant="20" id="EJw-ae-HE0"/>
+                                    <constraint firstItem="zJ8-6D-nzQ" firstAttribute="centerX" secondItem="ofx-ci-kyq" secondAttribute="centerX" id="VGu-vu-krq"/>
+                                    <constraint firstItem="zJ8-6D-nzQ" firstAttribute="top" secondItem="ofx-ci-kyq" secondAttribute="top" constant="25" id="Yop-ib-BAB"/>
+                                    <constraint firstItem="JMR-R5-TyG" firstAttribute="top" secondItem="zJ8-6D-nzQ" secondAttribute="bottom" constant="5" id="bvw-0Z-XjL"/>
+                                    <constraint firstItem="JMR-R5-TyG" firstAttribute="centerX" secondItem="ofx-ci-kyq" secondAttribute="centerX" id="rEC-iG-idd"/>
+                                    <constraint firstItem="JMR-R5-TyG" firstAttribute="leading" secondItem="ofx-ci-kyq" secondAttribute="leading" constant="20" id="slq-Rr-2H9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zJ8-6D-nzQ" secondAttribute="trailing" constant="12" id="3lc-Uz-tsS"/>
-                            <constraint firstItem="JMR-R5-TyG" firstAttribute="leading" secondItem="W60-2X-hjk" secondAttribute="trailing" constant="42" id="6ln-LJ-f6f"/>
+                            <constraint firstItem="ofx-ci-kyq" firstAttribute="leading" secondItem="W60-2X-hjk" secondAttribute="trailing" id="1aM-vz-RBf"/>
+                            <constraint firstAttribute="trailing" secondItem="ofx-ci-kyq" secondAttribute="trailing" id="6YK-cR-rg0"/>
                             <constraint firstItem="W60-2X-hjk" firstAttribute="leading" secondItem="zgW-dh-NLy" secondAttribute="trailing" constant="10" id="9ob-xI-XY2"/>
-                            <constraint firstItem="zJ8-6D-nzQ" firstAttribute="leading" secondItem="W60-2X-hjk" secondAttribute="trailing" constant="12" id="A8t-S1-avo"/>
                             <constraint firstItem="7hj-Ur-Mjj" firstAttribute="leading" secondItem="F98-7D-j2X" secondAttribute="leading" constant="10" id="BCY-1m-2Pe"/>
+                            <constraint firstAttribute="bottom" secondItem="ofx-ci-kyq" secondAttribute="bottom" id="BDU-re-f8R"/>
                             <constraint firstAttribute="bottom" secondItem="EdG-H4-ddQ" secondAttribute="bottom" constant="5" id="Bka-HU-ts9"/>
                             <constraint firstItem="7hj-Ur-Mjj" firstAttribute="top" secondItem="F98-7D-j2X" secondAttribute="top" constant="5" id="EPh-la-Mmu"/>
                             <constraint firstItem="k5T-0N-seQ" firstAttribute="top" secondItem="1af-Jz-lYh" secondAttribute="bottom" constant="5" id="Ju3-Ut-nkd"/>
                             <constraint firstItem="k5T-0N-seQ" firstAttribute="centerX" secondItem="1af-Jz-lYh" secondAttribute="centerX" id="KBr-UQ-vjA"/>
                             <constraint firstItem="W60-2X-hjk" firstAttribute="leading" secondItem="1af-Jz-lYh" secondAttribute="trailing" constant="40" id="Klh-Jt-v1G"/>
                             <constraint firstItem="W60-2X-hjk" firstAttribute="top" secondItem="F98-7D-j2X" secondAttribute="top" id="PBh-nt-Pdo"/>
+                            <constraint firstItem="ofx-ci-kyq" firstAttribute="top" secondItem="F98-7D-j2X" secondAttribute="top" id="V7F-hz-qbp"/>
                             <constraint firstItem="1af-Jz-lYh" firstAttribute="top" secondItem="F98-7D-j2X" secondAttribute="top" constant="25" id="WJM-Nx-cX6"/>
                             <constraint firstItem="1af-Jz-lYh" firstAttribute="leading" secondItem="F98-7D-j2X" secondAttribute="leading" constant="40" id="ZF1-Rg-Yd4"/>
                             <constraint firstItem="EdG-H4-ddQ" firstAttribute="leading" secondItem="F98-7D-j2X" secondAttribute="leading" constant="10" id="aym-39-H13"/>
                             <constraint firstItem="zgW-dh-NLy" firstAttribute="top" secondItem="F98-7D-j2X" secondAttribute="top" constant="6" id="pVC-i0-7l6"/>
                             <constraint firstAttribute="bottom" secondItem="W60-2X-hjk" secondAttribute="bottom" id="qq2-eF-tBQ"/>
-                            <constraint firstItem="zJ8-6D-nzQ" firstAttribute="top" secondItem="F98-7D-j2X" secondAttribute="top" constant="25" id="tnW-6I-cgl"/>
-                            <constraint firstItem="JMR-R5-TyG" firstAttribute="top" secondItem="zJ8-6D-nzQ" secondAttribute="bottom" constant="5" id="x9o-Me-E5c"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -137,10 +151,10 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Punctir" width="1" height="101"/>
+        <image name="Punctir" width="1.3333333730697632" height="101.33333587646484"/>
         <image name="colorsFor" width="21" height="8"/>
         <image name="flame_icon" width="24" height="24"/>
-        <image name="grayHeart" width="24" height="21"/>
+        <image name="grayHeart" width="24" height="20.666666030883789"/>
         <image name="mainLogo" width="221" height="191"/>
     </resources>
 </document>

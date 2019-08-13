@@ -62,7 +62,7 @@
                     </constraints>
                     <state key="normal">
                         <attributedString key="attributedTitle">
-                            <fragment content="SIGHN UP">
+                            <fragment content="SIGN UP">
                                 <attributes>
                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <font key="NSFont" size="20" name="GothamPro-Medium"/>

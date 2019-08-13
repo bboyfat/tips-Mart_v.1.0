@@ -12,6 +12,7 @@ class DetailShopView: UIView {
     
     //MARK: Outlets
     
+    @IBOutlet weak var copyIdBtn: UIButton!
     @IBOutlet weak var shoppingRules: UIButton!
     @IBOutlet weak var goToShop: UIButton!
     @IBOutlet weak var logoImageVIew: UIImageView!
@@ -20,6 +21,8 @@ class DetailShopView: UIView {
     @IBOutlet weak var cashbackCurrencyLbl: UILabel!
     @IBOutlet weak var informationLabel: UILabel!
     @IBOutlet weak var cashbackTimeLbl: UILabel!
+    @IBOutlet weak var toSafePurhcLbl: UILabel!
+    @IBOutlet weak var purchMadedLbl: UILabel!
     
     @IBOutlet weak var cashBackUpTobl: UILabel!
     @IBOutlet weak var attentionLbl: UILabel!
@@ -27,9 +30,24 @@ class DetailShopView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       cashBackUpTobl.text = NSLocalizedString("cashbackUpTo", comment: "")
+        setLocalized()
+        copyIdBtn.addTarget(self, action: #selector(copyId), for: .touchUpInside)
+    }
+    
+    
+    func setLocalized(){
+        cashBackUpTobl.text = NSLocalizedString("cashbackUpTo", comment: "")
         goToShop.setTitle(NSLocalizedString("goToShop", comment: ""), for: .normal)
         shoppingRules.setTitle(NSLocalizedString("shoppingRules", comment: ""), for: .normal)
+        
+        toSafePurhcLbl.text = NSLocalizedString("toSafePurchase", comment: "")
+        guard let id = userId() else {return}
+        purchMadedLbl.text = NSLocalizedString("purchMadedWith", comment: "") + String(id)
+    }
+    
+    
+    @objc func copyId(){
+        UIPasteboard.general.string = purchMadedLbl.text
     }
     /*
      // Only override draw() if you perform custom drawing.

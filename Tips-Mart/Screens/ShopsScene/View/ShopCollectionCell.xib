@@ -51,7 +51,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorsFor" translatesAutoresizingMaskIntoConstraints="NO" id="vNJ-Kw-Iie">
                                 <rect key="frame" x="6" y="6" width="21" height="8"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-di-v6Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="gC8-di-v6Q">
                                 <rect key="frame" x="81.5" y="132.5" width="33.5" height="11"/>
                                 <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="12"/>
                                 <color key="textColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,13 +60,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8Ca-sc-R55">
                                 <rect key="frame" x="120" y="123.5" width="40" height="28.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ean-ms-Xve">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ean-ms-Xve">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="28.5"/>
                                         <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="32"/>
                                         <color key="textColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pA-pT-NUw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="0pA-pT-NUw">
                                         <rect key="frame" x="22" y="9.5" width="18" height="19"/>
                                         <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="21"/>
                                         <color key="textColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,6 +90,7 @@
                             <constraint firstItem="nQ6-W2-EeV" firstAttribute="leading" secondItem="dF6-Pw-3MX" secondAttribute="leading" constant="8" id="jMz-Gx-CzK"/>
                             <constraint firstItem="9TX-CJ-AMp" firstAttribute="centerX" secondItem="nQ6-W2-EeV" secondAttribute="centerX" id="jPj-sU-YJ0"/>
                             <constraint firstAttribute="trailing" secondItem="nQ6-W2-EeV" secondAttribute="trailing" constant="8" id="mA1-ub-iYw"/>
+                            <constraint firstItem="gC8-di-v6Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dF6-Pw-3MX" secondAttribute="leading" constant="10" id="ovo-yk-MEn"/>
                             <constraint firstItem="nQ6-W2-EeV" firstAttribute="centerX" secondItem="dF6-Pw-3MX" secondAttribute="centerX" id="q2J-qS-Zn2"/>
                             <constraint firstAttribute="bottom" secondItem="8Ca-sc-R55" secondAttribute="bottom" constant="2" id="vwg-X4-vcG"/>
                             <constraint firstItem="9TX-CJ-AMp" firstAttribute="top" secondItem="nQ6-W2-EeV" secondAttribute="bottom" constant="5" id="xKC-3D-SzA"/>

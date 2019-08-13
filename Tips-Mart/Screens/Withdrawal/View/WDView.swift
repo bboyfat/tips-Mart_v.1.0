@@ -70,7 +70,7 @@ class WDView: UIView {
         case true:
             animateField()
             switchPhoneCard = .card
-            textFieldName.text = "Enter card number"
+            textFieldName.text = NSLocalizedString("Enter card number", comment: "")
             cardView.layer.borderColor = #colorLiteral(red: 0.6784313725, green: 0.1098039216, blue: 0.6392156863, alpha: 1)
             phoneView.layer.borderColor = #colorLiteral(red: 0.8784313725, green: 0.8784313725, blue: 0.8784313725, alpha: 1)
             cardView.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.9647058824, blue: 1, alpha: 1)
@@ -78,7 +78,7 @@ class WDView: UIView {
         case false:
             animateField()
             switchPhoneCard = .phone
-            textFieldName.text = "Enter phone number"
+            textFieldName.text = NSLocalizedString("Enter phone number", comment: "")
             phoneView.layer.borderColor = #colorLiteral(red: 0.6784313725, green: 0.1098039216, blue: 0.6392156863, alpha: 1)
             cardView.layer.borderColor = #colorLiteral(red: 0.8784313725, green: 0.8784313725, blue: 0.8784313725, alpha: 1)
             phoneView.backgroundColor = #colorLiteral(red: 0.968627451, green: 0.9647058824, blue: 1, alpha: 1)

@@ -114,11 +114,11 @@ class ProfileController: UIViewController {
     }
     
     @IBAction func greenBalanceInfo(_ sender: UIButton) {
-        balanceAlerts.presentInfo(NSLocalizedString("greenWallet", comment: ""), BalanceAlertMessage.greenMessage.rawValue)
+        balanceAlerts.presentInfo(NSLocalizedString("greenWallet", comment: ""), BalanceAlertMessage.greenMessage.rawValue, dismissOnEnd: false)
     }
     
     @IBAction func grayBalanceInfo(_ sender: Any) {
-        balanceAlerts.presentInfo(NSLocalizedString("grayWallet", comment: ""), BalanceAlertMessage.grayMessage.rawValue)
+        balanceAlerts.presentInfo(NSLocalizedString("grayWallet", comment: ""), BalanceAlertMessage.grayMessage.rawValue, dismissOnEnd: false)
     }
     
     

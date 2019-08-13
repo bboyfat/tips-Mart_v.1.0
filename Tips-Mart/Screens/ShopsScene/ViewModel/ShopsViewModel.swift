@@ -59,7 +59,7 @@ class ShopViewModel: ShopViewModelProtocol{
         self.shops  = Array(result)
         self.dataUpdated()
         if shops.count == 0{
-            fetchModel(selectedShopsList: selectedShopsList)
+           // fetchModel(selectedShopsList: selectedShopsList)
         }
     }
     func fetchModel(selectedShopsList: [String]){

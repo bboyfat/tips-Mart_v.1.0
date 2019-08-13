@@ -16,7 +16,7 @@ enum URLS: String{
     case regURL = "https://auth.tips-mart.com/app-client/registration"
     case login = "https://auth.tips-mart.com/app-client/login"
     case userInit = "https://app-client.tips-mart.com/user/init"
-    case changeInfo = "https://update.tips-mart.com/profile/settings"
+    case changeInfo = "https://tips-mart.com/profile/settings"
     case getInfo = "https://app-client.tips-mart.com/user/settings"
     
     case notifications = "https://app-client.tips-mart.com/user/notifications"

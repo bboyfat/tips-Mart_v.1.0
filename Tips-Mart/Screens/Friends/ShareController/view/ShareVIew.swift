@@ -15,6 +15,7 @@ class ShareVIew: UIView {
     @IBOutlet weak var shareLbl: UILabel!
     @IBOutlet weak var shareBtn: UIButton!
     @IBOutlet weak var linkTf: UITextField!
+    @IBOutlet weak var invitingTerms: UILabel!
     
     @IBOutlet weak var qrImageVIew: UIImageView!
     @IBOutlet weak var linkView: UIView!
@@ -31,6 +32,7 @@ class ShareVIew: UIView {
         scanLbl.text = NSLocalizedString("scan", comment: "")
         copyLbl.text = NSLocalizedString("copy", comment: "")
         shareLbl.text = NSLocalizedString("shareLbl", comment: "")
+        invitingTerms.text = NSLocalizedString("invitingTerms", comment: "")
         shareBtn.setTitle(NSLocalizedString("shareBtn", comment: ""), for: .normal)
     }
     func setLink(){
@@ -38,5 +40,5 @@ class ShareVIew: UIView {
         self.linkTf.text = "https://tips-mart.com?r=\(id)"
         qrImageVIew.image = BarCodeGenerator().generateBrCode(qrOrBar: .QRCode, from: self.linkTf.text!)
     }
-
+    
 }

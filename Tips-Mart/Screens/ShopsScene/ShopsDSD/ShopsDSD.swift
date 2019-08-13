@@ -129,8 +129,11 @@ extension ShopsDataSource: UISearchBarDelegate{
         }
         
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            
-            viewModel.searchShops(with: searchText)
+            guard let mutuableString = NSMutableString(utf8String: searchText) else {return}
+            guard let latinString = mutuableString.applyingTransform(StringTransform.toLatin, reverse: false) else {return}
+            guard let noDiacriticString = latinString.applyingTransform(StringTransform.stripDiacritics, reverse: false) else {return}
+            print(noDiacriticString)
+            viewModel.searchShops(with: noDiacriticString)
         }
       
 }

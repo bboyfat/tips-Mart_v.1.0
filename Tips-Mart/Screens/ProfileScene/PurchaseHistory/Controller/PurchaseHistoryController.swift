@@ -18,6 +18,8 @@ class PurchaseHistoryController: UIViewController {
     var purchaseSender: PurchaseSender = .profile
     
     //MARK: Properties
+    @IBOutlet weak var isEmptyView: UIView!
+    @IBOutlet weak var isEmptyLbl: UILabel!
     let leftBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "Arrow"), with: "       ", with: .forceLeftToRight)
     let rightBarButton = UINavigationItem.setTheBUtton(with: #imageLiteral(resourceName: "fillter"), with: "", with: .forceRightToLeft)
     
@@ -27,28 +29,41 @@ class PurchaseHistoryController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PurchaseHistoryNetworking().sendRequest(with: PurchaseReqData(data: PurchaseReq())) { (model) in
-            OperationQueue.main.addOperation {
-                self.tableDSD = PurchaseDSD(tableView: self.tableView, controller: self, model: model)
-                self.tableView.dataSource = self.tableDSD
-                self.tableView.delegate = self.tableDSD
-            }
-          
-        }
-    
-        
-        
         
         
         addTargets()
     }
+    
+    
+    func checkModel(model: [PurchaseObject]){
+        if !model.isEmpty{
+            
+            OperationQueue.main.addOperation {
+                self.tableDSD = PurchaseDSD(tableView: self.tableView, controller: self, model: model)
+                self.tableView.dataSource = self.tableDSD
+                self.tableView.delegate = self.tableDSD
+                if self.isEmptyView != nil{
+                self.isEmptyView.removeFromSuperview()
+                }
+            }
+            
+        }
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if isEmptyLbl != nil{
+        isEmptyLbl.text = NSLocalizedString("empty", comment: "")
+        }
         setClearNavigation(with: #colorLiteral(red: 0.0386101231, green: 0.8220543265, blue: 0.5023989081, alpha: 1), with: NSLocalizedString("Purchase history", comment:""))
         addLeftButtonToNavigationBar(with: setItemForNavigationBar(button: leftBarButton))
-//        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
+        PurchaseHistoryNetworking().sendRequest(with: PurchaseReqData(data: PurchaseReq())) { (model) in
+            self.checkModel(model: model)
+            
+        }
+        //        addRightButtonToNavigationBar(with: setItemForNavigationBar(button: rightBarButton))
     }
-   
+    
     
     //MARK: Methods
     
@@ -58,9 +73,9 @@ class PurchaseHistoryController: UIViewController {
         rightBarButton.addTarget(self, action: #selector(handlePush), for: .touchUpInside)
     }
     @objc func handlePop(){
-         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         if purchaseSender == .profile{
-      navigationController?.popViewController(animated: true)
+            navigationController?.popViewController(animated: true)
         }  else {
             self.dismiss(animated: true, completion: nil)
         }
